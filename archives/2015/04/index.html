@@ -3,35 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点 | Rouleur</title>
+  <title>Archives: 2015/4 | Rouleur</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="どんなシチュエーションで使うのか
-バッチ処理でログをDBに書き込んでいるケースなどでログは残したいけど、失敗した場合にトランザクションはロールバックしたいとか。
-
-どうすればできるのか
-別トランザクションにしたいメソッドまたはクラスに@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)アノテーションをつければOK
-
-注意点私の環境">
-<meta property="og:type" content="article">
-<meta property="og:title" content="S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点">
-<meta property="og:url" content="http://yenjoji.github.io/pages/2012/04/15/s2jdbc/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rouleur">
+<meta property="og:url" content="http://yenjoji.github.io/pages/archives/2015/04/index.html">
 <meta property="og:site_name" content="Rouleur">
-<meta property="og:description" content="どんなシチュエーションで使うのか
-バッチ処理でログをDBに書き込んでいるケースなどでログは残したいけど、失敗した場合にトランザクションはロールバックしたいとか。
-
-どうすればできるのか
-別トランザクションにしたいメソッドまたはクラスに@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)アノテーションをつければOK
-
-注意点私の環境">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点">
-<meta name="twitter:description" content="どんなシチュエーションで使うのか
-バッチ処理でログをDBに書き込んでいるケースなどでログは残したいけど、失敗した場合にトランザクションはロールバックしたいとか。
-
-どうすればできるのか
-別トランザクションにしたいメソッドまたはクラスに@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)アノテーションをつければOK
-
-注意点私の環境">
+<meta name="twitter:title" content="Rouleur">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/pages/atom.xml" title="Rouleur" type="application/atom+xml">
   
@@ -172,70 +154,39 @@
   
 </aside>
         
-        <section id="main"><article id="post-s2jdbc" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/pages/2012/04/15/s2jdbc/" class="article-date">
-  <time datetime="2012-04-15T13:10:40.000Z" itemprop="datePublished">2012-04-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/pages/archives/2015" class="archive-year">2015</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/pages/2015/04/09/raspi-xfd/" class="archive-article-date">
+  <time datetime="2015-04-09T10:41:39.000Z" itemprop="datePublished">4月 9</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/pages/2015/04/09/raspi-xfd/">raspi-xfd</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="どんなシチュエーションで使うのか">どんなシチュエーションで使うのか</h1><ul>
-<li>バッチ処理でログをDBに書き込んでいるケースなどでログは残したいけど、失敗した場合にトランザクションはロールバックしたいとか。</li>
-</ul>
-<h1 id="どうすればできるのか">どうすればできるのか</h1><ul>
-<li>別トランザクションにしたいメソッドまたはクラスに<br>@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)<br>アノテーションをつければOK</li>
-</ul>
-<h1 id="注意点">注意点</h1><p>私の環境では、メソッドにこのアノテーションをつけた場合に<br><strong>メソッドがpublicでないと</strong> トランザクション境界にならなかった！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yenjoji.github.io/pages/2012/04/15/s2jdbc/" data-id="ci8adkhw7000izmvxqb44q25l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/S2JDBC/">S2JDBC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/program/">program</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/pages/2012/04/22/tocfe/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          状況打開力を叩き上げる　TOCfE ブートキャンプに参加してきました
-        
-      </div>
-    </a>
-  
-  
-    <a href="/pages/2012/04/04/2012-04-04-momongar/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">フクロモモンガ温度記録システムを作りました</div>
-    </a>
-  
-</nav>
-
-  
 </article>
-
+  
+  
+    </div></section>
+  
 </section>
       </div>
       <footer id="footer">

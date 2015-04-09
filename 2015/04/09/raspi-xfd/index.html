@@ -3,35 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点 | Rouleur</title>
+  <title>raspi-xfd | Rouleur</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="どんなシチュエーションで使うのか
-バッチ処理でログをDBに書き込んでいるケースなどでログは残したいけど、失敗した場合にトランザクションはロールバックしたいとか。
-
-どうすればできるのか
-別トランザクションにしたいメソッドまたはクラスに@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)アノテーションをつければOK
-
-注意点私の環境">
+  <meta name="description" content="突然ですがXFDをご存知ですか?
+XFDとはオブジェクト倶楽部 http://objectclub.jp/community/xfd/ によると“””プロジェクトステータスやメトリクスは、目に見えにくい。見えないからこそ難しい。そんな悩みを解決してくれるのが、XFD(eXtreme Feedback Device)です。目に見えて、楽しい、ユニークな装置。目に付いて、絶対見落とさないような装置を指">
 <meta property="og:type" content="article">
-<meta property="og:title" content="S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点">
-<meta property="og:url" content="http://yenjoji.github.io/pages/2012/04/15/s2jdbc/index.html">
+<meta property="og:title" content="raspi-xfd">
+<meta property="og:url" content="http://yenjoji.github.io/pages/2015/04/09/raspi-xfd/index.html">
 <meta property="og:site_name" content="Rouleur">
-<meta property="og:description" content="どんなシチュエーションで使うのか
-バッチ処理でログをDBに書き込んでいるケースなどでログは残したいけど、失敗した場合にトランザクションはロールバックしたいとか。
-
-どうすればできるのか
-別トランザクションにしたいメソッドまたはクラスに@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)アノテーションをつければOK
-
-注意点私の環境">
+<meta property="og:description" content="突然ですがXFDをご存知ですか?
+XFDとはオブジェクト倶楽部 http://objectclub.jp/community/xfd/ によると“””プロジェクトステータスやメトリクスは、目に見えにくい。見えないからこそ難しい。そんな悩みを解決してくれるのが、XFD(eXtreme Feedback Device)です。目に見えて、楽しい、ユニークな装置。目に付いて、絶対見落とさないような装置を指">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点">
-<meta name="twitter:description" content="どんなシチュエーションで使うのか
-バッチ処理でログをDBに書き込んでいるケースなどでログは残したいけど、失敗した場合にトランザクションはロールバックしたいとか。
-
-どうすればできるのか
-別トランザクションにしたいメソッドまたはクラスに@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)アノテーションをつければOK
-
-注意点私の環境">
+<meta name="twitter:title" content="raspi-xfd">
+<meta name="twitter:description" content="突然ですがXFDをご存知ですか?
+XFDとはオブジェクト倶楽部 http://objectclub.jp/community/xfd/ によると“””プロジェクトステータスやメトリクスは、目に見えにくい。見えないからこそ難しい。そんな悩みを解決してくれるのが、XFD(eXtreme Feedback Device)です。目に見えて、楽しい、ユニークな装置。目に付いて、絶対見落とさないような装置を指">
   
     <link rel="alternative" href="/pages/atom.xml" title="Rouleur" type="application/atom+xml">
   
@@ -172,10 +157,10 @@
   
 </aside>
         
-        <section id="main"><article id="post-s2jdbc" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-raspi-xfd" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/pages/2012/04/15/s2jdbc/" class="article-date">
-  <time datetime="2012-04-15T13:10:40.000Z" itemprop="datePublished">2012-04-15</time>
+    <a href="/pages/2015/04/09/raspi-xfd/" class="article-date">
+  <time datetime="2015-04-09T10:41:39.000Z" itemprop="datePublished">2015-04-09</time>
 </a>
     
   </div>
@@ -186,7 +171,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点
+      raspi-xfd
     </h1>
   
 
@@ -194,21 +179,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="どんなシチュエーションで使うのか">どんなシチュエーションで使うのか</h1><ul>
-<li>バッチ処理でログをDBに書き込んでいるケースなどでログは残したいけど、失敗した場合にトランザクションはロールバックしたいとか。</li>
+        <p>突然ですがXFDをご存知ですか?</p>
+<h2 id="XFDとは">XFDとは</h2><p>オブジェクト倶楽部 <a href="http://objectclub.jp/community/xfd/" target="_blank" rel="external">http://objectclub.jp/community/xfd/</a> によると<br>“””<br>プロジェクトステータスやメトリクスは、目に見えにくい。見えないからこそ難しい。そんな悩みを解決してくれるのが、XFD(eXtreme Feedback Device)です。目に見えて、楽しい、ユニークな装置。目に付いて、絶対見落とさないような装置を指します。安上がりならなおよろし。<br>“””<br>とのことです。</p>
+<p>例えばCIによるビルドエラーに連動したパトランプ <a href="http://gitgear.com/xfd/" target="_blank" rel="external">http://gitgear.com/xfd/</a> など、<br>そのままだと気づきにくいイベントを気づきやすくするデバイスを指すようです。</p>
+<h1 id="概要">概要</h1><p>今回はそんなXFDをRaspberry Piを利用して作成してみたいと思います。<br>なお、今回対象とするCIサーバーは Atlassian Bamboo とします。</p>
+<h1 id="用意するもの">用意するもの</h1><ul>
+<li><p>Raspberry Pi  x  1<br>今買うなら Raspberry Pi 2 Type B がお得だと思われます。</p>
+</li>
+<li><p>赤色LED x 1<br>色はお好みで。<br>今回はビルド失敗のエラー感を出すため 3mm径の赤色高輝度LEDとしました。</p>
+</li>
+<li><p>330Ω抵抗 x 1<br>LEDが壊れないよう基本に則って抵抗を使用します。</p>
+</li>
+<li><p>ブレットボード x 1</p>
+</li>
+<li>配線用ジャンプワイヤ　適量<br>その他配線用の機材を適宜よういします。</li>
 </ul>
-<h1 id="どうすればできるのか">どうすればできるのか</h1><ul>
-<li>別トランザクションにしたいメソッドまたはクラスに<br>@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)<br>アノテーションをつければOK</li>
-</ul>
-<h1 id="注意点">注意点</h1><p>私の環境では、メソッドにこのアノテーションをつけた場合に<br><strong>メソッドがpublicでないと</strong> トランザクション境界にならなかった！</p>
+<h1 id="回路">回路</h1><p>上記のパーツを組み込むとこのようになります。</p>
+<p>＜写真＞</p>
+<h1 id="プログラム">プログラム</h1><p>例えば以下のようにREST APIでBambooのビルド結果を取得します。<br>なお、今回はBamboo上でブランチごとにビルドをしている想定のコードとなっています。</p>
+<script src="https://gist.github.com/yenjoji/f29553357d3a28566e7e.js"></script>
+
+
+<h1 id="結果">結果</h1><p>これで、Bambooの指定したブランチがビルドエラーになった際には、<br>接続されたLEDが点灯するようになりました。</p>
+<p>＜写真＞</p>
+<p>しかし、ちょっとこれでは寂しいので、ひと手間加えたいと思います。</p>
+<p>最近はだいぶJOJOや、仮面ライダーに押されているとはいえ、エンジニアといえばガンダムです。<br>（今回は異論は聞かなかったこととします。）</p>
+<p>という訳で、ちょっとガンダム要素を追加してみます。</p>
+<p>＜写真＞</p>
+<p>ビルドが失敗するとシャア専用ズゴックの目が赤く光ります。<br>これでだいぶテンションが上がるようになりました。</p>
+<h1 id="まとめ">まとめ</h1><p>Raspberry Piが発売されたことによって、ネットワークを利用した電子工作が簡単にできるようになりました。</p>
+<p>みなさんもオリジナルのXFDでプロジェクトを活性化してみたらいかがでしょうか。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yenjoji.github.io/pages/2012/04/15/s2jdbc/" data-id="ci8adkhw7000izmvxqb44q25l" class="article-share-link">Share</a>
+      <a data-url="http://yenjoji.github.io/pages/2015/04/09/raspi-xfd/" data-id="ci8adkhwc000nzmvx9p56o58j" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/S2JDBC/">S2JDBC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/program/">program</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Agile/">Agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/IoT/">IoT</a></li></ul>
 
     </footer>
   </div>
@@ -216,19 +224,10 @@
     
 <nav id="article-nav">
   
-    <a href="/pages/2012/04/22/tocfe/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          状況打開力を叩き上げる　TOCfE ブートキャンプに参加してきました
-        
-      </div>
-    </a>
   
-  
-    <a href="/pages/2012/04/04/2012-04-04-momongar/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/pages/2015/02/03/2015-2-2-mpp/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">フクロモモンガ温度記録システムを作りました</div>
+      <div class="article-nav-title">2015/2/2 英語学習勉強会「英語のセッションを聴く」実践編 に参加してきました。</div>
     </a>
   
 </nav>

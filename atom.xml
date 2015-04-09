@@ -4,7 +4,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/"/>
-  <updated>2015-04-09T10:01:27.000Z</updated>
+  <updated>2015-04-09T16:21:47.000Z</updated>
   <id>http://yenjoji.github.io/pages/</id>
   
   <author>
@@ -15,11 +15,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[raspi-xfd]]></title>
+    <link href="http://yenjoji.github.io/pages/2015/04/09/raspi-xfd/"/>
+    <id>http://yenjoji.github.io/pages/2015/04/09/raspi-xfd/</id>
+    <published>2015-04-09T10:41:39.000Z</published>
+    <updated>2015-04-09T16:21:47.000Z</updated>
+    <content type="html"><![CDATA[<p>突然ですがXFDをご存知ですか?</p>
+<h2 id="XFDとは">XFDとは</h2><p>オブジェクト倶楽部 <a href="http://objectclub.jp/community/xfd/" target="_blank" rel="external">http://objectclub.jp/community/xfd/</a> によると<br>“””<br>プロジェクトステータスやメトリクスは、目に見えにくい。見えないからこそ難しい。そんな悩みを解決してくれるのが、XFD(eXtreme Feedback Device)です。目に見えて、楽しい、ユニークな装置。目に付いて、絶対見落とさないような装置を指します。安上がりならなおよろし。<br>“””<br>とのことです。</p>
+<p>例えばCIによるビルドエラーに連動したパトランプ <a href="http://gitgear.com/xfd/" target="_blank" rel="external">http://gitgear.com/xfd/</a> など、<br>そのままだと気づきにくいイベントを気づきやすくするデバイスを指すようです。</p>
+<h1 id="概要">概要</h1><p>今回はそんなXFDをRaspberry Piを利用して作成してみたいと思います。<br>なお、今回対象とするCIサーバーは Atlassian Bamboo とします。</p>
+<h1 id="用意するもの">用意するもの</h1><ul>
+<li><p>Raspberry Pi  x  1<br>今買うなら Raspberry Pi 2 Type B がお得だと思われます。</p>
+</li>
+<li><p>赤色LED x 1<br>色はお好みで。<br>今回はビルド失敗のエラー感を出すため 3mm径の赤色高輝度LEDとしました。</p>
+</li>
+<li><p>330Ω抵抗 x 1<br>LEDが壊れないよう基本に則って抵抗を使用します。</p>
+</li>
+<li><p>ブレットボード x 1</p>
+</li>
+<li>配線用ジャンプワイヤ　適量<br>その他配線用の機材を適宜よういします。</li>
+</ul>
+<h1 id="回路">回路</h1><p>上記のパーツを組み込むとこのようになります。</p>
+<p>＜写真＞</p>
+<h1 id="プログラム">プログラム</h1><p>例えば以下のようにREST APIでBambooのビルド結果を取得します。<br>なお、今回はBamboo上でブランチごとにビルドをしている想定のコードとなっています。</p>
+<script src="https://gist.github.com/yenjoji/f29553357d3a28566e7e.js"></script>
+
+
+<h1 id="結果">結果</h1><p>これで、Bambooの指定したブランチがビルドエラーになった際には、<br>接続されたLEDが点灯するようになりました。</p>
+<p>＜写真＞</p>
+<p>しかし、ちょっとこれでは寂しいので、ひと手間加えたいと思います。</p>
+<p>最近はだいぶJOJOや、仮面ライダーに押されているとはいえ、エンジニアといえばガンダムです。<br>（今回は異論は聞かなかったこととします。）</p>
+<p>という訳で、ちょっとガンダム要素を追加してみます。</p>
+<p>＜写真＞</p>
+<p>ビルドが失敗するとシャア専用ズゴックの目が赤く光ります。<br>これでだいぶテンションが上がるようになりました。</p>
+<h1 id="まとめ">まとめ</h1><p>Raspberry Piが発売されたことによって、ネットワークを利用した電子工作が簡単にできるようになりました。</p>
+<p>みなさんもオリジナルのXFDでプロジェクトを活性化してみたらいかがでしょうか。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>突然ですがXFDをご存知ですか?</p>
+<h2 id="XFDとは">XFDとは</h2><p>オブジェクト倶楽部 <a href="http://objectclub.jp/community/xfd/" target="_blank" rel="external">h]]>
+    </summary>
+    
+      <category term="Agile" scheme="http://yenjoji.github.io/pages/tags/Agile/"/>
+    
+      <category term="IoT" scheme="http://yenjoji.github.io/pages/tags/IoT/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[2015/2/2 英語学習勉強会「英語のセッションを聴く」実践編 に参加してきました。]]></title>
     <link href="http://yenjoji.github.io/pages/2015/02/03/2015-2-2-mpp/"/>
     <id>http://yenjoji.github.io/pages/2015/02/03/2015-2-2-mpp/</id>
     <published>2015-02-02T18:35:00.000Z</published>
-    <updated>2015-04-09T10:01:27.000Z</updated>
+    <updated>2015-04-09T11:18:07.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://www.flickr.com/photos/130999506@N07/16427800351" title="AXON_ACTIVE by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7453/16427800351_48b521e76e_m.jpg" alt="AXON_ACTIVE"></a></p>
 <p>牛尾さん(<a href="https://twitter.com/sandayuu" target="_blank" rel="external">https://twitter.com/sandayuu</a>)主催の、 Majide Perapera Project(<a href="http://mpp-group.doorkeeper.jp/" target="_blank" rel="external">http://mpp-group.doorkeeper.jp/</a>)の勉強会</p>
 <p><strong>英語学習勉強会「英語のセッションを聴く」実践編</strong><br><a href="http://mpp-group.doorkeeper.jp/events/20267" target="_blank" rel="external">http://mpp-group.doorkeeper.jp/events/20267</a>に参加してきました。</p>
@@ -89,7 +137,7 @@
     <link href="http://yenjoji.github.io/pages/2013/01/24/sgt2013-day1/"/>
     <id>http://yenjoji.github.io/pages/2013/01/24/sgt2013-day1/</id>
     <published>2013-01-24T05:23:22.000Z</published>
-    <updated>2015-04-09T05:25:43.000Z</updated>
+    <updated>2015-04-09T16:23:36.000Z</updated>
     <content type="html"><![CDATA[<p>1/14,15 の２日間にわたって開催された Scrum Alliance Regional Gathering Tokyo 2013 に参加してきましたのでその模様の一部をご紹介させていただきたいと思います。</p>
 <p>開催概要、タイムテーブルなど</p>
 <p><ul><br>    <li>公式のWeb<br><a href="http://scrumgatheringtokyo.org/2013/" target="_blank" rel="external"> http://scrumgatheringtokyo.org/2013/</a></li><br>    <li>一日目のtogetter<br><a href="http://togetter.com/li/439941" target="_blank" rel="external">http://togetter.com/li/439941</a></li><br></ul></p>
@@ -155,7 +203,7 @@
     <link href="http://yenjoji.github.io/pages/2012/10/18/svnsync/"/>
     <id>http://yenjoji.github.io/pages/2012/10/18/svnsync/</id>
     <published>2012-10-18T03:00:00.000Z</published>
-    <updated>2015-04-09T03:32:54.000Z</updated>
+    <updated>2015-04-09T16:23:53.000Z</updated>
     <content type="html"><![CDATA[<h1 id="リポジトリを同期する">リポジトリを同期する</h1><h2 id="同期用のリポジトリを作成">同期用のリポジトリを作成</h2><pre><code>svnadmin <span class="built_in">create</span> sync
 </code></pre><h2 id="同期用のリポジトリを初期化">同期用のリポジトリを初期化</h2><pre><code>svnsync init <span class="symbol">file:</span>/<span class="regexp">//dest</span><span class="regexp">/sync https:/</span><span class="regexp">/dest.example.com/svn</span><span class="regexp">/</span>
 </code></pre><p>もし</p>
@@ -185,7 +233,7 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
     <link href="http://yenjoji.github.io/pages/2012/07/07/2012-07-30-momongar/"/>
     <id>http://yenjoji.github.io/pages/2012/07/07/2012-07-30-momongar/</id>
     <published>2012-07-06T15:00:00.000Z</published>
-    <updated>2015-04-09T05:45:20.000Z</updated>
+    <updated>2015-04-09T11:18:00.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://www.flickr.com/photos/130999506@N07/16462770824" title="momongar002 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7693/16462770824_755cc89792.jpg" width="500" height="375" alt="momongar002"></a></p>
 <p>前回のコラムより、順調にフクロモモンガ温度記録システムを運用しています。</p>
 <p>日々の温度の変化がわかるようになり、もし寒すぎたり暑すぎたりした場合は<br>メールで通知が送られてくるので、非常に安心なフクロモモンガライフを送ることができています。</p>
@@ -224,7 +272,7 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
     <link href="http://yenjoji.github.io/pages/2012/04/28/first/"/>
     <id>http://yenjoji.github.io/pages/2012/04/28/first/</id>
     <published>2012-04-28T14:32:00.000Z</published>
-    <updated>2015-04-09T03:29:55.000Z</updated>
+    <updated>2015-04-09T16:22:45.000Z</updated>
     <content type="html"><![CDATA[<h1 id="アジャイルサムライ読書会_横浜道場_特別編_First_に参加しました">アジャイルサムライ読書会　横浜道場　特別編 First に参加しました</h1><p>アジャイルサムライ読書会　横浜道場　特別編 First に参加してきました。</p>
 <p><a href="http://kokucheese.com/event/index/33220/" target="_blank" rel="external">募集ページ</a></p>
 <p>今回は、いつもと趣向を変えてワークショップ＆LT大会でした。</p>
@@ -335,7 +383,7 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
     <link href="http://yenjoji.github.io/pages/2012/04/25/agile-japan/"/>
     <id>http://yenjoji.github.io/pages/2012/04/25/agile-japan/</id>
     <published>2012-04-24T16:52:00.000Z</published>
-    <updated>2015-04-09T03:28:23.000Z</updated>
+    <updated>2015-04-09T16:22:20.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://media.tumblr.com/tumblr_m2zqefKjNe1qiaely.jpg" alt=""></p>
 <p>アジャイルジャパン2012で大盛況だったとの噂の「アジャイルな開発からアジャイルな組織へ」の再演に参加しました。</p>
 <p><a href="http://partake.in/events/9fbe063e-e087-4dad-898d-4425c093edfd" target="_blank" rel="external">告知ページ</a></p>
@@ -404,7 +452,7 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
     <link href="http://yenjoji.github.io/pages/2012/04/22/tocfe/"/>
     <id>http://yenjoji.github.io/pages/2012/04/22/tocfe/</id>
     <published>2012-04-22T14:51:34.000Z</published>
-    <updated>2015-04-09T03:32:10.000Z</updated>
+    <updated>2015-04-09T16:24:12.000Z</updated>
     <content type="html"><![CDATA[<p>4/21 にOracle青山センターで開催された<br>TOCfEブートキャンプに参加してきました。</p>
 <p><a href="http://kokucheese.com/event/index/30962/" target="_blank" rel="external">こくちーずの募集ページ</a></p>
 <p>TOCfEってどういうものなの？という話は<br><a href="http://tocforeducation.org/" target="_blank" rel="external">教育のためのTOC日本支部コミュニティ</a>のページを見ていただくと詳しく書いて有ります。</p>
@@ -464,7 +512,7 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
     <link href="http://yenjoji.github.io/pages/2012/04/15/s2jdbc/"/>
     <id>http://yenjoji.github.io/pages/2012/04/15/s2jdbc/</id>
     <published>2012-04-15T13:10:40.000Z</published>
-    <updated>2015-04-09T03:31:37.000Z</updated>
+    <updated>2015-04-09T16:23:24.000Z</updated>
     <content type="html"><![CDATA[<h1 id="どんなシチュエーションで使うのか">どんなシチュエーションで使うのか</h1><ul>
 <li>バッチ処理でログをDBに書き込んでいるケースなどでログは残したいけど、失敗した場合にトランザクションはロールバックしたいとか。</li>
 </ul>
@@ -549,7 +597,7 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
     <link href="http://yenjoji.github.io/pages/2012/03/12/mysql-sql/"/>
     <id>http://yenjoji.github.io/pages/2012/03/12/mysql-sql/</id>
     <published>2012-03-12T11:42:52.000Z</published>
-    <updated>2015-04-09T03:36:11.000Z</updated>
+    <updated>2015-04-09T16:23:03.000Z</updated>
     <content type="html"><![CDATA[<p>1 ) 実行中のSQLの一覧を取得する<br>　　mysql> show full processlist;</p>
 <p>　　または </p>
 <p>　　mysql> show processlist;</p>
@@ -824,30 +872,6 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
       <category term="Groovy" scheme="http://yenjoji.github.io/pages/tags/Groovy/"/>
     
       <category term="Jenkins" scheme="http://yenjoji.github.io/pages/tags/Jenkins/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[WinXPさんが hal.dll が見つかりません とおっしゃいます]]></title>
-    <link href="http://yenjoji.github.io/pages/2011/06/22/2011-06-22-WinXP-hal-dll/"/>
-    <id>http://yenjoji.github.io/pages/2011/06/22/2011-06-22-WinXP-hal-dll/</id>
-    <published>2011-06-21T15:00:00.000Z</published>
-    <updated>2015-04-09T03:10:48.000Z</updated>
-    <content type="html"><![CDATA[<p>ある日、リモートから会社のPCをWOLで起動したところ、<br>待てど暮らせどログインできるようにならないため、<br>会社に居る同僚に実機を確認してもらったところ。</p>
-<p>「hal.dll が見つかりません」</p>
-<p>などという、メッセージが画面に出ているとの事。</p>
-<p>以下、復旧のために試したこと。</p>
-<p>1.修復コンソールから bootcfg /rebuid<br>  「メモリ不足のため、セットアップを続行できません<br>   セットアップを終了するには、F3 キーを押してください。」<br>2.knoppix で起動 -&gt; boot.ini を手書きで追加<br>  状況変わらず<br>3.修復コンソールから fixmbr<br>  コマンド成功するも状況変わらず。。。<br>4.修復コンソールから chkdsk /r<br>  半日かかって「いくつかのエラーを修復しました。」ざっくり過ぎて何だか分かりません。状況かわらず。<br>5.knoppixで起動。もしやと思いパーティションテーブルを確認<br>  fdisk -l<br>  あった、dellはDISK先頭にメンテナンス用パーティションがあるとな。<br>　リカバリ領域が末尾についていたりとかは何か記憶があったのですが。まさか先頭とはっ。<br>6.boot.ini　を手書きで ”２番めのパーティション”から起動するように変更</p>
-<p><span class="deco" style="font-size:xx-large;">復活しました。</span>よかった。。。</p>
-<p>丸一日つぶれたよ。。。orz</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>ある日、リモートから会社のPCをWOLで起動したところ、<br>待てど暮らせどログインできるようにならないため、<br>会社に居る同僚に実機を確認してもらったところ。</p>
-<p>「hal.dll が見つかりません」</p>
-<p>などという、メッセージが画面に出ていると]]>
-    </summary>
-    
-      <category term="Windows" scheme="http://yenjoji.github.io/pages/tags/Windows/"/>
     
   </entry>
   
