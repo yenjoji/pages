@@ -4,7 +4,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/"/>
-  <updated>2015-04-09T16:21:47.000Z</updated>
+  <updated>2015-04-09T11:18:07.000Z</updated>
   <id>http://yenjoji.github.io/pages/</id>
   
   <author>
@@ -13,54 +13,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[raspi-xfd]]></title>
-    <link href="http://yenjoji.github.io/pages/2015/04/09/raspi-xfd/"/>
-    <id>http://yenjoji.github.io/pages/2015/04/09/raspi-xfd/</id>
-    <published>2015-04-09T10:41:39.000Z</published>
-    <updated>2015-04-09T16:21:47.000Z</updated>
-    <content type="html"><![CDATA[<p>突然ですがXFDをご存知ですか?</p>
-<h2 id="XFDとは">XFDとは</h2><p>オブジェクト倶楽部 <a href="http://objectclub.jp/community/xfd/" target="_blank" rel="external">http://objectclub.jp/community/xfd/</a> によると<br>“””<br>プロジェクトステータスやメトリクスは、目に見えにくい。見えないからこそ難しい。そんな悩みを解決してくれるのが、XFD(eXtreme Feedback Device)です。目に見えて、楽しい、ユニークな装置。目に付いて、絶対見落とさないような装置を指します。安上がりならなおよろし。<br>“””<br>とのことです。</p>
-<p>例えばCIによるビルドエラーに連動したパトランプ <a href="http://gitgear.com/xfd/" target="_blank" rel="external">http://gitgear.com/xfd/</a> など、<br>そのままだと気づきにくいイベントを気づきやすくするデバイスを指すようです。</p>
-<h1 id="概要">概要</h1><p>今回はそんなXFDをRaspberry Piを利用して作成してみたいと思います。<br>なお、今回対象とするCIサーバーは Atlassian Bamboo とします。</p>
-<h1 id="用意するもの">用意するもの</h1><ul>
-<li><p>Raspberry Pi  x  1<br>今買うなら Raspberry Pi 2 Type B がお得だと思われます。</p>
-</li>
-<li><p>赤色LED x 1<br>色はお好みで。<br>今回はビルド失敗のエラー感を出すため 3mm径の赤色高輝度LEDとしました。</p>
-</li>
-<li><p>330Ω抵抗 x 1<br>LEDが壊れないよう基本に則って抵抗を使用します。</p>
-</li>
-<li><p>ブレットボード x 1</p>
-</li>
-<li>配線用ジャンプワイヤ　適量<br>その他配線用の機材を適宜よういします。</li>
-</ul>
-<h1 id="回路">回路</h1><p>上記のパーツを組み込むとこのようになります。</p>
-<p>＜写真＞</p>
-<h1 id="プログラム">プログラム</h1><p>例えば以下のようにREST APIでBambooのビルド結果を取得します。<br>なお、今回はBamboo上でブランチごとにビルドをしている想定のコードとなっています。</p>
-<script src="https://gist.github.com/yenjoji/f29553357d3a28566e7e.js"></script>
-
-
-<h1 id="結果">結果</h1><p>これで、Bambooの指定したブランチがビルドエラーになった際には、<br>接続されたLEDが点灯するようになりました。</p>
-<p>＜写真＞</p>
-<p>しかし、ちょっとこれでは寂しいので、ひと手間加えたいと思います。</p>
-<p>最近はだいぶJOJOや、仮面ライダーに押されているとはいえ、エンジニアといえばガンダムです。<br>（今回は異論は聞かなかったこととします。）</p>
-<p>という訳で、ちょっとガンダム要素を追加してみます。</p>
-<p>＜写真＞</p>
-<p>ビルドが失敗するとシャア専用ズゴックの目が赤く光ります。<br>これでだいぶテンションが上がるようになりました。</p>
-<h1 id="まとめ">まとめ</h1><p>Raspberry Piが発売されたことによって、ネットワークを利用した電子工作が簡単にできるようになりました。</p>
-<p>みなさんもオリジナルのXFDでプロジェクトを活性化してみたらいかがでしょうか。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>突然ですがXFDをご存知ですか?</p>
-<h2 id="XFDとは">XFDとは</h2><p>オブジェクト倶楽部 <a href="http://objectclub.jp/community/xfd/" target="_blank" rel="external">h]]>
-    </summary>
-    
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/tags/Agile/"/>
-    
-      <category term="IoT" scheme="http://yenjoji.github.io/pages/tags/IoT/"/>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[2015/2/2 英語学習勉強会「英語のセッションを聴く」実践編 に参加してきました。]]></title>
@@ -872,6 +824,30 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
       <category term="Groovy" scheme="http://yenjoji.github.io/pages/tags/Groovy/"/>
     
       <category term="Jenkins" scheme="http://yenjoji.github.io/pages/tags/Jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[WinXPさんが hal.dll が見つかりません とおっしゃいます]]></title>
+    <link href="http://yenjoji.github.io/pages/2011/06/22/2011-06-22-WinXP-hal-dll/"/>
+    <id>http://yenjoji.github.io/pages/2011/06/22/2011-06-22-WinXP-hal-dll/</id>
+    <published>2011-06-21T15:00:00.000Z</published>
+    <updated>2015-04-09T03:10:48.000Z</updated>
+    <content type="html"><![CDATA[<p>ある日、リモートから会社のPCをWOLで起動したところ、<br>待てど暮らせどログインできるようにならないため、<br>会社に居る同僚に実機を確認してもらったところ。</p>
+<p>「hal.dll が見つかりません」</p>
+<p>などという、メッセージが画面に出ているとの事。</p>
+<p>以下、復旧のために試したこと。</p>
+<p>1.修復コンソールから bootcfg /rebuid<br>  「メモリ不足のため、セットアップを続行できません<br>   セットアップを終了するには、F3 キーを押してください。」<br>2.knoppix で起動 -&gt; boot.ini を手書きで追加<br>  状況変わらず<br>3.修復コンソールから fixmbr<br>  コマンド成功するも状況変わらず。。。<br>4.修復コンソールから chkdsk /r<br>  半日かかって「いくつかのエラーを修復しました。」ざっくり過ぎて何だか分かりません。状況かわらず。<br>5.knoppixで起動。もしやと思いパーティションテーブルを確認<br>  fdisk -l<br>  あった、dellはDISK先頭にメンテナンス用パーティションがあるとな。<br>　リカバリ領域が末尾についていたりとかは何か記憶があったのですが。まさか先頭とはっ。<br>6.boot.ini　を手書きで ”２番めのパーティション”から起動するように変更</p>
+<p><span class="deco" style="font-size:xx-large;">復活しました。</span>よかった。。。</p>
+<p>丸一日つぶれたよ。。。orz</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>ある日、リモートから会社のPCをWOLで起動したところ、<br>待てど暮らせどログインできるようにならないため、<br>会社に居る同僚に実機を確認してもらったところ。</p>
+<p>「hal.dll が見つかりません」</p>
+<p>などという、メッセージが画面に出ていると]]>
+    </summary>
+    
+      <category term="Windows" scheme="http://yenjoji.github.io/pages/tags/Windows/"/>
     
   </entry>
   
