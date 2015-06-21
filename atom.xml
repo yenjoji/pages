@@ -4,7 +4,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/"/>
-  <updated>2015-04-14T11:30:56.000Z</updated>
+  <updated>2015-06-21T17:55:29.000Z</updated>
   <id>http://yenjoji.github.io/pages/</id>
   
   <author>
@@ -13,6 +13,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[2015/6/21 Agilesamurai Basecamp ふりかえり & TDD でお話させていただきました。]]></title>
+    <link href="http://yenjoji.github.io/pages/2015/06/22/20150621-spoken-at-asbc-tdd/"/>
+    <id>http://yenjoji.github.io/pages/2015/06/22/20150621-spoken-at-asbc-tdd/</id>
+    <published>2015-06-21T16:03:35.000Z</published>
+    <updated>2015-06-21T17:55:29.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://agilesamurai-basecamp.doorkeeper.jp/events/25071" target="_blank" rel="external">Agile Samurai Basecamp 2015.06 ふりかえり&amp;TDD</a><br>の事例紹介セッションでお話をさせていただきました。</p>
+<p>基本一発ネタですが、スライドをアップしました。</p>
+<h2 id="事例紹介_「安心してください。テスト書いてます」">事例紹介 「安心してください。テスト書いてます」</h2><p><iframe src="//www.slideshare.net/slideshow/embed_code/key/ibHSt7blkudEEl" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/YasutoEnjoji/20150621-asbc-pub" title="20150621 Agilesamrai Basecamp TDD事例紹介" target="_blank">20150621 Agilesamrai Basecamp TDD事例紹介</a> </strong> from <strong><a href="//www.slideshare.net/YasutoEnjoji" target="_blank">Yasuto Enjoji</a></strong> </div></p>
+<h2 id="QA">QA</h2><p>質疑応答で質問されたことを覚えている範囲で。</p>
+<h3 id="良いテストコードを書くにはどうしたらいいか">良いテストコードを書くにはどうしたらいいか</h3><ul>
+<li>（直接の回答では無いですが）実際にコードレビューとかしている時に感じた事は<ul>
+<li>プロダクトコードの意図が汲み取れる様なテストだと嬉しいです。</li>
+<li>単にカバレッジ等を稼ぐために量産した意図のわからないテストは嬉しくないです。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Red_Green_Refactor_を守った場合と守らなかった場合で定量的な差はあるのか">Red Green Refactor を守った場合と守らなかった場合で定量的な差はあるのか</h3><ul>
+<li>私達の現場では定量的に計測していないため、わかりません。</li>
+</ul>
+<h3 id="TDD導入するときに、既存チームからの暖簾分けする際のメンバーはどういう基準で選びましたか？">TDD導入するときに、既存チームからの暖簾分けする際のメンバーはどういう基準で選びましたか？</h3><ul>
+<li>これが正解というのはないですが、私達のケースでは生きのいい技術が好きな若者を投入しました。<ul>
+<li>自分からどんどんテストを書いて、周りを巻き込んでテストを書くという流れを作ってもらおうという意図でした。</li>
+<li>チームメンバーもテストを書くことについては肯定的だったので、リズムを作ればうまくいくと考えてました。</li>
+</ul>
+</li>
+</ul>
+<h3 id="要求を満たしているかをTDDで担保するにはどうしたら良いか">要求を満たしているかをTDDで担保するにはどうしたら良いか</h3><ul>
+<li>要求を満たしているかどうかはUnitテストでは担保できない（しにくい）と考えています。<ul>
+<li>私の現場では、手動で行う結合テスト（受け入れテスト）が開発フロー上義務付けられているので、そこで担保できるようにしています。</li>
+</ul>
+</li>
+</ul>
+<p> 同じ現場で働いている @setoazusa さんからのキラーパスをうっかり受けてしまったことから始まった今回の登壇でしたが、<br> 豪華登壇者と並ばせていただくなど、本当に貴重な体験をさせていただきました。<br> こんな場を設けてくださったスタッフの皆様、超きれいな眺めのイイ会場を提供してくださったリクルートジョブズ様<br> 拙い話を最後まで聞いてくださった参加者の方々に感謝致します。<br> 有難う御座いました。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://agilesamurai-basecamp.doorkeeper.jp/events/25071" target="_blank" rel="external">Agile Samurai Basecamp 2015.06 ふりかえり&am]]>
+    </summary>
+    
+      <category term="Agile" scheme="http://yenjoji.github.io/pages/tags/Agile/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Raspberry Pi で XFD]]></title>
@@ -864,30 +907,6 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
       <category term="Scrum" scheme="http://yenjoji.github.io/pages/tags/Scrum/"/>
     
       <category term="community" scheme="http://yenjoji.github.io/pages/tags/community/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[[Groovy]GroovyでtomcatのWebappを再起動してみる]]></title>
-    <link href="http://yenjoji.github.io/pages/2011/06/23/2011-06-23-Groovy-Groovy-tomcat-Webapp/"/>
-    <id>http://yenjoji.github.io/pages/2011/06/23/2011-06-23-Groovy-Groovy-tomcat-Webapp/</id>
-    <published>2011-06-22T15:00:00.000Z</published>
-    <updated>2015-04-09T03:18:41.000Z</updated>
-    <content type="html"><![CDATA[<p>Jenkins の DeployプラグインでTomcatにDeployし続けていたところTomcatのPermGenSpaceが枯渇しておちてしまったので、<br>対応方法を模索中。。。</p>
-<p>定期的な再起動とかがいいのですかねぇ。</p>
-<p>で、Groovyとかでどうにかできないか調べたところ。Webapp単位では再起動できたので、メモ。</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> groovyx.net.http.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> tomcatHost = <span class="string">"http://tomcat:8080/"</span></span><br><span class="line"><span class="keyword">def</span> userId = <span class="string">"user"</span></span><br><span class="line"><span class="keyword">def</span> passwd = <span class="string">"passwd"</span></span><br><span class="line"><span class="keyword">def</span> appName = <span class="string">"/app-name"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> tomcatManage = <span class="keyword">new</span> HTTPBuilder( tomcatHost )</span><br><span class="line">tomcatManage.auth.basic userId, passwd</span><br><span class="line"></span><br><span class="line">tomcatManage.get( <span class="string">path:</span><span class="string">'manager/stop'</span>, <span class="string">query:</span> [<span class="string">path:</span> appName])?.dump()</span><br><span class="line">tomcatManage.get( path:<span class="string">'manager/start'</span>, <span class="string">query:</span> [<span class="string">path:</span> appName])?.dump()</span><br></pre></td></tr></table></figure>
-<p>でも、あんまり意味がないか。。。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Jenkins の DeployプラグインでTomcatにDeployし続けていたところTomcatのPermGenSpaceが枯渇しておちてしまったので、<br>対応方法を模索中。。。</p>
-<p>定期的な再起動とかがいいのですかねぇ。</p>
-<p>で、Groovyと]]>
-    </summary>
-    
-      <category term="Groovy" scheme="http://yenjoji.github.io/pages/tags/Groovy/"/>
-    
-      <category term="Jenkins" scheme="http://yenjoji.github.io/pages/tags/Jenkins/"/>
     
   </entry>
   
