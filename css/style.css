@@ -1231,16 +1231,22 @@ a.article-title:hover {
   margin: 0;
 }
 .article-entry .gist .gist-file .gist-data {
-  background: none;
+  background: #2d2d2d;
   border: none;
 }
 .article-entry .gist .gist-file .gist-data .line-numbers {
-  background: none;
+  background: #2d2d2d;
   border: none;
   padding: 0 20px 0 0;
 }
 .article-entry .gist .gist-file .gist-data .line-data {
   padding: 0 !important;
+}
+.article-entry .gist .gist-file .gist-data .line-number {
+  height: 22px;
+}
+.article-entry .gist .gist-file .gist-data .line {
+  background: #2d2d2d;
 }
 .article-entry .gist .gist-file .highlight {
   margin: 0;
