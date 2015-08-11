@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Mackerel + Raspberry Pi で 職場環境をモニタリング
 皆さんMackerelをご存知ですか？
-Mackerel https://mackerel.io とは はてな社が提供しているサーバー監視のサービスで、サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。
-また、監視ルールを設定しておくことにより、サ">
+Mackerel とは はてな社が提供しているサーバー監視のサービスで、サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。
+また、監視ルールを設定しておくことにより、サーバーが特定の状態（CPU使用率90%以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mackerel + Raspberry Pi で 職場環境をモニタリング">
 <meta property="og:url" content="http://yenjoji.github.io/pages/2015/07/14/mackerel-raspi-temp/index.html">
 <meta property="og:site_name" content="Rouleur">
 <meta property="og:description" content="Mackerel + Raspberry Pi で 職場環境をモニタリング
 皆さんMackerelをご存知ですか？
-Mackerel https://mackerel.io とは はてな社が提供しているサーバー監視のサービスで、サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。
-また、監視ルールを設定しておくことにより、サ">
+Mackerel とは はてな社が提供しているサーバー監視のサービスで、サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。
+また、監視ルールを設定しておくことにより、サーバーが特定の状態（CPU使用率90%以">
 <meta property="og:image" content="https://farm8.staticflickr.com/7695/17211140511_d168850efd_z.jpg">
 <meta property="og:image" content="https://c1.staticflickr.com/1/281/19282373940_5b6feac8f1.jpg">
 <meta property="og:image" content="https://c1.staticflickr.com/1/519/19282339528_2010ee2383.jpg">
@@ -27,12 +27,13 @@ Mackerel https://mackerel.io とは はてな社が提供しているサーバ�
 <meta property="og:image" content="https://c1.staticflickr.com/1/294/19443993586_0f60c72627.jpg">
 <meta property="og:image" content="https://c2.staticflickr.com/4/3707/18849420843_3bd5471118.jpg">
 <meta property="og:image" content="https://c1.staticflickr.com/1/488/19443991026_6681b756d0.jpg">
+<meta property="og:updated_time" content="2015-08-11T06:02:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mackerel + Raspberry Pi で 職場環境をモニタリング">
 <meta name="twitter:description" content="Mackerel + Raspberry Pi で 職場環境をモニタリング
 皆さんMackerelをご存知ですか？
-Mackerel https://mackerel.io とは はてな社が提供しているサーバー監視のサービスで、サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。
-また、監視ルールを設定しておくことにより、サ">
+Mackerel とは はてな社が提供しているサーバー監視のサービスで、サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。
+また、監視ルールを設定しておくことにより、サーバーが特定の状態（CPU使用率90%以">
   
     <link rel="alternative" href="/pages/atom.xml" title="Rouleur" type="application/atom+xml">
   
@@ -79,7 +80,7 @@ ga('send', 'pageview');
       </nav>
       <nav id="sub-nav">
         <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yenjoji.github.io/pages"></form>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yenjoji.github.io/pages"></form>
         </div>
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
         
@@ -102,7 +103,7 @@ ga('send', 'pageview');
     <a href="http://about.me/yenjoji" class="mobile-nav-link">About</a>
   
   <div id="search-form-wrap-mobile">
-    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yenjoji.github.io/pages"></form>
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yenjoji.github.io/pages"></form>
   </div>
 </nav>
       <div class="outer">
@@ -116,6 +117,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/pages/2015/07/23/getting-start-play-with-idea/">Play! Scalaを Macで始める</a>
+          </li>
         
           <li>
             <a href="/pages/2015/07/14/mackerel-raspi-temp/">Mackerel + Raspberry Pi で 職場環境をモニタリング</a>
@@ -133,10 +138,6 @@ ga('send', 'pageview');
             <a href="/pages/2015/02/03/2015-2-2-mpp/">2015/2/2 英語学習勉強会「英語のセッションを聴く」実践編 に参加してきました。</a>
           </li>
         
-          <li>
-            <a href="/pages/2013/01/24/sgt2013-day1/">Scrum  Alliance Regional Gathering Tokyo 2013 （１日目）に参加してきました</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -146,7 +147,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Agile/">Agile</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Couchbase/">Couchbase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/DevLove/">DevLove</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Groovy/">Groovy</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/IoT/">IoT</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Jenkins/">Jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Linux/">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/S2JDBC/">S2JDBC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/SVN/">SVN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Scrum/">Scrum</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Struts/">Struts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/TOCfE/">TOCfE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/apache/">apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/astah/">astah</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/community/">community</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/eclipse/">eclipse</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/english/">english</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/momongar/">momongar</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/program/">program</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/twitter/">twitter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/横浜道場/">横浜道場</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Agile/">Agile</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Couchbase/">Couchbase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/DevLove/">DevLove</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Groovy/">Groovy</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/IntellijIDEA/">IntellijIDEA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/IoT/">IoT</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Jenkins/">Jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Linux/">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Mackerel/">Mackerel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Play/">Play</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/RasperryPi/">RasperryPi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/S2JDBC/">S2JDBC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/SVN/">SVN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Scala/">Scala</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Scrum/">Scrum</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Struts/">Struts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/TOCfE/">TOCfE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/apache/">apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/astah/">astah</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/community/">community</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/eclipse/">eclipse</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/english/">english</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/momongar/">momongar</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/program/">program</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/twitter/">twitter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/ネタ/">ネタ</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/横浜道場/">横浜道場</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -155,7 +156,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/07/">7月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/06/">6月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/04/">4月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/02/">2月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2013/01/">1月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/10/">10月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/07/">7月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/04/">4月 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/03/">3月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/01/">1月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/12/">12月 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/10/">10月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/07/">7月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/06/">6月 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/05/">5月 2011</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/07/">7月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/06/">6月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/04/">4月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/02/">2月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2013/01/">1月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/10/">10月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/07/">7月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/04/">4月 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/03/">3月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/01/">1月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/12/">12月 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/10/">10月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/07/">7月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/06/">6月 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/05/">5月 2011</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -164,7 +165,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/pages/tags/Agile/" style="font-size: 18px;">Agile</a><a href="/pages/tags/Couchbase/" style="font-size: 10px;">Couchbase</a><a href="/pages/tags/DevLove/" style="font-size: 10px;">DevLove</a><a href="/pages/tags/Groovy/" style="font-size: 16px;">Groovy</a><a href="/pages/tags/IoT/" style="font-size: 14px;">IoT</a><a href="/pages/tags/Jenkins/" style="font-size: 10px;">Jenkins</a><a href="/pages/tags/Linux/" style="font-size: 12px;">Linux</a><a href="/pages/tags/S2JDBC/" style="font-size: 10px;">S2JDBC</a><a href="/pages/tags/SVN/" style="font-size: 10px;">SVN</a><a href="/pages/tags/Scrum/" style="font-size: 12px;">Scrum</a><a href="/pages/tags/Struts/" style="font-size: 10px;">Struts</a><a href="/pages/tags/TOCfE/" style="font-size: 10px;">TOCfE</a><a href="/pages/tags/Windows/" style="font-size: 10px;">Windows</a><a href="/pages/tags/apache/" style="font-size: 10px;">apache</a><a href="/pages/tags/astah/" style="font-size: 10px;">astah</a><a href="/pages/tags/community/" style="font-size: 20px;">community</a><a href="/pages/tags/eclipse/" style="font-size: 10px;">eclipse</a><a href="/pages/tags/english/" style="font-size: 10px;">english</a><a href="/pages/tags/momongar/" style="font-size: 12px;">momongar</a><a href="/pages/tags/mysql/" style="font-size: 10px;">mysql</a><a href="/pages/tags/program/" style="font-size: 10px;">program</a><a href="/pages/tags/twitter/" style="font-size: 10px;">twitter</a><a href="/pages/tags/横浜道場/" style="font-size: 12px;">横浜道場</a>
+      <a href="/pages/tags/Agile/" style="font-size: 18px;">Agile</a> <a href="/pages/tags/Couchbase/" style="font-size: 10px;">Couchbase</a> <a href="/pages/tags/DevLove/" style="font-size: 10px;">DevLove</a> <a href="/pages/tags/Groovy/" style="font-size: 16px;">Groovy</a> <a href="/pages/tags/IntellijIDEA/" style="font-size: 10px;">IntellijIDEA</a> <a href="/pages/tags/IoT/" style="font-size: 14px;">IoT</a> <a href="/pages/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/pages/tags/Linux/" style="font-size: 12px;">Linux</a> <a href="/pages/tags/Mackerel/" style="font-size: 10px;">Mackerel</a> <a href="/pages/tags/Play/" style="font-size: 10px;">Play</a> <a href="/pages/tags/RasperryPi/" style="font-size: 12px;">RasperryPi</a> <a href="/pages/tags/S2JDBC/" style="font-size: 10px;">S2JDBC</a> <a href="/pages/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/pages/tags/Scala/" style="font-size: 10px;">Scala</a> <a href="/pages/tags/Scrum/" style="font-size: 12px;">Scrum</a> <a href="/pages/tags/Struts/" style="font-size: 10px;">Struts</a> <a href="/pages/tags/TOCfE/" style="font-size: 10px;">TOCfE</a> <a href="/pages/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/pages/tags/apache/" style="font-size: 10px;">apache</a> <a href="/pages/tags/astah/" style="font-size: 10px;">astah</a> <a href="/pages/tags/community/" style="font-size: 20px;">community</a> <a href="/pages/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/pages/tags/english/" style="font-size: 10px;">english</a> <a href="/pages/tags/momongar/" style="font-size: 12px;">momongar</a> <a href="/pages/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/pages/tags/program/" style="font-size: 10px;">program</a> <a href="/pages/tags/twitter/" style="font-size: 10px;">twitter</a> <a href="/pages/tags/ネタ/" style="font-size: 12px;">ネタ</a> <a href="/pages/tags/横浜道場/" style="font-size: 12px;">横浜道場</a>
     </div>
   </div>
 
@@ -210,7 +211,7 @@ ga('send', 'pageview');
       
         <p>Mackerel + Raspberry Pi で 職場環境をモニタリング</p>
 <p>皆さんMackerelをご存知ですか？</p>
-<p>Mackerel <a href="https://mackerel.io" target="_blank" rel="external">https://mackerel.io</a> とは はてな社が提供しているサーバー監視のサービスで、<br>サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。</p>
+<p><a href="https://mackerel.io" target="_blank" rel="external">Mackerel</a> とは はてな社が提供しているサーバー監視のサービスで、<br>サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。</p>
 <p>また、監視ルールを設定しておくことにより、サーバーが特定の状態（CPU使用率90%以上など）になった場合アラートを通知したり<br>無料プランでも一部制限はありますが、サーバー5台まで監視可能など、お手軽、便利、太っ腹なサービスです。</p>
 <p>今回は、そんな本来はサーバー監視のサービスであるMackerelを本来の用途以外に使ってみようと思います。</p>
 <h1 id="突然ですが、夏ですね">突然ですが、夏ですね</h1><p>だんだん気候も夏めいて来た今日このごろ、やはり気になるのはオフィスの環境。<br>健康を害するような環境で仕事をしないためにも、暑さで仕事の効率が落ちないためにも職場環境には気を使いたいところです。</p>
@@ -241,17 +242,17 @@ ga('send', 'pageview');
 <div class=""><br>  <script src="https://gist.github.com/yenjoji/40d135519a0741d3718b.js"></script><br></div>
 
 <p>これをRaspberryPI上でコンパイルし、パスの通った場所に配置します。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https:<span class="comment">//gist.githubusercontent.com/yenjoji/40d135519a0741d3718b/raw/5c7835651a539f16f3446108e15aa482f6c2111f/am2321.c</span></span><br><span class="line"></span><br><span class="line">gcc -lm -o a<span class="title">m2321</span> a<span class="title">m2321.</span>c</span><br><span class="line"></span><br><span class="line">chmod a+x a<span class="title">m2321</span></span><br><span class="line">mv a<span class="title">m2321</span> /usr/local/bi<span class="label">n</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://gist.githubusercontent.com/yenjoji/40d135519a0741d3718b/raw/5c7835651a539f16f3446108e15aa482f6c2111f/am2321.c&#10;&#10;gcc -lm -o am2321 am2321.c&#10;&#10;chmod a+x am2321&#10;mv am2321 /usr/local/bin</span><br></pre></td></tr></table></figure>
 <h1 id="Mackerelとの連携">Mackerelとの連携</h1><h2 id="Mackerelに登録してオーガニゼーションを作成する">Mackerelに登録してオーガニゼーションを作成する</h2><p><a href="http://help-ja.mackerel.io/entry/getting-started" target="_blank" rel="external">http://help-ja.mackerel.io/entry/getting-started</a><br>の手順にそって、オーガニゼーションを作成します。</p>
 <h2 id="maeckrel-agent_をインストールする">maeckrel-agent をインストールする</h2><p>パッケージをダウンロードし、インストールします。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -LO http:<span class="comment">//file.mackerel.io/agent/deb/mackerel-agent_latest.all.deb</span></span><br><span class="line">sudo dpkg -<span class="tag">i</span> mackerel-agent_latest<span class="class">.all</span><span class="class">.deb</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO http://file.mackerel.io/agent/deb/mackerel-agent_latest.all.deb&#10;sudo dpkg -i mackerel-agent_latest.all.deb</span><br></pre></td></tr></table></figure>
 <h2 id="ARM_版バイナリに実行ファイルを置き換える">ARM 版バイナリに実行ファイルを置き換える</h2><p>通常ならば、パッケージをインストールすれば完了ですが、<br>RasperryPiはもともとMackerelが想定しているCPUとアーキテクチャが違うためかそのままではうまく起動しません。<br>そのため、RaspberryPiのCPUにあったアーキテクチャのMackerelの実行ファイルで上書きします。</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -LO <span class="string">https:</span><span class="comment">//github.com/mackerelio/mackerel-agent/releases/download/v0.17.1/mackerel-agent_linux_arm.tar.gz</span></span><br><span class="line">tar xf mackerel-agent_linux_arm.tar.gz</span><br><span class="line"></span><br><span class="line">sudo mv <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>mackerel-agent <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>mackerel-agent.org</span><br><span class="line">sudo mv mackerel-agent_linux_arm<span class="regexp">/mackerel-agent /</span>usr<span class="regexp">/local/</span>bin/mackerel-agent</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://github.com/mackerelio/mackerel-agent/releases/download/v0.17.1/mackerel-agent_linux_arm.tar.gz&#10;tar xf mackerel-agent_linux_arm.tar.gz&#10;&#10;sudo mv /usr/local/bin/mackerel-agent /usr/local/bin/mackerel-agent.org&#10;sudo mv mackerel-agent_linux_arm/mackerel-agent /usr/local/bin/mackerel-agent</span><br></pre></td></tr></table></figure>
 <h2 id="maeckrel-agentの設定">maeckrel-agentの設定</h2><p>インストールが完了したので、設定をしていきます。</p>
 <p>設定ファイルに apiKeyとカスタムメトリクスの設定を追加します。<br>/etc/mackerel-agent/mackerel-agent.conf に オーガニゼーションの画面に表示されているAPIKEYと<br>以下のカスタムメトリクスの設定を追加してください。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Get room status</span></span><br><span class="line">[plugin.metrics.temperature]</span><br><span class="line"><span class="built_in">command</span> = <span class="string">"/usr/local/bin/am2321 -m"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Get room status&#10;[plugin.metrics.temperature]&#10;command = &#34;/usr/local/bin/am2321 -m&#34;</span><br></pre></td></tr></table></figure>
 <h2 id="mackerel-agent_起動">mackerel-agent 起動</h2><p>以上で設定がひと通り完了しましたので、エージェントを起動します。</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mackerel-agent <span class="built_in">start</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mackerel-agent start</span><br></pre></td></tr></table></figure>
 <p>これで、先ほど作成したオーガニゼーションに自動的にホストが追加され、<br>mackerelのデフォルトの監視項目と、温湿度計のデータが記録されていくようになります。</p>
 <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19282373940/in/dateposted-public/" title="mackerel-room" target="_blank" rel="external"><img src="https://c1.staticflickr.com/1/281/19282373940_5b6feac8f1.jpg" width="500" height="333" alt="mackerel-room"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <h1 id="アラートの設定">アラートの設定</h1><p>無事に温度と湿度の記録が始まりました。<br>しかしながらこれだけでは、職場が危機な状況になっても気づくことが出来ません。</p>
@@ -282,14 +283,25 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yenjoji.github.io/pages/2015/07/14/mackerel-raspi-temp/" data-id="cic4k3aat000ujovx9hzjuzn7" class="article-share-link">Share</a>
+      <a data-url="http://yenjoji.github.io/pages/2015/07/14/mackerel-raspi-temp/" data-id="cid6xewal000ut4vx9xl7t5zv" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/IoT/">IoT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Mackerel/">Mackerel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/RasperryPi/">RasperryPi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/ネタ/">ネタ</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
+  
+    <a href="/pages/2015/07/23/getting-start-play-with-idea/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Play! Scalaを Macで始める
+        
+      </div>
+    </a>
   
   
     <a href="/pages/2015/06/22/20150621-spoken-at-asbc-tdd/" id="article-nav-older" class="article-nav-link-wrap">

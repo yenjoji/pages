@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
+  
   <title><![CDATA[Rouleur]]></title>
   
   <link href="/pages/atom.xml" rel="self"/>
-  <link href="http://yenjoji.github.io/pages/"/>
-  <updated>2015-07-15T09:15:07.000Z</updated>
-  <id>http://yenjoji.github.io/pages/</id>
+  <link href="http://yenjoji.github.io/pages/pages//"/>
+  <updated>2015-08-11T07:09:58.000Z</updated>
+  <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
     <name><![CDATA[yenjoji]]></name>
@@ -15,14 +16,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Play! Scalaを Macで始める]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2015/07/23/getting-start-play-with-idea/"/>
+    <id>http://yenjoji.github.io/pages/pages/2015/07/23/getting-start-play-with-idea/</id>
+    <published>2015-07-23T12:23:11.000Z</published>
+    <updated>2015-08-11T07:09:58.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="Play!_Scalaを_Macで始める">Play! Scalaを Macで始める</h1><p>久しぶりにPlay!に触ったら昔とだいぶ違ったのでメモ。</p>
+<h1 id="今回の目標">今回の目標</h1><ol>
+<li>Play!をインストール</li>
+<li>プロジェクトのスケルトンを作成</li>
+<li>IntellijIDEAで開発スタートする準備をする<br>ところまでが目標。</li>
+</ol>
+<h1 id="Play!のインストール">Play!のインストール</h1><p>しばらくぶりにPlay!にさわろうと思ったら、playコマンドがなくなっていて、今はtypesafe-activatorにその役目を譲っているらしいので、typesafe-activatorをインストールします。<br>typesafe-activatorとその開発元のTypesafe社は <a href="http://osdn.jp/magazine/13/08/15/150000" target="_blank" rel="external">http://osdn.jp/magazine/13/08/15/150000</a> <a href="http://osdn.jp/magazine/11/05/13/0340257" target="_blank" rel="external">http://osdn.jp/magazine/11/05/13/0340257</a> この辺りをご参照ください。<br>(私の所属している会社も最近パートナーの末席に仲間入りしました。 <a href="https://www.typesafe.com/partners/systemintegrator-partners#community" target="_blank" rel="external">https://www.typesafe.com/partners/systemintegrator-partners#community</a> )</p>
+<p>typesafe-activatorはhomebrewでインストールできるので、おもむろにbrewコマンドでインストールします。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install typesafe-activator                                                                                                                          *[feature/merge]&#10;==&#62; Downloading https://homebrew.bintray.com/bottles/typesafe-activator-1.3.3.mavericks.bottle.tar.gz&#10;######################################################################## 100.0%&#10;==&#62; Pouring typesafe-activator-1.3.3.mavericks.bottle.tar.gz&#10;&#127866;  /usr/local/Cellar/typesafe-activator/1.3.3: 4 files, 1.2M</span><br></pre></td></tr></table></figure>
+<h1 id="プロジェクトのスケルトンを作成">プロジェクトのスケルトンを作成</h1><h2 id="プロジェクトの作成">プロジェクトの作成</h2><p>playコマンドの代わりにactivatorコマンドを使用してスケルトンを作成します。<br>いくつか質問されるので順次答えます。</p>
+<ol>
+<li>テンプレートは 6 の play-scala</li>
+<li>アプリケーション名は任意のものを指定</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ activator new&#10;&#10;Fetching the latest list of templates...&#10;&#10;Browse the list of templates: http://typesafe.com/activator/templates&#10;Choose from these featured templates or enter a template name:&#10;  1) minimal-akka-java-seed&#10;  2) minimal-akka-scala-seed&#10;  3) minimal-java&#10;  4) minimal-scala&#10;  5) play-java&#10;  6) play-scala&#10;(hit tab to see a list of all templates)&#10;&#62; 6&#10;Enter a name for your application (just press enter for &#39;play-scala&#39;)&#10;&#62; your-project-name&#10;OK, application &#34;your-project-name&#34; is being created using the &#34;play-scala&#34; template.&#10;&#10;To run &#34;your-project-name&#34; from the command line, &#34;cd your-project-name&#34; then:&#10;/Users/enjoji/projects/your-project-name/activator run&#10;&#10;To run the test for &#34;your-project-name&#34; from the command line, &#34;cd your-project-name&#34; then:&#10;/Users/enjoji/projects/your-project-name/activator test&#10;&#10;To run the Activator UI for &#34;your-project-name&#34; from the command line, &#34;cd your-project-name&#34; then:&#10;/Users/enjoji/projects/your-project-name/activator ui</span><br></pre></td></tr></table></figure>
+<h2 id="動作確認">動作確認</h2><p>プロジェクトが出来たので試しに起動してみます。<br>プロジェクトのディレクトリに移動し、 activator run を実行しエラーなく起動すればOKです。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ activator run&#10;Getting org.scala-sbt sbt 0.13.8 ...&#10;downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.jar</span><br></pre></td></tr></table></figure>
+<p>どうやらJava8じゃないと起動しない模様</p>
+<h2 id="IntelliJで使う">IntelliJで使う</h2><h3 id="Intellij_Install">Intellij Install</h3><ul>
+<li><p>まずは IntalliJ IDEA をインストールします。</p>
+</li>
+<li><p>次に必要なプラグインをインストールします</p>
+<ul>
+<li>Plugin<ul>
+<li>SBT</li>
+<li>Scala<br>プラグインをインストール</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ソースのインポート">ソースのインポート</h3><p>ソースコードをIDEAプロジェクトとしてインポートします。</p>
+<ol>
+<li>メニューを File&gt;New&gt;Project from Existing Source とたどります。</li>
+<li>ソースルートを選択</li>
+<li>Import project from external model</li>
+<li>SBTを選択</li>
+<li>Project SDK に Java8 を選択し Finish</li>
+</ol>
+<p>以上で、Play＋ScalaのスケルトンプロジェクトができてIDEAでの開発準備が整いました。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Play!_Scalaを_Macで始める">Play! Scalaを Macで始める</h1><p>久しぶりにPlay!に触ったら昔とだいぶ違ったのでメモ。</p>
+<h1 id="今回の目標">今回の目標</h1><ol>
+<li>Play!をインストール</l]]>
+    </summary>
+    
+      <category term="IntellijIDEA" scheme="http://yenjoji.github.io/pages/pages/tags/IntellijIDEA/"/>
+    
+      <category term="Play" scheme="http://yenjoji.github.io/pages/pages/tags/Play/"/>
+    
+      <category term="Scala" scheme="http://yenjoji.github.io/pages/pages/tags/Scala/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Mackerel + Raspberry Pi で 職場環境をモニタリング]]></title>
-    <link href="http://yenjoji.github.io/pages/2015/07/14/mackerel-raspi-temp/"/>
-    <id>http://yenjoji.github.io/pages/2015/07/14/mackerel-raspi-temp/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2015/07/14/mackerel-raspi-temp/"/>
+    <id>http://yenjoji.github.io/pages/pages/2015/07/14/mackerel-raspi-temp/</id>
     <published>2015-07-14T12:49:44.000Z</published>
-    <updated>2015-07-15T09:15:07.000Z</updated>
+    <updated>2015-08-11T06:02:36.000Z</updated>
     <content type="html"><![CDATA[<p>Mackerel + Raspberry Pi で 職場環境をモニタリング</p>
 <p>皆さんMackerelをご存知ですか？</p>
-<p>Mackerel <a href="https://mackerel.io" target="_blank" rel="external">https://mackerel.io</a> とは はてな社が提供しているサーバー監視のサービスで、<br>サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。</p>
+<p><a href="https://mackerel.io" target="_blank" rel="external">Mackerel</a> とは はてな社が提供しているサーバー監視のサービスで、<br>サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。</p>
 <p>また、監視ルールを設定しておくことにより、サーバーが特定の状態（CPU使用率90%以上など）になった場合アラートを通知したり<br>無料プランでも一部制限はありますが、サーバー5台まで監視可能など、お手軽、便利、太っ腹なサービスです。</p>
 <p>今回は、そんな本来はサーバー監視のサービスであるMackerelを本来の用途以外に使ってみようと思います。</p>
 <h1 id="突然ですが、夏ですね">突然ですが、夏ですね</h1><p>だんだん気候も夏めいて来た今日このごろ、やはり気になるのはオフィスの環境。<br>健康を害するような環境で仕事をしないためにも、暑さで仕事の効率が落ちないためにも職場環境には気を使いたいところです。</p>
@@ -53,17 +115,17 @@
 <div class=""><br>  <script src="https://gist.github.com/yenjoji/40d135519a0741d3718b.js"></script><br></div>
 
 <p>これをRaspberryPI上でコンパイルし、パスの通った場所に配置します。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https:<span class="comment">//gist.githubusercontent.com/yenjoji/40d135519a0741d3718b/raw/5c7835651a539f16f3446108e15aa482f6c2111f/am2321.c</span></span><br><span class="line"></span><br><span class="line">gcc -lm -o a<span class="title">m2321</span> a<span class="title">m2321.</span>c</span><br><span class="line"></span><br><span class="line">chmod a+x a<span class="title">m2321</span></span><br><span class="line">mv a<span class="title">m2321</span> /usr/local/bi<span class="label">n</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://gist.githubusercontent.com/yenjoji/40d135519a0741d3718b/raw/5c7835651a539f16f3446108e15aa482f6c2111f/am2321.c&#10;&#10;gcc -lm -o am2321 am2321.c&#10;&#10;chmod a+x am2321&#10;mv am2321 /usr/local/bin</span><br></pre></td></tr></table></figure>
 <h1 id="Mackerelとの連携">Mackerelとの連携</h1><h2 id="Mackerelに登録してオーガニゼーションを作成する">Mackerelに登録してオーガニゼーションを作成する</h2><p><a href="http://help-ja.mackerel.io/entry/getting-started" target="_blank" rel="external">http://help-ja.mackerel.io/entry/getting-started</a><br>の手順にそって、オーガニゼーションを作成します。</p>
 <h2 id="maeckrel-agent_をインストールする">maeckrel-agent をインストールする</h2><p>パッケージをダウンロードし、インストールします。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -LO http:<span class="comment">//file.mackerel.io/agent/deb/mackerel-agent_latest.all.deb</span></span><br><span class="line">sudo dpkg -<span class="tag">i</span> mackerel-agent_latest<span class="class">.all</span><span class="class">.deb</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO http://file.mackerel.io/agent/deb/mackerel-agent_latest.all.deb&#10;sudo dpkg -i mackerel-agent_latest.all.deb</span><br></pre></td></tr></table></figure>
 <h2 id="ARM_版バイナリに実行ファイルを置き換える">ARM 版バイナリに実行ファイルを置き換える</h2><p>通常ならば、パッケージをインストールすれば完了ですが、<br>RasperryPiはもともとMackerelが想定しているCPUとアーキテクチャが違うためかそのままではうまく起動しません。<br>そのため、RaspberryPiのCPUにあったアーキテクチャのMackerelの実行ファイルで上書きします。</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -LO <span class="string">https:</span><span class="comment">//github.com/mackerelio/mackerel-agent/releases/download/v0.17.1/mackerel-agent_linux_arm.tar.gz</span></span><br><span class="line">tar xf mackerel-agent_linux_arm.tar.gz</span><br><span class="line"></span><br><span class="line">sudo mv <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>mackerel-agent <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>mackerel-agent.org</span><br><span class="line">sudo mv mackerel-agent_linux_arm<span class="regexp">/mackerel-agent /</span>usr<span class="regexp">/local/</span>bin/mackerel-agent</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://github.com/mackerelio/mackerel-agent/releases/download/v0.17.1/mackerel-agent_linux_arm.tar.gz&#10;tar xf mackerel-agent_linux_arm.tar.gz&#10;&#10;sudo mv /usr/local/bin/mackerel-agent /usr/local/bin/mackerel-agent.org&#10;sudo mv mackerel-agent_linux_arm/mackerel-agent /usr/local/bin/mackerel-agent</span><br></pre></td></tr></table></figure>
 <h2 id="maeckrel-agentの設定">maeckrel-agentの設定</h2><p>インストールが完了したので、設定をしていきます。</p>
 <p>設定ファイルに apiKeyとカスタムメトリクスの設定を追加します。<br>/etc/mackerel-agent/mackerel-agent.conf に オーガニゼーションの画面に表示されているAPIKEYと<br>以下のカスタムメトリクスの設定を追加してください。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Get room status</span></span><br><span class="line">[plugin.metrics.temperature]</span><br><span class="line"><span class="built_in">command</span> = <span class="string">"/usr/local/bin/am2321 -m"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Get room status&#10;[plugin.metrics.temperature]&#10;command = &#34;/usr/local/bin/am2321 -m&#34;</span><br></pre></td></tr></table></figure>
 <h2 id="mackerel-agent_起動">mackerel-agent 起動</h2><p>以上で設定がひと通り完了しましたので、エージェントを起動します。</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mackerel-agent <span class="built_in">start</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mackerel-agent start</span><br></pre></td></tr></table></figure>
 <p>これで、先ほど作成したオーガニゼーションに自動的にホストが追加され、<br>mackerelのデフォルトの監視項目と、温湿度計のデータが記録されていくようになります。</p>
 <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19282373940/in/dateposted-public/" title="mackerel-room" target="_blank" rel="external"><img src="https://c1.staticflickr.com/1/281/19282373940_5b6feac8f1.jpg" width="500" height="333" alt="mackerel-room"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <h1 id="アラートの設定">アラートの設定</h1><p>無事に温度と湿度の記録が始まりました。<br>しかしながらこれだけでは、職場が危機な状況になっても気づくことが出来ません。</p>
@@ -94,15 +156,23 @@
     <summary type="html">
     <![CDATA[<p>Mackerel + Raspberry Pi で 職場環境をモニタリング</p>
 <p>皆さんMackerelをご存知ですか？</p>
-<p>Mackerel <a href="https://mackerel.io" target="_blank" rel="exter]]>
+<p><a href="https://mackerel.io" target="_blank" rel="external">Mack]]>
     </summary>
+    
+      <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
+    
+      <category term="Mackerel" scheme="http://yenjoji.github.io/pages/pages/tags/Mackerel/"/>
+    
+      <category term="RasperryPi" scheme="http://yenjoji.github.io/pages/pages/tags/RasperryPi/"/>
+    
+      <category term="ネタ" scheme="http://yenjoji.github.io/pages/pages/tags/%E3%83%8D%E3%82%BF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[2015/6/21 Agilesamurai Basecamp ふりかえり & TDD でお話させていただきました。]]></title>
-    <link href="http://yenjoji.github.io/pages/2015/06/22/20150621-spoken-at-asbc-tdd/"/>
-    <id>http://yenjoji.github.io/pages/2015/06/22/20150621-spoken-at-asbc-tdd/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2015/06/22/20150621-spoken-at-asbc-tdd/"/>
+    <id>http://yenjoji.github.io/pages/pages/2015/06/22/20150621-spoken-at-asbc-tdd/</id>
     <published>2015-06-21T16:03:35.000Z</published>
     <updated>2015-06-22T00:59:57.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://agilesamurai-basecamp.doorkeeper.jp/events/25071" target="_blank" rel="external">Agile Samurai Basecamp 2015.06 ふりかえり&amp;TDD</a><br>の事例紹介セッションでお話をさせていただきました。</p>
@@ -138,16 +208,16 @@
     <![CDATA[<p><a href="https://agilesamurai-basecamp.doorkeeper.jp/events/25071" target="_blank" rel="external">Agile Samurai Basecamp 2015.06 ふりかえり&am]]>
     </summary>
     
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/tags/Agile/"/>
+      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Raspberry Pi で XFD]]></title>
-    <link href="http://yenjoji.github.io/pages/2015/04/09/raspi-xfd/"/>
-    <id>http://yenjoji.github.io/pages/2015/04/09/raspi-xfd/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2015/04/09/raspi-xfd/"/>
+    <id>http://yenjoji.github.io/pages/pages/2015/04/09/raspi-xfd/</id>
     <published>2015-04-09T10:41:39.000Z</published>
-    <updated>2015-04-14T11:30:56.000Z</updated>
+    <updated>2015-08-11T06:02:51.000Z</updated>
     <content type="html"><![CDATA[<p>突然ですがXFDをご存知ですか?</p>
 <h1 id="XFDとは">XFDとは</h1><p>オブジェクト倶楽部 <a href="http://objectclub.jp/community/xfd/" target="_blank" rel="external">http://objectclub.jp/community/xfd/</a> によると</p>
 <blockquote>
@@ -200,16 +270,20 @@
 <h1 id="XFDとは">XFDとは</h1><p>オブジェクト倶楽部 <a href="http://objectclub.jp/community/xfd/" target="_blank" rel="external">h]]>
     </summary>
     
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/tags/Agile/"/>
+      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
     
-      <category term="IoT" scheme="http://yenjoji.github.io/pages/tags/IoT/"/>
+      <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
+    
+      <category term="RasperryPi" scheme="http://yenjoji.github.io/pages/pages/tags/RasperryPi/"/>
+    
+      <category term="ネタ" scheme="http://yenjoji.github.io/pages/pages/tags/%E3%83%8D%E3%82%BF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[2015/2/2 英語学習勉強会「英語のセッションを聴く」実践編 に参加してきました。]]></title>
-    <link href="http://yenjoji.github.io/pages/2015/02/03/2015-2-2-mpp/"/>
-    <id>http://yenjoji.github.io/pages/2015/02/03/2015-2-2-mpp/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2015/02/03/2015-2-2-mpp/"/>
+    <id>http://yenjoji.github.io/pages/pages/2015/02/03/2015-2-2-mpp/</id>
     <published>2015-02-02T18:35:00.000Z</published>
     <updated>2015-04-09T11:18:07.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://www.flickr.com/photos/130999506@N07/16427800351" title="AXON_ACTIVE by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7453/16427800351_48b521e76e_m.jpg" alt="AXON_ACTIVE"></a></p>
@@ -270,16 +344,16 @@
     <![CDATA[<p><a href="https://www.flickr.com/photos/130999506@N07/16427800351" title="AXON_ACTIVE by Yasuto Enjoji, on Flickr" target="_blank" rel="ex]]>
     </summary>
     
-      <category term="community" scheme="http://yenjoji.github.io/pages/tags/community/"/>
+      <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
     
-      <category term="english" scheme="http://yenjoji.github.io/pages/tags/english/"/>
+      <category term="english" scheme="http://yenjoji.github.io/pages/pages/tags/english/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Scrum  Alliance Regional Gathering Tokyo 2013 （１日目）に参加してきました]]></title>
-    <link href="http://yenjoji.github.io/pages/2013/01/24/sgt2013-day1/"/>
-    <id>http://yenjoji.github.io/pages/2013/01/24/sgt2013-day1/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2013/01/24/sgt2013-day1/"/>
+    <id>http://yenjoji.github.io/pages/pages/2013/01/24/sgt2013-day1/</id>
     <published>2013-01-24T05:23:22.000Z</published>
     <updated>2015-04-09T16:23:36.000Z</updated>
     <content type="html"><![CDATA[<p>1/14,15 の２日間にわたって開催された Scrum Alliance Regional Gathering Tokyo 2013 に参加してきましたのでその模様の一部をご紹介させていただきたいと思います。</p>
@@ -334,21 +408,21 @@
 <p><u]]>
     </summary>
     
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/tags/Agile/"/>
+      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
     
-      <category term="Scrum" scheme="http://yenjoji.github.io/pages/tags/Scrum/"/>
+      <category term="Scrum" scheme="http://yenjoji.github.io/pages/pages/tags/Scrum/"/>
     
-      <category term="community" scheme="http://yenjoji.github.io/pages/tags/community/"/>
+      <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[svnsyncでリモートリポジトリをコピーする]]></title>
-    <link href="http://yenjoji.github.io/pages/2012/10/18/svnsync/"/>
-    <id>http://yenjoji.github.io/pages/2012/10/18/svnsync/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2012/10/18/svnsync/"/>
+    <id>http://yenjoji.github.io/pages/pages/2012/10/18/svnsync/</id>
     <published>2012-10-18T03:00:00.000Z</published>
     <updated>2015-04-09T16:23:53.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="リポジトリを同期する">リポジトリを同期する</h1><h2 id="同期用のリポジトリを作成">同期用のリポジトリを作成</h2><pre><code>svnadmin <span class="built_in">create</span> sync
+    <content type="html"><![CDATA[<h1 id="リポジトリを同期する">リポジトリを同期する</h1><h2 id="同期用のリポジトリを作成">同期用のリポジトリを作成</h2><pre><code>svnadmin <span class="operator"><span class="keyword">create</span> <span class="keyword">sync</span></span>
 </code></pre><h2 id="同期用のリポジトリを初期化">同期用のリポジトリを初期化</h2><pre><code>svnsync init <span class="symbol">file:</span>/<span class="regexp">//dest</span><span class="regexp">/sync https:/</span><span class="regexp">/dest.example.com/svn</span><span class="regexp">/</span>
 </code></pre><p>もし</p>
 <pre><code>svnsync: E165006: Repository <span class="keyword">has</span> <span class="keyword">not</span> been enabled <span class="keyword">to</span> accept revision propchanges;
@@ -364,18 +438,17 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p>元ネタ：<br><a href="http://stackoverflow.com/questions/4077601/svnsync-couldnt-get-lock-on-destination-repos" target="_blank" rel="external">http://stackoverflow.com/questions/4077601/svnsync-couldnt-get-lock-on-destination-repos</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="リポジトリを同期する">リポジトリを同期する</h1><h2 id="同期用のリポジトリを作成">同期用のリポジトリを作成</h2><pre><code>svnadmin <span class="built_in">create</span> sync
-</co]]>
+    <![CDATA[<h1 id="リポジトリを同期する">リポジトリを同期する</h1><h2 id="同期用のリポジトリを作成">同期用のリポジトリを作成</h2><pre><code>svnadmin <span class="operator"><span class="keyword">c]]>
     </summary>
     
-      <category term="SVN" scheme="http://yenjoji.github.io/pages/tags/SVN/"/>
+      <category term="SVN" scheme="http://yenjoji.github.io/pages/pages/tags/SVN/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[フクロモモンガ温度記録システムにカメラをつけました]]></title>
-    <link href="http://yenjoji.github.io/pages/2012/07/07/2012-07-30-momongar/"/>
-    <id>http://yenjoji.github.io/pages/2012/07/07/2012-07-30-momongar/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2012/07/07/2012-07-30-momongar/"/>
+    <id>http://yenjoji.github.io/pages/pages/2012/07/07/2012-07-30-momongar/</id>
     <published>2012-07-06T15:00:00.000Z</published>
     <updated>2015-04-09T11:18:00.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://www.flickr.com/photos/130999506@N07/16462770824" title="momongar002 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7693/16462770824_755cc89792.jpg" width="500" height="375" alt="momongar002"></a></p>
@@ -405,16 +478,16 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
     <![CDATA[<p><a href="https://www.flickr.com/photos/130999506@N07/16462770824" title="momongar002 by Yasuto Enjoji, on Flickr" target="_blank" rel="ex]]>
     </summary>
     
-      <category term="IoT" scheme="http://yenjoji.github.io/pages/tags/IoT/"/>
+      <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
     
-      <category term="momongar" scheme="http://yenjoji.github.io/pages/tags/momongar/"/>
+      <category term="momongar" scheme="http://yenjoji.github.io/pages/pages/tags/momongar/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[アジャイルサムライ読書会　横浜道場　特別編 First に参加しました]]></title>
-    <link href="http://yenjoji.github.io/pages/2012/04/28/first/"/>
-    <id>http://yenjoji.github.io/pages/2012/04/28/first/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2012/04/28/first/"/>
+    <id>http://yenjoji.github.io/pages/pages/2012/04/28/first/</id>
     <published>2012-04-28T14:32:00.000Z</published>
     <updated>2015-04-09T16:22:45.000Z</updated>
     <content type="html"><![CDATA[<h1 id="アジャイルサムライ読書会_横浜道場_特別編_First_に参加しました">アジャイルサムライ読書会　横浜道場　特別編 First に参加しました</h1><p>アジャイルサムライ読書会　横浜道場　特別編 First に参加してきました。</p>
@@ -514,18 +587,18 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p><a hre]]>
     </summary>
     
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/tags/Agile/"/>
+      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
     
-      <category term="community" scheme="http://yenjoji.github.io/pages/tags/community/"/>
+      <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
     
-      <category term="横浜道場" scheme="http://yenjoji.github.io/pages/tags/%E6%A8%AA%E6%B5%9C%E9%81%93%E5%A0%B4/"/>
+      <category term="横浜道場" scheme="http://yenjoji.github.io/pages/pages/tags/%E6%A8%AA%E6%B5%9C%E9%81%93%E5%A0%B4/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[【Agile Japan 再演】アジャイルな開発からアジャイルな組織へ に参加しました]]></title>
-    <link href="http://yenjoji.github.io/pages/2012/04/25/agile-japan/"/>
-    <id>http://yenjoji.github.io/pages/2012/04/25/agile-japan/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2012/04/25/agile-japan/"/>
+    <id>http://yenjoji.github.io/pages/pages/2012/04/25/agile-japan/</id>
     <published>2012-04-24T16:52:00.000Z</published>
     <updated>2015-04-09T16:22:20.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://media.tumblr.com/tumblr_m2zqefKjNe1qiaely.jpg" alt=""></p>
@@ -583,18 +656,18 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p>アジャイルジャパン2012で大盛況だったとの噂の「アジャイルな開発からアジャイルな組織へ」の再演に参加しました。</]]>
     </summary>
     
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/tags/Agile/"/>
+      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
     
-      <category term="community" scheme="http://yenjoji.github.io/pages/tags/community/"/>
+      <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
     
-      <category term="横浜道場" scheme="http://yenjoji.github.io/pages/tags/%E6%A8%AA%E6%B5%9C%E9%81%93%E5%A0%B4/"/>
+      <category term="横浜道場" scheme="http://yenjoji.github.io/pages/pages/tags/%E6%A8%AA%E6%B5%9C%E9%81%93%E5%A0%B4/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[状況打開力を叩き上げる　TOCfE ブートキャンプに参加してきました]]></title>
-    <link href="http://yenjoji.github.io/pages/2012/04/22/tocfe/"/>
-    <id>http://yenjoji.github.io/pages/2012/04/22/tocfe/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2012/04/22/tocfe/"/>
+    <id>http://yenjoji.github.io/pages/pages/2012/04/22/tocfe/</id>
     <published>2012-04-22T14:51:34.000Z</published>
     <updated>2015-04-09T16:24:12.000Z</updated>
     <content type="html"><![CDATA[<p>4/21 にOracle青山センターで開催された<br>TOCfEブートキャンプに参加してきました。</p>
@@ -645,16 +718,16 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p><a href="http://kokucheese.com/event/index/30962/" target="_blank" rel="externa]]>
     </summary>
     
-      <category term="TOCfE" scheme="http://yenjoji.github.io/pages/tags/TOCfE/"/>
+      <category term="TOCfE" scheme="http://yenjoji.github.io/pages/pages/tags/TOCfE/"/>
     
-      <category term="community" scheme="http://yenjoji.github.io/pages/tags/community/"/>
+      <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点]]></title>
-    <link href="http://yenjoji.github.io/pages/2012/04/15/s2jdbc/"/>
-    <id>http://yenjoji.github.io/pages/2012/04/15/s2jdbc/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2012/04/15/s2jdbc/"/>
+    <id>http://yenjoji.github.io/pages/pages/2012/04/15/s2jdbc/</id>
     <published>2012-04-15T13:10:40.000Z</published>
     <updated>2015-04-09T16:23:24.000Z</updated>
     <content type="html"><![CDATA[<h1 id="どんなシチュエーションで使うのか">どんなシチュエーションで使うのか</h1><ul>
@@ -672,16 +745,16 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <h1 id="ど]]>
     </summary>
     
-      <category term="S2JDBC" scheme="http://yenjoji.github.io/pages/tags/S2JDBC/"/>
+      <category term="S2JDBC" scheme="http://yenjoji.github.io/pages/pages/tags/S2JDBC/"/>
     
-      <category term="program" scheme="http://yenjoji.github.io/pages/tags/program/"/>
+      <category term="program" scheme="http://yenjoji.github.io/pages/pages/tags/program/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[フクロモモンガ温度記録システムを作りました]]></title>
-    <link href="http://yenjoji.github.io/pages/2012/04/04/2012-04-04-momongar/"/>
-    <id>http://yenjoji.github.io/pages/2012/04/04/2012-04-04-momongar/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2012/04/04/2012-04-04-momongar/"/>
+    <id>http://yenjoji.github.io/pages/pages/2012/04/04/2012-04-04-momongar/</id>
     <published>2012-04-03T15:00:00.000Z</published>
     <updated>2015-04-09T05:45:11.000Z</updated>
     <content type="html"><![CDATA[<h2>なんでつくったのか</h2>
@@ -730,16 +803,16 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p><a href="https://www.flickr.com/photos/130999506@N07/16465075443" title="momonga_001 by]]>
     </summary>
     
-      <category term="IoT" scheme="http://yenjoji.github.io/pages/tags/IoT/"/>
+      <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
     
-      <category term="momongar" scheme="http://yenjoji.github.io/pages/tags/momongar/"/>
+      <category term="momongar" scheme="http://yenjoji.github.io/pages/pages/tags/momongar/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[MySQLで実行中のSQLを調べて止める方法]]></title>
-    <link href="http://yenjoji.github.io/pages/2012/03/12/mysql-sql/"/>
-    <id>http://yenjoji.github.io/pages/2012/03/12/mysql-sql/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2012/03/12/mysql-sql/"/>
+    <id>http://yenjoji.github.io/pages/pages/2012/03/12/mysql-sql/</id>
     <published>2012-03-12T11:42:52.000Z</published>
     <updated>2015-04-09T16:23:03.000Z</updated>
     <content type="html"><![CDATA[<p>1 ) 実行中のSQLの一覧を取得する<br>　　mysql> show full processlist;</p>
@@ -757,19 +830,19 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p>　　fullをつけると実行中のSQLが省略されずに表示]]>
     </summary>
     
-      <category term="mysql" scheme="http://yenjoji.github.io/pages/tags/mysql/"/>
+      <category term="mysql" scheme="http://yenjoji.github.io/pages/pages/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CouchConf Tokyo に参加してきました]]></title>
-    <link href="http://yenjoji.github.io/pages/2012/01/28/2012-01-28-CouchConf-Tokyo/"/>
-    <id>http://yenjoji.github.io/pages/2012/01/28/2012-01-28-CouchConf-Tokyo/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2012/01/28/2012-01-28-CouchConf-Tokyo/"/>
+    <id>http://yenjoji.github.io/pages/pages/2012/01/28/2012-01-28-CouchConf-Tokyo/</id>
     <published>2012-01-27T15:00:00.000Z</published>
     <updated>2015-04-09T10:03:42.000Z</updated>
     <content type="html"><![CDATA[<p>2012/1/27 JR田町駅から徒歩10分かからないくらいのところにある<br>ベルサール三田 で開催されたCouchConf Tokyo に参加してきました。</p>
 <p>奇しくも同日に開催されていた ビールが2トンとか、レッドブルのおねいさんがいるとかいう話だった</p>
-<h1 id="CROSS2012_とはベルサールつながりでした">CROSS2012 とはベルサールつながりでした</h1><p>＃CROSS2012の内容は @shinyaa31さんのブログにまとめられていますので詳しくはそちらをご覧ください。<a href="http://d.hatena.ne.jp/absj31/20120127/1327732404" target="_blank" rel="external">http://d.hatena.ne.jp/absj31/20120127/1327732404</a></p>
+<p>#CROSS2012 とはベルサールつながりでした<br>＃CROSS2012の内容は @shinyaa31さんのブログにまとめられていますので詳しくはそちらをご覧ください。<a href="http://d.hatena.ne.jp/absj31/20120127/1327732404" target="_blank" rel="external">http://d.hatena.ne.jp/absj31/20120127/1327732404</a></p>
 <p>ｰｰ閑話休題－－</p>
 <p>ということで一日Couchbase漬けになってきました。</p>
 <p>当日のタイムテーブルはこちらのとおり <a href="http://www.couchbase.com/couchconf-tokyo" target="_blank" rel="external">http://www.couchbase.com/couchconf-tokyo</a><br>また、当日の雰囲気を感じられるかもなまとめもついでに作成しました。<br><a href="http://togetter.com/li/248729" target="_blank" rel="external">http://togetter.com/li/248729</a></p>
@@ -806,16 +879,16 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p>奇しくも同日に開催されていた ビールが2トンとか、レッドブルのおねいさんがいるとかいう話だった<]]>
     </summary>
     
-      <category term="Couchbase" scheme="http://yenjoji.github.io/pages/tags/Couchbase/"/>
+      <category term="Couchbase" scheme="http://yenjoji.github.io/pages/pages/tags/Couchbase/"/>
     
-      <category term="community" scheme="http://yenjoji.github.io/pages/tags/community/"/>
+      <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[自動的に元日にTweetしてみる]]></title>
-    <link href="http://yenjoji.github.io/pages/2011/12/31/2011-12-31-Tweet/"/>
-    <id>http://yenjoji.github.io/pages/2011/12/31/2011-12-31-Tweet/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2011/12/31/2011-12-31-Tweet/"/>
+    <id>http://yenjoji.github.io/pages/pages/2011/12/31/2011-12-31-Tweet/</id>
     <published>2011-12-30T15:00:00.000Z</published>
     <updated>2015-04-09T03:17:49.000Z</updated>
     <content type="html"><![CDATA[<p>G* Advent Calendar の 12/16 記事に触発されて書いてみました。<br>AkeomeJobから呼び出すメソッドを変えると画像付きと画像なしが選べるようにしたつもり。</p>
@@ -829,16 +902,16 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p><a href="http://samuraism.jp/diary/2]]>
     </summary>
     
-      <category term="Groovy" scheme="http://yenjoji.github.io/pages/tags/Groovy/"/>
+      <category term="Groovy" scheme="http://yenjoji.github.io/pages/pages/tags/Groovy/"/>
     
-      <category term="twitter" scheme="http://yenjoji.github.io/pages/tags/twitter/"/>
+      <category term="twitter" scheme="http://yenjoji.github.io/pages/pages/tags/twitter/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[apache で　server should be ssl-aware but has no certificate configured hint sslcertificatefile null 0 となった。]]></title>
-    <link href="http://yenjoji.github.io/pages/2011/12/27/2011-12-27-apache-server-should-be-ssl-aware-but-has-no-certificate-configured-hint-sslcertificatefile-null-0/"/>
-    <id>http://yenjoji.github.io/pages/2011/12/27/2011-12-27-apache-server-should-be-ssl-aware-but-has-no-certificate-configured-hint-sslcertificatefile-null-0/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2011/12/27/2011-12-27-apache-server-should-be-ssl-aware-but-has-no-certificate-configured-hint-sslcertificatefile-null-0/"/>
+    <id>http://yenjoji.github.io/pages/pages/2011/12/27/2011-12-27-apache-server-should-be-ssl-aware-but-has-no-certificate-configured-hint-sslcertificatefile-null-0/</id>
     <published>2011-12-26T15:00:00.000Z</published>
     <updated>2015-04-09T03:12:16.000Z</updated>
     <content type="html"><![CDATA[<p>解決方法はここにあったとおり</p>
@@ -846,10 +919,10 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p>SSLEngine on<br>SSLCertificateFile をVirtualHostごとに書けば良いのですが、</p>
 <p>VirtualHostごとに設定ファイルIncludeして、<br>そのファイルでこいつを書いていたのですが同じエラーが出続けてはまりました。</p>
 <p>ダメなパターン</p>
-<p>httpd-ssl.conf<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">VirtualHost</span> *<span class="attribute">:443</span>&gt;</span></span><br><span class="line"> DocumentRoot ...</span><br><span class="line"> <span class="tag">&lt;<span class="title">Location</span> "/"&gt;</span></span><br><span class="line">  ...</span><br><span class="line"> <span class="tag">&lt;/<span class="title">Location</span>&gt;</span></span><br><span class="line"> Include conf/sslcert.conf</span><br><span class="line"><span class="tag">&lt;/<span class="title">VirtualHost</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>sslcert.conf<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SSLEngine <span class="keyword">on</span></span><br><span class="line">SSLCertificateFile <span class="keyword">conf</span>/server.crt</span><br><span class="line">SSLCertificateKeyFile <span class="keyword">conf</span>/server.key</span><br></pre></td></tr></table></figure></p>
+<p>httpd-ssl.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;VirtualHost *:443&#62;&#10; DocumentRoot ...&#10; &#60;Location &#34;/&#34;&#62;&#10;  ...&#10; &#60;/Location&#62;&#10; Include conf/sslcert.conf&#10;&#60;/VirtualHost&#62;</span><br></pre></td></tr></table></figure></p>
+<p>sslcert.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SSLEngine on&#10;SSLCertificateFile conf/server.crt&#10;SSLCertificateKeyFile conf/server.key</span><br></pre></td></tr></table></figure></p>
 <p> いけたパターン</p>
-<p>httpd-ssl.conf<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:443&gt;</span><br><span class="line">  DocumentRoot ...</span><br><span class="line">  SSLEngine <span class="keyword">on</span></span><br><span class="line">  SSLCertificateFile <span class="keyword">conf</span>/server.crt</span><br><span class="line">  SSLCertificateKeyFile <span class="keyword">conf</span>/server.key</span><br><span class="line"></span><br><span class="line">  &lt;Location <span class="string">"/"</span>&gt;</span><br><span class="line">   ...</span><br><span class="line">  &lt;/Location&gt;</span><br><span class="line">  <span class="keyword">Include</span> <span class="keyword">conf</span>/sslcert.<span class="keyword">conf</span></span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure></p>
+<p>httpd-ssl.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;VirtualHost *:443&#62;&#10;  DocumentRoot ...&#10;  SSLEngine on&#10;  SSLCertificateFile conf/server.crt&#10;  SSLCertificateKeyFile conf/server.key&#10;&#10;  &#60;Location &#34;/&#34;&#62;&#10;   ...&#10;  &#60;/Location&#62;&#10;  Include conf/sslcert.conf&#10;&#60;/VirtualHost&#62;</span><br></pre></td></tr></table></figure></p>
 <p>同じ設定でapache2.2.17@Ubuntuはいけたのに、2.2.20@MacOSXはダメとか。。。<br>ディレクティブの記述順のもんだい？</p>
 ]]></content>
     <summary type="html">
@@ -857,14 +930,14 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <p><a href="http://serverfault.com/questions/232782/debian-squeeze-upgrade-breaks-apache-ssl" target="_blank" rel="ext]]>
     </summary>
     
-      <category term="apache" scheme="http://yenjoji.github.io/pages/tags/apache/"/>
+      <category term="apache" scheme="http://yenjoji.github.io/pages/pages/tags/apache/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[[Groovy]ファイルをファイルの最終更新日時別のディレクトリに仕分ける]]></title>
-    <link href="http://yenjoji.github.io/pages/2011/12/22/2011-12-22-Groovy/"/>
-    <id>http://yenjoji.github.io/pages/2011/12/22/2011-12-22-Groovy/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2011/12/22/2011-12-22-Groovy/"/>
+    <id>http://yenjoji.github.io/pages/pages/2011/12/22/2011-12-22-Groovy/</id>
     <published>2011-12-21T15:00:00.000Z</published>
     <updated>2015-04-09T03:11:58.000Z</updated>
     <content type="html"><![CDATA[<p>雑多に保存していた画像を日付で仕分けしたくなったので。</p>
@@ -877,14 +950,14 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <figure class="highlight groovy"><table><tr><td class="gut]]>
     </summary>
     
-      <category term="Groovy" scheme="http://yenjoji.github.io/pages/tags/Groovy/"/>
+      <category term="Groovy" scheme="http://yenjoji.github.io/pages/pages/tags/Groovy/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Strutsでresetメソッドを使わないでcheckboxをいいかんじにする]]></title>
-    <link href="http://yenjoji.github.io/pages/2011/10/27/2011-10-27-Struts-reset-checkbox/"/>
-    <id>http://yenjoji.github.io/pages/2011/10/27/2011-10-27-Struts-reset-checkbox/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2011/10/27/2011-10-27-Struts-reset-checkbox/"/>
+    <id>http://yenjoji.github.io/pages/pages/2011/10/27/2011-10-27-Struts-reset-checkbox/</id>
     <published>2011-10-26T15:00:00.000Z</published>
     <updated>2015-04-09T10:04:10.000Z</updated>
     <content type="html"><![CDATA[<p>助かったのでメモ。</p>
@@ -899,14 +972,14 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <iframe marginwidth="0" marginheight="0" src="http://b.hatena.ne.jp/entry.parts?url=http%3A%2F%2Fhisasann.com%2Fhousetect%2]]>
     </summary>
     
-      <category term="Struts" scheme="http://yenjoji.github.io/pages/tags/Struts/"/>
+      <category term="Struts" scheme="http://yenjoji.github.io/pages/pages/tags/Struts/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[[Groovy]astah* の ER図からliquibase の createtable を生成したい]]></title>
-    <link href="http://yenjoji.github.io/pages/2011/07/27/2011-07-27-Groovy-astah-ER-liquibase-createtable/"/>
-    <id>http://yenjoji.github.io/pages/2011/07/27/2011-07-27-Groovy-astah-ER-liquibase-createtable/</id>
+    <link href="http://yenjoji.github.io/pages/pages/2011/07/27/2011-07-27-Groovy-astah-ER-liquibase-createtable/"/>
+    <id>http://yenjoji.github.io/pages/pages/2011/07/27/2011-07-27-Groovy-astah-ER-liquibase-createtable/</id>
     <published>2011-07-26T15:00:00.000Z</published>
     <updated>2015-04-09T03:18:08.000Z</updated>
     <content type="html"><![CDATA[<p>と思ったので。間に合せで書いてみた。</p>
@@ -917,32 +990,9 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="li]]>
     </summary>
     
-      <category term="Groovy" scheme="http://yenjoji.github.io/pages/tags/Groovy/"/>
+      <category term="Groovy" scheme="http://yenjoji.github.io/pages/pages/tags/Groovy/"/>
     
-      <category term="astah" scheme="http://yenjoji.github.io/pages/tags/astah/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[[Linux]Linuxで使っていたPCをWindowsにしようとしたら起動しなかったときの対処方法]]></title>
-    <link href="http://yenjoji.github.io/pages/2011/07/01/2011-07-01-Linux-Linux-PC-Windows/"/>
-    <id>http://yenjoji.github.io/pages/2011/07/01/2011-07-01-Linux-Linux-PC-Windows/</id>
-    <published>2011-06-30T15:00:00.000Z</published>
-    <updated>2015-04-09T03:11:32.000Z</updated>
-    <content type="html"><![CDATA[<p>MBRにGRUBがインストールされていると、<br>Windowsのセットアッププログラムが起動しないらしい。</p>
-<p>今回の症状としては<br>+PCパワーon<br>+CDから起動させる<br>+画面に「Inspect なんとかかんとか」の表示<br>+ブラックアウトで進まなくなる</p>
-<p>でした。</p>
-<p>遥か昔にそんなことがあったような気もするけど、すっかり忘れてたよ。</p>
-<p>というわけで<br>今回はたまたま手元にあったubuntu11.04 desktop CDでMBRのお掃除を実施</p>
-<p>Linux で MBR をクリアする方法<br>デバイス名の確認<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># fdisk -l</span></span><br></pre></td></tr></table></figure></p>
-<p>MBRクリア<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># dd <span class="keyword">if</span>=/dev/zero of=<span class="label">$&#123;DeviceName&#125;</span> <span class="keyword">bs</span>=512 <span class="keyword">count</span>=1</span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>MBRにGRUBがインストールされていると、<br>Windowsのセットアッププログラムが起動しないらしい。</p>
-<p>今回の症状としては<br>+PCパワーon<br>+CDから起動させる<br>+画面に「Inspect なんとかかんとか」の表示<br>+ブラックア]]>
-    </summary>
-    
-      <category term="Linux" scheme="http://yenjoji.github.io/pages/tags/Linux/"/>
+      <category term="astah" scheme="http://yenjoji.github.io/pages/pages/tags/astah/"/>
     
   </entry>
   
