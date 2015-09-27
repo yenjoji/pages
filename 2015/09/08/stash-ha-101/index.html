@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Atlassian Stashの耐障害性を高めよう その1 プランニング編 | Rouleur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="はじめに私の所属しているプロジェクトではAtlassian Stash （Git）でソースコードを管理しています。普段何気なく使用しているGitですが、もはや手放すことが難しい存在です。
+そんな中、ふと「もしもStashのデータが消失したら。」と言う事態を想像してみました。Gitは分散バージョン管理なので、各々のローカルのGitリポジトリをかき集めれば必要なものは復旧できそうです。
+どうやらソース">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Atlassian Stashの耐障害性を高めよう その1 プランニング編">
+<meta property="og:url" content="http://yenjoji.github.io/pages/2015/09/08/stash-ha-101/index.html">
+<meta property="og:site_name" content="Rouleur">
+<meta property="og:description" content="はじめに私の所属しているプロジェクトではAtlassian Stash （Git）でソースコードを管理しています。普段何気なく使用しているGitですが、もはや手放すことが難しい存在です。
+そんな中、ふと「もしもStashのデータが消失したら。」と言う事態を想像してみました。Gitは分散バージョン管理なので、各々のローカルのGitリポジトリをかき集めれば必要なものは復旧できそうです。
+どうやらソース">
+<meta property="og:image" content="https://farm1.staticflickr.com/710/21266389192_c7ff5dfa6d.jpg">
+<meta property="og:updated_time" content="2015-09-19T13:08:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Atlassian Stashの耐障害性を高めよう その1 プランニング編">
+<meta name="twitter:description" content="はじめに私の所属しているプロジェクトではAtlassian Stash （Git）でソースコードを管理しています。普段何気なく使用しているGitですが、もはや手放すことが難しい存在です。
+そんな中、ふと「もしもStashのデータが消失したら。」と言う事態を想像してみました。Gitは分散バージョン管理なので、各々のローカルのGitリポジトリをかき集めれば必要なものは復旧できそうです。
+どうやらソース">
+  
+    <link rel="alternative" href="/pages/atom.xml" title="Rouleur" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css"> -->
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+  <link href='//fonts.useso.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/pages/css/style.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-30922655-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <a href="/pages/" class="logo">Rouleur</a>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/pages/">Home</a>
+        
+          <a class="main-nav-link" href="/pages/archives">Archives</a>
+        
+          <a class="main-nav-link" href="http://about.me/yenjoji">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yenjoji.github.io/pages"></form>
+        </div>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/pages/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/yenjoji" title="Fork me on GitHub"></a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <nav id="mobile-nav" class="off">
+  
+    <a href="/pages/" class="mobile-nav-link">Home</a>
+  
+    <a href="/pages/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="http://about.me/yenjoji" class="mobile-nav-link">About</a>
+  
+  <div id="search-form-wrap-mobile">
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yenjoji.github.io/pages"></form>
+  </div>
+</nav>
+      <div class="outer">
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/pages/2015/09/20/setup-stash-ha-resource/">Atlassian Stashの耐障害性を高めよう その3 HAリソースセットアップ編</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2015/09/15/setup-stash-ha/">Atlassian Stashの耐障害性を高めよう その2 HAセットアップ編</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2015/09/08/stash-ha-101/">Atlassian Stashの耐障害性を高めよう その1 プランニング編</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2015/09/05/about-application-link/">Atlassian製品のアドバンテージ「Application Link」</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2015/08/12/integrated-crowd-with-bamboo/">Atlassian Bamboo + Crowd 後編：Crowdとの連携</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Agile/">Agile</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Atlassian/">Atlassian</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Bamboo/">Bamboo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/CI/">CI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Couchbase/">Couchbase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Crowd/">Crowd</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/DevLove/">DevLove</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Groovy/">Groovy</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/IntellijIDEA/">IntellijIDEA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/IoT/">IoT</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Jenkins/">Jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Linux/">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Mackerel/">Mackerel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Pacemaker/">Pacemaker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Play/">Play</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/RasperryPi/">RasperryPi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/S2JDBC/">S2JDBC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/SVN/">SVN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Scala/">Scala</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Scrum/">Scrum</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Stash/">Stash</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Struts/">Struts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/TOCfE/">TOCfE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/apache/">apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/astah/">astah</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/community/">community</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/eclipse/">eclipse</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/english/">english</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/momongar/">momongar</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/program/">program</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/twitter/">twitter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/ネタ/">ネタ</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/横浜道場/">横浜道場</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/09/">9月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/08/">8月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/07/">7月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/06/">6月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/04/">4月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/02/">2月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2013/01/">1月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/10/">10月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/07/">7月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/04/">4月 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/03/">3月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/01/">1月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/12/">12月 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/10/">10月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/07/">7月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/06/">6月 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/05/">5月 2011</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/pages/tags/Agile/" style="font-size: 18.33px;">Agile</a> <a href="/pages/tags/Atlassian/" style="font-size: 18.33px;">Atlassian</a> <a href="/pages/tags/Bamboo/" style="font-size: 13.33px;">Bamboo</a> <a href="/pages/tags/CI/" style="font-size: 11.67px;">CI</a> <a href="/pages/tags/Couchbase/" style="font-size: 10px;">Couchbase</a> <a href="/pages/tags/Crowd/" style="font-size: 11.67px;">Crowd</a> <a href="/pages/tags/DevLove/" style="font-size: 10px;">DevLove</a> <a href="/pages/tags/Groovy/" style="font-size: 16.67px;">Groovy</a> <a href="/pages/tags/IntellijIDEA/" style="font-size: 10px;">IntellijIDEA</a> <a href="/pages/tags/IoT/" style="font-size: 15px;">IoT</a> <a href="/pages/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/pages/tags/Linux/" style="font-size: 11.67px;">Linux</a> <a href="/pages/tags/Mackerel/" style="font-size: 10px;">Mackerel</a> <a href="/pages/tags/Pacemaker/" style="font-size: 13.33px;">Pacemaker</a> <a href="/pages/tags/Play/" style="font-size: 10px;">Play</a> <a href="/pages/tags/RasperryPi/" style="font-size: 11.67px;">RasperryPi</a> <a href="/pages/tags/S2JDBC/" style="font-size: 10px;">S2JDBC</a> <a href="/pages/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/pages/tags/Scala/" style="font-size: 10px;">Scala</a> <a href="/pages/tags/Scrum/" style="font-size: 11.67px;">Scrum</a> <a href="/pages/tags/Stash/" style="font-size: 15px;">Stash</a> <a href="/pages/tags/Struts/" style="font-size: 10px;">Struts</a> <a href="/pages/tags/TOCfE/" style="font-size: 10px;">TOCfE</a> <a href="/pages/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/pages/tags/apache/" style="font-size: 10px;">apache</a> <a href="/pages/tags/astah/" style="font-size: 10px;">astah</a> <a href="/pages/tags/community/" style="font-size: 20px;">community</a> <a href="/pages/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/pages/tags/english/" style="font-size: 10px;">english</a> <a href="/pages/tags/momongar/" style="font-size: 11.67px;">momongar</a> <a href="/pages/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/pages/tags/program/" style="font-size: 10px;">program</a> <a href="/pages/tags/twitter/" style="font-size: 10px;">twitter</a> <a href="/pages/tags/ネタ/" style="font-size: 11.67px;">ネタ</a> <a href="/pages/tags/横浜道場/" style="font-size: 11.67px;">横浜道場</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://about.me/yenjoji">about.me</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+        <section id="main"><article id="post-stash-ha-101" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/pages/2015/09/08/stash-ha-101/" class="article-date">
+  <time datetime="2015-09-08T03:10:00.000Z" itemprop="datePublished">2015-09-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Atlassian Stashの耐障害性を高めよう その1 プランニング編
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="はじめに">はじめに</h1><p>私の所属しているプロジェクトではAtlassian Stash （Git）でソースコードを管理しています。<br><br>普段何気なく使用しているGitですが、もはや手放すことが難しい存在です。</p>
+<p>そんな中、ふと「もしもStashのデータが消失したら。」と言う事態を想像してみました。<br><br>Gitは分散バージョン管理なので、各々のローカルのGitリポジトリをかき集めれば必要なものは復旧できそうです。</p>
+<p>どうやらソースコードの消失などの最悪の事態は発生しないことはわかりましたが、<br><br>Stashを使用していればサーバーの冗長構成は必要ないでしょうか。</p>
+<p><a href="https://confluence.atlassian.com/stash/high-availability-for-stash-437915322.html" target="_blank" rel="external">Atlassian</a>のドキュメントによると、Stashに障害が発生した場合、復旧作業をおこなっている間、下記の様な状況になります。</p>
+<ul>
+<li><p>できること</p>
+<ul>
+<li>開発者<ul>
+<li>コードのコミット</li>
+<li>ブランチの作成</li>
+<li>ブランチの切り替え</li>
+<li>過去のコミットと差分確認</li>
+<li>…</li>
+<li>Stashを経由せずに他の開発者のリポジトリからフェッチする</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>できないこと</p>
+<ul>
+<li>開発者<ul>
+<li>リポジトリのクローン</li>
+<li>セントラルリポジトリ（Stash）からのフェッチ</li>
+<li>セントラルリポジトリ（Stash）へのプッシュ</li>
+<li>Stash UI へのアクセス （プルリクエストの操作など）</li>
+</ul>
+</li>
+<li>CI/CDサーバー<ul>
+<li>リポジトリのクローン</li>
+<li>変更点の取得</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>作業は続行不可能では無いですが、チーム開発を進めていく上でかなりの制限となってしまいそうです。</p>
+<p>というわけで、転ばぬ先の杖ということでStashの冗長化に挑戦してみたいと思います。</p>
+<p>Stash冗長化について調べてみたところ、本家Atlassianに<a href="https://confluence.atlassian.com/stash/high-availability-for-stash-437915322.html" target="_blank" rel="external">冗長化についてのドキュメント</a>が用意されていました。<br></p>
+<h1 id="冗長構成のパターン">冗長構成のパターン</h1><p>Atlassianのドキュメントによると、冗長構成には以下の様なパターンがあるようです</p>
+<table>
+<thead>
+<tr>
+<th>構成</th>
+<th>復旧時間</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single node</td>
+<td>hours-days</td>
+<td>単一ノード</td>
+</tr>
+<tr>
+<td>Cold Standby</td>
+<td>2-10 min</td>
+<td>サーバーはActive StandByともに起動させておくが、StashはActive側のみ起動しておく構成。Active側が障害となった場合StandBy側のStashを起動させ、切り替える。</td>
+</tr>
+<tr>
+<td>Warm Standby</td>
+<td>0-30 Sec</td>
+<td>Active Standby 双方にStashを起動させておき、Active側が障害となった場合切り替える</td>
+</tr>
+<tr>
+<td>Active-Active</td>
+<td>&lt;5 Sec</td>
+<td>マルチマスタ＆負荷分散構成 ただし Stash Data Center が必要</td>
+</tr>
+</tbody>
+</table>
+<p>この構成の内、Active-Active構成をするためには Stash Data Centerを使う必要があるらしく、<br>予算的に厳しい様な予感がするので今回は見送ることとします。</p>
+<p>また、Warm StandBy 構成 はStashがメモリ上にロック情報などを持っているため、現時点でこの構成は取れないそうです。</p>
+<p>そうすると、コストとメリットのバランスを考えた場合Cold Standby構成を取るのが良いようです。<br><br>（Atlassianのドキュメントもこの構成でクラスタを組んでいます。）</p>
+<p>図で表すと、下記の様になります。おおむねAtlassianのドキュメント通りですが、データベースのみ、他のAtlassianプロダクトと共有することを考えて、Stashとは別のサーバーとしています。</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/21266389192/in/dateposted-public/" title="atlassian_stash_cluster_network_diagram" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/710/21266389192_c7ff5dfa6d.jpg" width="407" height="500" alt="atlassian_stash_cluster_network_diagram"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>細かいソフトウェアのバージョンなどはもう少し調べてみてから決定していきたいと思います。</p>
+<p>というわけで、だいたいの構成の目処がついたところで、今回はここまでとしたいと思います。</p>
+<p>次回は実際のクラスターの構築を行ってみたいと思います。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yenjoji.github.io/pages/2015/09/08/stash-ha-101/" data-id="cif2o560s000dz5vxi4tzj7iw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Atlassian/">Atlassian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Pacemaker/">Pacemaker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Stash/">Stash</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/pages/2015/09/15/setup-stash-ha/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Atlassian Stashの耐障害性を高めよう その2 HAセットアップ編
+        
+      </div>
+    </a>
+  
+  
+    <a href="/pages/2015/09/05/about-application-link/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Atlassian製品のアドバンテージ「Application Link」</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <a href="/" class="logo">Rouleur</a>
+      &copy; 2015 yenjoji<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="/pages/js/jquery.min.js" type="text/javascript"></script>
+<script src="/pages/js/jquery.scrollLoading.js" type="text/javascript"></script>
+
+
+  <link rel="stylesheet" href="/pages/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/pages/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/pages/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Atlassian Stashの耐障害性を高めよう その3 HAリソースセットアップ編 | Rouleur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。
+回 ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編はHAクラスタをくんだものの、IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。
+このままでは表題に偽りありと言われても反論出来ないので、今回こそは、Stashの可用性を高めていき">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Atlassian Stashの耐障害性を高めよう その3 HAリソースセットアップ編">
+<meta property="og:url" content="http://yenjoji.github.io/pages/2015/09/20/setup-stash-ha-resource/index.html">
+<meta property="og:site_name" content="Rouleur">
+<meta property="og:description" content="今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。
+回 ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編はHAクラスタをくんだものの、IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。
+このままでは表題に偽りありと言われても反論出来ないので、今回こそは、Stashの可用性を高めていき">
+<meta property="og:updated_time" content="2015-09-20T02:29:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Atlassian Stashの耐障害性を高めよう その3 HAリソースセットアップ編">
+<meta name="twitter:description" content="今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。
+回 ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編はHAクラスタをくんだものの、IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。
+このままでは表題に偽りありと言われても反論出来ないので、今回こそは、Stashの可用性を高めていき">
+  
+    <link rel="alternative" href="/pages/atom.xml" title="Rouleur" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css"> -->
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+  <link href='//fonts.useso.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/pages/css/style.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-30922655-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <a href="/pages/" class="logo">Rouleur</a>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/pages/">Home</a>
+        
+          <a class="main-nav-link" href="/pages/archives">Archives</a>
+        
+          <a class="main-nav-link" href="http://about.me/yenjoji">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yenjoji.github.io/pages"></form>
+        </div>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/pages/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/yenjoji" title="Fork me on GitHub"></a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <nav id="mobile-nav" class="off">
+  
+    <a href="/pages/" class="mobile-nav-link">Home</a>
+  
+    <a href="/pages/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="http://about.me/yenjoji" class="mobile-nav-link">About</a>
+  
+  <div id="search-form-wrap-mobile">
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yenjoji.github.io/pages"></form>
+  </div>
+</nav>
+      <div class="outer">
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/pages/2015/09/20/setup-stash-ha-resource/">Atlassian Stashの耐障害性を高めよう その3 HAリソースセットアップ編</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2015/09/15/setup-stash-ha/">Atlassian Stashの耐障害性を高めよう その2 HAセットアップ編</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2015/09/08/stash-ha-101/">Atlassian Stashの耐障害性を高めよう その1 プランニング編</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2015/09/05/about-application-link/">Atlassian製品のアドバンテージ「Application Link」</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2015/08/12/integrated-crowd-with-bamboo/">Atlassian Bamboo + Crowd 後編：Crowdとの連携</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Agile/">Agile</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Atlassian/">Atlassian</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Bamboo/">Bamboo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/CI/">CI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Couchbase/">Couchbase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Crowd/">Crowd</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/DevLove/">DevLove</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Groovy/">Groovy</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/IntellijIDEA/">IntellijIDEA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/IoT/">IoT</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Jenkins/">Jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Linux/">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Mackerel/">Mackerel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Pacemaker/">Pacemaker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Play/">Play</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/RasperryPi/">RasperryPi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/S2JDBC/">S2JDBC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/SVN/">SVN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Scala/">Scala</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Scrum/">Scrum</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Stash/">Stash</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Struts/">Struts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/TOCfE/">TOCfE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/apache/">apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/astah/">astah</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/community/">community</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/eclipse/">eclipse</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/english/">english</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/momongar/">momongar</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/program/">program</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/twitter/">twitter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/ネタ/">ネタ</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/横浜道場/">横浜道場</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/09/">9月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/08/">8月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/07/">7月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/06/">6月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/04/">4月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/02/">2月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2013/01/">1月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/10/">10月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/07/">7月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/04/">4月 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/03/">3月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/01/">1月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/12/">12月 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/10/">10月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/07/">7月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/06/">6月 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/05/">5月 2011</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/pages/tags/Agile/" style="font-size: 18.33px;">Agile</a> <a href="/pages/tags/Atlassian/" style="font-size: 18.33px;">Atlassian</a> <a href="/pages/tags/Bamboo/" style="font-size: 13.33px;">Bamboo</a> <a href="/pages/tags/CI/" style="font-size: 11.67px;">CI</a> <a href="/pages/tags/Couchbase/" style="font-size: 10px;">Couchbase</a> <a href="/pages/tags/Crowd/" style="font-size: 11.67px;">Crowd</a> <a href="/pages/tags/DevLove/" style="font-size: 10px;">DevLove</a> <a href="/pages/tags/Groovy/" style="font-size: 16.67px;">Groovy</a> <a href="/pages/tags/IntellijIDEA/" style="font-size: 10px;">IntellijIDEA</a> <a href="/pages/tags/IoT/" style="font-size: 15px;">IoT</a> <a href="/pages/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/pages/tags/Linux/" style="font-size: 11.67px;">Linux</a> <a href="/pages/tags/Mackerel/" style="font-size: 10px;">Mackerel</a> <a href="/pages/tags/Pacemaker/" style="font-size: 13.33px;">Pacemaker</a> <a href="/pages/tags/Play/" style="font-size: 10px;">Play</a> <a href="/pages/tags/RasperryPi/" style="font-size: 11.67px;">RasperryPi</a> <a href="/pages/tags/S2JDBC/" style="font-size: 10px;">S2JDBC</a> <a href="/pages/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/pages/tags/Scala/" style="font-size: 10px;">Scala</a> <a href="/pages/tags/Scrum/" style="font-size: 11.67px;">Scrum</a> <a href="/pages/tags/Stash/" style="font-size: 15px;">Stash</a> <a href="/pages/tags/Struts/" style="font-size: 10px;">Struts</a> <a href="/pages/tags/TOCfE/" style="font-size: 10px;">TOCfE</a> <a href="/pages/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/pages/tags/apache/" style="font-size: 10px;">apache</a> <a href="/pages/tags/astah/" style="font-size: 10px;">astah</a> <a href="/pages/tags/community/" style="font-size: 20px;">community</a> <a href="/pages/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/pages/tags/english/" style="font-size: 10px;">english</a> <a href="/pages/tags/momongar/" style="font-size: 11.67px;">momongar</a> <a href="/pages/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/pages/tags/program/" style="font-size: 10px;">program</a> <a href="/pages/tags/twitter/" style="font-size: 10px;">twitter</a> <a href="/pages/tags/ネタ/" style="font-size: 11.67px;">ネタ</a> <a href="/pages/tags/横浜道場/" style="font-size: 11.67px;">横浜道場</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://about.me/yenjoji">about.me</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+        <section id="main"><article id="post-setup-stash-ha-resource" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/pages/2015/09/20/setup-stash-ha-resource/" class="article-date">
+  <time datetime="2015-09-20T03:00:00.000Z" itemprop="datePublished">2015-09-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Atlassian Stashの耐障害性を高めよう その3 HAリソースセットアップ編
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。</p>
+<p>回 <a href="http://www.atware.co.jp/blog/2015/9/15/setup-stash-ha" target="_blank" rel="external">ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編</a>はHAクラスタをくんだものの、<br>IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。</p>
+<p>このままでは表題に偽りありと言われても反論出来ないので、今回こそは、Stashの可用性を高めていきたいと思います。</p>
+<p>前回は、ノードが切り替わる際にIPアドレスが自動的にアクティブノードに付与されるように設定を行いました。<br>ただ、アクティブノードにIPアドレスが付与されるだけでは、Stashにアクセス出来ません。</p>
+<p>というわけで今回は、ノードの切り替わり時に自動的にStashが起動する様にします。</p>
+<h1 id="前提条件">前提条件</h1><ul>
+<li>前回までの設定が終わっている</li>
+<li>Stashが各ノードにインストール済み＆初期設定済み</li>
+<li>Stashの自動起動がOFFになっている</li>
+<li>StashのデータベースはStash以外のサーバーのものを使っている</li>
+</ul>
+<p>ここまでの設定が終わっている前提で進めていきます。<br>Stashはインストーラーを利用しても、tar.gzを利用しても問題ありません。</p>
+<p>なお、今回のStashはインストーラーを利用してセットアップしました。</p>
+<h1 id="リソース制御スクリプトの追加">リソース制御スクリプトの追加</h1><p>今回クラスタの制御に使用しているPacemakerは、一般的なクラスタリソースの制御スクリプトが最初から用意されています。<br>また、クラスタリソース制御スクリプトが用意されていない場合には、Pacemakerの指定する形式に沿った自作のスクリプトを所定のディレクトリに配置することにより、制御対象のクラスタリソースを追加することが出来ます。</p>
+<p>Atlassian Stashも残念ながらPacemakerにスクリプトを用意されるほどにはメジャーになっていないようなので、自作のスクリプトを配置する必要があります。</p>
+<p>このスクリプトを一から自作するとなかなか大変なのですが、Atlassian社がサンプルで用意しているリソース制御スクリプトがあるので、今回はそれを拝借します。</p>
+<p>CentOS 7.1 + Pacemaker 1.1 の構成では /usr/lib/ocf/resource.d/ 以下に自作スクリプトを配置することによりクラスタリソースが追加されます。</p>
+<p>ということで、<a href="https://bitbucket.org/atlassian/stash-ha-example/src/master/vagrant/scripts/heartbeat-stash?fileviewer=file-view-default" target="_blank" rel="external">このファイル</a>を各ノードの /usr/lib/ocf/resource.d/heartbeat に配置します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/lib/ocf/resource.d/heartbeat&#10;curl -o stash https://bitbucket.org/atlassian/stash-ha-example/raw/1397712da2b11ab4894c91446009aacae94fcf3d/vagrant/scripts/heartbeat-stash&#10;chmod 755 /usr/lib/ocf/resource.d/heartbeat/stash</span><br></pre></td></tr></table></figure>
+<p>リソースが定義されているかの確認をします。 pcs resource list コマンドの結果に ocf:heartbeat:stash が含まれていればOKです。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs resource list&#10;--&#20013;&#30053;--&#10;ocf:heartbeat:slapd - Manages a Stand-alone LDAP Daemon (slapd) instance&#10;ocf:heartbeat:stash - Manages a Stash instance&#10;ocf:heartbeat:symlink - Manages a symbolic link&#10;ocf:heartbeat:tomcat - Manages a Tomcat servlet environment instance&#10;--&#20197;&#19979;&#30053;--</span><br></pre></td></tr></table></figure>
+<h1 id="Stashリソースの定義">Stashリソースの定義</h1><p>リソースを定義する準備が整いましたので、クラスタにリソースを追加します。<br>下記コマンドを実行して、stashのリソースを定義します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs resource create stash_res ocf:heartbeat:stash params stash_user=atlstash stash_home=/var/atlassian/application-data/stash stash_inst=/opt/atlassian/stash/3.11.3 op monitor interval=15s op start timeout=240s</span><br></pre></td></tr></table></figure></p>
+<p>次にstashが単一のノードでしか起動しないように設定します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs resource meta stash_res migration-threshold=1</span><br></pre></td></tr></table></figure></p>
+<p>最後に、stashのプロセスと、VIPが同時に同じノードで起動するように設定します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs constraint colocation add stash_vip with stash_res INFINITY</span><br></pre></td></tr></table></figure></p>
+<p>リソースを定義した後、クラスタの状態を確認しこのようにstash_vipとstash_resが同じノード上でStartedになっていればOKです。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs status&#10;Cluster name: stash&#10;Last updated: Sun Sep 20 10:07:15 2015&#9;&#9;Last change: Sun Sep 20 09:32:39 2015 by root via cibadmin on node01&#10;Stack: corosync&#10;Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 2 resources configured&#10;&#10;Online: [ node01 node02 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node01&#10; stash_res&#9;(ocf::heartbeat:stash):&#9;Started node01&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Online&#10;&#10;Daemon Status:&#10;  corosync: active/disabled&#10;  pacemaker: active/disabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure></p>
+<h1 id="ノード切り替えの確認">ノード切り替えの確認</h1><p>それでは、設定が出来たのでノード障害時に自動的に切り替わるか確認したいと思います。</p>
+<p>まず現状を確認します。<br>諸事情で、node02がアクティブになっています。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs status&#10;Cluster name: stash&#10;Last updated: Sun Sep 20 11:03:59 2015&#9;&#9;Last change: Sun Sep 20 09:32:39 2015 by root via cibadmin on node01&#10;Stack: corosync&#10;Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 2 resources configured&#10;&#10;Online: [ node01 node02 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node02&#10; stash_res&#9;(ocf::heartbeat:stash):&#9;Started node02&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Online&#10;&#10;Daemon Status:&#10;  corosync: active/enabled&#10;  pacemaker: active/enabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure>
+<p>では、ここでnode02の電源をOFFします。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs status&#10;Cluster name: stash&#10;Last updated: Sun Sep 20 11:08:36 2015&#9;&#9;Last change: Sun Sep 20 09:32:39 2015 by root via cibadmin on node01&#10;Stack: corosync&#10;Current DC: node01 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 2 resources configured&#10;&#10;Online: [ node01 ]&#10;OFFLINE: [ node02 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node01&#10; stash_res&#9;(ocf::heartbeat:stash):&#9;Started node01&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Offline&#10;&#10;Daemon Status:&#10;  corosync: active/disabled&#10;  pacemaker: active/disabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure>
+<p>しばらく後にクラスタの状態を確認したところ無事にnode01に切り替わっていることが確認出来ました。</p>
+<h1 id="さいごに">さいごに</h1><p>今回で、ようやくStashが切り替わる様になりました。これで可用性が高まって枕を高くして眠れるかと思いましたが、実はまだ設定が足りません。<br>なんと、Stashはハードディスク上にもデータを保存しているのです。</p>
+<p>というわけで次回はディスクを冗長化して、こんどこそ真のStashの耐障害性向上を成し遂げたいと思います。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yenjoji.github.io/pages/2015/09/20/setup-stash-ha-resource/" data-id="cif2o5611000uz5vx69r60ys2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Atlassian/">Atlassian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Pacemaker/">Pacemaker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Stash/">Stash</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/pages/2015/09/15/setup-stash-ha/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Atlassian Stashの耐障害性を高めよう その2 HAセットアップ編</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <a href="/" class="logo">Rouleur</a>
+      &copy; 2015 yenjoji<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="/pages/js/jquery.min.js" type="text/javascript"></script>
+<script src="/pages/js/jquery.scrollLoading.js" type="text/javascript"></script>
+
+
+  <link rel="stylesheet" href="/pages/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/pages/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/pages/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
