@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2015-09-20T02:29:21.000Z</updated>
+  <updated>2015-09-27T15:38:57.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yenjoji.github.io/pages/pages/2015/09/20/setup-stash-ha-resource/"/>
     <id>http://yenjoji.github.io/pages/pages/2015/09/20/setup-stash-ha-resource/</id>
     <published>2015-09-20T03:00:00.000Z</published>
-    <updated>2015-09-20T02:29:21.000Z</updated>
+    <updated>2015-09-27T15:38:57.000Z</updated>
     <content type="html"><![CDATA[<p>今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。</p>
-<p>回 <a href="http://www.atware.co.jp/blog/2015/9/15/setup-stash-ha" target="_blank" rel="external">ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編</a>はHAクラスタをくんだものの、<br>IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。</p>
+<p>回 <a href="http://yenjoji.github.io/pages/2015/09/15/setup-stash-ha/">ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編</a>はHAクラスタをくんだものの、<br>IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。</p>
 <p>このままでは表題に偽りありと言われても反論出来ないので、今回こそは、Stashの可用性を高めていきたいと思います。</p>
 <p>前回は、ノードが切り替わる際にIPアドレスが自動的にアクティブノードに付与されるように設定を行いました。<br>ただ、アクティブノードにIPアドレスが付与されるだけでは、Stashにアクセス出来ません。</p>
 <p>というわけで今回は、ノードの切り替わり時に自動的にStashが起動する様にします。</p>
@@ -57,7 +57,7 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。</p>
-<p>回 <a href="http://www.atware.co.jp/blog/2015/9/15/setup-stash-ha" target="_blank" rel=]]>
+<p>回 <a href="http://yenjoji.github.io/pages/2015/09/15/setup-stash-ha/">ATLASSIAN STASHの]]>
     </summary>
     
       <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
@@ -73,8 +73,8 @@
     <link href="http://yenjoji.github.io/pages/pages/2015/09/15/setup-stash-ha/"/>
     <id>http://yenjoji.github.io/pages/pages/2015/09/15/setup-stash-ha/</id>
     <published>2015-09-15T03:10:00.000Z</published>
-    <updated>2015-09-19T13:08:26.000Z</updated>
-    <content type="html"><![CDATA[<p>今回は <a href="http://www.atware.co.jp/blog/2015/9/10/atlassian-stash-ha-101" target="_blank" rel="external">前回 「Atlassian Stashの耐障害性を高めよう その１ プランニング編」</a> の続きとして、<br>HAクラスタのセットアップを行いたいと思います。</p>
+    <updated>2015-09-27T15:38:35.000Z</updated>
+    <content type="html"><![CDATA[<p>今回は <a href="http://yenjoji.github.io/pages/2015/09/08/stash-ha-101/">前回 「Atlassian Stashの耐障害性を高めよう その１ プランニング編」</a> の続きとして、<br>HAクラスタのセットアップを行いたいと思います。</p>
 <p>手順は<a href="https://access.redhat.com/documentation/ja-JP/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/" target="_blank" rel="external">redhat向けのHIGH AVAILABILITY ADD-ON リファレンス</a> を参考に行っていきます</p>
 <h1 id="今回の構成">今回の構成</h1><p>今回は、LinuxのHAクラスタミドルウェアの定番であるPacemakerを使用してクラスタを構成します。</p>
 <table>
@@ -153,7 +153,7 @@
 <p><a href="http://kan3aa.hatenablog.com/entry/2015/06/05/135150" target="_blank" rel="external">CentOS7.1でPacemaker+corosyncによるクラスタを構成する（Part.1）</a><br>CentOS7 + Pacemaker でのクラスタ構築からVIP設定までが非常に丁寧にステップバイステップで解説されています。<br>最終的には、このエントリもほぼ似たような感じになってしまいました。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>今回は <a href="http://www.atware.co.jp/blog/2015/9/10/atlassian-stash-ha-101" target="_blank" rel="external">前回 「Atlassian Stashの耐障害性を高めよう ]]>
+    <![CDATA[<p>今回は <a href="http://yenjoji.github.io/pages/2015/09/08/stash-ha-101/">前回 「Atlassian Stashの耐障害性を高めよう その１ プランニング編」</a> の続きとして、<br>HAクラスタのセッ]]>
     </summary>
     
       <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>

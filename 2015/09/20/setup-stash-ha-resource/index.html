@@ -15,7 +15,7 @@
 <meta property="og:description" content="今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。
 回 ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編はHAクラスタをくんだものの、IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。
 このままでは表題に偽りありと言われても反論出来ないので、今回こそは、Stashの可用性を高めていき">
-<meta property="og:updated_time" content="2015-09-20T02:29:21.000Z">
+<meta property="og:updated_time" content="2015-09-27T15:38:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Atlassian Stashの耐障害性を高めよう その3 HAリソースセットアップ編">
 <meta name="twitter:description" content="今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。
@@ -197,7 +197,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。</p>
-<p>回 <a href="http://www.atware.co.jp/blog/2015/9/15/setup-stash-ha" target="_blank" rel="external">ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編</a>はHAクラスタをくんだものの、<br>IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。</p>
+<p>回 <a href="http://yenjoji.github.io/pages/2015/09/15/setup-stash-ha/">ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編</a>はHAクラスタをくんだものの、<br>IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。</p>
 <p>このままでは表題に偽りありと言われても反論出来ないので、今回こそは、Stashの可用性を高めていきたいと思います。</p>
 <p>前回は、ノードが切り替わる際にIPアドレスが自動的にアクティブノードに付与されるように設定を行いました。<br>ただ、アクティブノードにIPアドレスが付与されるだけでは、Stashにアクセス出来ません。</p>
 <p>というわけで今回は、ノードの切り替わり時に自動的にStashが起動する様にします。</p>
@@ -233,7 +233,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yenjoji.github.io/pages/2015/09/20/setup-stash-ha-resource/" data-id="cif2o5611000uz5vx69r60ys2" class="article-share-link">Share</a>
+      <a data-url="http://yenjoji.github.io/pages/2015/09/20/setup-stash-ha-resource/" data-id="cif2o8yyn000u17vxtno7hbnp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Atlassian/">Atlassian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Pacemaker/">Pacemaker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Stash/">Stash</a></li></ul>
