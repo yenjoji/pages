@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2015-09-27T15:38:57.000Z</updated>
+  <updated>2015-10-26T01:17:27.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -16,13 +16,302 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Atlassian Stashの耐障害性を高めよう その4 分散ストレージ設定編]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2015/10/26/setup-stash-ha-storage-glusterfs/"/>
+    <id>http://yenjoji.github.io/pages/pages/2015/10/26/setup-stash-ha-storage-glusterfs/</id>
+    <published>2015-10-26T03:00:00.000Z</published>
+    <updated>2015-10-26T01:17:27.000Z</updated>
+    <content type="html"><![CDATA[<p>今回もStashの高可用性を目指してクラスタを組んでいきたいと思います。<br>前回までで、サーバーと、Stashのプロセスの冗長化は一旦完了したので、今回は一番重要なデータ保存領域の冗長化を目指します。</p>
+<h1 id="お知らせ">お知らせ</h1><p>今までAtlassian Stash を冗長化しようと頑張ってきましたが、つい先日なんとAtlassian Stashがなくなってしまいました。<br>今度からは生まれ変わった？ Bitbucket Server をよろしくお願いします。</p>
+<p>・・・閑話休題・・・</p>
+<p>それでは、Stash改めBitbucket Serverのストレージを冗長化したいと思います。</p>
+<p><a href="https://confluence.atlassian.com/stash/high-availability-for-stash-437915322.html" target="_blank" rel="external">Atlassianの公式</a>によるとストレージは GFS2 + DRBD でストレージの冗長化を行っていますが、<br>今回は個人的な興味で、GlusterFSを使って冗長構成をしてみたいと思います。</p>
+<h1 id="事前準備">事前準備</h1><h2 id="VagrantにDISKを追加">VagrantにDISKを追加</h2><p>Virtualbox コンソール経由で、node01,node02 にDISKを追加します。<br>Stashのデータに使用するので、保存するデータの容量によって大きさをかんがえる必要があります。<br>今回は仮に8GBとして データ用にパーティション /dev/sdb1 を作成しました。</p>
+<h1 id="GlusterFSのインストール（全ノード）">GlusterFSのインストール（全ノード）</h1><h2 id="パッケージのインストール">パッケージのインストール</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/&#10;curl -o glusterfs.repo http://download.gluster.org/pub/gluster/glusterfs/LATEST/CentOS/glusterfs-epel.repo&#10;yum install glusterfs-server</span><br></pre></td></tr></table></figure>
+<h2 id="通信ポートの開放">通信ポートの開放</h2><p>まずは、通信に必要なポートを開放します。<br>今回は実験用途なのでどこからでも通信可能に設定してしまいます。</p>
+<p>/usr/lib/firewalld/services/glusterfs.xml を以下の内容で作成します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&#62;&#10;&#60;service&#62;&#10;  &#60;short&#62;GlusterFS&#60;/short&#62;&#10;  &#60;description&#62;GlusterFS&#60;/description&#62;&#10;  &#60;port protocol=&#34;tcp&#34; port=&#34;1111&#34;/&#62;&#10;  &#60;port protocol=&#34;tcp&#34; port=&#34;24007-24100&#34;/&#62;&#10;&#9;&#60;port protocol=&#34;tcp&#34; port=&#34;49152&#34;/&#62;&#10;&#60;/service&#62;</span><br></pre></td></tr></table></figure></p>
+<p>作成したファイルをもとにファイワォールの設定を変更します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --add-service=glusterfs&#10;firewall-cmd --reload</span><br></pre></td></tr></table></figure></p>
+<h1 id="GlusterFS_Volumeの作成">GlusterFS Volumeの作成</h1><p>次にGlusterFSで使用するディスクの準備をします。</p>
+<h2 id="ファイルシステムの作成">ファイルシステムの作成</h2><p>GlusterFSは共有するボリュームのファイルシステムをXFSにする必要があります。<br>まずはデータ用のボリュームをXFSで用意します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.xfs /dev/sdb1</span><br></pre></td></tr></table></figure>
+<p>/etc/fstab の末尾にエントリを追加します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/dev/sdb1       /data&#9;&#9;&#9;&#9;&#9;  xfs     defaults        0 0</span><br></pre></td></tr></table></figure></p>
+<p>マウントします。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -a</span><br></pre></td></tr></table></figure></p>
+<h2 id="GlusterFSの起動">GlusterFSの起動</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start glusterd&#10;systemctl enable glusterd</span><br></pre></td></tr></table></figure>
+<h2 id="GlusterFSのノード登録">GlusterFSのノード登録</h2><ul>
+<li><p>node01</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gluster peer probe node02</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>node02</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gluster peer probe node01</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="GlusterFSのVolume作成(任意の1ノードで実行)">GlusterFSのVolume作成(任意の1ノードで実行)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /data/atlassian/stash</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gluster volume create stash_vol replica 2 node01:/data/atlassian/stash node02:/data/atlassian/stash&#10;gluster volume start stash_vol</span><br></pre></td></tr></table></figure>
+<h2 id="GlusterFSのマウント">GlusterFSのマウント</h2><h3 id="マウントポイントの作成">マウントポイントの作成</h3><p>まずマウントポイントを作成します。<br>既存のStashのデータディレクトリはあとでGlusterFS上にコピーするためリネームして退避しておきます。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /var/atlassian/application-data/stash /var/atlassian/application-data/stash.org&#10;mkdir -p  /var/atlassian/application-data/stash&#10;chown atlstash:atlstash /var/atlassian/application-data/stash</span><br></pre></td></tr></table></figure></p>
+<h3 id="fstabの修正">fstabの修正</h3><p>次に各ノードで /etc/fstab にエントリを追加します。</p>
+<ul>
+<li><p>node01</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node01:stash_vol        /var/atlassian/application-data/stash   glusterfs       defaults        0 0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>node02</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node02:stash_vol        /var/atlassian/application-data/stash   glusterfs       defaults        0 0</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="ファイルシステムのマウント">ファイルシステムのマウント</h3><p>次に、両方のノードでglusterfsをマウントします。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -a</span><br></pre></td></tr></table></figure></p>
+<h3 id="既存データのコピー">既存データのコピー</h3><p>次に、今までのデータをどちらか一方のノードでコピーします<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -rp /var/atlassian/application-data/stash.org/* /var/atlassian/application-data/stash/.</span><br></pre></td></tr></table></figure></p>
+<p>これで課題だったDISKの冗長化も出来、Stash改めBitbucketServerのクラスタリングが完了しました。<br>実際の運用では、定期的なデータのバックアップは行う事はあっても、クラスタリングをすることはまれかもしれませんが、<br>クラスタリングを検討されている方の参考になれば幸いです。</p>
+<p>※ このシリーズの記事はあくまで検証用途でクラスタの設定を行っているため、実際の環境では使用に耐えない可能性があります。<br>   実際にHAを構成を行う場合には十分な検証を行うことをおすすめします。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今回もStashの高可用性を目指してクラスタを組んでいきたいと思います。<br>前回までで、サーバーと、Stashのプロセスの冗長化は一旦完了したので、今回は一番重要なデータ保存領域の冗長化を目指します。</p>
+<h1 id="お知らせ">お知らせ</h1><p>今までA]]>
+    </summary>
+    
+      <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
+    
+      <category term="GlusterFS" scheme="http://yenjoji.github.io/pages/pages/tags/GlusterFS/"/>
+    
+      <category term="Stash" scheme="http://yenjoji.github.io/pages/pages/tags/Stash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Thinking about INVEST]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2015/09/26/thiking-about-invest/"/>
+    <id>http://yenjoji.github.io/pages/pages/2015/09/26/thiking-about-invest/</id>
+    <published>2015-09-26T03:00:00.000Z</published>
+    <updated>2015-09-25T17:39:08.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="INVEST">INVEST</h1><p>Have you ever heard the acronym “INVEST”?</p>
+<p>The INVEST mnemonic was created by Bill Wake and it is introduced in <a href="https://pragprog.com/titles/jtrap/the-agile-samurai" target="_blank" rel="external">The Agile Samurai(@jrasmusson 2010)</a> .</p>
+<p>“INVEST” is as a reminder of the characteristics of a good quality user story,</p>
+<ul>
+<li>Independent<ul>
+<li>The user story should be self-contained, in a way that there is no inherent dependency on another user story.</li>
+</ul>
+</li>
+<li>Negotiable<ul>
+<li>User stories, up until they are part of an iteration, can always be changed and rewritten.</li>
+</ul>
+</li>
+<li>Valuable<ul>
+<li>A u ser story must deliver value to the end user.</li>
+</ul>
+</li>
+<li>Estimable<ul>
+<li>You must always be able to estimate the size of a user story.</li>
+</ul>
+</li>
+<li>Small<ul>
+<li>User stories should not be so big as to become impossible to plan/task/prioritize with a certain level of certainty.</li>
+</ul>
+</li>
+<li>Testable<ul>
+<li>The user story or its related description must provide the necessary information to make test development possible.</li>
+</ul>
+</li>
+</ul>
+<p>quated from <a href="https://en.wikipedia.org/wiki/INVEST_(mnemonic" target="_blank" rel="external">wikipedia</a>)</p>
+<p>“Valuable” is easy understand Of these six words, So everyone will care<br>But Testable,Small and Estimable are often forgotten.</p>
+<p>If you noticed follow problems, It may be able to solve it by being conscious of INVEST.</p>
+<ul>
+<li>Story goal is difficult to understand, Because acceptance criteria is not clear.</li>
+<li>Story is hard to estimate, Because the size is huge.</li>
+</ul>
+<h1 id="INVEST_User_Story">INVEST User Story</h1><p>Then I think about an example about the user story that is INVEST.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">As a Administrator,&#10;I want search user by name so that I don&#39;t use time for find user in list.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Independent<ul>
+<li>OK. This story is inipendent feature.</li>
+</ul>
+</li>
+<li>Negotiable<ul>
+<li>OK. This story is not specified implementation.</li>
+</ul>
+</li>
+<li>Valuable<ul>
+<li>OK. To improve Administrator’s work efficiency</li>
+</ul>
+</li>
+<li>Estimable<ul>
+<li>OK. It story may be modified 1 view (and 1 logic)</li>
+</ul>
+</li>
+<li>Small<ul>
+<li>OK. It is simple and small.</li>
+</ul>
+</li>
+<li>Testable<ul>
+<li>OK. Story is simple, (please confirm the acceptance criteria properly in PO.)</li>
+</ul>
+</li>
+</ul>
+<p>It is INVEST and good user story.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">As a ramen JIRO lovers (sometimes called Jirolian),&#10;I want to know which JIRO is open now&#10;so I wants to go to Jiro as soon as I thought.</span><br></pre></td></tr></table></figure>
+<p>And this user story is INVEST too.</p>
+<h1 id="Conclusion">Conclusion</h1><p>INVEST is good practice for writing user story.</p>
+<p>How about if you try a Story-Gathering workshop while being conscious of INVEST?</p>
+<h1 id="Appendix">Appendix</h1><h1 id="INVEST_something">INVEST something</h1><p>With that said, I understood that INVEST was important in thinking about user story.<br>In, what’s the INVEST in something other than user stories can be applied?</p>
+<p>I’m tried.</p>
+<h2 id="JIRO">JIRO</h2><p>Ramen Jiro is of course technically ramen, but it is somewhat different from any other ramen in Japan.</p>
+<p>quated from <a href="http://www.ramentokyo.com/2007/06/ramen-jiro.html" target="_blank" rel="external">http://www.ramentokyo.com/2007/06/ramen-jiro.html</a></p>
+<p>Ramen Jiro is introduced in Guardian 2009 <a href="http://www.theguardian.com/lifeandstyle/2009/sep/13/best-foods-in-the-world" target="_blank" rel="external">The 50 best things to eat in the world, and where to eat them</a></p>
+<p>and <a href="https://twitter.com/elonmusk/status/508617476804866048" target="_blank" rel="external">Elon Mask was visited.</a></p>
+<h2 id="Is_Jiro_INVEST?">Is Jiro INVEST?</h2><ul>
+<li>Independent<ul>
+<li>Jiro has some unique distinction. amazing large serving, own rule, etc…</li>
+<li>someone says “Jiro is not ramen, but Jiro is the Independent food”</li>
+</ul>
+</li>
+<li>Negotiable<ul>
+<li>Jiro is negotiable some toppings vegitables (yasai), Backfat (abura), garlic(nin-niku) and depth of taste (karame).</li>
+<li>If you want to more and more vegitables,backfat and garlic, you shoud say “yasai, abura, nin-niku mashi-mashi”.</li>
+</ul>
+</li>
+<li>Valuable<ul>
+<li>Jiro is Cost-effective.</li>
+<li>Jiro is unique.</li>
+</ul>
+</li>
+<li>Estimable<ul>
+<li>While you attend a few times, it will be so as estimated to be either the amount of how much today is eaten.</li>
+<li>If, when you can not eat too much, it would be nice if I tell half noodles when presenting the meal ticket.</li>
+</ul>
+</li>
+<li>Small<ul>
+<li>Jiro’s menu have “small size” (but Jiro’s small size equals ordinaly ramens large size or extra large size.)</li>
+</ul>
+</li>
+<li>Testable<ul>
+<li>Jiro might store a total of 40. we can achieve 100% coverage. It’s testable.</li>
+</ul>
+</li>
+</ul>
+<p>Jiro isn’t completely INVEST. but Jiro is extremely unique.</p>
+<h2 id="Conclusion-1">Conclusion</h2><p>Meanwhile, it is very distinctive ramen Jiro, as there is also saying, “Seeing is believing”, First, What is How about try to experience.</p>
+<p>Enjoy “mashi-mashi”.</p>
+<p>(日本語版)</p>
+<h1 id="INVEST-1">INVEST</h1><p>INVEST という頭文字語をご存知ですか？</p>
+<p>“INVEST” とは <a href="http://xp123.com/articles/invest-in-good-stories-and-smart-tasks/" target="_blank" rel="external">ビルウェイクにより考案され</a>、<a href="https://github.com/agile-samurai-ja/support/wiki" target="_blank" rel="external">アジャイルサムライ</a>でも紹介された、よくかけているユーザーストーリーに備わっている6つの要素を表します。</p>
+<ul>
+<li>Indipendent<ul>
+<li>独立している</li>
+</ul>
+</li>
+<li>Negotiable<ul>
+<li>交渉の余地がある</li>
+</ul>
+</li>
+<li>Valuable<ul>
+<li>価値のある</li>
+</ul>
+</li>
+<li>Estimable<ul>
+<li>見積もれる</li>
+</ul>
+</li>
+<li>Small<ul>
+<li>小さい</li>
+</ul>
+</li>
+<li>Testable<ul>
+<li>テストできる</li>
+</ul>
+</li>
+</ul>
+<p>この中でもValuableはわかりやすいので、誰もが気にするのですが、<br>意外と見逃し気味なのが、Testable,Small,Estimableです。</p>
+<ul>
+<li>受け入れ条件が曖昧でストーリーのゴールがわかりにくい</li>
+<li>ストーリーが壮大過ぎて見積もろうとしても想像が出来ない</li>
+</ul>
+<p>などの状況に気づいたら、INVESTを意識すると解決できるかも知れません。</p>
+<h1 id="INVEST_User_Story-1">INVEST User Story</h1><p>では、INVESTなユーザーストーリーについて例を考えてみます。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#31649;&#29702;&#32773;&#12399;&#12518;&#12540;&#12470;&#12540;&#12434;&#26908;&#32034;&#12375;&#12383;&#12356;&#12290;&#12394;&#12380;&#12394;&#12425;&#12522;&#12473;&#12488;&#12363;&#12425;&#30446;Grep&#12377;&#12427;&#12398;&#12364;&#12461;&#12484;&#12452;&#12363;&#12425;&#12384;&#12290;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Indipendent<ul>
+<li>OK. 独立したフィーチャーです。</li>
+</ul>
+</li>
+<li>Negotiable<ul>
+<li>OK. 実現方法などはまだ交渉（カイゼン）の余地があります。</li>
+</ul>
+</li>
+<li>Valuable<ul>
+<li>OK. 管理者の作業効率が上がります。</li>
+</ul>
+</li>
+<li>Estimable<ul>
+<li>OK. 開発者が想像できるくらいのサイズです。（おそらく1画面＋1ロジックでしょう）</li>
+</ul>
+</li>
+<li>Small<ul>
+<li>OK. 十分に小さいです。</li>
+</ul>
+</li>
+<li>Testable<ul>
+<li>OK. ユーザーストーリーがシンプルなので、テストも書きやすそうです。（ただし、POと受け入れ条件は合意して億必要があります。）</li>
+</ul>
+</li>
+</ul>
+<p>このユーザーストーリーはINVESTを満たしていて、良いストーリーと言えるでしょう。</p>
+<p>別の例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#12472;&#12525;&#12522;&#12450;&#12531;&#12399;&#12393;&#12398;&#24215;&#33303;&#12364;&#20170;&#21942;&#26989;&#20013;&#12394;&#12398;&#12363;&#30693;&#12426;&#12383;&#12356;&#12290;&#12394;&#12380;&#12394;&#12425;&#12289;&#24605;&#12356;&#31435;&#12387;&#12383;&#12381;&#12398;&#12479;&#12452;&#12511;&#12531;&#12464;&#12391;&#12521;&#12540;&#12513;&#12531;&#20108;&#37070;&#12408;&#34892;&#12365;&#12383;&#12356;&#12363;&#12425;&#12384;&#12290;</span><br></pre></td></tr></table></figure>
+<p>また、このストーリーもINVESTを満たしていて良いストーリーといえるのでは無いでしょうか。</p>
+<h1 id="Conclusion-2">Conclusion</h1><p>このようにINVESTを意識することで、ユーザーストーリーがより良くなります。</p>
+<p>ユーザーストーリーワークショップなどを行う際には<br>INVESTを意識しながらストーリーを抽出してみたらいかがでしょうか。</p>
+<h1 id="Appendix-1">Appendix</h1><h1 id="INVEST_something-1">INVEST something</h1><p>ということで、ユーザーストーリーを考える上でINVESTが重要な事はわかりました。<br>では、今回は少々趣向を変えて、ユーザーストーリーではなく、身近なものにINVESTが適用できるか考えてみました。</p>
+<h2 id="jiro">jiro</h2><p>ラーメン二郎とは、</p>
+<p>Guardian 2009 <a href="http://www.theguardian.com/lifeandstyle/2009/sep/13/best-foods-in-the-world" target="_blank" rel="external">The 50 best things to eat in the world, and where to eat them</a></p>
+<p>で紹介され、</p>
+<p><a href="http://mogumogunews.com/2015/04/topic_10702/" target="_blank" rel="external">http://mogumogunews.com/2015/04/topic_10702/</a></p>
+<p>あの、<a href="https://twitter.com/elonmusk/status/508617476804866048" target="_blank" rel="external">イーロン・マスクも訪れた</a>ラーメン店です。</p>
+<p><a href="http://japan.cnet.com/news/offtopic/35053480/" target="_blank" rel="external">http://japan.cnet.com/news/offtopic/35053480/</a></p>
+<h2 id="Is_JIRO_INVEST?">Is JIRO INVEST?</h2><ul>
+<li>I<ul>
+<li>二郎はラーメンではなく、二郎という食べ物だと言われることもあるほど独自性が高く、一種独特の文化があると言えるでしょう。</li>
+</ul>
+</li>
+<li>N<ul>
+<li>二郎非常に柔軟な調整が可能です。代表的なものは 麺、野菜、背脂、にんにくの量や、味の濃さです。たとえば、野菜と背脂とにんにくをとても多くしたい場合は「野菜、アブラ、ニンニク マシマシ」と店主に伝えることにより、おそらくあなたの希望の結果が得られるでしょう。</li>
+</ul>
+</li>
+<li>V<ul>
+<li>二郎には圧倒的なオリジナリティがあります。これにまさる価値は無いでしょう。</li>
+</ul>
+</li>
+<li>E<ul>
+<li>何回か二郎に通うと、自分のコンディションに応じて何を増やして何を減らすかが見積もれる様になります。体調が悪くあまり食べられない場合は、食券を提示する際に、麺半分などと伝えればいいでしょう</li>
+</ul>
+</li>
+<li>S<ul>
+<li>二郎にもスモールサイズはありますが、これには注意が必要です。二郎のスモールサイズは、一般的な店舗の大盛りか、それ以上に値します。慣れるまではスモールサイズもしくは（もしあれば）ソレより小さいプチサイズにするのが良いでしょう。</li>
+</ul>
+</li>
+<li>T<ul>
+<li>二郎は総店舗数が40店舗弱（内休業中が2店舗？）であるため、カバレッジ100％を達成することも可能であるため、テスタブルと言えるでしょう。また、非常に量が多いため、自分に対する判断力を試されるため、自分自身に対するテストと考えることも出来ます。</li>
+</ul>
+</li>
+</ul>
+<p>そんな、非常に特徴的なラーメン二郎ですが、百聞は一見にしかずということわざもあるように、まずは体験してみるのはいかがでしょうか。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="INVEST">INVEST</h1><p>Have you ever heard the acronym “INVEST”?</p>
+<p>The INVEST mnemonic was created by Bill Wake and it is introd]]>
+    </summary>
+    
+      <category term="agile" scheme="http://yenjoji.github.io/pages/pages/tags/agile/"/>
+    
+      <category term="jiro" scheme="http://yenjoji.github.io/pages/pages/tags/jiro/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Atlassian Stashの耐障害性を高めよう その3 HAリソースセットアップ編]]></title>
     <link href="http://yenjoji.github.io/pages/pages/2015/09/20/setup-stash-ha-resource/"/>
     <id>http://yenjoji.github.io/pages/pages/2015/09/20/setup-stash-ha-resource/</id>
     <published>2015-09-20T03:00:00.000Z</published>
-    <updated>2015-09-27T15:38:57.000Z</updated>
+    <updated>2015-10-06T07:40:12.000Z</updated>
     <content type="html"><![CDATA[<p>今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。</p>
-<p>回 <a href="http://yenjoji.github.io/pages/2015/09/15/setup-stash-ha/">ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編</a>はHAクラスタをくんだものの、<br>IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。</p>
+<p>前回 <a href="http://yenjoji.github.io/pages/2015/09/15/setup-stash-ha/">ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編</a>はHAクラスタをくんだものの、<br>IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。</p>
 <p>このままでは表題に偽りありと言われても反論出来ないので、今回こそは、Stashの可用性を高めていきたいと思います。</p>
 <p>前回は、ノードが切り替わる際にIPアドレスが自動的にアクティブノードに付与されるように設定を行いました。<br>ただ、アクティブノードにIPアドレスが付与されるだけでは、Stashにアクセス出来ません。</p>
 <p>というわけで今回は、ノードの切り替わり時に自動的にStashが起動する様にします。</p>
@@ -57,7 +346,7 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。</p>
-<p>回 <a href="http://yenjoji.github.io/pages/2015/09/15/setup-stash-ha/">ATLASSIAN STASHの]]>
+<p>前回 <a href="http://yenjoji.github.io/pages/2015/09/15/setup-stash-ha/">ATLASSIAN STASH]]>
     </summary>
     
       <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
@@ -1330,89 +1619,6 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
       <category term="S2JDBC" scheme="http://yenjoji.github.io/pages/pages/tags/S2JDBC/"/>
     
       <category term="program" scheme="http://yenjoji.github.io/pages/pages/tags/program/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[フクロモモンガ温度記録システムを作りました]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2012/04/04/2012-04-04-momongar/"/>
-    <id>http://yenjoji.github.io/pages/pages/2012/04/04/2012-04-04-momongar/</id>
-    <published>2012-04-03T15:00:00.000Z</published>
-    <updated>2015-04-09T05:45:11.000Z</updated>
-    <content type="html"><![CDATA[<h2>なんでつくったのか</h2>
-
-<p>昨年の7月にフクロモモンガを飼い始めました。</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/16465075443" title="momonga_001 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm9.staticflickr.com/8710/16465075443_275c00513e.jpg" width="500" height="375" alt="momonga_001"></a></p>
-<p>こんな感じです。<br>３X歳のいい年した男ですが、可愛いと言わざるを得ません。</p>
-
-<p>最近では結構人気があるようで、芸能人でも飼っている方が居るとか。<br><br>近所のペットショップでも、かなり見かける小動物です。</p>
-
-<p>よく言われる魅力は、</p>
-<ul><br><li><p>慣れやすい<br>ベタなれという状態までなれると名前を呼ぶと飛んできたりするそうです。<br>うまくすればナウシカ気分になれるとか。</p></li><br><li><p>比較的長寿<br>10年とか15年とか聞くこともありますが、普通に5年から7年くらいは一緒に暮らせるようです。</p></li><br><li><p>滑空します。<br>ムササビとか、忍者ハットリくんのイメージです。</p></li><br></ul>
-
-<p>他にも色々魅力はありますので、もし興味の湧いた方はインターネットで検索していただけるといろんなモモンガが見られます。<br>youtubeに動画もあるようですので、自宅に迎える前に魅力を堪能してみてください。</p>
-
-<p>そんな魅力たっぷりのフクロモモンガですが、飼い始めて、フクロモモンガのことを調べていくと、<br><br>どうやら温度管理が大切だということがわかりました。<br><br>インターネットや、本の情報を見ると20度を下回ると低体温状態になり、30度をこえると熱射病の危険があるそうです。</p>
-
-<p>夏の間はエアコンをかけっぱなしにしていたのである程度安心でしたが、<br><br>冬は光熱費の関係などもあって、室内全体を温めるのではなく、<br><br>モモンガのケージの周りだけ小型のオイルヒーターと、パネルヒーターで温めることにしました。<br><br>そうなると、室内の温度とモモンガの生活空間の温度が一致しなくなり、<br><br>実際のところ適温にできているのかという疑問が湧いてきました。</p>
-
-<p>温度計のような、その時その時の状態だけでなく、一日を通しての温度変化。<br><br>しかもフクロモモンガの生活している環境により近いところでの計測がしたいという欲求が湧いてきました。</p>
-
-<p>そんなことを考えていた矢先に、社内でワインセラーの温度管理システムを趣味で構築した話を聞いたことを思い出しました。<br><br>それをそのままいただいてしまって、ちょっと手を加えればフクロモモンガに使えるんじゃないかと思い、<br><br>システムの作成者を<s>うまく口車にのせて</s>説得して。<br><br>セラー温度管理システムにプラスアルファしてこのシステムが完成しました。</p>
-
-<h2>何ができるのか</h2>
-
-<ul><br><li>10分置きに温度を測定して、記録し続けます。</li><br><li>記録した温度の変化をブラウザから折れ線グラフで確認できます。<br><a href="https://www.flickr.com/photos/130999506@N07/17059259216" title="momonga_000 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm9.staticflickr.com/8777/17059259216_cf4fa6bd48.jpg" width="441" height="500" alt="momonga_000"></a><br></li><li>予め設定した温度の上限と、下限をこえた場合、メールでお知らせします。</li><br></ul>
-
-<h2>なにでできているのか</h2>
-
-<p>今回制作したモモンガ温度管理システムは<br>アメリカ <a href="http://www.globalscaletechnologies.com/" target="_blank" rel="external">Globalscale Technologies</a>社の <a href="http://www.globalscaletechnologies.com/p-49-guruplug-server-standard.aspx#components" target="_blank" rel="external">GuruPlug Server Standard</a> という小型LinuxBoxの上で稼動しています。<br>温度計は <a href="http://www.amazon.co.jp/%E3%83%90%E3%83%AB%E3%82%AF-USB%E6%B8%A9%E5%BA%A6%E8%A8%88-USB-thermometer/dp/B004FI1570" target="_blank" rel="external">TEMPerUSB</a> というUSB温度計を使用しました。</p>
-
-<p>GuruPlug Serverは350ml缶を横にして四角くしたくらいのサイズの中にサーバーとして使用するに必要十分な機能が詰まったLinuxBoxです。<br><br>OSはDebianがプリインストールされ、GigabitEthernetや、２PortのUSBなど画面を出力できない以外はほぼすべての機能を備えたマシンです。</p>
-
-<h2>使ってみてみてどうだったのか</h2>
-
-<p>しばらく運用してみると、我が家のモモンガのケージの気温は多少の上下はあるものの、概ね適温を推移しているということがわかりました。<br><br>大丈夫だろうと思っていたものの、実際数値になって見えることによりより安心出来ました。</p>
-
-<p>また、汎用的なLinuxBoxを使ってシステムを作っているので、機能を拡張する自由度が高いのが魅力です。<br>今後も、このシステムを改良して楽しいモモンガライフを送ろうと思います。</p>
-
-<p>せっかく作ったシステムですので、興味のある方がもしいらっしゃれば使っていただけるようにしたいと思っています。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2>なんでつくったのか</h2>
-
-<p>昨年の7月にフクロモモンガを飼い始めました。</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/16465075443" title="momonga_001 by]]>
-    </summary>
-    
-      <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
-    
-      <category term="momongar" scheme="http://yenjoji.github.io/pages/pages/tags/momongar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[MySQLで実行中のSQLを調べて止める方法]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2012/03/12/mysql-sql/"/>
-    <id>http://yenjoji.github.io/pages/pages/2012/03/12/mysql-sql/</id>
-    <published>2012-03-12T11:42:52.000Z</published>
-    <updated>2015-04-09T16:23:03.000Z</updated>
-    <content type="html"><![CDATA[<p>1 ) 実行中のSQLの一覧を取得する<br>　　mysql> show full processlist;</p>
-<p>　　または </p>
-<p>　　mysql> show processlist;</p>
-<p>　　fullをつけると実行中のSQLが省略されずに表示されるようだ。</p>
-<p>　　ここで表示されたIDを控えておく</p>
-<p>​2) おもむろに停止</p>
-<p>　mysql> kill  ${１）で確認したID}</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>1 ) 実行中のSQLの一覧を取得する<br>　　mysql> show full processlist;</p>
-<p>　　または </p>
-<p>　　mysql> show processlist;</p>
-<p>　　fullをつけると実行中のSQLが省略されずに表示]]>
-    </summary>
-    
-      <category term="mysql" scheme="http://yenjoji.github.io/pages/pages/tags/mysql/"/>
     
   </entry>
   
