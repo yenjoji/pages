@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2016-01-01T18:44:45.000Z</updated>
+  <updated>2016-01-12T16:12:17.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -14,6 +14,68 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[「100円のコーラを1000円で売る方法 コミック版」を読みました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/01/11/20160111-how-to-sell-100yen-cola-for-1000yen-comic/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/01/11/20160111-how-to-sell-100yen-cola-for-1000yen-comic/</id>
+    <published>2016-01-11T14:00:00.000Z</published>
+    <updated>2016-01-12T16:12:17.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/404602836X/" target="_blank" rel="external">100円のコーラを1000円で売る方法 コミック版</a></li>
+<li>所要時間<br>1.5時間</li>
+<li>購入元<br>BookOff</li>
+<li>価格<br>¥200</li>
+</ul>
+<h1 id="感想">感想</h1><p><a href="http://www.amazon.co.jp/dp/404602836X/" target="_blank" rel="external">100円のコーラを1000円で売る方法 コミック版</a> を読みました。</p>
+<p><a href="http://www.amazon.co.jp/dp/4800215315" target="_blank" rel="external">まんがでわかる 7つの習慣</a>に続くまんがで読むベストセラーです。</p>
+<p>前回と同じく、活字で読むとそれなりにボリュームがある本のエッセンスを1時間程度でサラッと読めてしまうのが良いです。</p>
+<p>マーケティングと言うと我々ソフトウェアエンジニアには縁遠い用に感じますが、<br>本を読み進めると、プロダクトオーナーなどが考えるべき商品企画の基礎となるような考え方や<br>ブルーオーシャン戦略、キャズム理論など有名な概念がわかりやすく解説されておりマーケティング素人の私でもわかった気になれました。</p>
+<p>中でも印象に残ったのは「顧客満足の式」とよばれる式で 顧客満足は 「 顧客が感じた価値 - 事前期待値 」で表され、<br>顧客の期待に応えるだけでは結果は0点であり、顧客の期待以上の価値が提供できなければ商品としてプラスの評価にはならないという考え方でした。</p>
+<p>実際、詳細にマーケティングを学ぶにはより多くの書籍などに当たる必要があると思いますが、<br>開発者がプロダクトオーナーなど、企画している方々の考えを知るには非常にいい一冊だと思います。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/404602836X/" target="_blank" rel="external">100円のコーラを1000円で売る方法 コミ]]>
+    </summary>
+    
+      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[「まんがでわかる 7つの習慣」を読みました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/01/10/20160110-7habits-comic-vol01/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/01/10/20160110-7habits-comic-vol01/</id>
+    <published>2016-01-10T13:00:00.000Z</published>
+    <updated>2016-01-12T16:12:09.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4800215315" target="_blank" rel="external">まんがでわかる 7つの習慣</a></li>
+<li>所要時間<br>1.5時間</li>
+<li>購入元<br>BookOff</li>
+<li>価格<br>¥720</li>
+</ul>
+<h1 id="感想">感想</h1><p><a href="http://www.amazon.co.jp/dp/4800215315" target="_blank" rel="external">まんがでわかる 7つの習慣</a>を読みました。</p>
+<p>私は、本家の7つの習慣を読んだことがないのですが。</p>
+<ul>
+<li>1時間程度でサラッと読める</li>
+<li>（おそらく）重要なエッセンスだけを抽出してある<br>ので、少ない時間で7つの習慣を俯瞰できてよ位と思いました。</li>
+</ul>
+<p>7つの習慣に就いては、そのどれもが非常に素晴らしいものだと感じました。</p>
+<p>特に、第2の習慣の「終わりを思い描くことから始める」にあった、ミッションステートメントを持つことについては、<br>40歳、不惑を前にして、自分のこれからを見つめなおす頃合いかなと感じていた私にはうってつけでした。</p>
+<p>なんとなく目標を考えてはいたものの、父、夫、上司、部下など、<br>自分の役割ごとにミッションステートメントを持つという考え方はより（長期的な）目標を具体的に考える指標になると感じました。</p>
+<p>また、第7の習慣の「刃を研ぐ」も同じく自分の（特に短期的な）これからを考える良い参考になりました。</p>
+<p>まんがでサラッと読めて、絵も綺麗で、内容もためになるという意味でおすすめできます。<br>気になったら読み返すのにも時間がかからないという面でも頑張って活字を読むより良いと感じました。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4800215315" target="_blank" rel="external">まんがでわかる 7つの習慣</a></li>
+]]>
+    </summary>
+    
+      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[2015年 ふりかえり]]></title>
@@ -1548,135 +1610,6 @@ ask the administrator <span class="keyword">to</span> <span class="keyword">crea
       <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
     
       <category term="横浜道場" scheme="http://yenjoji.github.io/pages/pages/tags/%E6%A8%AA%E6%B5%9C%E9%81%93%E5%A0%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[【Agile Japan 再演】アジャイルな開発からアジャイルな組織へ に参加しました]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2012/04/25/agile-japan/"/>
-    <id>http://yenjoji.github.io/pages/pages/2012/04/25/agile-japan/</id>
-    <published>2012-04-24T16:52:00.000Z</published>
-    <updated>2015-04-09T16:22:20.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://media.tumblr.com/tumblr_m2zqefKjNe1qiaely.jpg" alt=""></p>
-<p>アジャイルジャパン2012で大盛況だったとの噂の「アジャイルな開発からアジャイルな組織へ」の再演に参加しました。</p>
-<p><a href="http://partake.in/events/9fbe063e-e087-4dad-898d-4425c093edfd" target="_blank" rel="external">告知ページ</a></p>
-<p>公演の内容は <a href="http://togetter.com/li/292250" target="_blank" rel="external">Togetter</a> 及び<br><a href="http://www.slideshare.net/Ryuzee/agileagile-aj21-b2" target="_blank" rel="external">Slideshare</a></p>
-<p><strong><a href="http://www.slideshare.net/Ryuzee/agileagile-aj21-b2" title="Agileな開発からAgileな組織へ #aj21 #b2" target="_blank" rel="external">Agileな開発からAgileな組織へ #aj21<br>#b2</a></strong></p>
-<p>View more <a href="http://www.slideshare.net/" target="_blank" rel="external">presentations</a> from <a href="http://www.slideshare.net/Ryuzee" target="_blank" rel="external">Ryuzee<br>YOSHIBA</a></p>
-<p>などを確認していただければ雰囲気を感じていただけるかと思います。</p>
-<p>公演内容は、時に痛快で、時に気づきがあり、時にいいパンチをもらうような楽しい公演でした。</p>
-<p>印象に残っているところを</p>
-<h2 id="変化に対応しないといけない">変化に対応しないといけない</h2><ul>
-<li>ビジネスを取り巻く環境が変わっている<ul>
-<li>不安定な場所をものすごいスピード競争している</li>
-<li>意思決定を早くする必要がある。</li>
-<li>考えてても偉くない</li>
-<li>やったほうが偉い</li>
-</ul>
-</li>
-<li>ビジネスモデルの賞味期限が短くなっている</li>
-</ul>
-<h2 id="改善するかしないかが肝心である。">改善するかしないかが肝心である。</h2><ul>
-<li>Scrumなどの方法論は無駄をなくそうという話！</li>
-</ul>
-<h2 id="価値を高めないものはすべてムダ！">価値を高めないものはすべてムダ！</h2><ul>
-<li><p>求められる以上の品質もムダ</p>
-</li>
-<li><p>システムの64%は使われていないという調査結果がある</p>
-<ul>
-<li>顧客でさえも本当に必要なものがわからない</li>
-<li>頻繁に軌道修正をしなければいけない</li>
-</ul>
-</li>
-</ul>
-<h2 id="早く失敗することも重要">早く失敗することも重要</h2><h2 id="アジャイルはリスクマネジメント">アジャイルはリスクマネジメント</h2><ul>
-<li>頻繁にリリースして、確認することによってリスクを最小化する。</li>
-<li>WFは最後にしか確認できないのが厳しい。</li>
-</ul>
-<h2 id="短いスパンで改善していく">短いスパンで改善していく</h2><ul>
-<li>ふりかえりを行って、継続的に改善していく</li>
-<li>ふりかえりしたあとにちゃんとTRYが実行されるようにする</li>
-</ul>
-<h2 id="チームはばらしてしまうとせっかくの改善が無駄になる">チームはばらしてしまうとせっかくの改善が無駄になる</h2><ul>
-<li>無理をしてでもチームを維持するべき</li>
-</ul>
-<h2 id="態度重要">態度重要</h2><ul>
-<li>アジャイルはハラをくくってやるかどうかだ！</li>
-</ul>
-<h1 id="感想">感想</h1><p>今の自分のハラのくくり方はまだまだ甘いなと思いました。<br>次回はハラをくくってアジャイルをやっている人に挙手できるように精進します。</p>
-<p>勧められたので、この本を買ってみました。<br><a href="http://www.amazon.co.jp/dp/4478460019/" target="_blank" rel="external">トヨタ生産方式―脱規模の経営をめざして</a></p>
-<p>有意義な公演をしてくださった @ryuzee<br>さん、参加してくださった皆様ありがとうございました。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><img src="http://media.tumblr.com/tumblr_m2zqefKjNe1qiaely.jpg" alt=""></p>
-<p>アジャイルジャパン2012で大盛況だったとの噂の「アジャイルな開発からアジャイルな組織へ」の再演に参加しました。</]]>
-    </summary>
-    
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
-    
-      <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
-    
-      <category term="横浜道場" scheme="http://yenjoji.github.io/pages/pages/tags/%E6%A8%AA%E6%B5%9C%E9%81%93%E5%A0%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[状況打開力を叩き上げる　TOCfE ブートキャンプに参加してきました]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2012/04/22/tocfe/"/>
-    <id>http://yenjoji.github.io/pages/pages/2012/04/22/tocfe/</id>
-    <published>2012-04-22T14:51:34.000Z</published>
-    <updated>2015-04-09T16:24:12.000Z</updated>
-    <content type="html"><![CDATA[<p>4/21 にOracle青山センターで開催された<br>TOCfEブートキャンプに参加してきました。</p>
-<p><a href="http://kokucheese.com/event/index/30962/" target="_blank" rel="external">こくちーずの募集ページ</a></p>
-<p>TOCfEってどういうものなの？という話は<br><a href="http://tocforeducation.org/" target="_blank" rel="external">教育のためのTOC日本支部コミュニティ</a>のページを見ていただくと詳しく書いて有ります。</p>
-<h1 id="参加の動機">参加の動機</h1><p>去年の夏くらいからTOCという言葉をよく耳にするようになっていて、ちょっと気になっていたところに、スタッフの一人にこんなイベントがあるよという話を聞き、どんなものかというのを体験したくて参加しました。</p>
-<h1 id="参加前">参加前</h1><p>事前準備として参考書籍として「<a href="http://www.amazon.co.jp/dp/4478420408/" target="_blank" rel="external">ザ・ゴール</a>」「<a href="http://www.amazon.co.jp/dp/4478420416/" target="_blank" rel="external">ザ・ゴール２</a>」の２冊を購入して読みました。</p>
-<p>閉鎖寸前の工場がTOCの手法を取り入れて劇的に改善していくというストーリ仕立ての本はとても面白く、何年ぶりかに本を読んでいて降りる駅を通り過ぎるどころか終点まで気づかないという経験をしてしまいました。</p>
-<p>ただ時間が足りなく「ザ・ゴール２」を４分の１読んだくらいでブートキャンプ当日を迎えてしまいました。</p>
-<p>当日の題材であるクラウドを含むTOCfEのツールは「ザ・ゴール２」で紹介されていたため、読みきってから参加したほうが良かったなと思いましたがあとの祭りでした。</p>
-<h1 id="当日のざっくりとした流れ">当日のざっくりとした流れ</h1><p>一日かけて、TOCfEのツールであるクラウドのワークショップを行いました。</p>
-<ul>
-<li>午前から午後１</li>
-</ul>
-<p>午前中から午後の途中までは参加者個々が自分の抱えている問題についてクラウドを作成しました。</p>
-<p>はじめにスタッフの方からどうやってクラウドを作成していくかという説明があり、その後実際に自分でつくってみるという過程をステップを細かく分けて行っていくという進め方でした。</p>
-<p>例えば午後１終了時点でのクラウドはこんな感じ。（あくまで例で実際のものではないです。）<br><img src="http://media.tumblr.com/tumblr_m2vxzsou4Y1qiaely.jpg" alt="自分が作ったクラウドのうち無難な方"></p>
-<ul>
-<li>午後２</li>
-</ul>
-<p>その後、３人でグループを作り、その中の一人のクラウドについて解決に向けて３人で協力して考えるという内容でした。</p>
-<p>私の入ったグループ（@riskrisk<br>さん、主婦！の女性、私）は自分も共感できる内容だったので、ぜひとも解決策を導き出すところまで行きたかったのですが、結局時間が足りずに終わってしまったのが残念でした。</p>
-<ul>
-<li>懇親会</li>
-</ul>
-<p>その後そのままの会場でビアバッシュ形式での懇親会になりました。</p>
-<p>やはり移動がないのは楽で非常にありがたかったです。<br>準備してくださったスタッフの方や、会場を提供してくださるOracle社の対応に非常に感謝しなければいけないなと思いました。</p>
-<p>懇親会になってもTOCfEにまつわるアカデミックなトークができたり、</p>
-<p>@yumzou<br>さんがクラウドを書いて、クラウドが出来上がって行く様をライブ観戦できたり。</p>
-<p>誰かがクラウドを考えて書いていくさまを見るのは非常に興味深く勉強になりました。</p>
-<p>某氏のエグい題材に対してのクラウド（酔と題材の重さ故か未完成）が始まったりと、非常にエキサイティングな懇親会でした。</p>
-<h1 id="感想">感想</h1><p>参加する前は、</p>
-<ul>
-<li><p>募集ページの「家庭のことから仕事のことまで何でも解決できますよ！」との謳い文句（一部脚色があります。）に半信半疑で、</p>
-</li>
-<li><p>一日かけて「クラウド」というツールのワークショップで時間が持つんだろうか</p>
-</li>
-</ul>
-<p>などとちょっと斜に構えていた所があったのですが、この両方共見事にいい意味で裏切られました。</p>
-<p>家庭の問題から、仕事の問題まで実に多岐に渡るクラウドが作成されてかつ活発な議論がかわされていましたし、私のチームでは結局時間が足りなくなるハメになり、TOCfEの深さ、スタッフの深慮に、脱毛する思いでした。</p>
-<p>今回はクラウドというツールを使って、今までなんとなく考えて結論を出していた（と思っていた）問題について再度ちゃんと考えることによって、たくさんの新しい気づきを得ることができました。</p>
-<p>参加者もどこかで見たことがある方も多かったですが、主婦の方など普段の勉強会ではまずお会いしない方ともお話ができて非常に貴重な体験ができました。</p>
-<p>スタッフの方々、会場を提供してくださったOracle社さん<br>ありがとうございました。</p>
-<p>TOCfEって本当に素晴らしいですね！ #ステマ</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>4/21 にOracle青山センターで開催された<br>TOCfEブートキャンプに参加してきました。</p>
-<p><a href="http://kokucheese.com/event/index/30962/" target="_blank" rel="externa]]>
-    </summary>
-    
-      <category term="TOCfE" scheme="http://yenjoji.github.io/pages/pages/tags/TOCfE/"/>
-    
-      <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
     
   </entry>
   
