@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2016-01-25T10:11:34.000Z</updated>
+  <updated>2016-02-27T08:23:57.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -16,11 +16,148 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[2016/2/26 アジャイルひよこクラブ 「今年のTryプレゼン＆現場のProblem相談＆Keep事例発表大会」に参加してきました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/02/26/20160226-agile-hiyoko/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/02/26/20160226-agile-hiyoko/</id>
+    <published>2016-02-26T10:41:19.000Z</published>
+    <updated>2016-02-27T08:23:57.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="感想">感想</h1><p>渋谷のヒカリエ31階にある株式会社medibaで開催された<a href="https://agile-hiyoko-club.doorkeeper.jp/events/38245" target="_blank" rel="external">アジャイルひよこクラブ「今年のTryプレゼン＆現場のProblem相談＆Keep事例発表大会」</a>に参加しました。</p>
+<p>最近めっきり数が減った定期的に行われているアジャイル開発のコミュニティです。<br>昨年横浜道場のスタッフの永井さんとてらひでさんが登壇したのをきっかけに存在を知りました。</p>
+<p>今回予定があったので、初参加してきました。</p>
+<p>参加した感想としては、</p>
+<ul>
+<li>最近では数少ない定期的に活動しているアジャイルコミュニティであり</li>
+<li>質問しやすい雰囲気からくる活発な質疑応答＆議論が行われており<br>初心者にとっては疑問をぶつけられる場であり、それなりに経験している人には質問に答えたり、質疑を聞くことにより理解をより一層深められる場でいいと感じました。</li>
+</ul>
+<p>デブラブでいろんな有名人に声をかけまくったので、しばらくビックタレントの公園が続くそうなので、今後も期待できそうです。</p>
+<p>偶数月に開催しているそうで、次回は4月でPO Studyの関さんがメインスピーカーだそうです。</p>
+<h1 id="内容">内容</h1><h2 id="イントロ">イントロ</h2><p>ちょっと遅れて到着したので、最初の説明は聞けませんでした。<br>開いている席に着席すると、まずは周りの参加者と3人から4人でグループを作って</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#31169;&#12399;&#10;&#20170;&#12399;XX&#12375;&#12390;&#12414;&#12377;&#10;&#12450;&#12472;&#12515;&#12452;&#12523;&#32076;&#39443;&#12399;XX&#24180;&#12391;&#12377;&#10;&#10;&#24471;&#24847;&#12394;&#35328;&#35486;&#12399;XX&#12391;&#12377;&#10;&#20170;&#24745;&#12435;&#12391;&#12427;&#12371;&#12392;&#12399;XX&#12391;&#12377;</span><br></pre></td></tr></table></figure>
+<p>のフォーマットに合わせて自己紹介をしました。</p>
+<p>自己紹介後はまずLTタイムです。</p>
+<h2 id="LT">LT</h2><h3 id="LT1:_たじさん_「俺がKen_Rubinから学んだこと：SM研修報告〜たじ編〜」">LT1: たじさん 「俺がKen Rubinから学んだこと：SM研修報告〜たじ編〜」</h3><p><iframe src="//www.slideshare.net/slideshow/embed_code/key/yXJsEdUSwvxFEm" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/masayataji/certified-scrummasterlt-ver" title="Certified scrummaster研修について(LT ver.)" target="_blank">Certified scrummaster研修について(LT ver.)</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/masayataji">Masaya Taji</a></strong> </div></p>
+<p>RSGT2016で基調講演を行ったKen Rubin氏による認定スクラムマスター研修に参加し（うらやまし）そこで学んだことのお話。</p>
+<p>印象に残ったのは Ken Rubinが<br><strong>テストやってないとスクラムできないよ</strong><br>と言ったというところ。</p>
+<p>言葉の裏にはたくさんの意図があるんだろうけど、とりあえず<a href="https://tddbc.doorkeeper.jp/events/38369" target="_blank" rel="external">TDDブートキャンプ</a>に次回は参加しようと思いました。</p>
+<h3 id="LT2:_橘_周世さん_「俺がKen_Rubinから学んだこと：SM研修報告〜周生編〜」">LT2: 橘 周世さん 「俺がKen Rubinから学んだこと：SM研修報告〜周生編〜」</h3><p>同じくKen Rubinの認定スクラムマスター研修に参加し、学んだことの話。<br>橘さんは「プロダクトオーナーに求められること」という切り口での発表でした。</p>
+<p>プロダクトオーナーのことがわからんから、自分でやってみたというお話。<br>その行動力と、実現できるチームがあるということがすごいと思いました。</p>
+<h3 id="LT3:_出口達也さん「ペアプロはリモートでもできる」">LT3: 出口達也さん「ペアプロはリモートでもできる」</h3><p>次はリモートでもペアプロができるというお話。<br>私もその昔リモートペアプロを試したことを思い出しました。</p>
+<p>以外にもその時使ったツールと似たようなツールでペアプロしていました。<br>やり方として違ったのは、ディスプレイを2つ用意し、自分の画面と相手の画面を同時に出すということでした。</p>
+<p>ツールは appear.in で画面共有して、Slackでチャットしていたそうですが、私達がぶつかったのと同じく画面共有のクオリティが問題になったそうです。</p>
+<p>今後はSlackが買収した画面共有サービスのScreenheroを使って見たいとおっしゃってました。</p>
+<h3 id="LT4:_川鯉光起さん_「営業活動のふりかえり共有」">LT4: 川鯉光起さん 「営業活動のふりかえり共有」</h3><p>週末起業したビジネスで、苦労したところと対応したことの発表でした。</p>
+<p>仮設と懸賞をショートスパンで繰り返すことで見えてくることがあるよ的な話でした。</p>
+<h2 id="発表">発表</h2><h3 id="発表1:_坂本直樹「リモート開発におけるチームビルディング」">発表1: 坂本直樹「リモート開発におけるチームビルディング」</h3><p><a href="http://www.yell4u.jp/" target="_blank" rel="external">YeLL</a>という、世界初クラウド型チームビルディングサービスでリモートチーム開発を行った時のチームビルディングのお話でした。</p>
+<p>YeLLではクラウドソーシングを利用して、エンジニアを集めているため<br>エンジニアが地理的に分散しているそうです（遠いところでは台湾とかっていってたような）。</p>
+<p>そんな状況で、工夫している（た）ことの事例紹介でした。</p>
+<ul>
+<li>やっていること<ul>
+<li>リモート振り返り</li>
+<li><a href="https://hackpad.com/" target="_blank" rel="external">hackpad</a>というサービスを使ってKPT形式で行っている</li>
+</ul>
+</li>
+<li><p>やったこと</p>
+<ul>
+<li>ストレングスファインダー</li>
+<li>インタビューシート</li>
+<li>ペアを組んでインタビューシート（権利の関係で社外秘）をベースに appear.inでインタビューをおこない、その後10分くらいで相手を紹介する<br>行った結果雑談が増えたて、Slackでの質問が活発になったそうです。</li>
+</ul>
+</li>
+<li><p>顧客との対話</p>
+<ul>
+<li>お客さんにオフィスに来てもらってサービスを使う上での問題意識などの話を聞く、リモートメンバーはSkypeで参加する</li>
+</ul>
+</li>
+</ul>
+<h3 id="発表2:_野村_敏昭「ぼくのスクラム」">発表2: 野村 敏昭「ぼくのスクラム」</h3><p>アジャイルサムライ横浜道場で面識のある、野村さんによる社内にいる「スクラムとかよくわからんという人向けに作った資料」（の抜粋）でした。</p>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/key/KDdOesv0HRoqsn" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/toshiaki0315/ss-58775040" title="僕のスクラム" target="_blank">僕のスクラム</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/toshiaki0315">Toshiaki Nomura</a></strong> </div></p>
+<p>@ebacky さんの認定スクラムマスター研修に参加した方からよく聞くのですが。ワーキングアグリーメントを最初に決めるのは定番みたいですね。</p>
+<p>スプリントレビューの後にプロダクトバックログリファインメントをおこなうというのもタイミングとしてはいいかもしれないですね。</p>
+<p>「ふつうのことをふつうに継続することはとてもむずかしい」はそうだなと思いました。</p>
+<h3 id="発表3:_横沢_佑輔「HCDの学びから見えたアジャイルとのシナジー、そしてリーンアジャイルHCD元年へ」">発表3: 横沢 佑輔「HCDの学びから見えたアジャイルとのシナジー、そしてリーンアジャイルHCD元年へ」</h3><p>HCDというのを初めて効いたので後で調べて見ようと思いました。</p>
+<h2 id="質問タイム">質問タイム</h2><h3 id="タスクをサインアップする環境を作るのはどうやりました">タスクをサインアップする環境を作るのはどうやりました</h3><ul>
+<li>ホワイトボードの前でやると自発的にやります</li>
+<li>動かないタスクは気を使ってあげる</li>
+</ul>
+<h3 id="HCDをやるのはエンジニアですか？">HCDをやるのはエンジニアですか？</h3><ul>
+<li>誰でもOKです。学校では３０人中５人位しかエンジニアがいないです</li>
+</ul>
+<h3 id="エンジニアがユーザーインタビューするとかそういうふうにするには">エンジニアがユーザーインタビューするとかそういうふうにするには</h3><ul>
+<li>自分が積極的にやること</li>
+<li>結果的にエンジニアが動くようになった</li>
+</ul>
+<h3 id="プロダクマネージャーって採用できますか？育てたほうがいいですか？">プロダクマネージャーって採用できますか？育てたほうがいいですか？</h3><ul>
+<li>ビジネスドメインを理解するのは難しいので、育てる方が早いと思う</li>
+</ul>
+<h3 id="タスクはチームによって違いますという話ですが、複数チームでスクラム舌ってことですか？">タスクはチームによって違いますという話ですが、複数チームでスクラム舌ってことですか？</h3><ul>
+<li>いろいろなチームで、チームメンバーが仕事できることが大切</li>
+<li>誰かが休んでも他の人ができる粒度が</li>
+</ul>
+<h3 id="ビジネスまでスコープにするおｔバックログが変わってしまうのでそこはどうか空風してますか">ビジネスまでスコープにするおｔバックログが変わってしまうのでそこはどうか空風してますか</h3><ul>
+<li>ウォーターフォールでやってます</li>
+<li>コンサルはアジャイルでやってるみたいです</li>
+<li>ソニーとかもやってるので、できるとおもいます。  </li>
+</ul>
+<h3 id="朝会で３つの質問してる時に、進捗があまりないタスクは要注意という話でしたが、進捗がないのに問題ないっていう人にはどうアプローチしますか">朝会で３つの質問してる時に、進捗があまりないタスクは要注意という話でしたが、進捗がないのに問題ないっていう人にはどうアプローチしますか</h3><ul>
+<li>５時間見積もりで、しばらく動いていないタスクがあったら「どうなってるか」確認する</li>
+<li>見積もりを書くことによってチームが気づけるようにする</li>
+</ul>
+<h3 id="見積もりの付箋ってどのくらいの大きさでやってますか？">見積もりの付箋ってどのくらいの大きさでやってますか？</h3><ul>
+<li><p>サブタスクに見積もりを入れてない</p>
+</li>
+<li><p>親タスクが終わらない</p>
+<ul>
+<li>→サブタスクは進んでるけど粒度がわからないので状況がわからない</li>
+<li>→サブタスクも見積もったほうがいい</li>
+</ul>
+</li>
+</ul>
+<h3 id="タスクの粒度ってどれくらいですか">タスクの粒度ってどれくらいですか</h3><ul>
+<li>コード書くじゃなくて、具体的にタスクに落とす</li>
+<li>タスクの時間は一番デキる人で決める<br>→なんでデキる人と同じ時間でできないかと改善のきっかけになる by kiro</li>
+<li>デキる人に追いつかない時に精神的にきつくならないですか<br>→ドーナツをだします<br>→ロケーションが一緒じゃないときついです</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="感想">感想</h1><p>渋谷のヒカリエ31階にある株式会社medibaで開催された<a href="https://agile-hiyoko-club.doorkeeper.jp/events/38245" target="_blank" rel="exter]]>
+    </summary>
+    
+      <category term="agile" scheme="http://yenjoji.github.io/pages/pages/tags/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[「ここらで広告コピーの本当の話をします。」を読みました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/02/26/20160225-reading-to-tell-the-truth-of-copy/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/02/26/20160225-reading-to-tell-the-truth-of-copy/</id>
+    <published>2016-02-25T17:28:12.000Z</published>
+    <updated>2016-02-27T15:20:59.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/B00PCJEB86/" target="_blank" rel="external">ここらで広告コピーの本当の話をします。</a></li>
+<li>所要時間<br>２週間</li>
+<li>購入元<br>図書館で借りてきた</li>
+<li>価格<br>¥0</li>
+</ul>
+<h1 id="感想">感想</h1><p>今年に入ってから個人的に開催している技術書じゃない本を読もうキャンペーンの一環で読んでみました。<br>広告や、マーケティングの話と言うのはいままでほとんど触れてこなかったので、新しい発見があるかなと期待して読んでみました。</p>
+<p>この直前に読んだ <a href="http://www.amazon.co.jp/dp/404602836X/" target="_blank" rel="external">100円のコーラを1000円で売る方法 コミック版</a> や <a href="http://www.amazon.co.jp/dp/4492502130/" target="_blank" rel="external">ラーメン二郎にまなぶ経営学 ―大行列をつくる26（ジロー）の秘訣</a> は、マーケティングの考え方や手法を軸に、それぞれをどういった局面でどう使うかについてカタログ的に書かれていましたが、<br>この書籍はちょっと違い、どうしたら顧客（の製品）の価値を高めることができるかということについてを主題に書かれています。</p>
+<p>競合優位性、ターゲット設定など、語られている手法は多くないものの、どのように考え、組み合わせれば、より価値を高められるかということが筆者の体験を元に書かれているため、非常に読み応えがありました。</p>
+<p>文体も自分の好みに合っていたのか、ぐんぐん読み進められる読みやすさと、今までの自分のが上辺をなぞってるだけだったなぁと認識させてくれる内容で、おすすめできる一冊です。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/B00PCJEB86/" target="_blank" rel="external">ここらで広告コピーの本当の話をします。</a]]>
+    </summary>
+    
+      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[「ラーメン二郎にまなぶ経営学 ―大行列をつくる26（ジロー）の秘訣」を読みました]]></title>
     <link href="http://yenjoji.github.io/pages/pages/2016/01/24/20160124-business-management-learned-from-jiro/"/>
     <id>http://yenjoji.github.io/pages/pages/2016/01/24/20160124-business-management-learned-from-jiro/</id>
     <published>2016-01-24T03:38:51.000Z</published>
-    <updated>2016-01-25T10:11:34.000Z</updated>
+    <updated>2016-02-25T17:50:14.000Z</updated>
     <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
 <li>題名<br><a href="http://www.amazon.co.jp/dp/4492502130/" target="_blank" rel="external">ラーメン二郎にまなぶ経営学 ―大行列をつくる26（ジロー）の秘訣</a></li>
 <li>所要時間<br>12時間くらい？（のべ14日間）</li>
@@ -30,7 +167,8 @@
 <h1 id="感想">感想</h1><p><a href="http://www.amazon.co.jp/dp/4492502130/" target="_blank" rel="external">ラーメン二郎にまなぶ経営学 ―大行列をつくる26（ジロー）の秘訣</a></p>
 <p>昨年の6月に職場の先輩ジロリアンにエスコートしてもらい、ラーメン二郎目黒店を経験してよりラーメン二郎がちょっとしたブームになっていた事もあり手にとってみました。</p>
 <p>内容としては、マーケティングの基本的な考え方が時に自然に、時に若干強引にラーメン二郎と絡めて解説されています。</p>
-<p>ラーメン二郎が好きでマーケティングに初心者の私のような方にはおすすめです。楽しく読めました。</p>
+<p>ラーメン二郎が好きでマーケティングに初心者の私のような方にはおすすめです。<br>楽しく読めると思います。（私は楽しかったです）</p>
+<p>著者の二郎への愛情と、時に自然に時に強引に二郎と経営学（マーケティング）的な考え方を解説いく方式は、二郎好きな私にとっては飽きずに楽しく読めて良かったです。<br>肝心の内容も、マーケティングに用いる様々な考え方が解説されており、初心者の私でも特に挫折することなく読めました。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
@@ -1989,144 +2127,6 @@
     </summary>
     
       <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Raspberry Pi で XFD]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/04/09/raspi-xfd/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/04/09/raspi-xfd/</id>
-    <published>2015-04-09T10:41:39.000Z</published>
-    <updated>2015-08-11T06:02:51.000Z</updated>
-    <content type="html"><![CDATA[<p>突然ですがXFDをご存知ですか?</p>
-<h1 id="XFDとは">XFDとは</h1><p>オブジェクト倶楽部 <a href="http://objectclub.jp/community/xfd/" target="_blank" rel="external">http://objectclub.jp/community/xfd/</a> によると</p>
-<blockquote>
-<p>プロジェクトステータスやメトリクスは、目に見えにくい。見えないからこそ難しい。そんな悩みを解決してくれるのが、XFD(eXtreme Feedback Device)です。目に見えて、楽しい、ユニークな装置。目に付いて、絶対見落とさないような装置を指します。安上がりならなおよろし。</p>
-</blockquote>
-<p>とのことです。</p>
-<p>例えばCIによるビルドエラーに連動したパトランプ <a href="http://gitgear.com/xfd/" target="_blank" rel="external">http://gitgear.com/xfd/</a> など、<br>そのままだと気づきにくいイベントを気づきやすくするデバイスを指すようです。</p>
-<h1 id="今回すること">今回すること</h1><p>今回はそんなXFDをRaspberry Piを利用して作成してみたいと思います。<br>なお、今回はAtlassian の CIサーバー Atlassian Bamboo を対象としますが、ビルド結果取得の部分だけ替えればJenkinsなどにも対応可能です。</p>
-<h1 id="用意するもの">用意するもの</h1><ul>
-<li><p>Raspberry Pi  x  1<br>今買うなら Raspberry Pi 2 Type B がお得だと思われます。</p>
-</li>
-<li><p>赤色LED x 1<br>色はお好みで。<br>今回はビルド失敗のエラー感を出すため 3mm径の赤色高輝度LEDとしました。</p>
-</li>
-<li><p>330Ω抵抗 x 1<br>LEDが壊れないよう基本に則って抵抗を使用します。</p>
-</li>
-<li><p>ブレットボード x 1</p>
-</li>
-<li>配線用ジャンパワイヤ　適量<br>その他配線用の機材を適宜用意します。</li>
-</ul>
-<h1 id="回路">回路</h1><p>上記のパーツを組み込むとこのようになります。</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/17095952411" title="DSC_0078 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm9.staticflickr.com/8793/17095952411_ae117f0b1c.jpg" width="500" height="281" alt="DSC_0078"></a></p>
-<p>一応実体配線図も作ってみました</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/16892826597" title="raspi-XFD by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7680/16892826597_7816819f87.jpg" width="500" height="381" alt="raspi-XFD"></a></p>
-<h1 id="プログラム">プログラム</h1><p>例えば以下のようにREST APIでBambooのビルド結果を取得します。<br>なお、今回はBamboo上に複数ブランチが登録されていることを前提としているため、ブランチがないと動きません。</p>
-<script src="https://gist.github.com/yenjoji/f29553357d3a28566e7e.js"></script>
-
-<h1 id="結果">結果</h1><p>これで、Bambooの指定したブランチがビルドエラーになった際には、<br>接続されたLEDが点灯するようになりました。</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/16474189394" title="DSC_0079 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7685/16474189394_33deca6d01.jpg" width="500" height="281" alt="DSC_0079"></a></p>
-<p>しかし、ちょっとこれでは寂しいので、ひと手間加えたいと思います。</p>
-<p>最近はだいぶJOJOや、仮面ライダーに押されているとはいえ、エンジニアといえばガンダムです。</p>
-<p>という訳で、ちょっとガンダムを足してみました。</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/16909072210" title="DSC_0080 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7591/16909072210_ce02bdcf1f.jpg" width="500" height="281" alt="DSC_0080"></a></p>
-<p>ドリルでモノアイ部分に穴を開けてLEDを装着し</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/17145119535" title="DSC_0097 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7694/17145119535_53d2a4681f.jpg" width="500" height="281" alt="DSC_0097"></a></p>
-<p>なるべく目立たないように配線をします。</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/16522691594" title="DSC_0098 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm9.staticflickr.com/8722/16522691594_c661070703.jpg" width="500" height="281" alt="DSC_0098"></a></p>
-<p>最近のプラモはよく出来ていて、関節可動部分が多くいので<br>昔のプラモのように脚部の中がスカスカでなかったのは誤算でした。</p>
-<p>今回はちょっと妥協してこのくらいにしておきますが、機会があればもう少し綺麗に配線をしたいと思います。</p>
-<h1 id="動作例">動作例</h1><p>さて、再度どうなるか試してみます。</p>
-<p>万が一Bambooでのビルドが失敗した場合には</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/17110199341" title="bamboo_build_failed by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm9.staticflickr.com/8776/17110199341_93663d3018.jpg" width="500" height="331" alt="bamboo_build_failed"></a></p>
-<p>光ります。</p>
-<p><a href="https://www.flickr.com/photos/130999506@N07/16474189674" title="DSC_0084 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7626/16474189674_5dce3d4052.jpg" width="500" height="281" alt="DSC_0084"></a></p>
-<p>これでだいぶ危機感が増しました。<br>ジムがやられる前になんとしてもビルドエラーを修正しなければなりません！！</p>
-<h1 id="まとめ">まとめ</h1><p>Raspberry Piが発売されたことによって、ネットワークを利用した電子工作が簡単にできるようになりました。</p>
-<p>電子工作初心者でも簡単に作れるオリジナルのXFDでプロジェクトを活性化して行きましょう！</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>突然ですがXFDをご存知ですか?</p>
-<h1 id="XFDとは">XFDとは</h1><p>オブジェクト倶楽部 <a href="http://objectclub.jp/community/xfd/" target="_blank" rel="external">h]]>
-    </summary>
-    
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
-    
-      <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
-    
-      <category term="RasperryPi" scheme="http://yenjoji.github.io/pages/pages/tags/RasperryPi/"/>
-    
-      <category term="ネタ" scheme="http://yenjoji.github.io/pages/pages/tags/%E3%83%8D%E3%82%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[2015/2/2 英語学習勉強会「英語のセッションを聴く」実践編 に参加してきました。]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/02/03/2015-2-2-mpp/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/02/03/2015-2-2-mpp/</id>
-    <published>2015-02-02T18:35:00.000Z</published>
-    <updated>2015-04-09T11:18:07.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="https://www.flickr.com/photos/130999506@N07/16427800351" title="AXON_ACTIVE by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7453/16427800351_48b521e76e_m.jpg" alt="AXON_ACTIVE"></a></p>
-<p>牛尾さん(<a href="https://twitter.com/sandayuu" target="_blank" rel="external">https://twitter.com/sandayuu</a>)主催の、 Majide Perapera Project(<a href="http://mpp-group.doorkeeper.jp/" target="_blank" rel="external">http://mpp-group.doorkeeper.jp/</a>)の勉強会</p>
-<p><strong>英語学習勉強会「英語のセッションを聴く」実践編</strong><br><a href="http://mpp-group.doorkeeper.jp/events/20267" target="_blank" rel="external">http://mpp-group.doorkeeper.jp/events/20267</a>に参加してきました。</p>
-<p>オフショア開発の実践者であり、<br>牛尾さんをして「ガチアジャイルの実践者」と言わしめる程のMarkusさんの貴重な話を聞け、<br>更には、自分の質問も聞いてもらった上に、自分の理解力のなさを棚に上げた「Could you summarize it, please.」などという無茶なお願いにも<br>「もう、十分要約してあるんだけどなぁ」<br>とか言いつつも非常に丁寧に答えてもらえ、超実践的な英語の勉強にもなる大変有意義な勉強会でした。</p>
-<h2 id="タイムテーブル">タイムテーブル</h2><p>19:30 - 19:45 Introduction<br> 19:45 - 20:30 My experience with IT outsourcing<br> 20:30 - 20:45 Team discussion<br> 20:45 - 21:30 Ask Mr. Markus</p>
-<p>勉強会はこのような流れでした。（ただし、時間はなんとなくです。）</p>
-<h3 id="1-_My_experience_with_IT_outsourcing">1. My experience with IT outsourcing</h3><p>まずは、ベトナムでのオフショア開発を実践されている<br> AXON ACTIVE 社(<a href="http://www.axonactive.vn/" target="_blank" rel="external">http://www.axonactive.vn/</a>)の<br> CEO Markus Baur さんによるオフショア開発の勘所と落とし穴に関するセッションです。</p>
-<p>すべて英語のセッションだったため、けっこうな頻度で聞き取れないところがあったのが残念でしたが、それでも随所にためになるエッセンスが散りばめられていて非常に参考になりました。</p>
-<ul>
-<li>文化の違いを認識しなければならない<ul>
-<li>インド人？のYesはYesじゃないとか</li>
-</ul>
-</li>
-<li>アクセシビリティ<ul>
-<li>オフショア先にいつでもすぐに飛んでいける距離感がとっても大切</li>
-<li>時差は4時間ぐらいまでがいい</li>
-</ul>
-</li>
-<li><p>Project型ではなくDedicated Team でないと難しい</p>
-</li>
-<li><p>短いスパンで頻繁な評価を</p>
-</li>
-<li>重厚なドキュメントを作らず、最低限のテキストで素早く結果を見る</li>
-<li>チームサイズは 5-10 人 で7人くらいがいい</li>
-<li><p>要求をまとめる人は一人にするべき</p>
-</li>
-<li><p>何を置いてもオフショアチームと直接会うべき</p>
-<ul>
-<li>最低限年に4回は現地にいくべき</li>
-<li>現地で、一緒に話、ご飯を食べ、お酒を飲みましょう</li>
-<li>お互いに歩み寄って、近い間柄になるべきです</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-_Team_discussion">2. Team discussion</h3><p>次に、Markusさんの話を受けて、セッションの内容のチーム内での共有と<br> Markusさんに聞いてみたい質問をまとめるディスカッションタイムです。</p>
-<p>質問のルールとして、チームディスカッションは日本語でOK、<br> 英語への翻訳もチームメンバーの力を借りてOKですが、</p>
-<p>実際の質問は質問する人が、英語でMarkusさんに質問をするというルールでした。</p>
-<h3 id="3-_Ask_Mr-Markus_(コーナー名は勝手につけました)">3. Ask Mr.Markus (コーナー名は勝手につけました)</h3><p>チームディスカッションの結果を元に、Markusさんを囲んで全員で座り、<br> Markusさんへ質問をぶつけて答えてもらおうのコーナーでした。<br> 当初は全員質問するのかなぁと思っていましたが、</p>
-<p>個々の質問に対するMarkusさんの対応が丁寧、個々の話題が意外と盛り上がったこともあり、結局7,8件くらいの質問に答えてもらったところでタイムアップでした。</p>
-<p>私は、ベトナムでは、けっこう転職が激しいという話も聞いたので、</p>
-<p>「アジャイル開発において、チームメンバーが頻繁に入れ替わるのはよく無いと言われていますが、その問題にどう対応しますか？」<br> という質問を<br> 「Turn over of members is problem of Agile development. how do you<br>avoid risk.」<br> という英語で質問しました。<br> 回答は。<br> 1.<br>開発者に権限を与えて（強制的に働かせたりせず）自己組織化して働いてもらうこと。</p>
-<ol>
-<li>職場環境を整えて、（託児所を用意したりして）環境を良くすること<br>という回答を頂きました。</li>
-</ol>
-<p>ただ、そうは言っても文化の違いがあったりするので<br> （ベトナムは65％でOKとしてしまうらしいとか。）<br> 締めるべきところは締めてやっていかなければとも感じました。</p>
-<h2 id="感想">感想</h2><p>オフショアバリバリやってる人の話をちょっと聞いてみようかなぁと<br>軽い気持ちで申し込んで。</p>
-<p><blockquote class="twitter-tweet" lang="ja"><p>ちなみにさっきのフル英語講演ですよ :)</p>&mdash; TsuyoshiUshio (@sandayuu) <a href="https://twitter.com/sandayuu/status/561903951813963776" target="_blank" rel="external">2015, 2月 1</a></blockquote></p>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>申し込んだ後にこのツイートに気づき、全編英語にビビりまくり</p>
-<p>一瞬参加やめようかと思ったりもしましたが、参加して良かったと感じました。</p>
-<p>一緒にディスカッションした方が、Markusさんの話を聞いて言った<br> 「これって日本でもおなじだよね」</p>
-<p>といっていた言葉を聞いて、本質的なところは文化をこえるってことかなぁと一人感動したりしてました。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><a href="https://www.flickr.com/photos/130999506@N07/16427800351" title="AXON_ACTIVE by Yasuto Enjoji, on Flickr" target="_blank" rel="ex]]>
-    </summary>
-    
-      <category term="community" scheme="http://yenjoji.github.io/pages/pages/tags/community/"/>
-    
-      <category term="english" scheme="http://yenjoji.github.io/pages/pages/tags/english/"/>
     
   </entry>
   
