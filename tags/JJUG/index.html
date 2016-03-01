@@ -3,27 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>apache で　server should be ssl-aware but has no certificate configured hint sslcertificatefile null 0 となった。 | Rouleur</title>
+  <title>Tag: JJUG | Rouleur</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="解決方法はここにあったとおり
-http://serverfault.com/questions/232782/debian-squeeze-upgrade-breaks-apache-ssl
-SSLEngine onSSLCertificateFile をVirtualHostごとに書けば良いのですが、
-VirtualHostごとに設定ファイルIncludeして、そのファイルでこいつを書いていたの">
-<meta property="og:type" content="article">
-<meta property="og:title" content="apache で　server should be ssl-aware but has no certificate configured hint sslcertificatefile null 0 となった。">
-<meta property="og:url" content="http://yenjoji.github.io/pages/2011/12/27/2011-12-27-apache-server-should-be-ssl-aware-but-has-no-certificate-configured-hint-sslcertificatefile-null-0/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rouleur">
+<meta property="og:url" content="http://yenjoji.github.io/pages/tags/JJUG/index.html">
 <meta property="og:site_name" content="Rouleur">
-<meta property="og:description" content="解決方法はここにあったとおり
-http://serverfault.com/questions/232782/debian-squeeze-upgrade-breaks-apache-ssl
-SSLEngine onSSLCertificateFile をVirtualHostごとに書けば良いのですが、
-VirtualHostごとに設定ファイルIncludeして、そのファイルでこいつを書いていたの">
-<meta property="og:updated_time" content="2015-04-09T03:12:16.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="apache で　server should be ssl-aware but has no certificate configured hint sslcertificatefile null 0 となった。">
-<meta name="twitter:description" content="解決方法はここにあったとおり
-http://serverfault.com/questions/232782/debian-squeeze-upgrade-breaks-apache-ssl
-SSLEngine onSSLCertificateFile をVirtualHostごとに書けば良いのですが、
-VirtualHostごとに設定ファイルIncludeして、そのファイルでこいつを書いていたの">
+<meta name="twitter:title" content="Rouleur">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/pages/atom.xml" title="Rouleur" type="application/atom+xml">
   
@@ -177,73 +167,39 @@ ga('send', 'pageview');
   
 </aside>
         
-        <section id="main"><article id="post-2011-12-27-apache-server-should-be-ssl-aware-but-has-no-certificate-configured-hint-sslcertificatefile-null-0" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/pages/2011/12/27/2011-12-27-apache-server-should-be-ssl-aware-but-has-no-certificate-configured-hint-sslcertificatefile-null-0/" class="article-date">
-  <time datetime="2011-12-26T15:00:00.000Z" itemprop="datePublished">2011-12-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      apache で　server should be ssl-aware but has no certificate configured hint sslcertificatefile null 0 となった。
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/pages/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/pages/2016/02/15/20160215-jjug-javaee7/" class="archive-article-date">
+  <time datetime="2016-02-15T10:02:01.000Z" itemprop="datePublished">2月 15</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/pages/2016/02/15/20160215-jjug-javaee7/">2016/2/15 【東京】JJUGナイトセミナー　「Java EE 7徹底入門」の著者が解説！ - Java EE 7特集 に参加しました</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>解決方法はここにあったとおり</p>
-<p><a href="http://serverfault.com/questions/232782/debian-squeeze-upgrade-breaks-apache-ssl" target="_blank" rel="external">http://serverfault.com/questions/232782/debian-squeeze-upgrade-breaks-apache-ssl</a></p>
-<p>SSLEngine on<br>SSLCertificateFile をVirtualHostごとに書けば良いのですが、</p>
-<p>VirtualHostごとに設定ファイルIncludeして、<br>そのファイルでこいつを書いていたのですが同じエラーが出続けてはまりました。</p>
-<p>ダメなパターン</p>
-<p>httpd-ssl.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;VirtualHost *:443&#62;&#10; DocumentRoot ...&#10; &#60;Location &#34;/&#34;&#62;&#10;  ...&#10; &#60;/Location&#62;&#10; Include conf/sslcert.conf&#10;&#60;/VirtualHost&#62;</span><br></pre></td></tr></table></figure></p>
-<p>sslcert.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SSLEngine on&#10;SSLCertificateFile conf/server.crt&#10;SSLCertificateKeyFile conf/server.key</span><br></pre></td></tr></table></figure></p>
-<p> いけたパターン</p>
-<p>httpd-ssl.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;VirtualHost *:443&#62;&#10;  DocumentRoot ...&#10;  SSLEngine on&#10;  SSLCertificateFile conf/server.crt&#10;  SSLCertificateKeyFile conf/server.key&#10;&#10;  &#60;Location &#34;/&#34;&#62;&#10;   ...&#10;  &#60;/Location&#62;&#10;  Include conf/sslcert.conf&#10;&#60;/VirtualHost&#62;</span><br></pre></td></tr></table></figure></p>
-<p>同じ設定でapache2.2.17@Ubuntuはいけたのに、2.2.20@MacOSXはダメとか。。。<br>ディレクティブの記述順のもんだい？</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yenjoji.github.io/pages/2011/12/27/2011-12-27-apache-server-should-be-ssl-aware-but-has-no-certificate-configured-hint-sslcertificatefile-null-0/" data-id="cil8sv6aa0041ybvxf048i79r" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/apache/">apache</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/pages/2011/12/31/2011-12-31-Tweet/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          自動的に元日にTweetしてみる
-        
-      </div>
-    </a>
-  
-  
-    <a href="/pages/2011/12/22/2011-12-22-Groovy/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">[Groovy]ファイルをファイルの最終更新日時別のディレクトリに仕分ける</div>
-    </a>
-  
-</nav>
-
-  
 </article>
-
+  
+  
+    </div></section>
+  
 </section>
       </div>
       <footer id="footer">

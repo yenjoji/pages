@@ -131,7 +131,7 @@
     <link href="http://yenjoji.github.io/pages/pages/2016/02/26/20160225-reading-to-tell-the-truth-of-copy/"/>
     <id>http://yenjoji.github.io/pages/pages/2016/02/26/20160225-reading-to-tell-the-truth-of-copy/</id>
     <published>2016-02-25T17:28:12.000Z</published>
-    <updated>2016-02-27T15:44:01.000Z</updated>
+    <updated>2016-02-27T15:44:31.000Z</updated>
     <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
 <li>題名<br><a href="http://www.amazon.co.jp/dp/B00PCJEB86/" target="_blank" rel="external">ここらで広告コピーの本当の話をします。</a></li>
 <li>読み終わった日<br>2016/2/25</li>
@@ -152,6 +152,164 @@
     </summary>
     
       <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2016/2/15 【東京】JJUGナイトセミナー　「Java EE 7徹底入門」の著者が解説！ - Java EE 7特集 に参加しました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/02/15/20160215-jjug-javaee7/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/02/15/20160215-jjug-javaee7/</id>
+    <published>2016-02-15T10:02:01.000Z</published>
+    <updated>2016-03-01T02:39:57.000Z</updated>
+    <content type="html"><![CDATA[<p>2016/2/15 に開催された<br><a href="http://www.java-users.jp/?p=2350" target="_blank" rel="external">【東京】JJUGナイトセミナー　「Java EE 7徹底入門」の著者が解説！ - Java EE 7特集</a><br>に参加してきました。</p>
+<h1 id="感想">感想</h1><p>仕事でSpringBatchを使っていたので、JBatchとSpringBatchの差分を知りたくて参加してみました。</p>
+<p>結果的には、申し訳ないですがワタシ的にはSpringでいいかなと思いました。<br>機能的にはJBatch,SpringBatchどっちを選んでも大差無いように思えましたが、</p>
+<ul>
+<li>JBatchは設定がXML一択</li>
+<li>JavaEEを使う積極的なモチベーションがわかなかった<br>という2点で、現段階ではまだSpringの方がいいかなと思いました。</li>
+</ul>
+<p>久しぶりにJavaEEの話を聞いた感想としては<br>「JavaEEも仕事で使ってもいいかな」<br>と思える様になったというところでしょうか。</p>
+<p>自分の JavaEE = 地雷源 というステレオタイプを改めてくれるきっかけになったのは嬉しかったです。</p>
+<p>登壇者の方が、中の方だったので、Springと比べた時の長所短所など、Java全体で見たところのJavaEEという感じの話があまりなかったのは残念でした。</p>
+<hr>
+<p>以下、当日のメモです</p>
+<h2 id="Java_EE_7徹底入門_概要説明_(猪瀬さん)">Java EE 7徹底入門 概要説明 (猪瀬さん)</h2><h3 id="書籍で目指したこと">書籍で目指したこと</h3><p>自然な日本語で実践的な機能に絞って完全に動作するサンプルを<br>→職場でJavaEE使おうと思った時に使える本にする</p>
+<h3 id="出版してみて">出版してみて</h3><p>誤記が多い<br>→誤記は正誤表を確認してね。<br>→積極的にこっちを更新しているので</p>
+<p>JavaEE日本語情報が増えてきた<br>→採用される候補になり訳すなった</p>
+<h3 id="事件">事件</h3><p><strong>てらだよしお退職</strong></p>
+<h3 id="白猫本と読んでね">白猫本と読んでね</h3><p>→スマホゲームとかぶる問題<br>→ググラビリティ低い！</p>
+<h2 id="プレゼンテーション層の開発_JSF_(加藤田さん)">プレゼンテーション層の開発 JSF (加藤田さん)</h2><h3 id="JSF使ったことある人">JSF使ったことある人</h3><p>→4割→浸透してきた？</p>
+<h3 id="書籍用のサンプルアプリケーション">書籍用のサンプルアプリケーション</h3><p>ナレッジシェア</p>
+<h3 id="JSF_フェースレット">JSF フェースレット</h3><ul>
+<li><p>XHTMLベース?！ だと?！</p>
+</li>
+<li><p>スクリプトレットが記述できない<br>→ロジックが強制的に分離される</p>
+</li>
+</ul>
+<h3 id="書籍ではふれなかったこと">書籍ではふれなかったこと</h3><h4 id="JSFのより詳細なこと">JSFのより詳細なこと</h4><ul>
+<li>カスタムコンポーネント<ul>
+<li>独自のタグライブラリを作る</li>
+</ul>
+</li>
+<li>イベント<ul>
+<li>ValueChangeイベントとか<br>→ 値を変更してボタンを押したタイミングで発火<br>→イマイチつかえない</li>
+</ul>
+</li>
+<li>BeanValdation<ul>
+<li>グループ機能<br>→ 登録画面と変更画面でちょっと違うとかに対応</li>
+</ul>
+</li>
+<li>EL<ul>
+<li>lambda式とか<br>→EL3.0 で追加された機能とか</li>
+</ul>
+</li>
+</ul>
+<h4 id="JavaEE8">JavaEE8</h4><p>どうなるJSF2.3?</p>
+<ul>
+<li>WebSocket対応 → これが目玉！<ul>
+<li>JSF = なるべくJavaScriptを使わないで開発しようというポリシー</li>
+</ul>
+</li>
+<li>マルチフィールドバリデーション<ul>
+<li>関連チェックができるようになる</li>
+</ul>
+</li>
+<li>あと改善系少々。。。</li>
+</ul>
+<h4 id="MVC1-0">MVC1.0</h4><ul>
+<li>StrutsみたいなAction機構で開発するフレームワーク<br>→ JAX-RSベース → 基本的にアノーテーションは同じ<br>→ ビューはfacelet,JSP</li>
+</ul>
+<h5 id="今後のプレゼンテーション">今後のプレゼンテーション</h5><ul>
+<li>JSF</li>
+<li>JAX-RS + Client MVC</li>
+<li>MVC 1.0 + WebComponents?<br>になってくんじゃないかとおもいます。<br>→どれに行ってもコンポーネント指向に収束していく。（のか？）</li>
+</ul>
+<h4 id="JSF関連ライブラリ">JSF関連ライブラリ</h4><ul>
+<li>コンポーネント系<br>→ 画面をリッチに<br>→ PrimeFaces</li>
+<li><p>ライブラリ系<br>→ 開発を容易に<br>→ OmniFaces PrettyFaces</p>
+</li>
+<li><p>PrimeFaces<br>→画面系最有力</p>
+</li>
+<li><p>OmniFaces<br>→個人ベースだから使用する際は注意（とはこれいかに？）</p>
+</li>
+</ul>
+<h3 id="まとめ">まとめ</h3><ul>
+<li>JSFは成熟している</li>
+</ul>
+<h2 id="ビジネスロジック層の開発_CDI,EJB_(羽生田さん)">ビジネスロジック層の開発 CDI,EJB (羽生田さん)</h2><p>CDI, EJB 排他的な関係ではない→組み合わせて解決するのが良いとおもってる</p>
+<h3 id="CDI">CDI</h3><p>POJOにスコープ定義さえあれば@Injectで好きにInjectionできる！</p>
+<ul>
+<li>@ConversationScoped<br>→好きにライフサイクルが定義できる</li>
+</ul>
+<h4 id="CDI-1">CDI</h4><ul>
+<li>簡単便利</li>
+<li>スコープ定義だけ覚えれば使える</li>
+</ul>
+<h4 id="CDI_コンテナ">CDI コンテナ</h4><ul>
+<li>Weld<br>→Weldのバージョンが何かを把握していないと死ねる<br>→APサーバーのバグより前にWeldのバグを調べたほうがいいくらいの勢い</li>
+</ul>
+<h5 id="アクセス用API">アクセス用API</h5><ul>
+<li><p>CDI</p>
+<ul>
+<li>CDI.current()　でとれる</li>
+<li>CDI.select(MyBean.class).get(); とかできる</li>
+</ul>
+</li>
+<li><p>CDIProvider</p>
+</li>
+<li><p>BeanManager</p>
+<ul>
+<li>Portable Extensionを担う<br>→いろいろできるけど使いすぎに注意→障害時におえなくなる？</li>
+</ul>
+</li>
+<li><p>LifecycleEvents<br>→コンテナ周りのイベントをフックできる</p>
+</li>
+</ul>
+<h4 id="どんな人むけ？">どんな人むけ？</h4><p>→APサーバーとかコンテナに任せておけない</p>
+<p>→Weldの実装が変わったら死ねるので気をつけよう</p>
+<h4 id="雑感">雑感</h4><ul>
+<li>CDIコンテナの動きとか、インジェクションどの位しているのかとかを制御したい（時があるらしい）<br>→CDIビーンのライフサイクルウォッチするようなものが作りたい</li>
+</ul>
+<h4 id="@ConversationScoped">@ConversationScoped</h4><h3 id="CDIとトランザクション">CDIとトランザクション</h3><ul>
+<li>@Transactional<ul>
+<li>トランザクション境界</li>
+</ul>
+</li>
+<li>@TransactionScoped<br>いま有効なJTAトランザクションの実行に合わせたライフサイクル<br>→トランザクションに合わせたビーンがほしい時とか</li>
+</ul>
+<p>(JavaEEをずっとやってきた感じでSpringと比べてどうとかそういうのはやっぱりないんだねぇ)</p>
+<h2 id="バッチアプリケーションの開発_jBatch_(猪瀬さん)">バッチアプリケーションの開発 jBatch (猪瀬さん)</h2><h3 id="JBatchとは">JBatchとは</h3><p>→JSR-352<br>→SpringBatchから多くを継承<br>→SpringBatchの方が高機能<br>→SpringBatchの一般的なところを拾って標準化したもの</p>
+<h3 id="Why_JBatch">Why JBatch</h3><ul>
+<li>スレッドで軽量</li>
+<li>ライブラリ共用できる</li>
+<li>開始停止の仕組みが用意されている</li>
+</ul>
+<p>###ジョブとステップ<br>Jobの中にステップがある<br>→設定は <strong>XML</strong> <strong>XML</strong> <strong>XML</strong></p>
+<h3 id="ジョブとステップの分離">ジョブとステップの分離</h3><ul>
+<li>古くはホスト時代に遡る <strong>JCL</strong></li>
+</ul>
+<h3 id="ステップの種類">ステップの種類</h3><ul>
+<li>チャンク型<br>→Reader/Processor/Writer形式</li>
+<li>バッチレット型<br>→シンプルなやつ<br>→ SpringBatchとおなじ</li>
+</ul>
+<h3 id="補助機能">補助機能</h3><h4 id="ジョブリポジトリ">ジョブリポジトリ</h4><p>→Glassfishには管理画面があって、一覧で見えるとか！</p>
+<h4 id="リスナ">リスナ</h4><p>→SpringBatchとおなじ</p>
+<h4 id="コンテキスト">コンテキスト</h4><ul>
+<li>JobContext<br>→永続化されない</li>
+<li>StepContext<br>→永続化される</li>
+</ul>
+<h4 id="メトリック">メトリック</h4><p>→ステップの統計を取れるAPI<br>→APサーバーでも確認できる</p>
+<h3 id="本に書いていない">本に書いていない</h3><ul>
+<li>ステップパーティショニングという機能があるよ！</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>2016/2/15 に開催された<br><a href="http://www.java-users.jp/?p=2350" target="_blank" rel="external">【東京】JJUGナイトセミナー　「Java EE 7徹底入門」の著者が解説！ - Ja]]>
+    </summary>
+    
+      <category term="JJUG" scheme="http://yenjoji.github.io/pages/pages/tags/JJUG/"/>
+    
+      <category term="java" scheme="http://yenjoji.github.io/pages/pages/tags/java/"/>
     
   </entry>
   
@@ -2091,49 +2249,6 @@
       <category term="RasperryPi" scheme="http://yenjoji.github.io/pages/pages/tags/RasperryPi/"/>
     
       <category term="ネタ" scheme="http://yenjoji.github.io/pages/pages/tags/%E3%83%8D%E3%82%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[2015/6/21 Agilesamurai Basecamp ふりかえり & TDD でお話させていただきました。]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/06/22/20150621-spoken-at-asbc-tdd/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/06/22/20150621-spoken-at-asbc-tdd/</id>
-    <published>2015-06-21T16:03:35.000Z</published>
-    <updated>2015-06-22T00:59:57.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="https://agilesamurai-basecamp.doorkeeper.jp/events/25071" target="_blank" rel="external">Agile Samurai Basecamp 2015.06 ふりかえり&amp;TDD</a><br>の事例紹介セッションでお話をさせていただきました。</p>
-<p>柴田さん (@hsbt)、末吉さん(@sue445) という豪華すぎるメンツに気後れしつつも無事に？発表出来ました。<br>基本一発ネタですが、スライドをアップしました。</p>
-<h2 id="事例紹介_「安心してください。テスト書いてます」">事例紹介 「安心してください。テスト書いてます」</h2><p><iframe src="//www.slideshare.net/slideshow/embed_code/key/ibHSt7blkudEEl" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/YasutoEnjoji/20150621-asbc-pub" title="20150621 Agilesamrai Basecamp TDD事例紹介" target="_blank">20150621 Agilesamrai Basecamp TDD事例紹介</a> </strong> from <strong><a href="//www.slideshare.net/YasutoEnjoji" target="_blank">Yasuto Enjoji</a></strong> </div></p>
-<h2 id="QA">QA</h2><p>質疑応答で質問されたことを覚えている範囲で。</p>
-<h3 id="良いテストコードを書くにはどうしたらいいか">良いテストコードを書くにはどうしたらいいか</h3><ul>
-<li>（直接の回答では無いですが）実際にコードレビューとかしている時に感じた事は<ul>
-<li>プロダクトコードの意図が汲み取れる様なテストだと嬉しいです。</li>
-<li>単にカバレッジ等を稼ぐために量産した意図のわからないテストは嬉しくないです。</li>
-</ul>
-</li>
-</ul>
-<h3 id="Red_Green_Refactor_を守った場合と守らなかった場合で定量的な差はあるのか">Red Green Refactor を守った場合と守らなかった場合で定量的な差はあるのか</h3><ul>
-<li>私達の現場では定量的に計測していないため、わかりません。</li>
-</ul>
-<h3 id="TDD導入するときに、既存チームからの暖簾分けする際のメンバーはどういう基準で選びましたか？">TDD導入するときに、既存チームからの暖簾分けする際のメンバーはどういう基準で選びましたか？</h3><ul>
-<li>これが正解というのはないですが、私達のケースでは生きのいい技術が好きな若者を投入しました。<ul>
-<li>自分からどんどんテストを書いて、周りを巻き込んでテストを書くという流れを作ってもらおうという意図でした。</li>
-<li>チームメンバーもテストを書くことについては肯定的だったので、リズムを作ればうまくいくと考えてました。</li>
-</ul>
-</li>
-</ul>
-<h3 id="要求を満たしているかをTDDで担保するにはどうしたら良いか">要求を満たしているかをTDDで担保するにはどうしたら良いか</h3><ul>
-<li>要求を満たしているかどうかはUnitテストでは担保できない（しにくい）と考えています。<ul>
-<li>私の現場では、手動で行う結合テスト（受け入れテスト）が開発フロー上義務付けられているので、そこで担保できるようにしています。</li>
-</ul>
-</li>
-</ul>
-<p> 同じ現場で働いている @setoazusa さんからのキラーパスをうっかり受けてしまったことから始まった今回の登壇でしたが、<br> 豪華登壇者と並ばせていただくなど、本当に貴重な体験をさせていただきました。<br> こんな場を設けてくださったスタッフの皆様、超きれいな眺めのイイ会場を提供してくださったリクルートジョブズ様<br> 拙い話を最後まで聞いてくださった参加者の方々に感謝致します。<br> 有難う御座いました。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><a href="https://agilesamurai-basecamp.doorkeeper.jp/events/25071" target="_blank" rel="external">Agile Samurai Basecamp 2015.06 ふりかえり&am]]>
-    </summary>
-    
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
     
   </entry>
   
