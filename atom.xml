@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2016-02-27T08:23:57.000Z</updated>
+  <updated>2016-03-05T17:03:35.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[20160207_read_power_of_inform]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/03/06/20160207-read-power-of-inform/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/03/06/20160207-read-power-of-inform/</id>
+    <published>2016-03-05T16:14:42.000Z</published>
+    <updated>2016-03-05T17:03:35.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4569690815/" target="_blank" rel="external">伝える力</a></li>
+<li>読み終わった日<br>2016/2/7</li>
+<li>所要時間<br>3時間くらい？</li>
+<li>購入元<br>BookOff</li>
+<li>価格<br>¥100</li>
+</ul>
+<h1 id="感想">感想</h1><p>テレビなどでお馴染みの池上彰さんの著書です。</p>
+<p>池上さんの実体験に基づく、人に物事を伝える伝え方、と伝えるための力の鍛え方が書かれています。</p>
+<p>”まず「自分は何も知らない」ことを知り、他人から謙虚に学ぶことです。この姿勢さえ持ち続けていれば、コミュニケーション能力は確実に向上していきます”<br>”「利便性」という言葉は便利ですが（中略）便利な言葉を使っていると、使う人が思考停止になってしまう恐れがあることを、知っておきましょう。”</p>
+<p>など、心構えから、具体的な注意しなければいけないポイントなど「伝える力」を高めるためのプラクティス、エッセンスが詰まっています。<br>さすがと言うか文章も読みやすいですし、ボリュームも新書サイズなので、サラッと読んで見ることをおすすめします。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4569690815/" target="_blank" rel="external">伝える力</a></li>
+<li>読み終わ]]>
+    </summary>
+    
+      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[20160227_read_creative_thinking]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/03/06/20160227-read-creative-thinking/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/03/06/20160227-read-creative-thinking/</id>
+    <published>2016-03-05T16:13:14.000Z</published>
+    <updated>2016-03-05T18:00:55.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4532490960/" target="_blank" rel="external">佐藤可士和のクリエイティブシンキング</a></li>
+<li>読み終わった日<br>2016/3/6</li>
+<li>所要時間<br>10時間くらい？（のべ14日間）</li>
+<li>購入元<br>BookOff</li>
+<li>価格<br>¥200</li>
+</ul>
+<h1 id="感想">感想</h1><p>佐藤可士和氏が、「クリエイティブ・シンキング」をテーマに、どのようにすればクリエイティブな思考ができるかのエッセンスをまとめた本です。</p>
+<p>そこかしこにいい感じのヒントになるような言葉が散りばめられています。<br>それぞれのエッセンスを<br>”お茶の間目線”<br>など、佐藤可士和氏の言葉で綴られています。</p>
+<p>私のクリエイティビティに音大があるのか、文体の相性とかがあるのかもしれませんが、私にはちょっと読みにくかったです。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4532490960/" target="_blank" rel="external">佐藤可士和のクリエイティブシンキング</a>]]>
+    </summary>
+    
+      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[2016/2/26 アジャイルひよこクラブ 「今年のTryプレゼン＆現場のProblem相談＆Keep事例発表大会」に参加してきました]]></title>
@@ -2095,160 +2149,6 @@
       <category term="CI" scheme="http://yenjoji.github.io/pages/pages/tags/CI/"/>
     
       <category term="Crowd" scheme="http://yenjoji.github.io/pages/pages/tags/Crowd/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Play! Scalaを Macで始める]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/07/23/getting-start-play-with-idea/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/07/23/getting-start-play-with-idea/</id>
-    <published>2015-07-23T12:23:11.000Z</published>
-    <updated>2015-08-11T07:09:58.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="Play!_Scalaを_Macで始める">Play! Scalaを Macで始める</h1><p>久しぶりにPlay!に触ったら昔とだいぶ違ったのでメモ。</p>
-<h1 id="今回の目標">今回の目標</h1><ol>
-<li>Play!をインストール</li>
-<li>プロジェクトのスケルトンを作成</li>
-<li>IntellijIDEAで開発スタートする準備をする<br>ところまでが目標。</li>
-</ol>
-<h1 id="Play!のインストール">Play!のインストール</h1><p>しばらくぶりにPlay!にさわろうと思ったら、playコマンドがなくなっていて、今はtypesafe-activatorにその役目を譲っているらしいので、typesafe-activatorをインストールします。<br>typesafe-activatorとその開発元のTypesafe社は <a href="http://osdn.jp/magazine/13/08/15/150000" target="_blank" rel="external">http://osdn.jp/magazine/13/08/15/150000</a> <a href="http://osdn.jp/magazine/11/05/13/0340257" target="_blank" rel="external">http://osdn.jp/magazine/11/05/13/0340257</a> この辺りをご参照ください。<br>(私の所属している会社も最近パートナーの末席に仲間入りしました。 <a href="https://www.typesafe.com/partners/systemintegrator-partners#community" target="_blank" rel="external">https://www.typesafe.com/partners/systemintegrator-partners#community</a> )</p>
-<p>typesafe-activatorはhomebrewでインストールできるので、おもむろにbrewコマンドでインストールします。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install typesafe-activator                                                                                                                          *[feature/merge]&#10;==&#62; Downloading https://homebrew.bintray.com/bottles/typesafe-activator-1.3.3.mavericks.bottle.tar.gz&#10;######################################################################## 100.0%&#10;==&#62; Pouring typesafe-activator-1.3.3.mavericks.bottle.tar.gz&#10;&#127866;  /usr/local/Cellar/typesafe-activator/1.3.3: 4 files, 1.2M</span><br></pre></td></tr></table></figure>
-<h1 id="プロジェクトのスケルトンを作成">プロジェクトのスケルトンを作成</h1><h2 id="プロジェクトの作成">プロジェクトの作成</h2><p>playコマンドの代わりにactivatorコマンドを使用してスケルトンを作成します。<br>いくつか質問されるので順次答えます。</p>
-<ol>
-<li>テンプレートは 6 の play-scala</li>
-<li>アプリケーション名は任意のものを指定</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ activator new&#10;&#10;Fetching the latest list of templates...&#10;&#10;Browse the list of templates: http://typesafe.com/activator/templates&#10;Choose from these featured templates or enter a template name:&#10;  1) minimal-akka-java-seed&#10;  2) minimal-akka-scala-seed&#10;  3) minimal-java&#10;  4) minimal-scala&#10;  5) play-java&#10;  6) play-scala&#10;(hit tab to see a list of all templates)&#10;&#62; 6&#10;Enter a name for your application (just press enter for &#39;play-scala&#39;)&#10;&#62; your-project-name&#10;OK, application &#34;your-project-name&#34; is being created using the &#34;play-scala&#34; template.&#10;&#10;To run &#34;your-project-name&#34; from the command line, &#34;cd your-project-name&#34; then:&#10;/Users/enjoji/projects/your-project-name/activator run&#10;&#10;To run the test for &#34;your-project-name&#34; from the command line, &#34;cd your-project-name&#34; then:&#10;/Users/enjoji/projects/your-project-name/activator test&#10;&#10;To run the Activator UI for &#34;your-project-name&#34; from the command line, &#34;cd your-project-name&#34; then:&#10;/Users/enjoji/projects/your-project-name/activator ui</span><br></pre></td></tr></table></figure>
-<h2 id="動作確認">動作確認</h2><p>プロジェクトが出来たので試しに起動してみます。<br>プロジェクトのディレクトリに移動し、 activator run を実行しエラーなく起動すればOKです。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ activator run&#10;Getting org.scala-sbt sbt 0.13.8 ...&#10;downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.jar</span><br></pre></td></tr></table></figure>
-<p>どうやらJava8じゃないと起動しない模様</p>
-<h2 id="IntelliJで使う">IntelliJで使う</h2><h3 id="Intellij_Install">Intellij Install</h3><ul>
-<li><p>まずは IntalliJ IDEA をインストールします。</p>
-</li>
-<li><p>次に必要なプラグインをインストールします</p>
-<ul>
-<li>Plugin<ul>
-<li>SBT</li>
-<li>Scala<br>プラグインをインストール</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="ソースのインポート">ソースのインポート</h3><p>ソースコードをIDEAプロジェクトとしてインポートします。</p>
-<ol>
-<li>メニューを File&gt;New&gt;Project from Existing Source とたどります。</li>
-<li>ソースルートを選択</li>
-<li>Import project from external model</li>
-<li>SBTを選択</li>
-<li>Project SDK に Java8 を選択し Finish</li>
-</ol>
-<p>以上で、Play＋ScalaのスケルトンプロジェクトができてIDEAでの開発準備が整いました。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="Play!_Scalaを_Macで始める">Play! Scalaを Macで始める</h1><p>久しぶりにPlay!に触ったら昔とだいぶ違ったのでメモ。</p>
-<h1 id="今回の目標">今回の目標</h1><ol>
-<li>Play!をインストール</l]]>
-    </summary>
-    
-      <category term="IntellijIDEA" scheme="http://yenjoji.github.io/pages/pages/tags/IntellijIDEA/"/>
-    
-      <category term="Play" scheme="http://yenjoji.github.io/pages/pages/tags/Play/"/>
-    
-      <category term="Scala" scheme="http://yenjoji.github.io/pages/pages/tags/Scala/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Mackerel + Raspberry Pi で 職場環境をモニタリング]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/07/14/mackerel-raspi-temp/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/07/14/mackerel-raspi-temp/</id>
-    <published>2015-07-14T12:49:44.000Z</published>
-    <updated>2015-08-11T06:02:36.000Z</updated>
-    <content type="html"><![CDATA[<p>Mackerel + Raspberry Pi で 職場環境をモニタリング</p>
-<p>皆さんMackerelをご存知ですか？</p>
-<p><a href="https://mackerel.io" target="_blank" rel="external">Mackerel</a> とは はてな社が提供しているサーバー監視のサービスで、<br>サーバーにエージェントと言われるモジュールを設置するだけで、サーバーの状況がブラウザからグラフィカルに確認できるサービスです。</p>
-<p>また、監視ルールを設定しておくことにより、サーバーが特定の状態（CPU使用率90%以上など）になった場合アラートを通知したり<br>無料プランでも一部制限はありますが、サーバー5台まで監視可能など、お手軽、便利、太っ腹なサービスです。</p>
-<p>今回は、そんな本来はサーバー監視のサービスであるMackerelを本来の用途以外に使ってみようと思います。</p>
-<h1 id="突然ですが、夏ですね">突然ですが、夏ですね</h1><p>だんだん気候も夏めいて来た今日このごろ、やはり気になるのはオフィスの環境。<br>健康を害するような環境で仕事をしないためにも、暑さで仕事の効率が落ちないためにも職場環境には気を使いたいところです。</p>
-<p>というわけで、今回は職場（でなくてもいいですが）の温度と湿度を計測したいと思います。</p>
-<h1 id="温度・湿度を測定する">温度・湿度を測定する</h1><p>では、実際に監視システムを構築していきたいと思います。</p>
-<h2 id="今回使うもの">今回使うもの</h2><ul>
-<li>Raspberry pi 2 Type B</li>
-<li>温湿度センサー<ul>
-<li>今回はAM2320 <a href="http://akizukidenshi.com/catalog/g/gM-08663/" target="_blank" rel="external">http://akizukidenshi.com/catalog/g/gM-08663/</a> を使用しました。</li>
-</ul>
-</li>
-<li>Raspberry pi と 温度センサー接続用のブレッドボードやジャンパ線<ul>
-<li>温度センサーとRaspberry Pi をつなぐための線を必要な分用意します。</li>
-</ul>
-</li>
-<li>以前に使用したズゴック（オプション）</li>
-</ul>
-<h2 id="ハードウェアの準備">ハードウェアの準備</h2><h3 id="Raspberry_Pi_と_AM2320_を接続する">Raspberry Pi と AM2320 を接続する</h3><p>この実体配線図のようにAM2320をRaspberry Pi と接続します。<br>AM2320は型番のシルク印刷を表に見た場合、<br>左から</p>
-<ul>
-<li>VDD &lt;-&gt; Pin #2 5V</li>
-<li>SDA &lt;-&gt; Pin #3 SDA</li>
-<li>GND &lt;-&gt; Pin #20 等 GND</li>
-<li>SCL &lt;-&gt; Pin #5 SCL<br>と接続します。</li>
-</ul>
-<p><a href="https://www.flickr.com/photos/130999506@N07/17211140511" title="raspi_am2320 by Yasuto Enjoji, on Flickr" target="_blank" rel="external"><img src="https://farm8.staticflickr.com/7695/17211140511_d168850efd_z.jpg" width="640" height="479" alt="raspi_am2320"></a></p>
-<h2 id="ソフトウエアの準備">ソフトウエアの準備</h2><h3 id="Raspberry_Pi_で_I2C_を使えるようにする">Raspberry Pi で I2C を使えるようにする</h3><p>今回使用する AM2320 という温湿度計モジュールは I2C インターフェース経由でデータを取得します。<br>RaspberryPIは初期状態ではI2Cが有効になっていないため、<br>こちらのページ <a href="https://blog.ymyzk.com/2015/02/enable-raspberry-pi-i2c/" target="_blank" rel="external">https://blog.ymyzk.com/2015/02/enable-raspberry-pi-i2c/</a> を参考にし、I2Cを有効にします。</p>
-<h3 id="AM2320からデータを取得するプログラムを用意する">AM2320からデータを取得するプログラムを用意する</h3><p>こちらのコード <a href="https://github.com/takagi/am2321" target="_blank" rel="external">https://github.com/takagi/am2321</a> をベースにし、出力をMackerelに対応させたコードがこちらです。</p>
-<div class=""><br>  <script src="https://gist.github.com/yenjoji/40d135519a0741d3718b.js"></script><br></div>
-
-<p>これをRaspberryPI上でコンパイルし、パスの通った場所に配置します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://gist.githubusercontent.com/yenjoji/40d135519a0741d3718b/raw/5c7835651a539f16f3446108e15aa482f6c2111f/am2321.c&#10;&#10;gcc -lm -o am2321 am2321.c&#10;&#10;chmod a+x am2321&#10;mv am2321 /usr/local/bin</span><br></pre></td></tr></table></figure>
-<h1 id="Mackerelとの連携">Mackerelとの連携</h1><h2 id="Mackerelに登録してオーガニゼーションを作成する">Mackerelに登録してオーガニゼーションを作成する</h2><p><a href="http://help-ja.mackerel.io/entry/getting-started" target="_blank" rel="external">http://help-ja.mackerel.io/entry/getting-started</a><br>の手順にそって、オーガニゼーションを作成します。</p>
-<h2 id="maeckrel-agent_をインストールする">maeckrel-agent をインストールする</h2><p>パッケージをダウンロードし、インストールします。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO http://file.mackerel.io/agent/deb/mackerel-agent_latest.all.deb&#10;sudo dpkg -i mackerel-agent_latest.all.deb</span><br></pre></td></tr></table></figure>
-<h2 id="ARM_版バイナリに実行ファイルを置き換える">ARM 版バイナリに実行ファイルを置き換える</h2><p>通常ならば、パッケージをインストールすれば完了ですが、<br>RasperryPiはもともとMackerelが想定しているCPUとアーキテクチャが違うためかそのままではうまく起動しません。<br>そのため、RaspberryPiのCPUにあったアーキテクチャのMackerelの実行ファイルで上書きします。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://github.com/mackerelio/mackerel-agent/releases/download/v0.17.1/mackerel-agent_linux_arm.tar.gz&#10;tar xf mackerel-agent_linux_arm.tar.gz&#10;&#10;sudo mv /usr/local/bin/mackerel-agent /usr/local/bin/mackerel-agent.org&#10;sudo mv mackerel-agent_linux_arm/mackerel-agent /usr/local/bin/mackerel-agent</span><br></pre></td></tr></table></figure>
-<h2 id="maeckrel-agentの設定">maeckrel-agentの設定</h2><p>インストールが完了したので、設定をしていきます。</p>
-<p>設定ファイルに apiKeyとカスタムメトリクスの設定を追加します。<br>/etc/mackerel-agent/mackerel-agent.conf に オーガニゼーションの画面に表示されているAPIKEYと<br>以下のカスタムメトリクスの設定を追加してください。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Get room status&#10;[plugin.metrics.temperature]&#10;command = &#34;/usr/local/bin/am2321 -m&#34;</span><br></pre></td></tr></table></figure>
-<h2 id="mackerel-agent_起動">mackerel-agent 起動</h2><p>以上で設定がひと通り完了しましたので、エージェントを起動します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mackerel-agent start</span><br></pre></td></tr></table></figure>
-<p>これで、先ほど作成したオーガニゼーションに自動的にホストが追加され、<br>mackerelのデフォルトの監視項目と、温湿度計のデータが記録されていくようになります。</p>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19282373940/in/dateposted-public/" title="mackerel-room" target="_blank" rel="external"><img src="https://c1.staticflickr.com/1/281/19282373940_5b6feac8f1.jpg" width="500" height="333" alt="mackerel-room"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<h1 id="アラートの設定">アラートの設定</h1><p>無事に温度と湿度の記録が始まりました。<br>しかしながらこれだけでは、職場が危機な状況になっても気づくことが出来ません。</p>
-<p>ということで、職場の労働環境を監視する尺度として、不快指数を使って職場環境をモニタリングしたいと思います。</p>
-<p>実は先程のMackerelカスタムメトリクス取得プログラムには、温度、湿度以外に不快指数も取得できるようにしてあります。<br>なので、手順通りに設定した場合は、すでにカスタムメトリクス上に不快指数が記録されていると思います。</p>
-<p>wikipediaによると、日本人は不快指数が77を超えた辺りから一部の方々が不快を覚え始め、80を超えるとみんなが不快感を感じるそうなので、<br>この値を超えた場合に通知が来るように設定したいと思います。</p>
-<ol>
-<li>Macerel管理画面から Monitor メニューをクリックし、監視ルールを追加ボタンをクリックします。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19282339528/in/dateposted-public/" title="mackerel-monitor_001" target="_blank" rel="external"><img src="https://c1.staticflickr.com/1/519/19282339528_2010ee2383.jpg" width="500" height="263" alt="mackerel-monitor_001"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>ポップアップしたウィンドウに監視条件を入力し作成ボタンをクリックします。<br>今回は不快指数(custom.room.1.discomfortindex)を選択し、77でWarning、80でCriticalとなるように設定します。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19463574002/in/dateposted-public/" title="mackerel-monitor_002" target="_blank" rel="external"><img src="https://c1.staticflickr.com/1/451/19463574002_2b9f7c24ee.jpg" width="500" height="263" alt="mackerel-monitor_002"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>作成した関し条件が一覧に表示されていれば成功です。<br>これで不快指数がしきい値を超えるた際にメール通知がされるようになりました。また、チャットなどメール以外の通知方法も用意されています。（私はHipChatにも通知しています。）<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19463581282/in/dateposted-public/" title="momongar-discomfortindex" target="_blank" rel="external"><img src="https://c2.staticflickr.com/4/3912/19463581282_0628d1a7f6.jpg" width="500" height="260" alt="momongar-discomfortindex"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-</ol>
-<h1 id="ズゴックと連携する">ズゴックと連携する</h1><p>以前作成した、ズゴックXFDですが、<br>チームのみんながちゃんとテストが通ることを確認してからソースコードをPushするため、ほぼ活躍する機会がありません。<br>このままだと <strong>ただ職場にガンプラをおいている人になってしまう</strong> ので、<br>ズゴックの存在意義を上げるべく温度計を連携させたいと思います。</p>
-<h2 id="温度計の実装">温度計の実装</h2><ol>
-<li>ドリルで大まかな穴を開けた後、ニッパーで穴をつなぎ<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/18849417353/in/dateposted-public/" title="DSC_0093" target="_blank" rel="external"><img src="https://c1.staticflickr.com/1/546/18849417353_1ec27ef32a.jpg" width="500" height="281" alt="DSC_0093"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>カッターで凹凸を整えます<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/18849429613/in/dateposted-public/" title="DSC_0094" target="_blank" rel="external"><img src="https://c1.staticflickr.com/1/432/18849429613_180dececaf.jpg" width="500" height="281" alt="DSC_0094"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>温度計を開けた穴にはめ込み、配線を足経由で踵から外部に引き出せば完成です。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19443993586/in/dateposted-public/" title="DSC_0101" target="_blank" rel="external"><img src="https://c1.staticflickr.com/1/294/19443993586_0f60c72627.jpg" width="281" height="500" alt="DSC_0101"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>組み立てるとこんなかんじになります。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/18849420843/in/dateposted-public/" title="DSC_0108" target="_blank" rel="external"><img src="https://c2.staticflickr.com/4/3707/18849420843_3bd5471118.jpg" width="500" height="281" alt="DSC_0108"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script><br><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19443991026/in/dateposted-public/" title="DSC_0105" target="_blank" rel="external"><img src="https://c1.staticflickr.com/1/488/19443991026_6681b756d0.jpg" width="281" height="500" alt="DSC_0105"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-</ol>
-<h1 id="結果">結果</h1><p>晴れてズゴックに温度計が付き、職場の状況をモニタリングすることが可能になりました。</p>
-<p>これで、自分の居室の不快指数を計測し放題です。<br>計測したところで、特に快適になったりはしないのは残念ですが、<br>計測データを元に現場のリーダーに職場環境のカイゼンをお願いする材料くらいにはなるはずです。</p>
-<p>ただ、残念ながら、温度計を付けてもズゴック見た目に変化がないので、<br>相変わらず傍から見るとガンダム好きな人にしか見えないという点は今後の課題とします。</p>
-<p>みなさんもMackerelと様々なセンサーを組み合わせて遊んでみるのはいかがでしょうか？</p>
-<h1 id="参考URL">参考URL</h1><h2 id="Raspberry_Pi_の_I2C_を有効化する方法_(2015年版)">Raspberry Pi の I2C を有効化する方法 (2015年版)</h2><p><a href="https://blog.ymyzk.com/2015/02/enable-raspberry-pi-i2c/" target="_blank" rel="external">https://blog.ymyzk.com/2015/02/enable-raspberry-pi-i2c/</a></p>
-<h2 id="Raspberry_Pi_で湿度センサ_AM2321_を使う">Raspberry Pi で湿度センサ AM2321 を使う</h2><p><a href="http://technology-memo.seesaa.net/article/404719464.html" target="_blank" rel="external">http://technology-memo.seesaa.net/article/404719464.html</a></p>
-<h2 id="Mackerelについて">Mackerelについて</h2><p><a href="http://qiita.com/ariarijp/items/838628e121b051524309" target="_blank" rel="external">http://qiita.com/ariarijp/items/838628e121b051524309</a></p>
-<h2 id="不快指数">不快指数</h2><p><a href="https://ja.wikipedia.org/wiki/%E4%B8%8D%E5%BF%AB%E6%8C%87%E6%95%B0" target="_blank" rel="external">https://ja.wikipedia.org/wiki/%E4%B8%8D%E5%BF%AB%E6%8C%87%E6%95%B0</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Mackerel + Raspberry Pi で 職場環境をモニタリング</p>
-<p>皆さんMackerelをご存知ですか？</p>
-<p><a href="https://mackerel.io" target="_blank" rel="external">Mack]]>
-    </summary>
-    
-      <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
-    
-      <category term="Mackerel" scheme="http://yenjoji.github.io/pages/pages/tags/Mackerel/"/>
-    
-      <category term="RasperryPi" scheme="http://yenjoji.github.io/pages/pages/tags/RasperryPi/"/>
-    
-      <category term="ネタ" scheme="http://yenjoji.github.io/pages/pages/tags/%E3%83%8D%E3%82%BF/"/>
     
   </entry>
   
