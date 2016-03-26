@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: program | Rouleur</title>
+  <title>姫路城を作ろう -準備編- | Rouleur</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rouleur">
-<meta property="og:url" content="http://yenjoji.github.io/pages/tags/program/index.html">
+  <meta name="description" content="動機前回のズゴックでのXFDからはや半年以上が経過しました。当初はネタとしても、用途としても満足をしていたのものの、使っていくうちに幾つか不満が出てきました。
+
+Bambooへの問い合わせがすべてRasperryPiで動いているGroovyのコードにかかれているため、Bambooの構成が変わるたびにGroovy修正→パッケージ→再デプロイが必要でメンテナンスが面倒でした、結果的にBambooの監視">
+<meta property="og:type" content="article">
+<meta property="og:title" content="姫路城を作ろう -準備編-">
+<meta property="og:url" content="http://yenjoji.github.io/pages/2016/03/27/20160327-let-us-construct-himeji-jo_001/index.html">
 <meta property="og:site_name" content="Rouleur">
-<meta property="og:description">
+<meta property="og:description" content="動機前回のズゴックでのXFDからはや半年以上が経過しました。当初はネタとしても、用途としても満足をしていたのものの、使っていくうちに幾つか不満が出てきました。
+
+Bambooへの問い合わせがすべてRasperryPiで動いているGroovyのコードにかかれているため、Bambooの構成が変わるたびにGroovy修正→パッケージ→再デプロイが必要でメンテナンスが面倒でした、結果的にBambooの監視">
+<meta property="og:updated_time" content="2016-03-26T15:56:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rouleur">
-<meta name="twitter:description">
+<meta name="twitter:title" content="姫路城を作ろう -準備編-">
+<meta name="twitter:description" content="動機前回のズゴックでのXFDからはや半年以上が経過しました。当初はネタとしても、用途としても満足をしていたのものの、使っていくうちに幾つか不満が出てきました。
+
+Bambooへの問い合わせがすべてRasperryPiで動いているGroovyのコードにかかれているため、Bambooの構成が変わるたびにGroovy修正→パッケージ→再デプロイが必要でメンテナンスが面倒でした、結果的にBambooの監視">
   
     <link rel="alternative" href="/pages/atom.xml" title="Rouleur" type="application/atom+xml">
   
@@ -167,39 +174,112 @@ ga('send', 'pageview');
   
 </aside>
         
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/pages/archives/2012" class="archive-year">2012</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/pages/2012/04/15/s2jdbc/" class="archive-article-date">
-  <time datetime="2012-04-15T13:10:40.000Z" itemprop="datePublished">4月 15</time>
+        <section id="main"><article id="post-20160327-let-us-construct-himeji-jo_001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/pages/2016/03/27/20160327-let-us-construct-himeji-jo_001/" class="article-date">
+  <time datetime="2016-03-26T15:00:00.000Z" itemprop="datePublished">2016-03-27</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/pages/2012/04/15/s2jdbc/">S2JDBCで一部の処理だけ別トランザクションにしたい場合の注意点</a>
+    <h1 class="article-title" itemprop="name">
+      姫路城を作ろう -準備編-
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="動機">動機</h1><p>前回のズゴックでのXFDからはや半年以上が経過しました。<br>当初はネタとしても、用途としても満足をしていたのものの、使っていくうちに幾つか不満が出てきました。</p>
+<ol>
+<li>Bambooへの問い合わせがすべてRasperryPiで動いているGroovyのコードにかかれているため、Bambooの構成が変わるたびにGroovy修正→パッケージ→再デプロイが必要でメンテナンスが面倒でした、結果的にBambooの監視は途中から止めてしまっていました。</li>
+<li>Bambooのビルドのイベント以外でもLED光らせたら楽しいかなぁというイベント（プルリクエストとか）があるのに、上記の通りメンテナンスが面倒なので結局応用がきかせにくく、せっかくアイディアが思いついてもそのまま寝かせてしまっていました。</li>
+<li>温度、湿度情報もMackerel以外でも使えそうなのに、RasperryPi上でコマンドを実行しないと値が取れないので使いにくくせっかくのデータが行かせていませんでした。</li>
+</ol>
+<p>そこで今回は、この不満を解消しつつ、</p>
+<ol>
+<li>Go言語なんか目につく機会が多くなったんで、ここいらでちょっと使ってみたいなぁ。何ならDockerとかHashicorpとかコード読めるようになったら嬉しい！</li>
+<li>Rundeckって社内で使っている人も増えてるし、世間的にも流行ってるっぽいからちょっと使ってみたい。いやむしろ使うべき！</li>
+</ol>
+<p>という個人的な野望を満たすため、ズゴックのアップデートを行うことにしました。</p>
+<h2 id="なんで姫路城？">なんで姫路城？</h2><p>という経緯でズゴックをアップデートしようと思い立ったものの</p>
+<ol>
+<li>スゴックは職場に置きっぱなしで手元になかった(そもそものうっかり！)</li>
+<li>ガンダムネタは鉄板かと思っていたが、最近入社した若者の中にはガンダムを知らないというケースがあった(ジェネレーションギャップ！！！)</li>
+<li>アニメより歴史的な建造物とかのほうが一般受けするんじゃないか(という下心！)</li>
+<li>人型ロボットはスペースが少なくてセンサーの設置やケーブルの取り回しが大変<br>といういくつか問題と前回の反省点がありました。</li>
+</ol>
+<p>そんなことを考えて悶々とした日々を送っていたところ。<br>「なんか最近テレビで城の特集とかやってるし下町ロケットで仮面ライダードライブ(役だったひと)が入院中の子供に姫路城プレゼントしてたしこれはもう絶対城しかない」<br>というひらめきを得て、ズゴックから路線を変えて<a href="http://www.doyusha-model.com/list/pramodel/jj1200.html" target="_blank" rel="external">姫路城</a>をベースに新しいデバイスを作ることにしました。</p>
+<h2 id="なんでGo言語">なんでGo言語</h2><p>なんか（いまになって）流行ってる風なのと、風のうわさで「Go言語いいよいいよ」みたいな話は聞くものの、具体的に何がいいのかピンとこなかったので使ったらわかるかもしれないという淡い期待を込めてGo言語を採用しました。</p>
+<h2 id="なんでRundeckとかつかったの？">なんでRundeckとかつかったの？</h2><p><a href="http://www-03.ibm.com/software/products/ja/workload-scheduler" target="_blank" rel="external">IBM Tivoli Workload Scheduler</a>とか<a href="http://www.hitachi.co.jp/Prod/comp/soft1/jp1/products/list/ajs/index.html" target="_blank" rel="external">JP1 AJS</a>とか<a href="http://www.bmcsoftware.jp/it-solutions/control-m.html" target="_blank" rel="external">Controll-M</a>とかで苦しんできた過去を踏まえて、いま流行りっぽいオープンソースのジョブスケジューラの実力（の片鱗）を見てみたかったのと、「<a href="http://muranonushi.hatenablog.jp/entry/2015/12/01/200413" target="_blank" rel="external">SSHログインしたら負け</a>」というポリシーのもと、一旦作ったプロダクトの運用はSSHを使わずにできないといけないという流派の存在をしり、そのムーブメントに乗ってみようかと思ったので採用してみました。</p>
+<h1 id="アーキテクチャ">アーキテクチャ</h1><p>今回のポイントとしては</p>
+<ul>
+<li>センサー、LEDの制御をREST API化して、Raspi本体からも、外部からも気軽に使えるようにする。</li>
+<li>物理ボタンを押した際のアクションをRundeckのJOB定義にすることにより、ブラウザからボタンの振る舞いを変更できるようにする。<br>の2点です。</li>
+</ul>
+<p>シンプルなのであまり参考になりませんが、LED、温度センサー、物理ボタンの処理シーケンスを書いてみました。</p>
+<ul>
+<li>LED処理シーケンス</li>
+<li>温湿度計処理シーケンス</li>
+<li>物理ボタン処理シーケンス<br>書いてみて再認識しましたがほんとに大したことないシーケンスですね。</li>
+</ul>
+<h1 id="準備">準備</h1><h2 id="材料">材料</h2><ul>
+<li><a href="http://www.yodobashi.com/%E7%AB%A5%E5%8F%8B%E7%A4%BE-DOYUSHA-JOYJOY%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-1-800-%E5%A7%AB%E8%B7%AF%E5%9F%8E/pd/100000001000991908/" target="_blank" rel="external">童友社 DOYUSHA<br>JOYJOYコレクション 1/800 姫路城</a><ul>
+<li>関係ないですが、ヨドバシはプラモが常に安くていいですね。</li>
+</ul>
+</li>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-09024/" target="_blank" rel="external">Ｒａｓｐｂｅｒｒｙ　Ｐｉ　２　Ｍｏｄｅｌ　Ｂ</a></li>
+<li><a href="http://akizukidenshi.com/catalog/g/gI-02476/" target="_blank" rel="external">ＲＧＢフルカラーＬＥＤ　５ｍｍ４本足　ＯＳＴＡ５１３１Ａ　カソードコモン</a><ul>
+<li>フルカラーLEDなら何でもいいですが、<a href="http://akizukidenshi.com/catalog/g/gI-08411/" target="_blank" rel="external">マイコン内蔵のLED</a>はPaspberryPiからの制御が難しいという話を聞いて今回は避けました。</li>
+</ul>
+</li>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-08663/" target="_blank" rel="external">温湿度センサ　モジュール　ＡＭ２３２０</a><ul>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-08775/" target="_blank" rel="external">違うモジュール</a>を試してみようと思いましたが、今回は個人的に実績のあるこちらのモジュールにしました</li>
+</ul>
+</li>
+<li><a href="http://akizukidenshi.com/catalog/g/gR-25331/" target="_blank" rel="external">カーボン抵抗（炭素皮膜抵抗）　１／４Ｗ　３３０Ω</a></li>
+<li><a href="http://akizukidenshi.com/catalog/g/gP-02561/" target="_blank" rel="external">タクトスイッチ（大）１０個セット</a></li>
+<li><p><a href="http://akizukidenshi.com/catalog/g/gP-05294/" target="_blank" rel="external">ブレッドボード　ＢＢ－８０１</a></p>
+</li>
+<li><p>適当なジャンパ線</p>
+</li>
+<li>ハンダゴテ＋はんだ</li>
+<li>私は温度計の足を直接はんだ付けしたくなかったので<a href="http://akizukidenshi.com/catalog/g/gC-05779/" target="_blank" rel="external">分割ロングピンソケット　１ｘ４２　（４２Ｐ）</a> を使いました。</li>
+</ul>
+<p>電子部品系は<a href="http://akizukidenshi.com/" target="_blank" rel="external">秋月電子</a>で購入し、プラモはヨドバシカメラで購入しました。</p>
+<h1 id="次回">次回</h1><p>今回は、なんとなくの設計と、材料を揃えました。<br>次回は、姫路城の築城について書きたいと思います。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yenjoji.github.io/pages/2016/03/27/20160327-let-us-construct-himeji-jo_001/" data-id="cim9b6nwm002q7lvxden5z8qu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/Golang/">Golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/IoT/">IoT</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/pages/2016/03/11/20160311-read-game-ni-suureba-umakuiku/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">「ゲームにすればうまくいく」を読みました</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
       </div>
       <footer id="footer">

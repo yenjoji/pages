@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2016-03-23T16:48:12.000Z</updated>
+  <updated>2016-03-26T15:56:42.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -14,6 +14,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[姫路城を作ろう -準備編-]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/03/27/20160327-let-us-construct-himeji-jo_001/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/03/27/20160327-let-us-construct-himeji-jo_001/</id>
+    <published>2016-03-26T15:00:00.000Z</published>
+    <updated>2016-03-26T15:56:42.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="動機">動機</h1><p>前回のズゴックでのXFDからはや半年以上が経過しました。<br>当初はネタとしても、用途としても満足をしていたのものの、使っていくうちに幾つか不満が出てきました。</p>
+<ol>
+<li>Bambooへの問い合わせがすべてRasperryPiで動いているGroovyのコードにかかれているため、Bambooの構成が変わるたびにGroovy修正→パッケージ→再デプロイが必要でメンテナンスが面倒でした、結果的にBambooの監視は途中から止めてしまっていました。</li>
+<li>Bambooのビルドのイベント以外でもLED光らせたら楽しいかなぁというイベント（プルリクエストとか）があるのに、上記の通りメンテナンスが面倒なので結局応用がきかせにくく、せっかくアイディアが思いついてもそのまま寝かせてしまっていました。</li>
+<li>温度、湿度情報もMackerel以外でも使えそうなのに、RasperryPi上でコマンドを実行しないと値が取れないので使いにくくせっかくのデータが行かせていませんでした。</li>
+</ol>
+<p>そこで今回は、この不満を解消しつつ、</p>
+<ol>
+<li>Go言語なんか目につく機会が多くなったんで、ここいらでちょっと使ってみたいなぁ。何ならDockerとかHashicorpとかコード読めるようになったら嬉しい！</li>
+<li>Rundeckって社内で使っている人も増えてるし、世間的にも流行ってるっぽいからちょっと使ってみたい。いやむしろ使うべき！</li>
+</ol>
+<p>という個人的な野望を満たすため、ズゴックのアップデートを行うことにしました。</p>
+<h2 id="なんで姫路城？">なんで姫路城？</h2><p>という経緯でズゴックをアップデートしようと思い立ったものの</p>
+<ol>
+<li>スゴックは職場に置きっぱなしで手元になかった(そもそものうっかり！)</li>
+<li>ガンダムネタは鉄板かと思っていたが、最近入社した若者の中にはガンダムを知らないというケースがあった(ジェネレーションギャップ！！！)</li>
+<li>アニメより歴史的な建造物とかのほうが一般受けするんじゃないか(という下心！)</li>
+<li>人型ロボットはスペースが少なくてセンサーの設置やケーブルの取り回しが大変<br>といういくつか問題と前回の反省点がありました。</li>
+</ol>
+<p>そんなことを考えて悶々とした日々を送っていたところ。<br>「なんか最近テレビで城の特集とかやってるし下町ロケットで仮面ライダードライブ(役だったひと)が入院中の子供に姫路城プレゼントしてたしこれはもう絶対城しかない」<br>というひらめきを得て、ズゴックから路線を変えて<a href="http://www.doyusha-model.com/list/pramodel/jj1200.html" target="_blank" rel="external">姫路城</a>をベースに新しいデバイスを作ることにしました。</p>
+<h2 id="なんでGo言語">なんでGo言語</h2><p>なんか（いまになって）流行ってる風なのと、風のうわさで「Go言語いいよいいよ」みたいな話は聞くものの、具体的に何がいいのかピンとこなかったので使ったらわかるかもしれないという淡い期待を込めてGo言語を採用しました。</p>
+<h2 id="なんでRundeckとかつかったの？">なんでRundeckとかつかったの？</h2><p><a href="http://www-03.ibm.com/software/products/ja/workload-scheduler" target="_blank" rel="external">IBM Tivoli Workload Scheduler</a>とか<a href="http://www.hitachi.co.jp/Prod/comp/soft1/jp1/products/list/ajs/index.html" target="_blank" rel="external">JP1 AJS</a>とか<a href="http://www.bmcsoftware.jp/it-solutions/control-m.html" target="_blank" rel="external">Controll-M</a>とかで苦しんできた過去を踏まえて、いま流行りっぽいオープンソースのジョブスケジューラの実力（の片鱗）を見てみたかったのと、「<a href="http://muranonushi.hatenablog.jp/entry/2015/12/01/200413" target="_blank" rel="external">SSHログインしたら負け</a>」というポリシーのもと、一旦作ったプロダクトの運用はSSHを使わずにできないといけないという流派の存在をしり、そのムーブメントに乗ってみようかと思ったので採用してみました。</p>
+<h1 id="アーキテクチャ">アーキテクチャ</h1><p>今回のポイントとしては</p>
+<ul>
+<li>センサー、LEDの制御をREST API化して、Raspi本体からも、外部からも気軽に使えるようにする。</li>
+<li>物理ボタンを押した際のアクションをRundeckのJOB定義にすることにより、ブラウザからボタンの振る舞いを変更できるようにする。<br>の2点です。</li>
+</ul>
+<p>シンプルなのであまり参考になりませんが、LED、温度センサー、物理ボタンの処理シーケンスを書いてみました。</p>
+<ul>
+<li>LED処理シーケンス</li>
+<li>温湿度計処理シーケンス</li>
+<li>物理ボタン処理シーケンス<br>書いてみて再認識しましたがほんとに大したことないシーケンスですね。</li>
+</ul>
+<h1 id="準備">準備</h1><h2 id="材料">材料</h2><ul>
+<li><a href="http://www.yodobashi.com/%E7%AB%A5%E5%8F%8B%E7%A4%BE-DOYUSHA-JOYJOY%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-1-800-%E5%A7%AB%E8%B7%AF%E5%9F%8E/pd/100000001000991908/" target="_blank" rel="external">童友社 DOYUSHA<br>JOYJOYコレクション 1/800 姫路城</a><ul>
+<li>関係ないですが、ヨドバシはプラモが常に安くていいですね。</li>
+</ul>
+</li>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-09024/" target="_blank" rel="external">Ｒａｓｐｂｅｒｒｙ　Ｐｉ　２　Ｍｏｄｅｌ　Ｂ</a></li>
+<li><a href="http://akizukidenshi.com/catalog/g/gI-02476/" target="_blank" rel="external">ＲＧＢフルカラーＬＥＤ　５ｍｍ４本足　ＯＳＴＡ５１３１Ａ　カソードコモン</a><ul>
+<li>フルカラーLEDなら何でもいいですが、<a href="http://akizukidenshi.com/catalog/g/gI-08411/" target="_blank" rel="external">マイコン内蔵のLED</a>はPaspberryPiからの制御が難しいという話を聞いて今回は避けました。</li>
+</ul>
+</li>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-08663/" target="_blank" rel="external">温湿度センサ　モジュール　ＡＭ２３２０</a><ul>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-08775/" target="_blank" rel="external">違うモジュール</a>を試してみようと思いましたが、今回は個人的に実績のあるこちらのモジュールにしました</li>
+</ul>
+</li>
+<li><a href="http://akizukidenshi.com/catalog/g/gR-25331/" target="_blank" rel="external">カーボン抵抗（炭素皮膜抵抗）　１／４Ｗ　３３０Ω</a></li>
+<li><a href="http://akizukidenshi.com/catalog/g/gP-02561/" target="_blank" rel="external">タクトスイッチ（大）１０個セット</a></li>
+<li><p><a href="http://akizukidenshi.com/catalog/g/gP-05294/" target="_blank" rel="external">ブレッドボード　ＢＢ－８０１</a></p>
+</li>
+<li><p>適当なジャンパ線</p>
+</li>
+<li>ハンダゴテ＋はんだ</li>
+<li>私は温度計の足を直接はんだ付けしたくなかったので<a href="http://akizukidenshi.com/catalog/g/gC-05779/" target="_blank" rel="external">分割ロングピンソケット　１ｘ４２　（４２Ｐ）</a> を使いました。</li>
+</ul>
+<p>電子部品系は<a href="http://akizukidenshi.com/" target="_blank" rel="external">秋月電子</a>で購入し、プラモはヨドバシカメラで購入しました。</p>
+<h1 id="次回">次回</h1><p>今回は、なんとなくの設計と、材料を揃えました。<br>次回は、姫路城の築城について書きたいと思います。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="動機">動機</h1><p>前回のズゴックでのXFDからはや半年以上が経過しました。<br>当初はネタとしても、用途としても満足をしていたのものの、使っていくうちに幾つか不満が出てきました。</p>
+<ol>
+<li>Bambooへの問い合わせがすべてRasper]]>
+    </summary>
+    
+      <category term="Golang" scheme="http://yenjoji.github.io/pages/pages/tags/Golang/"/>
+    
+      <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[「ゲームにすればうまくいく」を読みました]]></title>
@@ -1893,199 +1970,6 @@
       <category term="Bamboo" scheme="http://yenjoji.github.io/pages/pages/tags/Bamboo/"/>
     
       <category term="Stash" scheme="http://yenjoji.github.io/pages/pages/tags/Stash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Atlassian Bamboo + Crowd 後編：Crowdとの連携]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/08/12/integrated-crowd-with-bamboo/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/08/12/integrated-crowd-with-bamboo/</id>
-    <published>2015-08-12T03:00:00.000Z</published>
-    <updated>2015-09-27T15:35:10.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="BambooとCrowdの連携">BambooとCrowdの連携</h1><p>今回は前回の続きとして、BambooとCrowdを連携させて、<br>ユーザーをCrowdで一元管理できるようにしたいと思います。</p>
-<p>前回同様、基本的には<a href="https://confluence.atlassian.com/display/CROWD/Integrating+Crowd+with+Atlassian+Bamboo" target="_blank" rel="external">公式の手順</a> に沿ってすすめていきます。</p>
-<p>全体的な流れは</p>
-<ol>
-<li>Crowdにユーザーとグループ、Bambooとの連携設定を行う</li>
-<li>Bamboo側でCrowdへの接続設定を行う</li>
-<li>Bambooのユーザー認証をCrowdに切り替える</li>
-</ol>
-<p>です。</p>
-<h1 id="Crowd設定">Crowd設定</h1><p>まずはCrowd側にBamboo用のユーザーの作成と、連携のための設定を行います。</p>
-<p>Crowdに以下のユーザーを作成してBambooと連携します。</p>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>Group</th>
-<th>Bambooのロール</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bamboo</td>
-<td>bamboo-admin</td>
-<td>管理者</td>
-</tr>
-<tr>
-<td>bamboo-user</td>
-<td>bamboo-user</td>
-<td>一般ユーザー</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ユーザーの追加">ユーザーの追加</h2><p>Bamboo用にユーザーを追加します。</p>
-<ul>
-<li>Top画面から「Users」タブをクリック</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19857718703/in/dateposted-public/" title="0810_1111_Atlassian_Crowd_-_Administration_console" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/348/19857718703_95f9644a40.jpg" width="500" height="344" alt="0810_1111_Atlassian_Crowd_-_Administration_console"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>「Add User」リンクをクリックし、ユーザー登録画面にて必要な情報を入力し「Create」ボタンをクリック</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20484923911/in/dateposted-public/" title="0810_1118_Atlassian_Crowd_-_Users" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/398/20484923911_e250a52b18.jpg" width="500" height="344" alt="0810_1118_Atlassian_Crowd_-_Users"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>同様に一般ユーザーも追加します</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20290542940/in/dateposted-public/" title="0810_1511_Atlassian_Crowd_-_Add_user" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/403/20290542940_11d5c7b99d.jpg" width="500" height="344" alt="0810_1511_Atlassian_Crowd_-_Add_user"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<h2 id="グループの作成">グループの作成</h2><p>Bambooでユーザーのロール制御を行うため、ロールに対応したグループを作成します。</p>
-<ul>
-<li>「Groups」をクリック</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20469901562/in/dateposted-public/" title="0810_1512_Atlassian_Crowd_-_Groups" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/304/20469901562_baf6196f36.jpg" width="500" height="344" alt="0810_1512_Atlassian_Crowd_-_Groups"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>「Add Group」リンクをクリックし、グループ登録画面にて必要な情報を入力し「Create」ボタンをクリック</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20478653185/in/dateposted-public/" title="0810_1513_Atlassian_Crowd_-_Add_group" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/561/20478653185_ded6662813.jpg" width="500" height="344" alt="0810_1513_Atlassian_Crowd_-_Add_group"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>同様に一般ユーザー用グループも作成します</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20291988679/in/dateposted-public/" title="0810_1514_Atlassian_Crowd_-_Add_group" target="_blank" rel="external"><img src="https://farm4.staticflickr.com/3731/20291988679_7901418bdd.jpg" width="500" height="344" alt="0810_1514_Atlassian_Crowd_-_Add_group"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<h2 id="グループへユーザーを登録">グループへユーザーを登録</h2><p>作成したグループへユーザーを登録します。<br>管理者にしたいユーザーは bamboo-admin グループへ。<br>一般ユーザーにしたいユーザーは bamboo-user グループへ登録します。</p>
-<ul>
-<li>「Groups」をクリック、「bamboo-admin」リンクをクリック</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19855985444/in/dateposted-public/" title="0810_1943_Atlassian_Crowd_-_Groups" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/481/19855985444_abe141bf77.jpg" width="500" height="344" alt="0810_1943_Atlassian_Crowd_-_Groups"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>「Direct members」タブをクリックし「Add Users」ボタンをクリック</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19857716853/in/dateposted-public/" title="0810_1944_Atlassian_Crowd_-_View_group" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/284/19857716853_931929b751.jpg" width="500" height="344" alt="0810_1944_Atlassian_Crowd_-_View_group"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>「Search」ボタンをクリックすると、ユーザーが表示されるので、管理者にしたいユーザーにチェックをし、「Add Selected Users」ボタンをクリック</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20290607838/in/dateposted-public/" title="0810_1945_Atlassian_Crowd_-_View_group" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/340/20290607838_576329772c.jpg" width="500" height="344" alt="0810_1945_Atlassian_Crowd_-_View_group"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>同様に一般ユーザーも一般ユーザー用のグループへ登録します</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19857716413/in/dateposted-public/" title="0810_1949_Atlassian_Crowd_-_View_group" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/325/19857716413_3b98a7619f.jpg" width="500" height="344" alt="0810_1949_Atlassian_Crowd_-_View_group"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<h2 id="アプリケーションの作成">アプリケーションの作成</h2><p>Crowdで作成したユーザーとBambooを関連付けるため、アプリケーションを登録します。</p>
-<ul>
-<li>「Application」-&gt; Add application」をクリック</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20290542470/in/dateposted-public/" title="0810_1659_Atlassian_Crowd_-_Applications" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/442/20290542470_d6fabcea94.jpg" width="500" height="344" alt="0810_1659_Atlassian_Crowd_-_Applications"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>必要な情報を入力し「Next」をクリック</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>設定値</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Apprication type</td>
-<td>Bamboo</td>
-</tr>
-<tr>
-<td>Name</td>
-<td>Bamboo</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>任意のパスワード</td>
-</tr>
-</tbody>
-</table>
-<p>ここで設定するパスワードはBambooとCrowdが連携する際の認証に使用します</p>
-<ul>
-<li>BambooとCrowdの通信設定を入力し「Next」をクリック<br>URLにユーザーがアクセスするURLを、Remote IP AddressにBambooサーバーとCrowdサーバーが通信する際のBambooサーバーのIPアドレスを設定します。</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20484923151/in/dateposted-public/" title="0810_1702_Atlassian_Crowd_-_Add_application" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/262/20484923151_130eb04853.jpg" width="500" height="344" alt="0810_1702_Atlassian_Crowd_-_Add_application"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>ユーザーディレクトリの選択<br>Bambooの認証で使用するユーザーが存在する、ユーザーディレクトリを選択します。<br>今回では、先ほどの手順でユーザーを作成した際に指定したディレクトリを選択します。</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/19857717813/in/dateposted-public/" title="0810_1703_Atlassian_Crowd_-_Add_application" target="_blank" rel="external"><img src="https://farm4.staticflickr.com/3744/19857717813_8e426830fd.jpg" width="500" height="344" alt="0810_1703_Atlassian_Crowd_-_Add_application"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>グループの選択<br>Bambooで認証に使用するグループを追加します。</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20452412876/in/dateposted-public/" title="0810_1708_Atlassian_Crowd_-_Add_application" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/309/20452412876_487acf451f.jpg" width="500" height="344" alt="0810_1708_Atlassian_Crowd_-_Add_application"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>登録内容の確認<br>登録内容を確認し登録します。</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20290608388/in/dateposted-public/" title="0810_1709_Atlassian_Crowd_-_Add_application" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/339/20290608388_26006ce9f9.jpg" width="500" height="344" alt="0810_1709_Atlassian_Crowd_-_Add_application"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<h1 id="Bamboo_の設定">Bamboo の設定</h1><h2 id="Crowdとの通信設定">Crowdとの通信設定</h2><ul>
-<li>crowd.properties の編集<br>{BAMBOO_ROOT:/opt/atlassian/bamboo}/atlassian-bamboo/WEB-INF/classes/crowd.properties を編集します。</li>
-</ul>
-<p>マニュアルには以下の４点を変更せよと書いてありますが、session.validationintervalはデフォルトの２分で問題ないためそのままにします。</p>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>application.name</td>
-<td>bamboo</td>
-</tr>
-<tr>
-<td>application.password</td>
-<td>{CrowdのApplication設定で設定したパスワード}</td>
-</tr>
-<tr>
-<td>crowd.server.url</td>
-<td><a href="http://127.0.0.1:8095/crowd/services/" target="_blank" rel="external">http://127.0.0.1:8095/crowd/services/</a></td>
-</tr>
-<tr>
-<td>session.validationinterval</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Bambooの認証システムのCrowdへの切り替え<ul>
-<li>atlassian-user.xml の編集<br>{BAMBOO_ROOT:/opt/atlassian/bamboo}/atlassian-bamboo/WEB-INF/classes/atlassian-user.xml を編集します。</li>
-</ul>
-</li>
-</ul>
-<p>Crowd用の設定がコメントアウトされているので、コメントを外します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;!--&#60;crowd key=&#34;crowd&#34; name=&#34;Crowd Repository&#34;/&#62;--&#62;&#10;&#8595;&#10;&#60;crowd key=&#34;crowd&#34; name=&#34;Crowd Repository&#34;/&#62;</span><br></pre></td></tr></table></figure>
-<h2 id="ユーザーディレクトリの設定">ユーザーディレクトリの設定</h2><ul>
-<li>Bambooに管理者でログインし 「右上の歯車マーク &gt; Overview」をクリック</li>
-<li><p>「Bamboo administration」画面が表示されるので 「Security」グループの「User repositories」をクリック</p>
-</li>
-<li><p>Server URL, Application Nameを確認、 Application PasswordにCrowdに設定したパスワードを入力します。</p>
-</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/20290541630/in/dateposted-public/" title="0810_1934_User_repositories_-_Atlassian_Bamboo" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/480/20290541630_fdb19ac328.jpg" width="500" height="344" alt="0810_1934_User_repositories_-_Atlassian_Bamboo"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<p>これでめでたくBambooの認証をCrowdに統合することが出来ました。</p>
-<p>連携しているサービスがBambooだけですとそれほどメリットが感じられないかも知れませんが、 ここで上げたBamboo以外、Jira、Confluence、StashなどのAtlassianの製品を導入していくにつれてユーザー管理コストの軽減効果が実感できるものと考えております。</p>
-<p>また、ユーザーの追加・削除漏れなどのセキュリティリスクの軽減にもつながりますので、Atlassian製品導入の際には合わせてCrowdの導入もご検討ください。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="BambooとCrowdの連携">BambooとCrowdの連携</h1><p>今回は前回の続きとして、BambooとCrowdを連携させて、<br>ユーザーをCrowdで一元管理できるようにしたいと思います。</p>
-<p>前回同様、基本的には<a href="]]>
-    </summary>
-    
-      <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
-    
-      <category term="Bamboo" scheme="http://yenjoji.github.io/pages/pages/tags/Bamboo/"/>
-    
-      <category term="CI" scheme="http://yenjoji.github.io/pages/pages/tags/CI/"/>
-    
-      <category term="Crowd" scheme="http://yenjoji.github.io/pages/pages/tags/Crowd/"/>
     
   </entry>
   
