@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2016-03-27T02:41:18.000Z</updated>
+  <updated>2016-03-27T02:42:56.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yenjoji.github.io/pages/pages/2016/03/27/20160327-let-us-construct-himeji-jo_001/"/>
     <id>http://yenjoji.github.io/pages/pages/2016/03/27/20160327-let-us-construct-himeji-jo_001/</id>
     <published>2016-03-26T15:00:00.000Z</published>
-    <updated>2016-03-27T02:41:18.000Z</updated>
+    <updated>2016-03-27T02:42:56.000Z</updated>
     <content type="html"><![CDATA[<h1 id="動機">動機</h1><p>前回の<a href="./2015/04/09/raspi-xfd/">ズゴックでのXFD</a>と<a href="./2015/07/14/mackerel-raspi-temp/">ズゴック温度計</a>から気づくとはや半年以上が経過していました。<br>当初はネタとしても、用途としても満足をしていたのものの、使っていくうちに幾つか不満が出てきました。</p>
 <ol>
 <li>Bambooへの問い合わせがすべてRasperryPiで動いているGroovyのコードにかかれているため、Bambooの構成が変わるたびにGroovy修正→パッケージ→再デプロイが必要でメンテナンスが面倒でした、結果的にBambooの監視は途中から止めてしまっていました。</li>
