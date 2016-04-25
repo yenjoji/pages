@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2016-03-27T02:42:56.000Z</updated>
+  <updated>2016-04-25T07:44:35.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -14,6 +14,356 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[アジャイルひよこクラブ「７つの習慣に学ぶ！！開発者から見たプロダクトオーナーとのよい付き合い方」に参加してきました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/04/22/20160422-agile-hiyoko-club/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/04/22/20160422-agile-hiyoko-club/</id>
+    <published>2016-04-22T11:02:53.000Z</published>
+    <updated>2016-04-25T07:44:35.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://agile-hiyoko-club.doorkeeper.jp/events/41580" target="_blank" rel="external">アジャイルひよこクラブ「つの習慣に学ぶ！！開発者から見たプロダクトオーナーとのよい付き合い方」</a>に参加してきました。</p>
+<p>隔月開催のため、<a href="https://agile-hiyoko-club.doorkeeper.jp/events/38245" target="_blank" rel="external">前回</a>に引き続き2回連続の参加です。</p>
+<p>今回は<a href="https://postudy.doorkeeper.jp/" target="_blank" rel="external">PO Study</a>の主催者であり、7つの習慣ボードゲーム公認ナビゲーターでもある、<br>関さんによるプロダクトオーナーとのつきあい方についてのセッションでした。</p>
+<h1 id="時間が無い人向けのあらすじ">時間が無い人向けのあらすじ</h1><h2 id="付箋の使い方">付箋の使い方</h2><ul>
+<li>プロアジャイラーにになるための付箋の剥がし方<ul>
+<li>下に引っ張る ＞ 横に剥がす ＞＞＞＞＞ 普通に剥がす</li>
+</ul>
+</li>
+<li>プロアジャイラーにになるための付箋の貼り方<ul>
+<li>のりを下にして貼ると重ねた時の取り回しがらく＆重なった重みで落ちない</li>
+</ul>
+</li>
+</ul>
+<h2 id="７つの習慣に学ぶ！！開発者から見たプロダクトオーナーとのよい付き合い方">７つの習慣に学ぶ！！開発者から見たプロダクトオーナーとのよい付き合い方</h2><ul>
+<li>7つの習慣は習慣化しないと意味ない</li>
+<li>プロダクトオーナーとチームはちゃんと要望の意図を共有しないと良いものが作れない</li>
+<li>コンペティティブインテリジェンス重要</li>
+</ul>
+<h1 id="当日の流れ">当日の流れ</h1><h2 id="自己紹介">自己紹介</h2><p>まずは自己紹介です。<br>前回は４人くらいのグループを作って、グループ単位での自己紹介でしたが、<br>今回はひとりずつ全体に向かってテンプレに沿って自己紹介です。</p>
+<h2 id="７つの習慣に学ぶ！！開発者から見たプロダクトオーナーとのよい付き合い方-1">７つの習慣に学ぶ！！開発者から見たプロダクトオーナーとのよい付き合い方</h2><p><a href="https://twitter.com/fullvirtue" target="_blank" rel="external">関さん</a>のセッションです。</p>
+<h3 id="アイスブレイク_付箋のめくり方">アイスブレイク 付箋のめくり方</h3><p>はじめにアイスブレイクで付箋の正しい使い方のレクチャーです。</p>
+<ul>
+<li>剥がし方<ul>
+<li>横にめくる<ul>
+<li><a href="http://grapee.jp/157200" target="_blank" rel="external">ここ</a>のような剥がし方をすると、貼った時に丸まらないです。</li>
+</ul>
+</li>
+<li>引っ張る<ul>
+<li><a href="http://blogs.yahoo.co.jp/gohirano5/53832914.html" target="_blank" rel="external">ここ</a>に書いてあるとおり、付箋を平行にのりを上に持ち下に引っ張って剥がします。これぞ玄人の剥がし方だそうです。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>貼り方<ul>
+<li>のりを下にしてはる<ul>
+<li>こうすると、重ねて貼った場合に一枚の付箋に重さが集中して落ちるという事がなくなります。</li>
+<li>下に貼った付箋も上の付箋をめくると見えて便利</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="言葉の定義と意識合わせ">言葉の定義と意識合わせ</h3><p>次に、会場で話していることの認識がずれないように、<br>用語についての認識合わせということで、アジャイル開発とプロダクトマネジメントについての解説です。</p>
+<h4 id="アジャイル開発について">アジャイル開発について</h4><ul>
+<li>アジャイル<ul>
+<li>今できないことを次にできるようにしましょう → コレ以外言っていない</li>
+<li>プロジェクトマネジメント、プロダクトマネジメントが入っていない → これが原因で失敗するケースがおおい</li>
+</ul>
+</li>
+<li>アジャイル開発導入の時失敗したこと<ul>
+<li>アジャイルマニフェストの下2行が話されていないこと</li>
+<li>みんな勘違いして大変なことになった（ドキュメント書かなくていいんだ！！！ とか）</li>
+</ul>
+</li>
+</ul>
+<h4 id="プロダクトマネジメントとは">プロダクトマネジメントとは</h4><ul>
+<li>マネジメント対象<ul>
+<li>プロダクト</li>
+<li>市場</li>
+<li>顧客</li>
+</ul>
+</li>
+<li>上流と下流がある<ul>
+<li>上流<ul>
+<li>市場投入まで</li>
+<li>SIerとかLeanなかんじのひととか</li>
+</ul>
+</li>
+<li>下流<ul>
+<li>市場投入したあと</li>
+<li>メタップス、電通、博報堂とか</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>コンペティティブインテリジェンス<ul>
+<li>意思決定するために必要な情報を集めるスキル</li>
+</ul>
+</li>
+</ul>
+<h4 id="7つの習慣">7つの習慣</h4><p>最近各所でよく話を聞く７つの習慣について、図を用いて紹介です。</p>
+<ul>
+<li>事前アンケート<ul>
+<li>７つの習慣を読んだことがある人は結構いましたが、それを習慣化できている人は一人でした。</li>
+<li>関さん曰く７つの習慣は習慣化できないと意味が無い</li>
+</ul>
+</li>
+<li>7つの習慣について紹介<ul>
+<li>1-3の習慣<ul>
+<li>社会人としてできていないとまずい</li>
+</ul>
+</li>
+<li>2-6の習慣<ul>
+<li>チームで仕事するときにできていないとまずい</li>
+</ul>
+</li>
+<li>7の習慣<ul>
+<li>成功の習慣化<br><img src="/pages/images/20160422_001.JPG" alt=""><br><img src="/pages/images/20160422_002.JPG" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="プロダクトオーナーとのつきあい方について">プロダクトオーナーとのつきあい方について</h4><h5 id="ワークショップ">ワークショップ</h5><p>ここからワークショップ形式です。</p>
+<p>7つの習慣の配布資料について、配布時にはA4の紙半分に図が印刷されていて、かつ図が内側に来るように半分に折られていました。</p>
+<p>これは、図を目一杯印刷してしまうと、メモを取るスペースが無くなってしまうため、あえて半分の大きさにして印刷したそうです。</p>
+<p>そこで、関さんからの質問です。<br>「この配布資料を会場の皆さんだったらどう作りましたか？」付箋に書いてみてください。</p>
+<p>私の答えは</p>
+<ul>
+<li>折らずに配る</li>
+<li>縮小した図をセンタリングして印刷する<br>でした。</li>
+</ul>
+<h5 id="ワークショップ解説">ワークショップ解説</h5><p>このワークショップの意図は、POである関さんと、依頼を受けた我々が<br>目的を共有しないと依頼を受けた側が適切な対処ができない（コミュニケーションギャップが発生する）ということを再認識するためのものでした。</p>
+<p>我々は事前に「メモを取りたいから」という要望を聞いていたので、資料の印刷方法について適切に判断できましたが、<br>もし、その意図がないまま「A4の資料をA5縮小で印刷してほしい」という依頼を受けたらどうなるか、<br>もしかしたらA4の紙にA5サイズの図を2つ印刷してしまうかもしれません。</p>
+<p>POの立場としても、それを聞くチームとしても、ユーザーストーリーのテンプレートでいうところの「なぜ」の部分（＋コンペティティブインテリジェンス）をちゃんと共有しないとまずいということを再認識しました。</p>
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/key/6EtUY3GixQDcBn?startSlide=29" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/trtraki/6-38860406" title="【アジャイルサムライ】6章_ユーザストーリーを集める" target="_blank">【アジャイルサムライ】6章_ユーザストーリーを集める</a> </strong> from <strong><a href="//www.slideshare.net/trtraki" target="_blank">trtraki</a></strong> __ </div></p>
+<ul>
+<li>話の流れは忘れてしまったけど手元にメモしてあったこと<ul>
+<li>人が前に進むときにどんなもの（情報）が必要なのか、それをチームビルディング時に合意できていれば良い仕事ができる。</li>
+<li>本当はどういう姿になっていれば、もっと良い仕事ができたんだっけ？</li>
+<li>ちゃんと先のことを考えられるチームが必要</li>
+</ul>
+</li>
+</ul>
+<h2 id="LT_おのさん">LT おのさん</h2><ul>
+<li><p>チーム14人</p>
+<ul>
+<li>Srrumの定義的には多すぎというが何が悪いのか？</li>
+<li>コミュニケーション取れてますし、ちゃんとチームが強調して作業できてます。</li>
+<li>問題ない！</li>
+</ul>
+</li>
+<li><p>ディレクターに質問</p>
+<ul>
+<li>シモネタで会話できること</li>
+<li>シモネタはコミュニケーションツール</li>
+</ul>
+</li>
+</ul>
+<h2 id="質問タイム">質問タイム</h2><h3 id="PMがチームに必要になると、人数が多くなりませんか">PMがチームに必要になると、人数が多くなりませんか</h3><ul>
+<li>専任で用意せよというわけではなく、ロールを定義しましょうという話</li>
+<li>大事なのは、PO、SM、チームだけでオッケーと言う誤解した状態でやらないこと</li>
+<li>チームの外にはマネージャーとかいると思うので、チームの構成と、組織までスコープに入れた構成で考えたほうがいい</li>
+</ul>
+<h3 id="PMとプロダクトマネジメントを同時にやるのって難しくないですか">PMとプロダクトマネジメントを同時にやるのって難しくないですか</h3><ul>
+<li>現在は無理だと想います。</li>
+<li>昔はリリースの間隔が長かったことも有り、一緒にできた</li>
+<li>最近はリリースサイクルが早くなった＋技術要素など複雑になった</li>
+<li>自分たちのプロジェクトでは分けたほうがいいか？一緒にやったほうがいいかちゃんと考えて判断する</li>
+<li>一ヶ月のプロジェクトだったら、マネジメントはチーム各自で行うなど場合によって考えたほうがいい</li>
+</ul>
+<h2 id="悩み相談">悩み相談</h2><h3 id="トレードオフできない">トレードオフできない</h3><ul>
+<li>意思決定する情報がたりないので、みんなトレードオフの判断ができないという状況という可能性もある</li>
+<li>どんな情報があったら優先順位が決められるかという話をしてみる</li>
+<li><p>コンペティティブインテリジェンスを探す旅に出るのもおすすめ</p>
+</li>
+<li><p>どんな情報があったら決められますか？と聞いてみる。</p>
+</li>
+</ul>
+<h3 id="主体性がないメンバーにどうやって主体性を発揮させるか">主体性がないメンバーにどうやって主体性を発揮させるか</h3><ul>
+<li>主体性が与えられていない人もいるということもいるので、まずそこは確認しましょう</li>
+<li><p>その場合は契約を変えないといけない</p>
+</li>
+<li><p>それでもできないのであれば、要員交代を要求する。もしくはそういった取り組み方だと評価があまりされないということをちゃんと伝える</p>
+</li>
+<li>チームに慣れていないうちは、さじ加減がわからずできない場合もあるので、やっていいところと、止まってほしいところを事前に共有しておくとよい</li>
+</ul>
+<h4 id="他の参加者の回答１">他の参加者の回答１</h4><ul>
+<li>以前やってみてダメだったパターン<ul>
+<li>こういう勉強会いったよ、こんな手法があったよと相手を刺激する<ul>
+<li>そもそも興味が無いので響かない</li>
+</ul>
+</li>
+<li>アジャイルと言わずにやってみる<ul>
+<li>定着しなかった</li>
+<li>言わないとやらなかった</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="他の参加者の回答２">他の参加者の回答２</h4><ul>
+<li>チームメンバーが今できていないことを共有する<ul>
+<li>できていないことに気づくことによって、自発的にやることもある</li>
+</ul>
+</li>
+</ul>
+<h4 id="他の参加者の回答３">他の参加者の回答３</h4><ul>
+<li>ビジョンを共有する</li>
+<li>自分が作ったものがどう使われているか見せる→お客さんと合わせる</li>
+</ul>
+<h1 id="感想">感想</h1><p>７つの習慣に学ぶ！というほどプロダクトオーナーと７つの習慣は密接に絡んでいなかった気もするが、<br>７つの習慣のエッセンスと（駆け足だったけど）プロダクトオーナーについて話を聞けたのは良かった。</p>
+<p>アジャイルひよこクラブは質問とか、悩み相談にもウェイトをおいているので、メインスピーカーの話がどうしても短くなってしまうのが悩みどころ。<br>初心者の悩み相談というコミュニティのスタンスなので、この方式はいいと思うが、プロダクトオーナーの話は別の所でもう少し詳しく聞いてみたくなった。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://agile-hiyoko-club.doorkeeper.jp/events/41580" target="_blank" rel="external">アジャイルひよこクラブ「つの習慣に学ぶ！！開発者から見たプロダクトオーナーとのよい付き]]>
+    </summary>
+    
+      <category term="agile" scheme="http://yenjoji.github.io/pages/pages/tags/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[「ビブリオバトル入門―本を通して人を知る・人を通して本を知る」をよみました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/04/18/20160417-reading-bibliobattle/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/04/18/20160417-reading-bibliobattle/</id>
+    <published>2016-04-18T05:44:40.000Z</published>
+    <updated>2016-04-21T01:00:05.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4889510494" target="_blank" rel="external">ビブリオバトル入門―本を通して人を知る・人を通して本を知る</a></li>
+<li>所要時間<br>2時間 (必要なところだけ拾い読みしました)</li>
+<li>価格<br>¥0 (図書館で借りてきた)</li>
+</ul>
+<h1 id="感想">感想</h1><p>私が関わっている、とあるイベントでビブリオバトルをやってみたらどうかという企画が立ち上がりました。<br>興味があったので私もそのイベントのビブリオバトル運営に手を挙げました。</p>
+<p>手を挙げて見たものの実はビブリオバトル自体やったことも無ければ、詳しくも知らないので、<br>まずは基礎知識を得ようということで安定の千代田区立図書館からこの本を借りてきました。</p>
+<p>読んだ箇所は</p>
+<ul>
+<li>ビブリオバトルの公式ルールと、ルールの意図について</li>
+<li>様々なビブリオバトルサークルの活動についてをちょっと</li>
+<li>今後のビブリオバトルの広がりについてサラッと</li>
+</ul>
+<p>読んだ結果わかったことは</p>
+<ul>
+<li>ビブリオバトルのルールはしっかり決まっており、しかも厳密に守ることが求められている。<ul>
+<li>発表5分という時間一つをとってもちゃんと意図があるため、ビブリオバトルと名乗る以上は勝手にアレンジしてはいけない。</li>
+</ul>
+</li>
+<li>この本が発行された時点では活動していたサークルが結構活動休止してたりする<ul>
+<li>下火になってしまったのか？</li>
+</ul>
+</li>
+<li>でも調べてみると、そこそこビブリオバトルが行われている<ul>
+<li><a href="http://www.bibliobattle.jp/calendar" target="_blank" rel="external">ビブリオバトル公式サイトカレンダー</a></li>
+<li><a href="http://www.yurindo.co.jp/static/bibliobattle/" target="_blank" rel="external">ビブリオバトル有隣堂</a></li>
+</ul>
+</li>
+</ul>
+<p>ひとまず、基本的なことは知ることができたので、目的は達成できました。</p>
+<p>なお、<a href="http://www.bibliobattle.jp/koushiki-ruru" target="_blank" rel="external">公式ルール</a>はビブリオバトル公式サイトにも掲載されています。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4889510494" target="_blank" rel="external">ビブリオバトル入門―本を通して人を知る・人を通]]>
+    </summary>
+    
+      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ハンダゴテとコテ先を変えたら劇的に捗ったはなし]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/04/18/20160309-handa-kotesaki/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/04/18/20160309-handa-kotesaki/</id>
+    <published>2016-04-17T15:00:00.000Z</published>
+    <updated>2016-04-18T13:13:36.000Z</updated>
+    <content type="html"><![CDATA[<p>先日はんだゴテと、はんだゴテのコテ先を買い換えたら劇的に作業が捗るようになったので、<br>その感動を（役に立つ人がどれくらいいるかわかりませんが）共有します。</p>
+<h1 id="結論">結論</h1><p>お急ぎの方向けに結論を先に書いておきます。</p>
+<p>このハンダゴテに<br><a href="http://www.amazon.co.jp/dp/B006MQD7M4/" target="_blank" rel="external">白光 ダイヤル式温度制御はんだこて FX600</a></p>
+<p>このコテ先<br><a href="http://www.amazon.co.jp/dp/B004OR7UBM/" target="_blank" rel="external">白光 こて先 2C型 T18-C2</a></p>
+<p>を装着してください。</p>
+<p>ハンダ付けのイメージが変わります。<br>少なくとも私は変わりました。</p>
+<h1 id="いままでとの違い">いままでとの違い</h1><p>今まで使っていたハンダゴテは<a href="http://www.goot.jp/handakote/ks-30r/" target="_blank" rel="external">goot KS-30R</a>と同じような10年くらい前に購入したハンダゴテでした。<br><br>ぱっと見たところ、どっちでもいいんじゃないか、どっちもハンダゴテじゃないかというのはまぁそうなんですが、<br>同じようで結構違うのでハンダゴテを比較して見ます。</p>
+<ul>
+<li><p>ヒーター<br>以前のハンダゴテはニクロムヒーターと呼ばれるヒーターで、コテ先があたたまるまで５分以上時間がかかりました。そのため、ちょっとハンダ付けしたいのにヒーターがあたたまるまで待つ時間が無駄でした。<br><br>その点セラミックヒーターは、１ー２分でコテ先があたたまるため、気軽にハンダ付けができて作業へのモチベーションが上がります。</p>
+</li>
+<li><p>温度調節機能（温度お知らせランプ）<br>ハンダは温度が高くなりすぎると、酸化して劣化してしまうらしく、適切な温度で短時間でハンダ付けを行うのがいいらしいです。<br>そこで、温度調節機能です。ダイアルで任意の温度に合わせておくと自動的にその温度まで温まったら加熱が止まり、コテに付いているLEDで温まったことを通知してくれます。<br><br>最近健康に気を使って、鉛フリーはんだを使い始めたものの、普通のハンダより融点が高くて使いにくいなぁと感じていた私にとっても、鉛フリーはんだの融点のちょい上にピンポイントで温度を設定できる温度調節はとても良い感じです。</p>
+</li>
+<li><p>コテ先<br>普通にハンダゴテを買うと、鉛筆の用に先が尖ったコテ先がついてきます。いままでは特に気にせずそれを使っていました。<br>基盤とピンヘッダのハンダ付けで両方にうまく熱が伝えることができない不器用な私にはハンダ付けは非常に面倒なものでした。<br><br>しかし、インターネットでススメられていた、このコテ先に変えた途端そんな私でもみるみるピンヘッダがハンダ付けできるようになりました。<br>もう、<a href="http://bullworker.detail-page.com/img/ad.jpg" target="_blank" rel="external">ブルワーカー</a>なんか比じゃないくらい簡単でした。</p>
+</li>
+</ul>
+<p>ということで、ハンダ付けがうまくいかないと感じている紳士淑女のみなさまはコテとコテ先を変えてみてはいかがでしょうか。</p>
+<p>きっと、ザクからゲルググに乗り換えたくらいの快適感を得られると想います。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>先日はんだゴテと、はんだゴテのコテ先を買い換えたら劇的に作業が捗るようになったので、<br>その感動を（役に立つ人がどれくらいいるかわかりませんが）共有します。</p>
+<h1 id="結論">結論</h1><p>お急ぎの方向けに結論を先に書いておきます。</p>
+<p>こ]]>
+    </summary>
+    
+      <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[「エバンジェリスト養成講座 究極のプレゼンハック100 」をよみました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/04/12/20160411-reading-evangelist/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/04/12/20160411-reading-evangelist/</id>
+    <published>2016-04-12T03:24:39.000Z</published>
+    <updated>2016-04-20T09:27:42.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/100/dp/4798125091/" target="_blank" rel="external">エバンジェリスト養成講座 究極のプレゼンハック100 </a></li>
+<li>所要時間<br>3時間くらい。読みやすくてさくっと読めた</li>
+<li>価格<br>¥0 (図書館で借りてきた)</li>
+</ul>
+<h1 id="感想">感想</h1><p>最近行きつけの千代田区立図書館で、本を探していた時にたまたま目についたので借りてみました。<br>プレゼンテーションのグダグダさには定評があるので、少しでもその汚名を返上できればという一縷の望みもあり。<br>この本の続編？<a href="http://www.amazon.co.jp/dp/4798142999/" target="_blank" rel="external">新エバンジェリスト養成講座</a>が <a href="http://toyokeizai.net/articles/-/100153" target="_blank" rel="external">Amazon習慣売れ筋ランキング</a>でトップをとっていたので本当はそっちを読もうと思っていたのですが、図書館にはなかったので、まずは一作目からいってみました。</p>
+<p>AmazonのKindle版の煽り文句が「プレゼンのカリスマはジョブスだけじゃない」などとかなりうさんくさいですが。内容はとてもいいものでした。</p>
+<p>本の内容は、著者がプレゼンテーションを行うときにどういった考えでどういったことに気をつけているかの解説です。<br>著者が行っているプレゼンテーション講座を書籍化したものだそうですが、その触れ込みのとおり著者のプレゼンテーションを聞くようにサラッと読めてしまうものでした。</p>
+<p>内容は<a href="http://www.excite.co.jp/News/reviewbook/20111003/E1317479273138.html" target="_blank" rel="external">こちら</a>によくまとまっているので、こちらを参照していただくと良いかと想います。</p>
+<p>印象に残っているのは</p>
+<ul>
+<li>プレゼンテーションは伝われば成功</li>
+<li>15分程度のプレゼンテーションでは伝えられることは一つくらい</li>
+<li>プレゼンテーション初心者はフラッシュ型がおすすめ</li>
+<li>顧客目線で話をする「XXをリリースしました」ではなく「XXをお使いいただけるようになりました」</li>
+<li>とにかくデモが重要</li>
+</ul>
+<p>さくっと読めるし、まだ内容を咀嚼しきれていないので、近々再読しようと想います。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/100/dp/4798125091/" target="_blank" rel="external">エバンジェリスト養成講座 究極のプレ]]>
+    </summary>
+    
+      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[「巨大ダムの“なぜ"を科学する」を読みました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/04/12/20160407-reading-dambook/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/04/12/20160407-reading-dambook/</id>
+    <published>2016-04-11T15:00:00.000Z</published>
+    <updated>2016-04-18T12:25:47.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4860591313/" target="_blank" rel="external">巨大ダムの“なぜ”を科学する</a></li>
+<li>所要時間<br>6時間</li>
+<li>価格<br>¥0 (図書館で借りてきた)</li>
+</ul>
+<h1 id="感想">感想</h1><p>趣味でサイクリングに行くことがあるのですが、山などを目指していくと意外とダムというものがあることに気づきました。<br>サイクリングの目的地や中継点にダムを設定してみるのもいいかなと思い、それならもう少しダムについて詳しくなれば楽しくなるかと思い手に取りました。</p>
+<p>ちなみにダムについては以前<a href="http://www.amazon.co.jp/dp/4274503518/" target="_blank" rel="external">ダムマニア</a>を一度読み、なんとなく知識がある状態でした。</p>
+<p>「巨大ダムの“なぜ”を科学する」という題名でしたが、内容は「西松建設「ダム」プロジェクトチーム (著)」ということもあって、主に巨大ダムはどうやって建築されるかという部分の解説です。<br>大きくコンクリートダムとアースダムの２つについて、ダムの建築場所の選定から、ダムの建築の工程が丁寧に解説されています。</p>
+<p>ダム雑学としてはいいように思えます。</p>
+<p>ただ、ところどころ、専門用語と思われる知らない用語がなんの前触れもなく使われている箇所があったりと、若干の不親切感があったのが残念でした。</p>
+<p>ダムがどうやって作られるかを知りたい方にはおすすめできます。<br>ダムの味わい方が知りたい方にはちょっとおすすめしないかもしれません。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4860591313/" target="_blank" rel="external">巨大ダムの“なぜ”を科学する</a></li]]>
+    </summary>
+    
+      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[姫路城を作ろう -準備編-]]></title>
@@ -262,7 +612,7 @@
     <link href="http://yenjoji.github.io/pages/pages/2016/02/26/20160225-reading-to-tell-the-truth-of-copy/"/>
     <id>http://yenjoji.github.io/pages/pages/2016/02/26/20160225-reading-to-tell-the-truth-of-copy/</id>
     <published>2016-02-25T17:28:12.000Z</published>
-    <updated>2016-02-27T15:44:31.000Z</updated>
+    <updated>2016-04-21T06:02:31.000Z</updated>
     <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
 <li>題名<br><a href="http://www.amazon.co.jp/dp/B00PCJEB86/" target="_blank" rel="external">ここらで広告コピーの本当の話をします。</a></li>
 <li>読み終わった日<br>2016/2/25</li>
@@ -275,7 +625,7 @@
 <p>競合優位性、ターゲット設定など、語られている手法は多くないものの、どのように考え、組み合わせれば、より価値を高められるかということが筆者の体験を元に書かれているため、非常に読み応えがありました。</p>
 <p>文体も自分の好みに合っていたのか、ぐんぐん読み進められる読みやすさと、今までの自分のが上辺をなぞってるだけだったなぁと認識させてくれる内容で、おすすめできる一冊です。</p>
 <p><strong><em>クライアントの要望に応えられないのは三流、クライアントの要望にしか応えられないのは二流、クライアントの要望以上を出すのが一流</em></strong></p>
-<p>これは著者の先輩クリエイティブディレクターの言葉だ層ですが、エンジニアにもそのまま当てはまると思います。私も速く一流になりたいものです。</p>
+<p>これは著者の先輩クリエイティブディレクターの言葉だ層ですが、エンジニアにもそのまま当てはまると思います。私もはやく一流になりたいものです。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
@@ -1441,531 +1791,6 @@
       <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
     
       <category term="GlusterFS" scheme="http://yenjoji.github.io/pages/pages/tags/GlusterFS/"/>
-    
-      <category term="Stash" scheme="http://yenjoji.github.io/pages/pages/tags/Stash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Thinking about INVEST]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/09/26/thiking-about-invest/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/09/26/thiking-about-invest/</id>
-    <published>2015-09-26T03:00:00.000Z</published>
-    <updated>2015-09-25T17:39:08.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="INVEST">INVEST</h1><p>Have you ever heard the acronym “INVEST”?</p>
-<p>The INVEST mnemonic was created by Bill Wake and it is introduced in <a href="https://pragprog.com/titles/jtrap/the-agile-samurai" target="_blank" rel="external">The Agile Samurai(@jrasmusson 2010)</a> .</p>
-<p>“INVEST” is as a reminder of the characteristics of a good quality user story,</p>
-<ul>
-<li>Independent<ul>
-<li>The user story should be self-contained, in a way that there is no inherent dependency on another user story.</li>
-</ul>
-</li>
-<li>Negotiable<ul>
-<li>User stories, up until they are part of an iteration, can always be changed and rewritten.</li>
-</ul>
-</li>
-<li>Valuable<ul>
-<li>A u ser story must deliver value to the end user.</li>
-</ul>
-</li>
-<li>Estimable<ul>
-<li>You must always be able to estimate the size of a user story.</li>
-</ul>
-</li>
-<li>Small<ul>
-<li>User stories should not be so big as to become impossible to plan/task/prioritize with a certain level of certainty.</li>
-</ul>
-</li>
-<li>Testable<ul>
-<li>The user story or its related description must provide the necessary information to make test development possible.</li>
-</ul>
-</li>
-</ul>
-<p>quated from <a href="https://en.wikipedia.org/wiki/INVEST_(mnemonic" target="_blank" rel="external">wikipedia</a>)</p>
-<p>“Valuable” is easy understand Of these six words, So everyone will care<br>But Testable,Small and Estimable are often forgotten.</p>
-<p>If you noticed follow problems, It may be able to solve it by being conscious of INVEST.</p>
-<ul>
-<li>Story goal is difficult to understand, Because acceptance criteria is not clear.</li>
-<li>Story is hard to estimate, Because the size is huge.</li>
-</ul>
-<h1 id="INVEST_User_Story">INVEST User Story</h1><p>Then I think about an example about the user story that is INVEST.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">As a Administrator,&#10;I want search user by name so that I don&#39;t use time for find user in list.</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Independent<ul>
-<li>OK. This story is inipendent feature.</li>
-</ul>
-</li>
-<li>Negotiable<ul>
-<li>OK. This story is not specified implementation.</li>
-</ul>
-</li>
-<li>Valuable<ul>
-<li>OK. To improve Administrator’s work efficiency</li>
-</ul>
-</li>
-<li>Estimable<ul>
-<li>OK. It story may be modified 1 view (and 1 logic)</li>
-</ul>
-</li>
-<li>Small<ul>
-<li>OK. It is simple and small.</li>
-</ul>
-</li>
-<li>Testable<ul>
-<li>OK. Story is simple, (please confirm the acceptance criteria properly in PO.)</li>
-</ul>
-</li>
-</ul>
-<p>It is INVEST and good user story.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">As a ramen JIRO lovers (sometimes called Jirolian),&#10;I want to know which JIRO is open now&#10;so I wants to go to Jiro as soon as I thought.</span><br></pre></td></tr></table></figure>
-<p>And this user story is INVEST too.</p>
-<h1 id="Conclusion">Conclusion</h1><p>INVEST is good practice for writing user story.</p>
-<p>How about if you try a Story-Gathering workshop while being conscious of INVEST?</p>
-<h1 id="Appendix">Appendix</h1><h1 id="INVEST_something">INVEST something</h1><p>With that said, I understood that INVEST was important in thinking about user story.<br>In, what’s the INVEST in something other than user stories can be applied?</p>
-<p>I’m tried.</p>
-<h2 id="JIRO">JIRO</h2><p>Ramen Jiro is of course technically ramen, but it is somewhat different from any other ramen in Japan.</p>
-<p>quated from <a href="http://www.ramentokyo.com/2007/06/ramen-jiro.html" target="_blank" rel="external">http://www.ramentokyo.com/2007/06/ramen-jiro.html</a></p>
-<p>Ramen Jiro is introduced in Guardian 2009 <a href="http://www.theguardian.com/lifeandstyle/2009/sep/13/best-foods-in-the-world" target="_blank" rel="external">The 50 best things to eat in the world, and where to eat them</a></p>
-<p>and <a href="https://twitter.com/elonmusk/status/508617476804866048" target="_blank" rel="external">Elon Mask was visited.</a></p>
-<h2 id="Is_Jiro_INVEST?">Is Jiro INVEST?</h2><ul>
-<li>Independent<ul>
-<li>Jiro has some unique distinction. amazing large serving, own rule, etc…</li>
-<li>someone says “Jiro is not ramen, but Jiro is the Independent food”</li>
-</ul>
-</li>
-<li>Negotiable<ul>
-<li>Jiro is negotiable some toppings vegitables (yasai), Backfat (abura), garlic(nin-niku) and depth of taste (karame).</li>
-<li>If you want to more and more vegitables,backfat and garlic, you shoud say “yasai, abura, nin-niku mashi-mashi”.</li>
-</ul>
-</li>
-<li>Valuable<ul>
-<li>Jiro is Cost-effective.</li>
-<li>Jiro is unique.</li>
-</ul>
-</li>
-<li>Estimable<ul>
-<li>While you attend a few times, it will be so as estimated to be either the amount of how much today is eaten.</li>
-<li>If, when you can not eat too much, it would be nice if I tell half noodles when presenting the meal ticket.</li>
-</ul>
-</li>
-<li>Small<ul>
-<li>Jiro’s menu have “small size” (but Jiro’s small size equals ordinaly ramens large size or extra large size.)</li>
-</ul>
-</li>
-<li>Testable<ul>
-<li>Jiro might store a total of 40. we can achieve 100% coverage. It’s testable.</li>
-</ul>
-</li>
-</ul>
-<p>Jiro isn’t completely INVEST. but Jiro is extremely unique.</p>
-<h2 id="Conclusion-1">Conclusion</h2><p>Meanwhile, it is very distinctive ramen Jiro, as there is also saying, “Seeing is believing”, First, What is How about try to experience.</p>
-<p>Enjoy “mashi-mashi”.</p>
-<p>(日本語版)</p>
-<h1 id="INVEST-1">INVEST</h1><p>INVEST という頭文字語をご存知ですか？</p>
-<p>“INVEST” とは <a href="http://xp123.com/articles/invest-in-good-stories-and-smart-tasks/" target="_blank" rel="external">ビルウェイクにより考案され</a>、<a href="https://github.com/agile-samurai-ja/support/wiki" target="_blank" rel="external">アジャイルサムライ</a>でも紹介された、よくかけているユーザーストーリーに備わっている6つの要素を表します。</p>
-<ul>
-<li>Indipendent<ul>
-<li>独立している</li>
-</ul>
-</li>
-<li>Negotiable<ul>
-<li>交渉の余地がある</li>
-</ul>
-</li>
-<li>Valuable<ul>
-<li>価値のある</li>
-</ul>
-</li>
-<li>Estimable<ul>
-<li>見積もれる</li>
-</ul>
-</li>
-<li>Small<ul>
-<li>小さい</li>
-</ul>
-</li>
-<li>Testable<ul>
-<li>テストできる</li>
-</ul>
-</li>
-</ul>
-<p>この中でもValuableはわかりやすいので、誰もが気にするのですが、<br>意外と見逃し気味なのが、Testable,Small,Estimableです。</p>
-<ul>
-<li>受け入れ条件が曖昧でストーリーのゴールがわかりにくい</li>
-<li>ストーリーが壮大過ぎて見積もろうとしても想像が出来ない</li>
-</ul>
-<p>などの状況に気づいたら、INVESTを意識すると解決できるかも知れません。</p>
-<h1 id="INVEST_User_Story-1">INVEST User Story</h1><p>では、INVESTなユーザーストーリーについて例を考えてみます。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#31649;&#29702;&#32773;&#12399;&#12518;&#12540;&#12470;&#12540;&#12434;&#26908;&#32034;&#12375;&#12383;&#12356;&#12290;&#12394;&#12380;&#12394;&#12425;&#12522;&#12473;&#12488;&#12363;&#12425;&#30446;Grep&#12377;&#12427;&#12398;&#12364;&#12461;&#12484;&#12452;&#12363;&#12425;&#12384;&#12290;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Indipendent<ul>
-<li>OK. 独立したフィーチャーです。</li>
-</ul>
-</li>
-<li>Negotiable<ul>
-<li>OK. 実現方法などはまだ交渉（カイゼン）の余地があります。</li>
-</ul>
-</li>
-<li>Valuable<ul>
-<li>OK. 管理者の作業効率が上がります。</li>
-</ul>
-</li>
-<li>Estimable<ul>
-<li>OK. 開発者が想像できるくらいのサイズです。（おそらく1画面＋1ロジックでしょう）</li>
-</ul>
-</li>
-<li>Small<ul>
-<li>OK. 十分に小さいです。</li>
-</ul>
-</li>
-<li>Testable<ul>
-<li>OK. ユーザーストーリーがシンプルなので、テストも書きやすそうです。（ただし、POと受け入れ条件は合意して億必要があります。）</li>
-</ul>
-</li>
-</ul>
-<p>このユーザーストーリーはINVESTを満たしていて、良いストーリーと言えるでしょう。</p>
-<p>別の例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#12472;&#12525;&#12522;&#12450;&#12531;&#12399;&#12393;&#12398;&#24215;&#33303;&#12364;&#20170;&#21942;&#26989;&#20013;&#12394;&#12398;&#12363;&#30693;&#12426;&#12383;&#12356;&#12290;&#12394;&#12380;&#12394;&#12425;&#12289;&#24605;&#12356;&#31435;&#12387;&#12383;&#12381;&#12398;&#12479;&#12452;&#12511;&#12531;&#12464;&#12391;&#12521;&#12540;&#12513;&#12531;&#20108;&#37070;&#12408;&#34892;&#12365;&#12383;&#12356;&#12363;&#12425;&#12384;&#12290;</span><br></pre></td></tr></table></figure>
-<p>また、このストーリーもINVESTを満たしていて良いストーリーといえるのでは無いでしょうか。</p>
-<h1 id="Conclusion-2">Conclusion</h1><p>このようにINVESTを意識することで、ユーザーストーリーがより良くなります。</p>
-<p>ユーザーストーリーワークショップなどを行う際には<br>INVESTを意識しながらストーリーを抽出してみたらいかがでしょうか。</p>
-<h1 id="Appendix-1">Appendix</h1><h1 id="INVEST_something-1">INVEST something</h1><p>ということで、ユーザーストーリーを考える上でINVESTが重要な事はわかりました。<br>では、今回は少々趣向を変えて、ユーザーストーリーではなく、身近なものにINVESTが適用できるか考えてみました。</p>
-<h2 id="jiro">jiro</h2><p>ラーメン二郎とは、</p>
-<p>Guardian 2009 <a href="http://www.theguardian.com/lifeandstyle/2009/sep/13/best-foods-in-the-world" target="_blank" rel="external">The 50 best things to eat in the world, and where to eat them</a></p>
-<p>で紹介され、</p>
-<p><a href="http://mogumogunews.com/2015/04/topic_10702/" target="_blank" rel="external">http://mogumogunews.com/2015/04/topic_10702/</a></p>
-<p>あの、<a href="https://twitter.com/elonmusk/status/508617476804866048" target="_blank" rel="external">イーロン・マスクも訪れた</a>ラーメン店です。</p>
-<p><a href="http://japan.cnet.com/news/offtopic/35053480/" target="_blank" rel="external">http://japan.cnet.com/news/offtopic/35053480/</a></p>
-<h2 id="Is_JIRO_INVEST?">Is JIRO INVEST?</h2><ul>
-<li>I<ul>
-<li>二郎はラーメンではなく、二郎という食べ物だと言われることもあるほど独自性が高く、一種独特の文化があると言えるでしょう。</li>
-</ul>
-</li>
-<li>N<ul>
-<li>二郎非常に柔軟な調整が可能です。代表的なものは 麺、野菜、背脂、にんにくの量や、味の濃さです。たとえば、野菜と背脂とにんにくをとても多くしたい場合は「野菜、アブラ、ニンニク マシマシ」と店主に伝えることにより、おそらくあなたの希望の結果が得られるでしょう。</li>
-</ul>
-</li>
-<li>V<ul>
-<li>二郎には圧倒的なオリジナリティがあります。これにまさる価値は無いでしょう。</li>
-</ul>
-</li>
-<li>E<ul>
-<li>何回か二郎に通うと、自分のコンディションに応じて何を増やして何を減らすかが見積もれる様になります。体調が悪くあまり食べられない場合は、食券を提示する際に、麺半分などと伝えればいいでしょう</li>
-</ul>
-</li>
-<li>S<ul>
-<li>二郎にもスモールサイズはありますが、これには注意が必要です。二郎のスモールサイズは、一般的な店舗の大盛りか、それ以上に値します。慣れるまではスモールサイズもしくは（もしあれば）ソレより小さいプチサイズにするのが良いでしょう。</li>
-</ul>
-</li>
-<li>T<ul>
-<li>二郎は総店舗数が40店舗弱（内休業中が2店舗？）であるため、カバレッジ100％を達成することも可能であるため、テスタブルと言えるでしょう。また、非常に量が多いため、自分に対する判断力を試されるため、自分自身に対するテストと考えることも出来ます。</li>
-</ul>
-</li>
-</ul>
-<p>そんな、非常に特徴的なラーメン二郎ですが、百聞は一見にしかずということわざもあるように、まずは体験してみるのはいかがでしょうか。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="INVEST">INVEST</h1><p>Have you ever heard the acronym “INVEST”?</p>
-<p>The INVEST mnemonic was created by Bill Wake and it is introd]]>
-    </summary>
-    
-      <category term="agile" scheme="http://yenjoji.github.io/pages/pages/tags/agile/"/>
-    
-      <category term="jiro" scheme="http://yenjoji.github.io/pages/pages/tags/jiro/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Atlassian Stashの耐障害性を高めよう その3 HAリソースセットアップ編]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/09/20/setup-stash-ha-resource/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/09/20/setup-stash-ha-resource/</id>
-    <published>2015-09-20T03:00:00.000Z</published>
-    <updated>2015-10-06T07:40:12.000Z</updated>
-    <content type="html"><![CDATA[<p>今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。</p>
-<p>前回 <a href="http://yenjoji.github.io/pages/2015/09/15/setup-stash-ha/">ATLASSIAN STASHの耐障害性を高めよう その２ HAセットアップ編</a>はHAクラスタをくんだものの、<br>IPアドレスの設定のみで終わってしまい、全くStashの可用性が高まらないまま終わってしまいました。</p>
-<p>このままでは表題に偽りありと言われても反論出来ないので、今回こそは、Stashの可用性を高めていきたいと思います。</p>
-<p>前回は、ノードが切り替わる際にIPアドレスが自動的にアクティブノードに付与されるように設定を行いました。<br>ただ、アクティブノードにIPアドレスが付与されるだけでは、Stashにアクセス出来ません。</p>
-<p>というわけで今回は、ノードの切り替わり時に自動的にStashが起動する様にします。</p>
-<h1 id="前提条件">前提条件</h1><ul>
-<li>前回までの設定が終わっている</li>
-<li>Stashが各ノードにインストール済み＆初期設定済み</li>
-<li>Stashの自動起動がOFFになっている</li>
-<li>StashのデータベースはStash以外のサーバーのものを使っている</li>
-</ul>
-<p>ここまでの設定が終わっている前提で進めていきます。<br>Stashはインストーラーを利用しても、tar.gzを利用しても問題ありません。</p>
-<p>なお、今回のStashはインストーラーを利用してセットアップしました。</p>
-<h1 id="リソース制御スクリプトの追加">リソース制御スクリプトの追加</h1><p>今回クラスタの制御に使用しているPacemakerは、一般的なクラスタリソースの制御スクリプトが最初から用意されています。<br>また、クラスタリソース制御スクリプトが用意されていない場合には、Pacemakerの指定する形式に沿った自作のスクリプトを所定のディレクトリに配置することにより、制御対象のクラスタリソースを追加することが出来ます。</p>
-<p>Atlassian Stashも残念ながらPacemakerにスクリプトを用意されるほどにはメジャーになっていないようなので、自作のスクリプトを配置する必要があります。</p>
-<p>このスクリプトを一から自作するとなかなか大変なのですが、Atlassian社がサンプルで用意しているリソース制御スクリプトがあるので、今回はそれを拝借します。</p>
-<p>CentOS 7.1 + Pacemaker 1.1 の構成では /usr/lib/ocf/resource.d/ 以下に自作スクリプトを配置することによりクラスタリソースが追加されます。</p>
-<p>ということで、<a href="https://bitbucket.org/atlassian/stash-ha-example/src/master/vagrant/scripts/heartbeat-stash?fileviewer=file-view-default" target="_blank" rel="external">このファイル</a>を各ノードの /usr/lib/ocf/resource.d/heartbeat に配置します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/lib/ocf/resource.d/heartbeat&#10;curl -o stash https://bitbucket.org/atlassian/stash-ha-example/raw/1397712da2b11ab4894c91446009aacae94fcf3d/vagrant/scripts/heartbeat-stash&#10;chmod 755 /usr/lib/ocf/resource.d/heartbeat/stash</span><br></pre></td></tr></table></figure>
-<p>リソースが定義されているかの確認をします。 pcs resource list コマンドの結果に ocf:heartbeat:stash が含まれていればOKです。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs resource list&#10;--&#20013;&#30053;--&#10;ocf:heartbeat:slapd - Manages a Stand-alone LDAP Daemon (slapd) instance&#10;ocf:heartbeat:stash - Manages a Stash instance&#10;ocf:heartbeat:symlink - Manages a symbolic link&#10;ocf:heartbeat:tomcat - Manages a Tomcat servlet environment instance&#10;--&#20197;&#19979;&#30053;--</span><br></pre></td></tr></table></figure>
-<h1 id="Stashリソースの定義">Stashリソースの定義</h1><p>リソースを定義する準備が整いましたので、クラスタにリソースを追加します。<br>下記コマンドを実行して、stashのリソースを定義します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs resource create stash_res ocf:heartbeat:stash params stash_user=atlstash stash_home=/var/atlassian/application-data/stash stash_inst=/opt/atlassian/stash/3.11.3 op monitor interval=15s op start timeout=240s</span><br></pre></td></tr></table></figure></p>
-<p>次にstashが単一のノードでしか起動しないように設定します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs resource meta stash_res migration-threshold=1</span><br></pre></td></tr></table></figure></p>
-<p>最後に、stashのプロセスと、VIPが同時に同じノードで起動するように設定します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs constraint colocation add stash_vip with stash_res INFINITY</span><br></pre></td></tr></table></figure></p>
-<p>リソースを定義した後、クラスタの状態を確認しこのようにstash_vipとstash_resが同じノード上でStartedになっていればOKです。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs status&#10;Cluster name: stash&#10;Last updated: Sun Sep 20 10:07:15 2015&#9;&#9;Last change: Sun Sep 20 09:32:39 2015 by root via cibadmin on node01&#10;Stack: corosync&#10;Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 2 resources configured&#10;&#10;Online: [ node01 node02 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node01&#10; stash_res&#9;(ocf::heartbeat:stash):&#9;Started node01&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Online&#10;&#10;Daemon Status:&#10;  corosync: active/disabled&#10;  pacemaker: active/disabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure></p>
-<h1 id="ノード切り替えの確認">ノード切り替えの確認</h1><p>それでは、設定が出来たのでノード障害時に自動的に切り替わるか確認したいと思います。</p>
-<p>まず現状を確認します。<br>諸事情で、node02がアクティブになっています。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs status&#10;Cluster name: stash&#10;Last updated: Sun Sep 20 11:03:59 2015&#9;&#9;Last change: Sun Sep 20 09:32:39 2015 by root via cibadmin on node01&#10;Stack: corosync&#10;Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 2 resources configured&#10;&#10;Online: [ node01 node02 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node02&#10; stash_res&#9;(ocf::heartbeat:stash):&#9;Started node02&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Online&#10;&#10;Daemon Status:&#10;  corosync: active/enabled&#10;  pacemaker: active/enabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure>
-<p>では、ここでnode02の電源をOFFします。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs status&#10;Cluster name: stash&#10;Last updated: Sun Sep 20 11:08:36 2015&#9;&#9;Last change: Sun Sep 20 09:32:39 2015 by root via cibadmin on node01&#10;Stack: corosync&#10;Current DC: node01 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 2 resources configured&#10;&#10;Online: [ node01 ]&#10;OFFLINE: [ node02 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node01&#10; stash_res&#9;(ocf::heartbeat:stash):&#9;Started node01&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Offline&#10;&#10;Daemon Status:&#10;  corosync: active/disabled&#10;  pacemaker: active/disabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure>
-<p>しばらく後にクラスタの状態を確認したところ無事にnode01に切り替わっていることが確認出来ました。</p>
-<h1 id="さいごに">さいごに</h1><p>今回で、ようやくStashが切り替わる様になりました。これで可用性が高まって枕を高くして眠れるかと思いましたが、実はまだ設定が足りません。<br>なんと、Stashはハードディスク上にもデータを保存しているのです。</p>
-<p>というわけで次回はディスクを冗長化して、こんどこそ真のStashの耐障害性向上を成し遂げたいと思います。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>今回も引き続きStashの高可用性(HA)クラスタを組むべく進めていきたいと思います。</p>
-<p>前回 <a href="http://yenjoji.github.io/pages/2015/09/15/setup-stash-ha/">ATLASSIAN STASH]]>
-    </summary>
-    
-      <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
-    
-      <category term="Pacemaker" scheme="http://yenjoji.github.io/pages/pages/tags/Pacemaker/"/>
-    
-      <category term="Stash" scheme="http://yenjoji.github.io/pages/pages/tags/Stash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Atlassian Stashの耐障害性を高めよう その2 HAセットアップ編]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/09/15/setup-stash-ha/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/09/15/setup-stash-ha/</id>
-    <published>2015-09-15T03:10:00.000Z</published>
-    <updated>2015-09-27T15:38:35.000Z</updated>
-    <content type="html"><![CDATA[<p>今回は <a href="http://yenjoji.github.io/pages/2015/09/08/stash-ha-101/">前回 「Atlassian Stashの耐障害性を高めよう その１ プランニング編」</a> の続きとして、<br>HAクラスタのセットアップを行いたいと思います。</p>
-<p>手順は<a href="https://access.redhat.com/documentation/ja-JP/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/" target="_blank" rel="external">redhat向けのHIGH AVAILABILITY ADD-ON リファレンス</a> を参考に行っていきます</p>
-<h1 id="今回の構成">今回の構成</h1><p>今回は、LinuxのHAクラスタミドルウェアの定番であるPacemakerを使用してクラスタを構成します。</p>
-<table>
-<thead>
-<tr>
-<th>ソフトウェア</th>
-<th>バージョン</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CentOS</td>
-<td>7.1</td>
-</tr>
-<tr>
-<td>Pacemaker</td>
-<td>1.1.12</td>
-</tr>
-<tr>
-<td>Corosync</td>
-<td>2.3.4</td>
-</tr>
-<tr>
-<td>pcs</td>
-<td>0.9.137</td>
-</tr>
-</tbody>
-</table>
-<p>ノード設定<br>|ホスト名|IP|備考|<br>|—|—|—|<br>|node01|192,168.33.21|Stash node #1|<br>|node02|192,168.33.22|Stash node #2|<br>|stash|192,168.33.101|Stash VIP|</p>
-<h1 id="事前準備">事前準備</h1><p>クラスタ構成の際にお互いのノード名を解決出来ないとイケないので、 /etc/hosts にホストを追加しておきます。</p>
-<p>/etc/hosts<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.33.21 node01&#10;192.168.33.22 node02</span><br></pre></td></tr></table></figure></p>
-<p>次にクラスタの通信に使用するポートを開放します<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --add-service=high-availability&#10;firewall-cmd --add-service=high-availability</span><br></pre></td></tr></table></figure></p>
-<h1 id="ソフトウェアのインストール">ソフトウェアのインストール</h1><p>それでは、必要なソフトウェアをインストールしていきます。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># yum install pcs fence-agents-all</span><br></pre></td></tr></table></figure></p>
-<p>コマンドを両方のノードで実行します。<br>これだけでHAクラスタに必要なソフト一式がインストールされます。</p>
-<p>インストールが無事完了したら、クラスタの構成を行うコマンドのデーモンである pcsd を起動します。<br><br><br>また、再起動時に自動的に起動するように設定します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start pcsd&#10;systemctl enable pcsd</span><br></pre></td></tr></table></figure></p>
-<h1 id="クラスタの構築">クラスタの構築</h1><p>次に、node01,node02をメンバーとして、HAクラスタを構築します。</p>
-<h2 id="hacluster_ユーザーのパスワードを設定">hacluster ユーザーのパスワードを設定</h2><p>ここでは、マニュアルの推奨に従って、両ノードともに同じパスワードを設定します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd hacluster</span><br></pre></td></tr></table></figure></p>
-<p>これも両ノードで実行します。</p>
-<h2 id="クラスタノードの認証">クラスタノードの認証</h2><p>クラスタノード間の認証設定をします。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs cluster auth node01 node02 -u hacluster -p hacluster</span><br></pre></td></tr></table></figure></p>
-<h2 id="クラスタの作成">クラスタの作成</h2><p>クラスタを作成します<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs cluster setup --start --name stash node01 node02</span><br></pre></td></tr></table></figure></p>
-<h2 id="クラスタ状態の確認">クラスタ状態の確認</h2><p>作成したクラスタの状況を確認します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs cluster status</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cluster Status:&#10; Last updated: Mon Sep 14 09:46:54 2015&#9;&#9;Last change: Mon Sep 14 09:42:40 2015 by hacluster via crmd on node02&#10; Stack: corosync&#10; Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10; 2 nodes and 0 resources configured&#10; Online: [ node01 node02 ]&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Online</span><br></pre></td></tr></table></figure>
-<p>両ノードがOnlineとなっていればOKです。</p>
-<h2 id="STONITH_の無効化">STONITH の無効化</h2><p>ここで、/var/log/messages を確認すると。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sep 14 11:16:14 localhost pengine[4158]: error: Resource start-up disabled since no STONITH resources&#10;have been defined&#10;Sep 14 11:16:14 localhost pengine[4158]: error: Either configure some or disable STONITH with the ston&#10;ith-enabled option&#10;Sep 14 11:16:14 localhost pengine[4158]: error: NOTE: Clusters with shared data need STONITH to ensure&#10; data integrity</span><br></pre></td></tr></table></figure>
-<p>といったエラーが発生しています。</p>
-<p>この<a href="http://kan3aa.hatenablog.com/entry/2015/06/05/135150" target="_blank" rel="external">ページ</a>によると</p>
-<p>STONITHと呼ばれるノードが不安定になった場合、自動的に再起動を行う機能を実現するためのリソースが無いためエラーとなってしまっているようです。<br><br>現時点ではSTONITHを使用しないため、<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs property set stonith-enabled=false</span><br></pre></td></tr></table></figure></p>
-<p>を実行し、機能を無効化します。</p>
-<h1 id="リソースの作成">リソースの作成</h1><p>クラスタの設定が終わったところで、次にリソースを設定します。<br>クラスタでのリソースとは特にクラスタノード間で共有するリソースのことを指します。例えばアクティブノードが使用する仮想IPなどです。</p>
-<p>今回は、ユーザーがアクセスする際に指定する、サービス用の仮想IPをリソースとして追加します。</p>
-<p>どちらかのノードでコマンドを実行します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs resource create stash_vip IPaddr2 ip=192.168.33.101 cidr_netmask=24 op monitor interval=6s</span><br></pre></td></tr></table></figure></p>
-<p>これで、6秒ごとに死活確認を行うIPアドレスの共有リソースが設定されました。<br>アクティブノードに 192.168.33.101 のIPエイリアスが設定される様になります。</p>
-<h1 id="ノード切り替えのテスト">ノード切り替えのテスト</h1><p>サービス用の仮想IPが割り当てられることが確認出来ました。</p>
-<h2 id="アクティブノードの障害">アクティブノードの障害</h2><p>アクティブノードの障害時に正常に切り替わるか確認してみましょう。</p>
-<p>Active : node01<br>Standby: node02</p>
-<p>の状態で、node01の電源をOFFしてみます。</p>
-<p>実施前<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs status&#10;Cluster name: stash&#10;Last updated: Mon Sep 14 12:14:31 2015&#9;&#9;Last change: Mon Sep 14 11:51:35 2015 by root via crm_attribute on node02&#10;Stack: corosync&#10;Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 1 resource configured&#10;&#10;Online: [ node01 node02 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node01&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Online&#10;&#10;Daemon Status:&#10;  corosync: active/disabled&#10;  pacemaker: active/disabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure></p>
-<p>２ノードともオンラインで、stash_vip は node01に割り当てられています。</p>
-<p>ここで node01 の電源をOFFにします</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pcs status&#10;Cluster name: stash&#10;Last updated: Mon Sep 14 12:18:31 2015&#9;&#9;Last change: Mon Sep 14 11:51:35 2015 by root via crm_attribute on node02&#10;Stack: corosync&#10;Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 1 resource configured&#10;&#10;Online: [ node02 ]&#10;OFFLINE: [ node01 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node02&#10;&#10;PCSD Status:&#10;  node01: Offline&#10;  node02: Online&#10;&#10;Daemon Status:&#10;  corosync: active/enabled&#10;  pacemaker: active/enabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure>
-<p>正常に node02 にIPが切り替わりました。<br>この間pingを192.168.33.101宛に行っていましたが、途切れる事なくノードが切り替わりました。</p>
-<h2 id="スタンバイノードの追加">スタンバイノードの追加</h2><p>では、次に稼働中のクラスタに、node01を追加します。</p>
-<p>node01を起動し、node01でクラスタを起動します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs cluster start</span><br></pre></td></tr></table></figure></p>
-<p>正常に node01がクラスタに参加しました、ただアクティブノードはnode02のままです。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs status&#10;Cluster name: stash&#10;Last updated: Mon Sep 14 12:24:38 2015&#9;&#9;Last change: Mon Sep 14 11:51:35 2015 by root via crm_attribute on node02&#10;Stack: corosync&#10;Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 1 resource configured&#10;&#10;Online: [ node01 node02 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node02&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Online&#10;&#10;Daemon Status:&#10;  corosync: active/disabled&#10;  pacemaker: active/disabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure>
-<h2 id="アクティブノードの手動切替">アクティブノードの手動切替</h2><p>最後に、アクティブノードを切り替えます。<br>片系ずつ切り替えながらメンテナンスする際に威力を発揮しそうです。</p>
-<p>アクティブノードをスタンバイ状態にし、強制的にきりかえます。<br>アクティブノード上で下記のコマンドを実行します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs cluster standby</span><br></pre></td></tr></table></figure></p>
-<p>正常にノードが切り替わり、node01がアクティブになりました。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs status&#10;Cluster name: stash&#10;Last updated: Mon Sep 14 12:44:33 2015&#9;&#9;Last change: Mon Sep 14 12:44:24 2015 by root via crm_attribute on node02&#10;Stack: corosync&#10;Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 1 resource configured&#10;&#10;Node node02: standby&#10;Online: [ node01 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node01&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Online&#10;&#10;Daemon Status:&#10;  corosync: active/disabled&#10;  pacemaker: active/disabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure>
-<p>ただ、このままですと node01に障害が発生した場合でもnode02に切り替わらないので、node02のスタンバイ状態を解除します。<br>スタンバイ状態のノードで以下のコマンドを実行します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs cluster unstandby</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcs status&#10;Cluster name: stash&#10;Last updated: Mon Sep 14 12:46:29 2015&#9;&#9;Last change: Mon Sep 14 12:46:27 2015 by root via crm_attribute on node02&#10;Stack: corosync&#10;Current DC: node02 (version 1.1.13-a14efad) - partition with quorum&#10;2 nodes and 1 resource configured&#10;&#10;Online: [ node01 node02 ]&#10;&#10;Full list of resources:&#10;&#10; stash_vip&#9;(ocf::heartbeat:IPaddr2):&#9;Started node01&#10;&#10;PCSD Status:&#10;  node01: Online&#10;  node02: Online&#10;&#10;Daemon Status:&#10;  corosync: active/disabled&#10;  pacemaker: active/disabled&#10;  pcsd: active/enabled</span><br></pre></td></tr></table></figure>
-<p>node02がアクティブになりました。</p>
-<h1 id="今回はここまで">今回はここまで</h1><p>これでひと通りのクラスタ切り替えの動作の確認が出来ました。<br>しかしながら、IPの切り替えだけではStashの冗長化は出来ません。<br>次回は、ストレージの冗長化を設定しStashの冗長化を完成させたいと思います。</p>
-<p>参考資料：<br><a href="https://access.redhat.com/documentation/ja-JP/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/" target="_blank" rel="external">RED HAT ENTERPRISE LINUX 7 向け HIGH AVAILABILITY ADD-ON のリファレンスドキュメント</a><br>リファレンスなので、ひと通り情報は乗っているが、ステップバイステップで構築の手順となっていなく、コマンド例ももう一声ほしいところ。<br>総じて、読み解くのに読者の頑張りが必要なドキュメント。。。</p>
-<p><a href="http://kan3aa.hatenablog.com/entry/2015/06/05/135150" target="_blank" rel="external">CentOS7.1でPacemaker+corosyncによるクラスタを構成する（Part.1）</a><br>CentOS7 + Pacemaker でのクラスタ構築からVIP設定までが非常に丁寧にステップバイステップで解説されています。<br>最終的には、このエントリもほぼ似たような感じになってしまいました。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>今回は <a href="http://yenjoji.github.io/pages/2015/09/08/stash-ha-101/">前回 「Atlassian Stashの耐障害性を高めよう その１ プランニング編」</a> の続きとして、<br>HAクラスタのセッ]]>
-    </summary>
-    
-      <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
-    
-      <category term="Pacemaker" scheme="http://yenjoji.github.io/pages/pages/tags/Pacemaker/"/>
-    
-      <category term="Stash" scheme="http://yenjoji.github.io/pages/pages/tags/Stash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Atlassian Stashの耐障害性を高めよう その1 プランニング編]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/09/08/stash-ha-101/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/09/08/stash-ha-101/</id>
-    <published>2015-09-08T03:10:00.000Z</published>
-    <updated>2015-09-19T13:08:36.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="はじめに">はじめに</h1><p>私の所属しているプロジェクトではAtlassian Stash （Git）でソースコードを管理しています。<br><br>普段何気なく使用しているGitですが、もはや手放すことが難しい存在です。</p>
-<p>そんな中、ふと「もしもStashのデータが消失したら。」と言う事態を想像してみました。<br><br>Gitは分散バージョン管理なので、各々のローカルのGitリポジトリをかき集めれば必要なものは復旧できそうです。</p>
-<p>どうやらソースコードの消失などの最悪の事態は発生しないことはわかりましたが、<br><br>Stashを使用していればサーバーの冗長構成は必要ないでしょうか。</p>
-<p><a href="https://confluence.atlassian.com/stash/high-availability-for-stash-437915322.html" target="_blank" rel="external">Atlassian</a>のドキュメントによると、Stashに障害が発生した場合、復旧作業をおこなっている間、下記の様な状況になります。</p>
-<ul>
-<li><p>できること</p>
-<ul>
-<li>開発者<ul>
-<li>コードのコミット</li>
-<li>ブランチの作成</li>
-<li>ブランチの切り替え</li>
-<li>過去のコミットと差分確認</li>
-<li>…</li>
-<li>Stashを経由せずに他の開発者のリポジトリからフェッチする</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>できないこと</p>
-<ul>
-<li>開発者<ul>
-<li>リポジトリのクローン</li>
-<li>セントラルリポジトリ（Stash）からのフェッチ</li>
-<li>セントラルリポジトリ（Stash）へのプッシュ</li>
-<li>Stash UI へのアクセス （プルリクエストの操作など）</li>
-</ul>
-</li>
-<li>CI/CDサーバー<ul>
-<li>リポジトリのクローン</li>
-<li>変更点の取得</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>作業は続行不可能では無いですが、チーム開発を進めていく上でかなりの制限となってしまいそうです。</p>
-<p>というわけで、転ばぬ先の杖ということでStashの冗長化に挑戦してみたいと思います。</p>
-<p>Stash冗長化について調べてみたところ、本家Atlassianに<a href="https://confluence.atlassian.com/stash/high-availability-for-stash-437915322.html" target="_blank" rel="external">冗長化についてのドキュメント</a>が用意されていました。<br></p>
-<h1 id="冗長構成のパターン">冗長構成のパターン</h1><p>Atlassianのドキュメントによると、冗長構成には以下の様なパターンがあるようです</p>
-<table>
-<thead>
-<tr>
-<th>構成</th>
-<th>復旧時間</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Single node</td>
-<td>hours-days</td>
-<td>単一ノード</td>
-</tr>
-<tr>
-<td>Cold Standby</td>
-<td>2-10 min</td>
-<td>サーバーはActive StandByともに起動させておくが、StashはActive側のみ起動しておく構成。Active側が障害となった場合StandBy側のStashを起動させ、切り替える。</td>
-</tr>
-<tr>
-<td>Warm Standby</td>
-<td>0-30 Sec</td>
-<td>Active Standby 双方にStashを起動させておき、Active側が障害となった場合切り替える</td>
-</tr>
-<tr>
-<td>Active-Active</td>
-<td>&lt;5 Sec</td>
-<td>マルチマスタ＆負荷分散構成 ただし Stash Data Center が必要</td>
-</tr>
-</tbody>
-</table>
-<p>この構成の内、Active-Active構成をするためには Stash Data Centerを使う必要があるらしく、<br>予算的に厳しい様な予感がするので今回は見送ることとします。</p>
-<p>また、Warm StandBy 構成 はStashがメモリ上にロック情報などを持っているため、現時点でこの構成は取れないそうです。</p>
-<p>そうすると、コストとメリットのバランスを考えた場合Cold Standby構成を取るのが良いようです。<br><br>（Atlassianのドキュメントもこの構成でクラスタを組んでいます。）</p>
-<p>図で表すと、下記の様になります。おおむねAtlassianのドキュメント通りですが、データベースのみ、他のAtlassianプロダクトと共有することを考えて、Stashとは別のサーバーとしています。</p>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/21266389192/in/dateposted-public/" title="atlassian_stash_cluster_network_diagram" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/710/21266389192_c7ff5dfa6d.jpg" width="407" height="500" alt="atlassian_stash_cluster_network_diagram"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<p>細かいソフトウェアのバージョンなどはもう少し調べてみてから決定していきたいと思います。</p>
-<p>というわけで、だいたいの構成の目処がついたところで、今回はここまでとしたいと思います。</p>
-<p>次回は実際のクラスターの構築を行ってみたいと思います。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="はじめに">はじめに</h1><p>私の所属しているプロジェクトではAtlassian Stash （Git）でソースコードを管理しています。<br><br>普段何気なく使用しているGitですが、もはや手放すことが難しい存在です。</p>
-<p>そんな中、ふと「も]]>
-    </summary>
-    
-      <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
-    
-      <category term="Pacemaker" scheme="http://yenjoji.github.io/pages/pages/tags/Pacemaker/"/>
-    
-      <category term="Stash" scheme="http://yenjoji.github.io/pages/pages/tags/Stash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Atlassian製品のアドバンテージ「Application Link」]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/09/05/about-application-link/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/09/05/about-application-link/</id>
-    <published>2015-09-05T03:00:00.000Z</published>
-    <updated>2015-09-27T15:31:28.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="Application_Linkとは">Application Linkとは</h1><p>アプリケーションリンクとは、Atlassian製品にデフォルトで含まれている、Jira, Confluence, Stash, FishEye, Crucible, Bambooの各製品を相互に連携させるための機能です。<br>アプリケーションリンクを設定すると、リンクさせた製品同士が相互に情報をやりとりしたり、お互いの機能を利用することが出来ます。<br>例えば、JiraとConfluenceをリンクさせた場合、JiraのチケットをConfluenceのマクロを利用してリンクさせたり、<br>Confluenceで任意の文字列を選択した状態で右クリックからJiraのチケットを作成するなど、お互いの利便性を向上させることが出来る機能です。</p>
-<p>Atlassian以外の製品でも、CIツールと、リポジトリ管理ツールの連携や、課題管理ツールとCIツールの連携などが用意されている場合もありますが、<br>違うプロダクトを連携させる場合とくらべてAtlassianのアプリケーションリンクはより密接な連携ができるというメリットがあります。<br>また、設定も簡単にできるため、「サクッと連携できると思っていたけのに意外とハマった。」ということが起こらない点もメリットといえると思います。</p>
-<h1 id="Bamboo_+_Stash_をリンクすると">Bamboo + Stash をリンクすると</h1><p>では、具体的にはどうなるのでしょうか。<br><a href="https://confluence.atlassian.com/bamboo/integrating-bamboo-with-atlassian-applications-289276942.html" target="_blank" rel="external">Bambooの公式ドキュメント</a> によると、<br>リンクをすることにより以下のことができるようになります。</p>
-<ol>
-<li>Stashのリポジトリに新しいコードがpushされると自動的にビルドを実行させることが出来ます。（Stash以外のリポジトリの場合はBambooが定期的に更新を確認する必要があります）</li>
-<li>Stashの指定したリポジトリに新しいブランチが作成された場合、Bambooが自動的にそれを検知し、ブランチのビルドプランを作成します。<br>また、ブランチが削除された場合はBamboo上のブランチに対するビルドプランを自動的に削除することも可能です。</li>
-<li>Bambooのビルド結果から、そのビルドに含まれているコミットの変更差分確認画面へダイレクトにジャンプ出来ます。</li>
-<li>Bambooのビルドに含まれているStashのコミットのリストをBambooのビルド結果から確認出来ます。</li>
-<li>コミットやプルリクエストに対するビルド結果をStash側で確認することが出来ます。</li>
-</ol>
-<h2 id="ブランチの自動作成">ブランチの自動作成</h2><p>アプリケーションリンクの機能は業務でも使用していますが、今回はその中でも便利だと感じているブランチの自動作成機能を紹介します。</p>
-<ul>
-<li>Bambooのビルドプラン設定からブランチの自動作成設定が出来ます、すべてのブランチを作成することもできますし、正規表現にマッチするブランチだけを自動作成することも出来ます。<br>GitFlowで開発している場合に、featureブランチのみ自動作成するという設定も可能です。</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/21758626085/in/dateposted-public/" title="20150904_0936_myproject_-_myplan__Edit_plan_configuration_-_Atlassian_Bamboo_01" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/649/21758626085_e53647b3c9.jpg" width="500" height="360" alt="20150904_0936_myproject_-_myplan__Edit_plan_configuration_-_Atlassian_Bamboo_01"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>Stashで（もしくはGitコマンド経由で）ブランチを作成すると。</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/21571764779/in/dateposted-public/" title="20150904_0939_ブランチの作成_-_Stash_01" target="_blank" rel="external"><img src="https://farm6.staticflickr.com/5717/21571764779_daed59fe99.jpg" width="500" height="359" alt="20150904_0939_ブランチの作成_-_Stash_01"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<ul>
-<li>Bambooが自動的にブランチをビルドプランに追加してくれます。</li>
-</ul>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/130999506@N07/21746980562/in/dateposted-public/" title="20150904_0948_myproject_-_myplan__Edit_plan_configuration_-_Atlassian_Bamboo_01" target="_blank" rel="external"><img src="https://farm1.staticflickr.com/648/21746980562_c50df04b23.jpg" width="500" height="360" alt="20150904_0948_myproject_-_myplan__Edit_plan_configuration_-_Atlassian_Bamboo_01"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<p>ビルド対象のリポジトリが少ないうちは、Bambooの管理画面から手動でブランチを追加する作業も苦になりませんが、<br>リポジトリが増えてくるに連れて徐々に便利さが実感できるようになってきます。</p>
-<h1 id="その他の製品のApplication_Linkについて">その他の製品のApplication Linkについて</h1><p>さて、こんなに便利なApplicationLinkですが、今回例に上げたBambooとStashの組み合わせ以外にも様々な組み合わせが存在します。<br>ApplicationLinkを設定することでどんなメリットがあるかは下記リンク先のドキュメントをご参照ください。</p>
-<p>Stash<br><a href="https://confluence.atlassian.com/stash/integrating-stash-with-atlassian-applications-414812190.html" target="_blank" rel="external">https://confluence.atlassian.com/stash/integrating-stash-with-atlassian-applications-414812190.html</a></p>
-<p>Jira+Confluence<br><a href="https://confluence.atlassian.com/doc/use-jira-and-confluence-together-427623543.html" target="_blank" rel="external">https://confluence.atlassian.com/doc/use-jira-and-confluence-together-427623543.html</a></p>
-<p>Bamboo+Confluence<br><a href="https://confluence.atlassian.com/bamboo/integrating-bamboo-with-confluence-289276944.html" target="_blank" rel="external">https://confluence.atlassian.com/bamboo/integrating-bamboo-with-confluence-289276944.html</a></p>
-<p>RedmineなどのAtlassian製品以外のツールでも、CIサーバーや、リポジトリ管理ツールなどとの連携は可能ですが、<br>簡単で設定でハマりにくいという点でAtlassian製品ツールが完結させられるというメリットは大きいです。</p>
-<p>もし、Atlassian製品をお使いなら、非常に便利ですので、是非アプリケーションリンクを活用してみてください。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="Application_Linkとは">Application Linkとは</h1><p>アプリケーションリンクとは、Atlassian製品にデフォルトで含まれている、Jira, Confluence, Stash, FishEye, Crucible, Bam]]>
-    </summary>
-    
-      <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
-    
-      <category term="Bamboo" scheme="http://yenjoji.github.io/pages/pages/tags/Bamboo/"/>
     
       <category term="Stash" scheme="http://yenjoji.github.io/pages/pages/tags/Stash/"/>
     
