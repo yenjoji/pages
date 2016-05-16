@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2016-04-25T07:44:35.000Z</updated>
+  <updated>2016-05-16T12:18:47.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[CSP認定を頂きました！]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/05/10/20160510-csp/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/05/10/20160510-csp/</id>
+    <published>2016-05-09T15:00:00.000Z</published>
+    <updated>2016-05-16T12:18:47.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="/pages/images/20160510_CSP.png" alt=""></p>
+<p>伊藤さん(@hageyahho)による、<a href="http://d.hatena.ne.jp/hageyahhoo/20150405/1428220411" target="_blank" rel="external">資格申請の仕方の記事</a>を参考にして、4/12に申請を行い、5/10 認定を頂きました。</p>
+<p>途中記載不備があり、レビュアーから、「もう少し詳しくどういうことをしたか教えておくれよ。」というコメントをいただき、<br>たまたま連休中だったので、私の返答が遅れたので、「およそ3週間」というレビューの一般的な期間より、多少時間がかかってしまいました。</p>
+<p>指摘された点は、SEUのうち Category-D のボランティア活動の内容があまりに淡白すぎたため、もう少し具体的にどんなボランティア活動を行って、どういった効果があったのかを書いてほしいというレビュー指摘でした。</p>
+<p>頂いた指摘を修正し、再レビュー依頼をしたところ4日ほどで、レビューOKの返事を頂きました。</p>
+<p>資格を撮ったからといって、何ができるようになるわけでは無いですが、少しでもスクラムのプロフェッショナルに近づけるよう頑張っていきたいと思います。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="/pages/images/20160510_CSP.png" alt=""></p>
+<p>伊藤さん(@hageyahho)による、<a href="http://d.hatena.ne.jp/hageyahhoo/20150405/142822041]]>
+    </summary>
+    
+      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
+    
+      <category term="Scrum" scheme="http://yenjoji.github.io/pages/pages/tags/Scrum/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[アジャイルひよこクラブ「７つの習慣に学ぶ！！開発者から見たプロダクトオーナーとのよい付き合い方」に参加してきました]]></title>
@@ -612,7 +636,7 @@
     <link href="http://yenjoji.github.io/pages/pages/2016/02/26/20160225-reading-to-tell-the-truth-of-copy/"/>
     <id>http://yenjoji.github.io/pages/pages/2016/02/26/20160225-reading-to-tell-the-truth-of-copy/</id>
     <published>2016-02-25T17:28:12.000Z</published>
-    <updated>2016-04-21T06:02:31.000Z</updated>
+    <updated>2016-04-26T06:55:28.000Z</updated>
     <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
 <li>題名<br><a href="http://www.amazon.co.jp/dp/B00PCJEB86/" target="_blank" rel="external">ここらで広告コピーの本当の話をします。</a></li>
 <li>読み終わった日<br>2016/2/25</li>
@@ -625,7 +649,7 @@
 <p>競合優位性、ターゲット設定など、語られている手法は多くないものの、どのように考え、組み合わせれば、より価値を高められるかということが筆者の体験を元に書かれているため、非常に読み応えがありました。</p>
 <p>文体も自分の好みに合っていたのか、ぐんぐん読み進められる読みやすさと、今までの自分のが上辺をなぞってるだけだったなぁと認識させてくれる内容で、おすすめできる一冊です。</p>
 <p><strong><em>クライアントの要望に応えられないのは三流、クライアントの要望にしか応えられないのは二流、クライアントの要望以上を出すのが一流</em></strong></p>
-<p>これは著者の先輩クリエイティブディレクターの言葉だ層ですが、エンジニアにもそのまま当てはまると思います。私もはやく一流になりたいものです。</p>
+<p>これは著者の先輩クリエイティブディレクターの言葉だそうですが、エンジニアにもそのまま当てはまると思います。私もはやく一流になりたいものです。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
@@ -1733,66 +1757,6 @@
     </summary>
     
       <category term="poem" scheme="http://yenjoji.github.io/pages/pages/tags/poem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Atlassian Stashの耐障害性を高めよう その4 分散ストレージ設定編]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2015/10/26/setup-stash-ha-storage-glusterfs/"/>
-    <id>http://yenjoji.github.io/pages/pages/2015/10/26/setup-stash-ha-storage-glusterfs/</id>
-    <published>2015-10-26T03:00:00.000Z</published>
-    <updated>2015-10-26T01:17:27.000Z</updated>
-    <content type="html"><![CDATA[<p>今回もStashの高可用性を目指してクラスタを組んでいきたいと思います。<br>前回までで、サーバーと、Stashのプロセスの冗長化は一旦完了したので、今回は一番重要なデータ保存領域の冗長化を目指します。</p>
-<h1 id="お知らせ">お知らせ</h1><p>今までAtlassian Stash を冗長化しようと頑張ってきましたが、つい先日なんとAtlassian Stashがなくなってしまいました。<br>今度からは生まれ変わった？ Bitbucket Server をよろしくお願いします。</p>
-<p>・・・閑話休題・・・</p>
-<p>それでは、Stash改めBitbucket Serverのストレージを冗長化したいと思います。</p>
-<p><a href="https://confluence.atlassian.com/stash/high-availability-for-stash-437915322.html" target="_blank" rel="external">Atlassianの公式</a>によるとストレージは GFS2 + DRBD でストレージの冗長化を行っていますが、<br>今回は個人的な興味で、GlusterFSを使って冗長構成をしてみたいと思います。</p>
-<h1 id="事前準備">事前準備</h1><h2 id="VagrantにDISKを追加">VagrantにDISKを追加</h2><p>Virtualbox コンソール経由で、node01,node02 にDISKを追加します。<br>Stashのデータに使用するので、保存するデータの容量によって大きさをかんがえる必要があります。<br>今回は仮に8GBとして データ用にパーティション /dev/sdb1 を作成しました。</p>
-<h1 id="GlusterFSのインストール（全ノード）">GlusterFSのインストール（全ノード）</h1><h2 id="パッケージのインストール">パッケージのインストール</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/&#10;curl -o glusterfs.repo http://download.gluster.org/pub/gluster/glusterfs/LATEST/CentOS/glusterfs-epel.repo&#10;yum install glusterfs-server</span><br></pre></td></tr></table></figure>
-<h2 id="通信ポートの開放">通信ポートの開放</h2><p>まずは、通信に必要なポートを開放します。<br>今回は実験用途なのでどこからでも通信可能に設定してしまいます。</p>
-<p>/usr/lib/firewalld/services/glusterfs.xml を以下の内容で作成します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&#62;&#10;&#60;service&#62;&#10;  &#60;short&#62;GlusterFS&#60;/short&#62;&#10;  &#60;description&#62;GlusterFS&#60;/description&#62;&#10;  &#60;port protocol=&#34;tcp&#34; port=&#34;1111&#34;/&#62;&#10;  &#60;port protocol=&#34;tcp&#34; port=&#34;24007-24100&#34;/&#62;&#10;&#9;&#60;port protocol=&#34;tcp&#34; port=&#34;49152&#34;/&#62;&#10;&#60;/service&#62;</span><br></pre></td></tr></table></figure></p>
-<p>作成したファイルをもとにファイワォールの設定を変更します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --add-service=glusterfs&#10;firewall-cmd --reload</span><br></pre></td></tr></table></figure></p>
-<h1 id="GlusterFS_Volumeの作成">GlusterFS Volumeの作成</h1><p>次にGlusterFSで使用するディスクの準備をします。</p>
-<h2 id="ファイルシステムの作成">ファイルシステムの作成</h2><p>GlusterFSは共有するボリュームのファイルシステムをXFSにする必要があります。<br>まずはデータ用のボリュームをXFSで用意します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.xfs /dev/sdb1</span><br></pre></td></tr></table></figure>
-<p>/etc/fstab の末尾にエントリを追加します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/dev/sdb1       /data&#9;&#9;&#9;&#9;&#9;  xfs     defaults        0 0</span><br></pre></td></tr></table></figure></p>
-<p>マウントします。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -a</span><br></pre></td></tr></table></figure></p>
-<h2 id="GlusterFSの起動">GlusterFSの起動</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start glusterd&#10;systemctl enable glusterd</span><br></pre></td></tr></table></figure>
-<h2 id="GlusterFSのノード登録">GlusterFSのノード登録</h2><ul>
-<li><p>node01</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gluster peer probe node02</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>node02</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gluster peer probe node01</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="GlusterFSのVolume作成(任意の1ノードで実行)">GlusterFSのVolume作成(任意の1ノードで実行)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /data/atlassian/stash</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gluster volume create stash_vol replica 2 node01:/data/atlassian/stash node02:/data/atlassian/stash&#10;gluster volume start stash_vol</span><br></pre></td></tr></table></figure>
-<h2 id="GlusterFSのマウント">GlusterFSのマウント</h2><h3 id="マウントポイントの作成">マウントポイントの作成</h3><p>まずマウントポイントを作成します。<br>既存のStashのデータディレクトリはあとでGlusterFS上にコピーするためリネームして退避しておきます。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /var/atlassian/application-data/stash /var/atlassian/application-data/stash.org&#10;mkdir -p  /var/atlassian/application-data/stash&#10;chown atlstash:atlstash /var/atlassian/application-data/stash</span><br></pre></td></tr></table></figure></p>
-<h3 id="fstabの修正">fstabの修正</h3><p>次に各ノードで /etc/fstab にエントリを追加します。</p>
-<ul>
-<li><p>node01</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node01:stash_vol        /var/atlassian/application-data/stash   glusterfs       defaults        0 0</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>node02</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node02:stash_vol        /var/atlassian/application-data/stash   glusterfs       defaults        0 0</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="ファイルシステムのマウント">ファイルシステムのマウント</h3><p>次に、両方のノードでglusterfsをマウントします。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -a</span><br></pre></td></tr></table></figure></p>
-<h3 id="既存データのコピー">既存データのコピー</h3><p>次に、今までのデータをどちらか一方のノードでコピーします<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -rp /var/atlassian/application-data/stash.org/* /var/atlassian/application-data/stash/.</span><br></pre></td></tr></table></figure></p>
-<p>これで課題だったDISKの冗長化も出来、Stash改めBitbucketServerのクラスタリングが完了しました。<br>実際の運用では、定期的なデータのバックアップは行う事はあっても、クラスタリングをすることはまれかもしれませんが、<br>クラスタリングを検討されている方の参考になれば幸いです。</p>
-<p>※ このシリーズの記事はあくまで検証用途でクラスタの設定を行っているため、実際の環境では使用に耐えない可能性があります。<br>   実際にHAを構成を行う場合には十分な検証を行うことをおすすめします。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>今回もStashの高可用性を目指してクラスタを組んでいきたいと思います。<br>前回までで、サーバーと、Stashのプロセスの冗長化は一旦完了したので、今回は一番重要なデータ保存領域の冗長化を目指します。</p>
-<h1 id="お知らせ">お知らせ</h1><p>今までA]]>
-    </summary>
-    
-      <category term="Atlassian" scheme="http://yenjoji.github.io/pages/pages/tags/Atlassian/"/>
-    
-      <category term="GlusterFS" scheme="http://yenjoji.github.io/pages/pages/tags/GlusterFS/"/>
-    
-      <category term="Stash" scheme="http://yenjoji.github.io/pages/pages/tags/Stash/"/>
     
   </entry>
   
