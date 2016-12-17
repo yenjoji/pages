@@ -532,23 +532,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[DroneでECR上のイメージを使う]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2016/07/26/20160726-drone-with-ecr/"/>
-    <id>http://yenjoji.github.io/pages/pages/2016/07/26/20160726-drone-with-ecr/</id>
-    <published>2016-07-26T02:08:33.000Z</published>
-    <updated>2016-07-26T02:12:43.000Z</updated>
-    <content type="html"></content>
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="docker" scheme="http://yenjoji.github.io/pages/pages/tags/docker/"/>
-    
-      <category term="CI" scheme="http://yenjoji.github.io/pages/pages/tags/CI/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[ヌーボードは作れる！？]]></title>
     <link href="http://yenjoji.github.io/pages/pages/2016/06/26/20160626-nu-board/"/>
     <id>http://yenjoji.github.io/pages/pages/2016/06/26/20160626-nu-board/</id>
@@ -1519,6 +1502,34 @@
       <category term="java" scheme="http://yenjoji.github.io/pages/pages/tags/java/"/>
     
       <category term="JJUG" scheme="http://yenjoji.github.io/pages/pages/tags/JJUG/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[「伝える力」を読みました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/02/07/20160207-read-power-of-inform/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/02/07/20160207-read-power-of-inform/</id>
+    <published>2016-02-06T16:14:42.000Z</published>
+    <updated>2016-03-05T18:04:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4569690815/" target="_blank" rel="external">伝える力</a></li>
+<li>読み終わった日<br>2016/2/7</li>
+<li>所要時間<br>3時間くらい？</li>
+<li>購入元<br>BookOff</li>
+<li>価格<br>¥100</li>
+</ul>
+<h1 id="感想">感想</h1><p>テレビなどでお馴染みの池上彰さんの著書です。</p>
+<p>池上さんの実体験に基づく、人に物事を伝える伝え方、と伝えるための力の鍛え方が書かれています。</p>
+<p>”まず「自分は何も知らない」ことを知り、他人から謙虚に学ぶことです。この姿勢さえ持ち続けていれば、コミュニケーション能力は確実に向上していきます”<br>”「利便性」という言葉は便利ですが（中略）便利な言葉を使っていると、使う人が思考停止になってしまう恐れがあることを、知っておきましょう。”</p>
+<p>など、心構えから、具体的な注意しなければいけないポイントなど「伝える力」を高めるためのプラクティス、エッセンスが詰まっています。<br>さすがと言うか文章も読みやすいですし、ボリュームも新書サイズなので、サラッと読んで見ることをおすすめします。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
+<li>題名<br><a href="http://www.amazon.co.jp/dp/4569690815/" target="_blank" rel="external">伝える力</a></li>
+<li>読み終わ]]>
+    </summary>
+    
+      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
     
   </entry>
   
