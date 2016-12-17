@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Rouleur">
 <meta property="og:description" content="要旨jsonなどのデータを臨機応変に集計したいとき、あると思います。もちろん自分でスクリプトを書くとかjqなどのコマンドを駆使して頑張るのもいいけど、Apache Drillを使うと、SQLで集計できるので、SQLできる人ははかどりますよ！というお話。
 本題Story「今稼働しているVMから、名前がかぶっているインスタンスがあるか調べてくれない？」たとえば、ある日突然お客さんからこんな依頼が来たと">
-<meta property="og:updated_time" content="2016-11-15T01:09:21.000Z">
+<meta property="og:updated_time" content="2016-12-17T15:38:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Apache DrillでJSONを臨機応変に集計する">
 <meta name="twitter:description" content="要旨jsonなどのデータを臨機応変に集計したいとき、あると思います。もちろん自分でスクリプトを書くとかjqなどのコマンドを駆使して頑張るのもいいけど、Apache Drillを使うと、SQLで集計できるので、SQLできる人ははかどりますよ！というお話。
@@ -197,7 +197,7 @@ ga('send', 'pageview');
 <h1 id="本題">本題</h1><h2 id="Story">Story</h2><p>「今稼働しているVMから、名前がかぶっているインスタンスがあるか調べてくれない？」<br>たとえば、ある日突然お客さんからこんな依頼が来たとします。<br>そんなときも安心、そうApache Drillならね。</p>
 <h2 id="やりたいこと">やりたいこと</h2><p>CloudStackのAPIで取得できるVMの情報から、同じドメインに同じなまえのインスタンスが存在するか？ を調査したい！</p>
 <h2 id="データ">データ</h2><h3 id="JSONレイアウト">JSONレイアウト</h3><p>対象のデータは <a href="https://cloudstack.apache.org/api/apidocs-4.9/apis/listVirtualMachines.html" target="_blank" rel="external">こんな感じのJSON</a>が</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;listvirtualmachinesresponse&quot;: &#123;</div><div class="line">    &quot;count&quot;: 4896,</div><div class="line">    &quot;virtualmachine&quot;: [</div><div class="line">      &#123;</div><div class="line">       &quot;VMのJSON&quot;</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        &quot;VMのJSON&quot;</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;listvirtualmachinesresponse&quot;: &#123;</div><div class="line">    &quot;count&quot;: 99999,</div><div class="line">    &quot;virtualmachine&quot;: [</div><div class="line">      &#123;</div><div class="line">       &quot;VMのJSON&quot;</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        &quot;VMのJSON&quot;</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>こんな感じにラップされてます。<br>では、このJSONをApacheDrillで集計してみましょう。</p>
 <h2 id="集計">集計</h2><h3 id="準備">準備</h3><p>インストールはMacならHomeBrewで<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install drill</div></pre></td></tr></table></figure></p>
 <h3 id="SQLの実行">SQLの実行</h3><p>準備は整ったので実際に集計してみましょう！</p>
@@ -226,7 +226,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yenjoji.github.io/pages/pages/2016/10/21/20161021-apache-drill/" data-id="ciwtdzyaw002ylkvxwvg9tnjn" class="article-share-link">Share</a>
+      <a data-url="http://yenjoji.github.io/pages/pages/2016/10/21/20161021-apache-drill/" data-id="ciwte26e3002lnnvxribfvpkz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/JSON/">JSON</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/drill/">drill</a></li></ul>
