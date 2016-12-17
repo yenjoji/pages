@@ -5,7 +5,7 @@
   
   <link href="/pages/atom.xml" rel="self"/>
   <link href="http://yenjoji.github.io/pages/pages//"/>
-  <updated>2016-06-03T10:14:40.000Z</updated>
+  <updated>2016-12-17T14:50:39.000Z</updated>
   <id>http://yenjoji.github.io/pages/pages//</id>
   
   <author>
@@ -14,6 +14,629 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[jirolian.info というサービスをつくりました]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/12/17/20161217-jirolian-info/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/12/17/20161217-jirolian-info/</id>
+    <published>2016-12-17T14:49:23.000Z</published>
+    <updated>2016-12-17T14:50:39.000Z</updated>
+    <content type="html"><![CDATA[<p>こんにちは。ラーメン二郎歴１年半のyenjojiです。<br>この記事は<a href="http://www.adventar.org/calendars/1363" target="_blank" rel="external">ラーメン二郎アドベントカレンダー</a>の17日目の記事です。</p>
+<p>今日は、ラーメン二郎が好きなエンジニアが、いかにしてワンチャンスを逃さずにラーメンを食べるかを考えた結果作るに至ったサービスについて書きます。<br>完全なる自分向けサービスなのですが、同好者の皆さんのお役に少しでも立てば幸いです。</p>
+<h1 id="TL;DR">TL;DR</h1><ul>
+<li>二郎が好きなので現在地から近い順に二郎を検索する<a href="https://jirolian-info.herokuapp.com/" target="_blank" rel="external">Webサービス</a>を作りました</li>
+<li>データを<a href="https://www.github.com/yenjoji/jirolian_data" target="_blank" rel="external">GitHub</a>で公開しているので、ラーメン屋さん情報を提供してくださる優しい方がいればプルリクお願いします</li>
+<li>要望とか、データが違うよとかご意見は<a href="https://twitter.com/jirolian_info" target="_blank" rel="external">専用Twitterアカウント</a>までよろしくお願いします。</li>
+</ul>
+<h1 id="今すぐ食べたいをサポートするサービス">今すぐ食べたいをサポートするサービス</h1><p>勉強会などで、普段行かない場所に訪れることがありました。<br>概ね懇親会があったりしますが、中には懇親会がなく、そのまま解散になる勉強会もあったりします。</p>
+<p>そんな、あまり馴染みのない土地で、21時位に時間ができてしまったら？<br>まっすぐ家に帰るのもよし、<br>そのへんでノマドするもよし、<br>でも、せっかく普段は行かない場所にいるのなら、そこから行ける二郎（インスパイア）でラーメンを食べたいものです。<br>そんな土地勘がない場所でも、迷わずラーメンを食べに行けるようになったらいいなと思い、このサービスを作りました。</p>
+<h1 id="データが少ないので">データが少ないので</h1><p>人力でデータを入力している関係もあって、データはラーメン二郎の各店舗と、自分がいったことのあるインスパイア系の店舗を中心になっています。<br>自分が行ったことのない店舗もどんどん追懐していきたいので、おすすめの店舗があればぜひ教えてください。</p>
+<p>データファイル(JSON)形式をgithubリポジトリにおいてありますので、お時間がある方はデータファイルを作成して、プルリクエストなど投げていただければ更にうれしいです。<br>（間に合ってないですが、そのうちReadmeにデータフォーマットを書きます！）</p>
+<h1 id="ご意見、ご要望など">ご意見、ご要望など</h1><p>データが間違ってる、この店舗を追加して欲しい、こんな項目を表示して欲しいなどは<a href="https://twitter.com/jirolian_info" target="_blank" rel="external">専用Twitterアカウント</a>までよろしくお願いします。</p>
+<p>それでは、皆さんよいラーメン二郎ライフを！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>こんにちは。ラーメン二郎歴１年半のyenjojiです。<br>この記事は<a href="http://www.adventar.org/calendars/1363" target="_blank" rel="external">ラーメン二郎アドベントカレンダー</a>の]]>
+    </summary>
+    
+      <category term="jiro" scheme="http://yenjoji.github.io/pages/pages/tags/jiro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ソフトウェア品質勉強会「開発とテストが一体となったソフトウェア開発」]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/11/08/20161108-teyamagu/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/11/08/20161108-teyamagu/</id>
+    <published>2016-11-08T10:15:37.000Z</published>
+    <updated>2016-11-14T10:15:00.000Z</updated>
+    <content type="html"><![CDATA[<p>11/8 に渋谷ヒカリエの31F株式会社medibaで行われた<a href="http://connpass.com/event/43041/" target="_blank" rel="external">ソフトウェア品質勉強会「開発とテストが一体となったソフトウェア開発」</a> に参加してきました。</p>
+<p>内容は、<a href="http://jasst.jp/symposium/jasst16hokkaido.html" target="_blank" rel="external">JaSST 2016 Hokkaido</a> の基調講演の再演＋会場の参加者との多めの質疑応答でした。<br>主催者の方が、せっかくなので、講演だけでなく質疑応答を多めにできるようにした。という作戦がはまって、活発に質疑がかわされて良い会でした。</p>
+<h1 id="感じたこと">感じたこと</h1><ul>
+<li>組織としてのお墨付き</li>
+<li>適切というか大胆な権限委譲</li>
+<li>適切な評価システム<br>このあたりが整っているとチームは自律的になるんだなと感じました</li>
+</ul>
+<p>セッションの内容は<a href="http://www.slideshare.net/teyamagu/ss-65630230" target="_blank" rel="external">スライドが公開</a>されているので、そちらを参照していただくのがいいと思います。</p>
+<h1 id="以下メモ">以下メモ</h1><h2 id="テストエンジニアのチームとの関わり方">テストエンジニアのチームとの関わり方</h2><ul>
+<li><p>Agile Testingのスライドに書いてある部分を読めばわかる</p>
+<ul>
+<li>テストエンジニアならよりよく分かる→著者がテストエンジニアだから</li>
+</ul>
+</li>
+<li><p>テストエンジニアはプロジェクト初期から関わる</p>
+<ul>
+<li>なぜか？</li>
+</ul>
+</li>
+<li><p>Yahoo!も道半ばなので、完成形ではない。</p>
+</li>
+<li><p>パターン1</p>
+<ul>
+<li><p>プロジェクト初期からバリバリ関わっているわけではない</p>
+</li>
+<li><p>自動化したほうが楽なものはプログラマが自動化</p>
+<ul>
+<li>→ テストエンジニアがプログラマに提案する感じ？</li>
+</ul>
+</li>
+<li>プログラマとテストエンジニアがみつにコミュニケーションを取っている</li>
+</ul>
+</li>
+<li><p>パターン2</p>
+<ul>
+<li>テストエンジニアは業務委託さんへお願いするところを決める＋質問とかのカウンター</li>
+<li>パターン1より処理できるテストケース数はスケールする<ul>
+<li>大きな案件に向く</li>
+</ul>
+</li>
+<li>プログラマと業務委託のプロキシがいるのでスムーズに行くことが多い</li>
+</ul>
+</li>
+<li><p>パターン3</p>
+<ul>
+<li>典型的なパターン</li>
+<li>細かいテストはプログラマがやる</li>
+<li><p>テストエンジニアはサービス全体を見据えたテスト設計＋実施（リリース前）</p>
+<ul>
+<li>自分の現場に一番近い形</li>
+</ul>
+</li>
+<li><p>小さいリリース</p>
+<ul>
+<li>軽微な変更（誤植とか）</li>
+</ul>
+</li>
+<li><p>もともとWFだったところがやっているプロセス</p>
+<ul>
+<li>WFでやっている案件だとこういうパターンになるかもね → あー、そうだね～。うちの現場。</li>
+</ul>
+</li>
+<li><p>Q:それぞれのチームの規模感は</p>
+<ul>
+<li>A:1チーム10人いかないくらい<ul>
+<li>大きくなったら分割して、多チーム構成にします</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q:Sprintのきかんとか、リリースの単位とかは<ul>
+<li>A:早いところだと2日くらい→緊急リリース的な<ul>
+<li>Agile開発しているところは1w,2wが多い</li>
+<li>サーバーサイドはできたらすぐ出す</li>
+<li>アプリは審査があるのでちょっとサイクルが長めになる傾向</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q:テストは一斉にしますか？　順次しますか？<ul>
+<li>A:プロダクトによる、アプリとかはまとまってやる<ul>
+<li>できれば切りたいので、細かくする方向に持っていきたい</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q: チームは解体とか結構しますか<ul>
+<li>A:人の入れ替えは半期、一年とか<ul>
+<li>チームのライフサイクルはプロダクトに依存する</li>
+</ul>
+</li>
+<li>Q: 解散してしまうとノウハウが消えてしまうんじゃないか<ul>
+<li>A: そこは社内でも問題、だがずっと一緒のチームにいると学びが落ちて行く人もいるので</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q: パターン3でのコミュニケーションのスキームは<ul>
+<li>A:変更点とかをビジネスの人と、テストを変更しなければいけないところ<ul>
+<li>基本的にはテストエンジニアとプログラマが近くにいるので、適宜コミュニケーションをすればいいと思ってる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q:テストの範囲→テストエンジニアはQAですか？<ul>
+<li>A:QAって？　→第三者検査をする人<ul>
+<li>みんな当事者なので、第三者的な感じではなくプロダクトを一緒に作っていく人</li>
+<li>外部部門というスタンスではなく、ちかしい感じ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q:ドキュメントは<ul>
+<li>A:情報共有できる雑な最低限のものをConfluenceやExcelとかに残っている<ul>
+<li>粒度はまちまち</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q: ドキュメントがない状態のばあい、ミドルウェアのバージョンアップのときとかにフルにリグレッションテストとかをしないといけないと思うけど、困りませんか<ul>
+<li>A:全く前回と同じテストしないといけない理由が無い<ul>
+<li>お客様が使えないといけないというところが担保できていればいいので（そこは担保されているということ？　自動化されているとか？　いつもやってるテストケースがあるとか？）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="組織の話">組織の話</h2><ul>
+<li><p>部門が分かれていると、部門ごとに責任分界点が生まれる　→　ビジネスにフォーカスできないよね！</p>
+<ul>
+<li>なので組織を変えていく<ul>
+<li>（ここに関しては今の現場はできている、ところもある）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>参考書籍：JAICAのPDFがいい感じ、安い、生々しい</p>
+</li>
+<li><p>なぜ、あじゃいる</p>
+<ul>
+<li>なんかアジャイルだと解決できるらしいぜ！　→　やってみっぺ！　→　うまく行った！　→　テンション上がった！　→　普及した！</li>
+</ul>
+</li>
+<li><p>経営陣刷新　→　爆速</p>
+<ul>
+<li>COOのトップメッセージとしてスモールチームでやりなさい<ul>
+<li>作ったら出していいよへのシフト<ul>
+<li>QAへ責任転嫁できない　→　開発チームの責任感が大きく　→　テストしないとヤヴァイ！　→　チームへテストエンジニアが参画！</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>QA担当のパラダイムシフト</p>
+<ul>
+<li>受ける人から、自分で取りに行かないといけないように</li>
+</ul>
+</li>
+<li><p>Q: もともとQA担当の人ってどれくらいいました</p>
+<ul>
+<li>A: 40人位、業務委託の人も使っていた<ul>
+<li>テスト範囲も広くない＆リードタイムが長かった</li>
+<li>Q: テスト支援部門は<ul>
+<li>A: 15人位</li>
+<li>Q: 15人ですべてのチームの手伝いを？<ul>
+<li>A: 各チームのテストエンジニアのサポートと、テストしたいビジネスの人にコンサル的なことをする</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q ：もともとテストエンジニアじゃなかった人はジョブチェンジしましたか？<ul>
+<li>A: テストオペレーター的な人は、テストエンジニアになったり、テストしつつデータ解析したり、ビジネス系にいったりとか</li>
+</ul>
+</li>
+<li>Q: のこった2個の承認プロセスってなんですか<ul>
+<li>A: ビジネスをやるかやらないか、セキュリティやコーポレート・ガバナンス的なところの2つくらい</li>
+</ul>
+</li>
+<li>Q:似たようなアプリができたりしませんか<ul>
+<li>A: ある。けどカンパニーを分けているのでサービス的にはかち合うことがすくない</li>
+</ul>
+</li>
+<li>Q:セキュリティ以外の非機能要件はチームに任されている？<ul>
+<li>A:任されている、そこも含めてビジネスをすることを任されている</li>
+</ul>
+</li>
+<li>Q:ゲートを外したらヤバイと思った、思った人はサービスの人ですか？<ul>
+<li>A:いい方　→　サービスをちゃんとしないといけないというモチベーション<br>  良くない方　→　仕事が増えたので、テストエンジニアの人を取り込んでやってもらおう</li>
+</ul>
+</li>
+<li>Q:ゲートが外れた途端に品質がさがりましたか（バンバンリリースできるので、なんでもいいからバンバン出そうぜ！　みたいになって、品質が後回しにならないですか？）<ul>
+<li>A:下がりました、今は戻ってきているとき  </li>
+</ul>
+</li>
+<li>Q:品質についてショック療法的になっていますが、コレは狙いましたか？<ul>
+<li>A:狙っていません<ul>
+<li>そんなにインパクトがあったわけではなく、じわっとヤバイとなった感じ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q: テストスキルを上げるための取り組み<ul>
+<li>A:もともとレベルが低いので、ほんに書いてあることをティーチングできればOK　＋　サービスに合わせて行ければやっていけた</li>
+</ul>
+</li>
+<li>Q:課金系は権限委譲していますか<ul>
+<li>A：権限委譲はしています<ul>
+<li>法的な部分とかそういったところは組織でチェックしていく</li>
+<li>会社としてはサービス組織に以上している</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q: 品質あげようとするとコストとか時間がかかるが、そのあたりにビジネス層からの圧力や軋轢とかはありますか<ul>
+<li>A:現実的にはある<ul>
+<li>Q: どうやって解消していますか？<ul>
+<li>カイゼンも含めてサービスの向上なので、ビジネス、カイゼン含めて優先順位を決めていく<ul>
+<li>短期的視点と中長期的な視点で考える</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q: アーキテクチャとか、プロセスとかを標準化したい人がいるものの、そこはチームごとに最適解を目指していきたいけどどうやってその辺標準化厨を抑えてますか？<ul>
+<li>A:まとめたいひとと、まとめないほうがいいと思う人が話し合い<ul>
+<li>ライセンスとか、全社的に考え無いといけないときはそこで話し合う</li>
+<li>部分最適の人は勝手にやる</li>
+<li>コメント：標準化とすると最適にしないといけないけど、平準化として、ベースラインを決めると進めたほうがやりやすいって聞いたことがある</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q: コンテンツなどがカニバることってありますか？<ul>
+<li>A: コンテンツがカニバるときはある。<ul>
+<li>カニバらないようにするのは、チームの自助努力に任されている</li>
+<li>メディア・コンテンツの上の方の人たちは見てる＋分野がわかれているので</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q:サービス毎の機能連携<ul>
+<li>A：基本的にはチーム間での話し合い<ul>
+<li>戦略的にやるときは、コンダクトする人が出てくる（サービスの責任者級のひとたちで、カンパニー長は出てこない）</li>
+</ul>
+</li>
+<li>Q: システムIF　が変わってデグレしたりしませんか<ul>
+<li>A:します、けどスピード重視</li>
+<li>Q:そのへんは原因分析して、再発防止とかしますか<ul>
+<li>A:事故の規模、深刻度による</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q:チームの知見とか、グッドプラクティスは支援部門として広めるのですか？<ul>
+<li>A:支援部門がキャッチデキるところについてはそうしてる<ul>
+<li>でも、全部が把握できないので、そういったものはノウハウを持っている人が他チームにいったタイミングで拡散する</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q:コンフルエンス検索ダメじゃないですか？<ul>
+<li>A:検索やさんなので、頑張って改善しています<ul>
+<li>Googleの検索エンジンをバックエンドに使っているものの、そのまま使っているわけではなく、カスタマイズしていてまだまだ検索やさんがいます</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q:もともとQA部門があったからテストエンジニアができたとおもうけど、テストエンジニアになろうとする人のモチベーションを上げるには<ul>
+<li>理想的なチームにするためにはどうしたらいいですか</li>
+<li>A:テストするスキルは必要だが、テストエンジニアが必ずしも必要とはかぎらない。みんなでやればいい<ul>
+<li>テストスキルがその人に依存しているという状態はよろしくない</li>
+</ul>
+</li>
+<li>Q:テストできる人と、できない人のスキルレベルが違う　→　そこは揃えたい<ul>
+<li>A:プログラマと一緒で、シニアなエンジニアがジュニアなエンジニアを教育するのが理想じゃないか<ul>
+<li>コーディング規約みたいにテスト規約とかもあってもいいかもね</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q:テストコードを書ける人と、テスト設計デキる人って違う人だと思うのですが、そこの住み分けは<ul>
+<li>A:得意分野の差であり、違う職責としてはいない</li>
+</ul>
+</li>
+<li>Q: スキルを上げていく必要があるということにたいして、チームではなくて、会社、カンパニーとかで取り組んでますか<ul>
+<li>A:オフィシャルにはない、勉強会とか、支援部門としてセミナーをやったりしている<ul>
+<li>だいたい本を読めばわかることがおおい、それ以上は個別にコンテキストに応じたアドバイスをしないといけないので、使い分けている</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q: テスト勉強してこなかったプログラマにおすすめの本は？<ul>
+<li>A: みんなが読んだ本で良いんじゃないか</li>
+</ul>
+</li>
+<li>Q: テストを含めてどれくらい自動化してますか？<ul>
+<li>A: サービスがおおいので、均一な自動化はしていない<ul>
+<li>テスティングのプラットフォームを整備している<ul>
+<li>環境、CI、CDを用意する</li>
+<li>支援部門が教えに行く</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="感想">感想</h2><p>Yahoo!のいろいろな立場の方に過去話を聞いたことがあったが、<br>その人の立場とかやっていることによって話す内容や、話から受ける印象が違うのが楽しく、ためになるなぁと感じた。</p>
+<p>山口さん、呼べばどこでも講演してくれるそうなので、話を聞きたかったら読んでしまいましょう。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>11/8 に渋谷ヒカリエの31F株式会社medibaで行われた<a href="http://connpass.com/event/43041/" target="_blank" rel="external">ソフトウェア品質勉強会「開発とテストが一体となったソフトウェア開]]>
+    </summary>
+    
+      <category term="agile" scheme="http://yenjoji.github.io/pages/pages/tags/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Apache DrillでJSONを臨機応変に集計する]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/10/21/20161021-apache-drill/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/10/21/20161021-apache-drill/</id>
+    <published>2016-10-20T16:17:50.000Z</published>
+    <updated>2016-11-15T01:09:21.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="要旨">要旨</h1><p>jsonなどのデータを臨機応変に集計したいとき、あると思います。<br>もちろん自分でスクリプトを書くとかjqなどのコマンドを駆使して頑張るのもいいけど、<br><a href="https://drill.apache.org/" target="_blank" rel="external">Apache Drill</a>を使うと、SQLで集計できるので、SQLできる人ははかどりますよ！というお話。</p>
+<h1 id="本題">本題</h1><h2 id="Story">Story</h2><p>「今稼働しているVMから、名前がかぶっているインスタンスがあるか調べてくれない？」<br>たとえば、ある日突然お客さんからこんな依頼が来たとします。<br>そんなときも安心、そうApache Drillならね。</p>
+<h2 id="やりたいこと">やりたいこと</h2><p>CloudStackのAPIで取得できるVMの情報から、同じドメインに同じなまえのインスタンスが存在するか？ を調査したい！</p>
+<h2 id="データ">データ</h2><h3 id="JSONレイアウト">JSONレイアウト</h3><p>対象のデータは <a href="https://cloudstack.apache.org/api/apidocs-4.9/apis/listVirtualMachines.html" target="_blank" rel="external">こんな感じのJSON</a>が</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;listvirtualmachinesresponse&quot;: &#123;</div><div class="line">    &quot;count&quot;: 4896,</div><div class="line">    &quot;virtualmachine&quot;: [</div><div class="line">      &#123;</div><div class="line">       &quot;VMのJSON&quot;</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        &quot;VMのJSON&quot;</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>こんな感じにラップされてます。<br>では、このJSONをApacheDrillで集計してみましょう。</p>
+<h2 id="集計">集計</h2><h3 id="準備">準備</h3><p>インストールはMacならHomeBrewで<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install drill</div></pre></td></tr></table></figure></p>
+<h3 id="SQLの実行">SQLの実行</h3><p>準備は整ったので実際に集計してみましょう！</p>
+<h4 id="drillの起動">drillの起動</h4><p>まず、Drillを起動します。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">drill-embedded</div></pre></td></tr></table></figure></p>
+<p>起動すると、Drillのプロンプトが返ってくるので、そこにおもむろにSQLを叩き込みます。</p>
+<h4 id="SQLを実行する">SQLを実行する</h4><p>あとは、SQLを実行するだけ。<br>いつものSQLと違うのはFROM句でテーブルを指定せず、ファイルを指定するくらいです。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">select vms.vm.name, vms.vm.domain, count(*)</div><div class="line">from ( select flatten(t.listvirtualmachinesresponse.virtualmachine) as vm from dfs.`/Users/yenjoji/Downloads/listVirtualMachines.json` as t) as vms</div><div class="line">group by vms.vm.name, vms.vm.domain</div><div class="line">having count(*) &gt; 1</div><div class="line">order by vms.vm.name</div><div class="line">;</div></pre></td></tr></table></figure>
+<h3 id="おまけ">おまけ</h3><p>私は、みんな大好きエクセルで後加工したかったので、こんなオプションつけました。</p>
+<ul>
+<li><p>ヘッダを最初だけにする</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">!set headerinterval 0</div></pre></td></tr></table></figure>
+</li>
+<li><p>出力フォーマットをTSVにする</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">!set outputformat tsv</div></pre></td></tr></table></figure>
+</li>
+<li><p>出力をファイルに保存する</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">!record result.tsv</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>と、しておくとTSVになるので、Excelにはっつけてピボットテーブルでどうにかしたりなど加工し放題です。</p>
+<h1 id="感想">感想</h1><ul>
+<li>JSONをSQLでサクッと検索できるのはちょっとうれしい。</li>
+<li>1回使う手順を覚えてしまえば、2回め以降が楽になるし、ちょっと集計方法を変えたりなんかの対応が柔軟に出来る。</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="要旨">要旨</h1><p>jsonなどのデータを臨機応変に集計したいとき、あると思います。<br>もちろん自分でスクリプトを書くとかjqなどのコマンドを駆使して頑張るのもいいけど、<br><a href="https://drill.apache.org/" t]]>
+    </summary>
+    
+      <category term="drill" scheme="http://yenjoji.github.io/pages/pages/tags/drill/"/>
+    
+      <category term="JSON" scheme="http://yenjoji.github.io/pages/pages/tags/JSON/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Amazon ECR が思った以上に簡単だったのでDocker Private Registry はコレでいいんじゃないか]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/07/26/20160725-ecr-101/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/07/26/20160725-ecr-101/</id>
+    <published>2016-07-26T02:14:02.000Z</published>
+    <updated>2016-08-06T18:16:38.000Z</updated>
+    <content type="html"><![CDATA[<p>こんにちは。<br>みなさんはいかがお過ごしでしょうか?　私はすっかりDockerかぶれになっています。</p>
+<p>Dockerは気軽に環境を作ったり壊したりできる手軽さと、Virtualboxと比べてリソースをそこまで食わないのが嬉しいところですね。</p>
+<p>VagrantでVMを3つくらい起動した挙句メモリが足りなくなり、<br>Macがグレーの画面でハングアップなんていうVagrantあるあるからおさらばできるだけでもかなりのメリットがありますね。</p>
+<p>そんなDockerにすっかりかぶれてしまった私なので、当然CIはDroneを使うわけです。<br><a href="https://drone.io/" target="_blank" rel="external">drone</a>は DockerベースのCIサーバーで、特徴としては</p>
+<ul>
+<li>Docker上でビルドを行うので、常にクリーンな環境でビルドできる。</li>
+<li>設定がTravisCI、CircleCIのようにリポジトリのルートにおいた yaml ファイル一個で済むのでスマート＆Git管理下における。</li>
+</ul>
+<p>という感じの田中美奈子と同じくらいナウいCIサーバーです。</p>
+<p>詳しくは<a href="http://knowledge.sakura.ad.jp/tech/2729/" target="_blank" rel="external">この辺</a>を見ていただくとなんとなく特徴がわかると思います。</p>
+<p>そんなある日、プロジェクトで使っているCIサーバーであるDroneでOracleJDKをつかいたくなってしまいました。<br>OpenJDKのコンテナなら、Oracleから提供されているので<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">image: oracle/openjdk:8</div></pre></td></tr></table></figure></p>
+<p>などと、.drone.ymlに設定すれば、たやすく環境が手に入ります。<br>しかしながら、OracleJDKはライセンスの関係か、オフィシャルのコンテナイメージ用意されていないようです。</p>
+<p>ローカル環境で使うだけならば手元で docker build してあげればいいのですが、Droneちゃんは、レジストリからしかイメージを取得できないようでした。</p>
+<p>自前でプライベートレジストリを構築するという選択肢もありましたが、ここは将来的に ECS を使うことも見据えて ECR を使っておこうということになりました（自分の中で）。</p>
+<h1 id="まとめ">まとめ</h1><p>手順等も書きますが、そもそもそんなに難しくないですし、AWSの画面にコマンド一覧出るので、とりあえずここでは言いたいことだけ書きなぐっておきます。</p>
+<ul>
+<li>ECR簡単なので、Docker使っている場合は選択肢に入れていいと思います</li>
+<li>転送量課金なので、そこは気をつけたほうがいいかも</li>
+<li>現在バージニア、オレゴン、アイルランドでしか提供されていないので、それ以外のリージョンで「あれ？ 出てこない？」とかならないように注意</li>
+<li>EC2にIAMロールつけとくと、アクセスキーとか、ユーザーとか気にしなくていいからお気楽です(Amazonも推奨してます。)</li>
+</ul>
+<p>一応雑な手順も書きましたので、興味があったら以下手順も見てみてください。</p>
+<h1 id="手順">手順</h1><h2 id="Amazon_ECR_の準備">Amazon ECR の準備</h2><p>ECRは現在 3つのリージョンでしか使えません<a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_Console_Repositories.html" target="_blank" rel="external">この辺参照</a>。<br>なので、今回は us-east-1 RegionでECRを使いたいと思います。</p>
+<h3 id="ECR_Repository_の作成">ECR Repository の作成</h3><ol>
+<li>はじめてECSを使うとウィザードに誘導されます。今回はひとまずECRだけ用意するので「Store container images securely with Amazon ECR」だけにチェックを入れて進みます。</li>
+<li>次の画面でリポジトリ名（dockerのイメージ名）を設定すれば作成完了です。</li>
+</ol>
+<h3 id="ECR_イメージ作成用インスタンスの作成">ECR イメージ作成用インスタンスの作成</h3><ol>
+<li>EC2用IAMロール作成<br>今回は、アクセスキーの管理の手間を省くため、EC2のIAMロールに ECR関連の権限を付与することにします。そのため、先にEC2用のIAMロールを作っておきます<ol>
+<li>IAM -&gt; 「新しいロールの作成」</li>
+<li>適当なロール名を設定<ul>
+<li>「ECR_CREATER」とかなんでもいいと思います</li>
+</ul>
+</li>
+<li>AWS サービスロールから Amazon EC2 を選択</li>
+<li>「AmazonEC2ContainerRegistryPowerUser」あたりをチェックしてロールの作成</li>
+</ol>
+</li>
+<li>EC2インスタンスの作成<ol>
+<li>適当なイメージからEC2インスタンスを作成します<ul>
+<li>リージョンはどこでも良いので、いつも使っているリージョンで良いと思います</li>
+<li>AMIもdockerが使えればなんでも良いです。今回はAmazonLinuxにしました</li>
+<li>インスタンスタイプもまずは t2.micro とかで大丈夫です。足りなかったら後でスケールアップしましょう</li>
+<li>たくさんイメージを作る・使う場合はディスクを大きめにしておくといいかもしれません</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>イメージの作成</p>
+<ol>
+<li>作成したインスタンスへログイン</li>
+<li><p>dockerのインストール</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install docker</div></pre></td></tr></table></figure>
+</li>
+<li><p>dockerの起動</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service docker start</div></pre></td></tr></table></figure>
+</li>
+<li><p>イメージの作成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker build -t $&#123;dockerのイメージ名&#125; .</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>イメージをRepositoryへ登録</p>
+<ol>
+<li><p>ECRへのログイン</p>
+<ul>
+<li>aws ecr get-login でログイン文字列がもらえるのでバッククォートで直接実行するとログインできます。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`aws ecr get-login  --region us-east-1`</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>イメージへのタグ付け</p>
+<ul>
+<li>ecr のマニュアル通りです<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker tag $&#123;dockerのイメージ名&#125;:latest XXXXXXXXXXXXXX.dkr.ecr.us-east-1.amazonaws.com/$&#123;dockerのイメージ名&#125;:latest</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>イメージのPush</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker push XXXXXXXXXXXXXX.dkr.ecr.us-east-1.amazonaws.com/$&#123;dockerのイメージ名&#125;:latest</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="最後に">最後に</h1><p>こんな感じにDockerレジストリが作れてしまうとは！ と、私はひとりで感動してしまいました。<br>AWSなんでそれなりにお金はかかりますが、懐に余裕があれば選択肢の一つにしてもいいかも知れません。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>こんにちは。<br>みなさんはいかがお過ごしでしょうか?　私はすっかりDockerかぶれになっています。</p>
+<p>Dockerは気軽に環境を作ったり壊したりできる手軽さと、Virtualboxと比べてリソースをそこまで食わないのが嬉しいところですね。</p>
+<p>V]]>
+    </summary>
+    
+      <category term="docker" scheme="http://yenjoji.github.io/pages/pages/tags/docker/"/>
+    
+      <category term="AWS" scheme="http://yenjoji.github.io/pages/pages/tags/AWS/"/>
+    
+      <category term="ECR" scheme="http://yenjoji.github.io/pages/pages/tags/ECR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[DroneでECR上のイメージを使う]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/07/26/20160726-drone-with-ecr/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/07/26/20160726-drone-with-ecr/</id>
+    <published>2016-07-26T02:08:33.000Z</published>
+    <updated>2016-07-26T02:12:43.000Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="docker" scheme="http://yenjoji.github.io/pages/pages/tags/docker/"/>
+    
+      <category term="CI" scheme="http://yenjoji.github.io/pages/pages/tags/CI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ヌーボードは作れる！？]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/06/26/20160626-nu-board/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/06/26/20160626-nu-board/</id>
+    <published>2016-06-26T14:58:55.000Z</published>
+    <updated>2016-06-29T17:14:27.000Z</updated>
+    <content type="html"><![CDATA[<p>こんにちは。</p>
+<p>先日、知人に私の月々のお小遣いの額を正直に言ったら、可哀想な表情をされました。<br>それでも私は元気です。円城寺です。</p>
+<p>話は変わりますが、<a href="https://obun.jp/original/nuboard/" target="_blank" rel="external">nu board</a>をご存知でしょうか？</p>
+<p>スケッチブックのような見た目のホワイトボードのノートです。</p>
+<p>ホワイトボード愛好家の私としては、以前からこのノートがほしかったのですが、<a href="https://www.amazon.co.jp/dp/B00E5645VK/" target="_blank" rel="external">意外と高価</a>でなかなか手が出ませんでした。</p>
+<p>だが欲しいものは欲しい。<br>「買えぬなら、作ってしまえホトトギス。」<br>と誰かが言ったとか言わなかったとか。</p>
+<p>よくよく見ると、100円ショップで買えるようなものでそれっぽいものが作れるんじゃないかという気がしてきました。</p>
+<p><a href="http://www.obc.co.jp/corporate/outline/cm/cm017.html" target="_blank" rel="external">「よし、新プロジェクトの旗揚げだ！」</a></p>
+<h1 id="材料">材料</h1><p>今回はすべてダイソーで揃えました。</p>
+<ul>
+<li>ホワイトボードシート x 2</li>
+<li><p>厚紙 黒 3枚入り  x 1<br><img src="/pages/images/20160626_001.jpg" alt=""></p>
+</li>
+<li><p>カードリング x 1<br><img src="/pages/images/20160626_002.jpg" alt=""></p>
+</li>
+</ul>
+<p>今回はプロトタイプ一回目ということで、今回は2ページ構成でためしてみることにしました。</p>
+<p>ちなみに材料費はここまでで <strong>432円</strong> です。 すこぶる財布に優しいです。</p>
+<p>この他に、<br>カッター、カッターマット、穴あけパンチ、定規 が作業に必要ですが、自宅にあったので今回は材料費には入れません。</p>
+<h1 id="工作">工作</h1><p>もはや解説の余地もない気がしますが一応作業手順をば。</p>
+<ol>
+<li><p>ホワイトボード部分の作成<br>厚紙の両面にホワイトボードを貼ります。<br>今回購入したホワイトボードは裏側がシールになっているため、そのまま厚紙に貼ってしまいます。<br>特にコツはないと思いますが、私は先ずホワイトボード上端部分だけ粘着面を出し、<br><img src="/pages/images/20160626_003.jpg" alt=""><br>位置あわせをしてから残りの部分を貼りました。</p>
+</li>
+<li><p>穴を開ける<br>パンチで適当に穴を開けます。<br>後々市販のリフィルなどを使いたいという場合は使う予定のリフィルと穴の位置を合わせておくといいでしょう。</p>
+</li>
+<li><p>カードリングで冊子状にまとめる<br>開けた穴にカードリングを通して、冊子状にすれば出来上がりです。</p>
+</li>
+</ol>
+<p><img src="/pages/images/20160626_004.jpg" alt=""></p>
+<h1 id="まとめ">まとめ</h1><p>500円かからずにnu boardっぽいものは作れました。</p>
+<p>意外と厚紙がしっかりしているので、机の上でなくても使えそうです。<br>何より、ヌーボードのラインナップにないB4サイズというのがいいです。かばんの収まりがいまいちですが。</p>
+<p>ただ、ページを本家と同じく8ページに増やすと材料費だけで1500円くらいにはなってしまうので<br>全体的な出来栄えを考えると4000円くらいなら買ってしまってもいいかなとも思いました。</p>
+<p>まぁ、工作も簡単なので今後もバージョンアップを考えていきたいと思います。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>こんにちは。</p>
+<p>先日、知人に私の月々のお小遣いの額を正直に言ったら、可哀想な表情をされました。<br>それでも私は元気です。円城寺です。</p>
+<p>話は変わりますが、<a href="https://obun.jp/original/nuboard/" ta]]>
+    </summary>
+    
+      <category term="lifehack" scheme="http://yenjoji.github.io/pages/pages/tags/lifehack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Dockerでコンテナ2個立ち上げるならComposeしちゃえばいいじゃない]]></title>
+    <link href="http://yenjoji.github.io/pages/pages/2016/06/20/20160620-docker-compose/"/>
+    <id>http://yenjoji.github.io/pages/pages/2016/06/20/20160620-docker-compose/</id>
+    <published>2016-06-20T10:39:50.000Z</published>
+    <updated>2016-06-20T10:44:53.000Z</updated>
+    <content type="html"><![CDATA[<p>みなさん、Docker使ってますか？</p>
+<p>私は使ってません。</p>
+<p>しかし日常的には使っていないものの、ちょっと新しいプロダクト試そうかなと公式サイトのQuickstartとかを眺めると、Dockerのコンテナが用意されているケースが増えてきた気がします。世間の流れですね。いわゆるBigWaveです。乗らないとイカンやつです。</p>
+<p>そんな中、現在のプロジェクトで<a href="https://getkong.org/" target="_blank" rel="external">KONG</a>というミドルウェアを使うことになりました。</p>
+<p>KONGがどういうものかは <a href="http://www.ryuzee.com/contents/blog/7048" target="_blank" rel="external">この辺（Ryuzee）</a> や <a href="http://dev.classmethod.jp/etc/kong-api-aggregator/" target="_blank" rel="external">この辺（クラメソ）</a> を読むとなんとなくわかるかもしれません。</p>
+<p>同じカテゴリのプロダクトとしては <a href="https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf" target="_blank" rel="external">WEB API Degign</a>を配布している、<a href="http://apigee.com/about/" target="_blank" rel="external">Apigee</a>　が有名です。</p>
+<p>〜閑話休題〜</p>
+<p>このKONGなる謎のミドルウェア。使ったことがないので、どんなものかもわかりません。<br>最終的にはAWSに環境を構築するので、それを待つのもいいのですが、さしあたってどういうものかを試してみたいのが人情ってやつです。</p>
+<p>そんな時、今まではVagrantなどで環境を構築して試用するのが常でしたが、最近ではDockerが流行りのようです。時の流れってやつですね。</p>
+<p>実際、公式のインストレーションのページでもDockerが筆頭になっていますし、ここはDockerで行くべきなんだと思います。</p>
+<p>ということで、公式の手順を読んでみると、どうやらKONGは　DB( cassandra または postgresql )と KONG本体の2つのコンテナが必要のようです。</p>
+<p>ここは<a href="https://getkong.org/install/docker/" target="_blank" rel="external">手順</a>通りにおとなしくDockerコマンドを2回粛々と実行するのが大人のたしなみという説もあるかもしれませんが、違いのわかる大人になるため、エレガントにdocer-composeコマンド１回で２つのコンテナを自在に操って見たいと思います。</p>
+<h2 id="手順">手順</h2><p>ということで、任意のフォルダに “docker-compose.yml” をこの内容で作成します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">kong-database:</div><div class="line">  image: postgres:9.4</div><div class="line">  ports:</div><div class="line">    - 5432:5432</div><div class="line">  environment:</div><div class="line">    POSTGRES_USER: kong</div><div class="line">    POSTGRES_DB: kong</div><div class="line"></div><div class="line">kong:</div><div class="line">  image: mashape/kong</div><div class="line">  links:</div><div class="line">    - kong-database:kong-database</div><div class="line">  ports:</div><div class="line">    - 8000:8000</div><div class="line">    - 8443:8443</div><div class="line">    - 8001:8001</div><div class="line">    - 7946:7946</div><div class="line">    - 7946:7946/udp</div><div class="line">  environment:</div><div class="line">    DATABASE: postgres</div></pre></td></tr></table></figure>
+<p>必要ならdocker-machineを準備し<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ docker-machine create -d virtualbox kong</div><div class="line">$ eval &quot;$(docker-machine env kong)&quot;</div></pre></td></tr></table></figure></p>
+<p>おもむろに docker-compose up を実行するだけで、さくっとKONGが起動っ</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$ docker-compose up</div><div class="line">Starting vagrant_kong-database_1...</div><div class="line">Starting vagrant_kong_1...</div><div class="line">Attaching to vagrant_kong-database_1, vagrant_kong_1</div><div class="line">kong-database_1 | The files belonging to this database system will be owned by user &quot;postgres&quot;.</div><div class="line">kong-database_1 | This user must also own the server process.</div><div class="line">−中略−</div><div class="line">kong_1          | [INFO] kong 0.8.3</div><div class="line">kong_1          | [INFO] Using configuration: /etc/kong/kong.yml</div><div class="line">kong_1          | [INFO] Setting working directory to /usr/local/kong</div><div class="line">kong_1          | [INFO] database...........postgres host=kong-database database=kong user=kong port=5432</div><div class="line">kong_1          | [INFO] dnsmasq............address=127.0.0.1:8053 dnsmasq=true port=8053</div><div class="line">kong_1          | [INFO] Leaving cluster..</div><div class="line">kong_1          | [ERR] serf is already running</div><div class="line">kong_1          | [ERR] Could not start Kong</div></pre></td></tr></table></figure>
+<p>エラーになりました!!!!</p>
+<p>が、めげずにKONGへアクセスしてみると、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ curl http://192.168.99.100:8001/status</div><div class="line">&#123;&quot;server&quot;:&#123;&quot;connections_handled&quot;:7,&quot;connections_reading&quot;:0,&quot;connections_active&quot;:1,&quot;total_requests&quot;:7,&quot;connections_accepted&quot;:7,&quot;connections_writing&quot;:1,&quot;connections_waiting&quot;:0&#125;,&quot;database&quot;:&#123;&quot;oauth2_tokens&quot;:0,&quot;jwt_secrets&quot;:0,&quot;response_ratelimiting_metrics&quot;:0,&quot;keyauth_credentials&quot;:0,&quot;oauth2_authorization_codes&quot;:0,&quot;acls&quot;:0,&quot;apis&quot;:0,&quot;hmacauth_credentials&quot;:0,&quot;consumers&quot;:0,&quot;ratelimiting_metrics&quot;:0,&quot;basicauth_credentials&quot;:0,&quot;nodes&quot;:1,&quot;oauth2_credentials&quot;:0,&quot;plugins&quot;:0&#125;&#125;</div></pre></td></tr></table></figure>
+<p>正常にアクセスできる!!!<br>KONGの起動メッセージがなんとなくすっきりしませんが、何故か起動完了。</p>
+<h2 id="まとめ">まとめ</h2><p>Docker Composeを使うことにより、コンテナ起動の手間を省いたり「コンテナ起動手順」の代わりに”docker-compose.yml”を配布するなんてこともできたりして、<br>環境構築のめんどくささが減るんじゃないかなぁ。減るといいなぁ。そんな感じです。</p>
+<p>みなさんも良いDokcer Lifeを！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>みなさん、Docker使ってますか？</p>
+<p>私は使ってません。</p>
+<p>しかし日常的には使っていないものの、ちょっと新しいプロダクト試そうかなと公式サイトのQuickstartとかを眺めると、Dockerのコンテナが用意されているケースが増えてきた気がします。]]>
+    </summary>
+    
+      <category term="docker" scheme="http://yenjoji.github.io/pages/pages/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[アジャイルジャパン ２０１６に参加しました]]></title>
@@ -539,9 +1162,9 @@
     <![CDATA[<h1 id="動機">動機</h1><p>前回の<a href="./2015/04/09/raspi-xfd/">ズゴックでのXFD</a>と<a href="./2015/07/14/mackerel-raspi-temp/">ズゴック温度計</a>から気づくとはや半年以上]]>
     </summary>
     
-      <category term="Golang" scheme="http://yenjoji.github.io/pages/pages/tags/Golang/"/>
-    
       <category term="IoT" scheme="http://yenjoji.github.io/pages/pages/tags/IoT/"/>
+    
+      <category term="Golang" scheme="http://yenjoji.github.io/pages/pages/tags/Golang/"/>
     
   </entry>
   
@@ -559,7 +1182,7 @@
 <li>価格<br>¥0</li>
 </ul>
 <h1 id="感想">感想</h1><p>ゲーミフィケーションとは、どういうことで、どのようにサービスにゲーム要素を取り込み、それによってサービスの魅力を増大させるかということについて、非常にわかりやすく書かれた本です。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#12300;&#12466;&#12540;&#12511;&#12501;&#12451;&#12465;&#12540;&#12471;&#12519;&#12531;&#12387;&#12390;&#12289;&#12496;&#12483;&#12472;&#12539;&#12509;&#12452;&#12531;&#12488;&#12420;&#12524;&#12505;&#12523;&#12398;&#35201;&#32032;&#12434;&#20837;&#12428;&#12428;&#12400;&#12356;&#12356;&#12435;&#12391;&#12375;&#12423;&#12301;&#12392;&#35328;&#12431;&#12428;&#12427;&#12371;&#12392;&#12364;&#12354;&#12426;&#12414;&#12377;&#12290;&#10;&#12371;&#12371;&#12391;&#12356;&#12358;&#12466;&#12540;&#12512;&#12398;&#35201;&#32032;&#12399;&#12381;&#12398;&#12424;&#12358;&#12394;&#34920;&#38754;&#30340;&#12394;&#12371;&#12392;&#12391;&#12399;&#12354;&#12426;&#12414;&#12379;&#12435;&#12290;&#10;&#12381;&#12428;&#12424;&#12426;&#12418;&#12466;&#12540;&#12512;&#12398;&#35201;&#32032;&#12364;&#12289;&#12300;&#26412;&#26469;&#12398;&#12469;&#12540;&#12499;&#12473;&#12398;&#38754;&#30333;&#21619;&#12301;&#12354;&#12427;&#12356;&#12399;&#12300;&#12518;&#12540;&#12470;&#12540;&#12398;&#21033;&#29992;&#30446;&#30340;&#12301;&#12392;&#27491;&#12375;&#12367;&#12388;&#12394;&#12364;&#12387;&#12390;&#12356;&#12427;&#12363;&#12393;&#12358;&#12363;&#12364;&#22823;&#20999;&#12394;&#12398;&#12391;&#12377;&#12290;&#10;&#12518;&#12540;&#12470;&#12540;&#12364;&#12381;&#12398;&#12469;&#12540;&#12499;&#12473;&#12363;&#12425;&#24471;&#12383;&#12356;&#12392;&#32771;&#12360;&#12390;&#12356;&#12427;&#20385;&#20516;&#12434;&#12375;&#12387;&#12363;&#12426;&#12392;&#29702;&#35299;&#12377;&#12427;&#12371;&#12392;&#12289;&#12381;&#12428;&#12364;&#24471;&#12425;&#12428;&#12427;&#12424;&#12358;&#12395;&#12377;&#12427;&#12371;&#12392;&#12420;&#12289;&#10;&#12354;&#12427;&#12356;&#12399;&#24471;&#12425;&#12428;&#12390;&#12356;&#12427;&#12392;&#12356;&#12358;&#23455;&#24863;&#12364;&#25345;&#12390;&#12427;&#12424;&#12358;&#12395;&#12377;&#12427;&#12371;&#12392;&#12434;&#12289;&#12466;&#12540;&#12512;&#12398;&#35201;&#32032;&#12434;&#20351;&#12387;&#12390;&#21152;&#36895;&#12377;&#12427;&#12289;&#12371;&#12428;&#12364;&#12466;&#12540;&#12511;&#12501;&#12451;&#12465;&#12540;&#12471;&#12519;&#12531;&#12398;&#32771;&#12360;&#26041;&#12391;&#12377;&#12290;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">「ゲーミフィケーションって、バッジ・ポイントやレベルの要素を入れればいいんでしょ」と言われることがあります。</div><div class="line">ここでいうゲームの要素はそのような表面的なことではありません。</div><div class="line">それよりもゲームの要素が、「本来のサービスの面白味」あるいは「ユーザーの利用目的」と正しくつながっているかどうかが大切なのです。</div><div class="line">ユーザーがそのサービスから得たいと考えている価値をしっかりと理解すること、それが得られるようにすることや、</div><div class="line">あるいは得られているという実感が持てるようにすることを、ゲームの要素を使って加速する、これがゲーミフィケーションの考え方です。</div></pre></td></tr></table></figure>
 <p>まずは、この一文によってゲーミフィケーションの誤解と、ゲーミフィケーションについての正しい定義を提示してくれます。<br>これだけでも読んだ価値が有ります。</p>
 <p>あとは、筆者の理論による、ゲーミフィケーションを支える、9つの要素からなる「g-デザインブロック」という概念について、丁寧に解説されています。</p>
 <p>ゲーミフィケーションとは、コテ先の技ではなく、サービスについてよく考えて、サービス似あわせたゲーム化をしなければ成功しないと感じました。</p>
@@ -618,7 +1241,7 @@
 <p>デブラブでいろんな有名人に声をかけまくったので、しばらくビックタレントの公園が続くそうなので、今後も期待できそうです。</p>
 <p>偶数月に開催しているそうで、次回は4月でPO Studyの関さんがメインスピーカーだそうです。</p>
 <h1 id="内容">内容</h1><h2 id="イントロ">イントロ</h2><p>ちょっと遅れて到着したので、最初の説明は聞けませんでした。<br>開いている席に着席すると、まずは周りの参加者と3人から4人でグループを作って</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#31169;&#12399;&#10;&#20170;&#12399;XX&#12375;&#12390;&#12414;&#12377;&#10;&#12450;&#12472;&#12515;&#12452;&#12523;&#32076;&#39443;&#12399;XX&#24180;&#12391;&#12377;&#10;&#10;&#24471;&#24847;&#12394;&#35328;&#35486;&#12399;XX&#12391;&#12377;&#10;&#20170;&#24745;&#12435;&#12391;&#12427;&#12371;&#12392;&#12399;XX&#12391;&#12377;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">私は</div><div class="line">今はXXしてます</div><div class="line">アジャイル経験はXX年です</div><div class="line"></div><div class="line">得意な言語はXXです</div><div class="line">今悩んでることはXXです</div></pre></td></tr></table></figure>
 <p>のフォーマットに合わせて自己紹介をしました。</p>
 <p>自己紹介後はまずLTタイムです。</p>
 <h2 id="LT">LT</h2><h3 id="LT1:_たじさん_「俺がKen_Rubinから学んだこと：SM研修報告〜たじ編〜」">LT1: たじさん 「俺がKen Rubinから学んだこと：SM研修報告〜たじ編〜」</h3><p><iframe src="//www.slideshare.net/slideshow/embed_code/key/yXJsEdUSwvxFEm" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/masayataji/certified-scrummasterlt-ver" title="Certified scrummaster研修について(LT ver.)" target="_blank">Certified scrummaster研修について(LT ver.)</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/masayataji">Masaya Taji</a></strong> </div></p>
@@ -893,866 +1516,9 @@
     <![CDATA[<p>2016/2/15 に開催された<br><a href="http://www.java-users.jp/?p=2350" target="_blank" rel="external">【東京】JJUGナイトセミナー　「Java EE 7徹底入門」の著者が解説！ - Ja]]>
     </summary>
     
-      <category term="JJUG" scheme="http://yenjoji.github.io/pages/pages/tags/JJUG/"/>
-    
       <category term="java" scheme="http://yenjoji.github.io/pages/pages/tags/java/"/>
     
-  </entry>
-  
-  <entry>
-    <title><![CDATA[「伝える力」を読みました]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2016/02/07/20160207-read-power-of-inform/"/>
-    <id>http://yenjoji.github.io/pages/pages/2016/02/07/20160207-read-power-of-inform/</id>
-    <published>2016-02-06T16:14:42.000Z</published>
-    <updated>2016-03-05T18:04:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/4569690815/" target="_blank" rel="external">伝える力</a></li>
-<li>読み終わった日<br>2016/2/7</li>
-<li>所要時間<br>3時間くらい？</li>
-<li>購入元<br>BookOff</li>
-<li>価格<br>¥100</li>
-</ul>
-<h1 id="感想">感想</h1><p>テレビなどでお馴染みの池上彰さんの著書です。</p>
-<p>池上さんの実体験に基づく、人に物事を伝える伝え方、と伝えるための力の鍛え方が書かれています。</p>
-<p>”まず「自分は何も知らない」ことを知り、他人から謙虚に学ぶことです。この姿勢さえ持ち続けていれば、コミュニケーション能力は確実に向上していきます”<br>”「利便性」という言葉は便利ですが（中略）便利な言葉を使っていると、使う人が思考停止になってしまう恐れがあることを、知っておきましょう。”</p>
-<p>など、心構えから、具体的な注意しなければいけないポイントなど「伝える力」を高めるためのプラクティス、エッセンスが詰まっています。<br>さすがと言うか文章も読みやすいですし、ボリュームも新書サイズなので、サラッと読んで見ることをおすすめします。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/4569690815/" target="_blank" rel="external">伝える力</a></li>
-<li>読み終わ]]>
-    </summary>
-    
-      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[「ラーメン二郎にまなぶ経営学 ―大行列をつくる26（ジロー）の秘訣」を読みました]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2016/01/24/20160124-business-management-learned-from-jiro/"/>
-    <id>http://yenjoji.github.io/pages/pages/2016/01/24/20160124-business-management-learned-from-jiro/</id>
-    <published>2016-01-24T03:38:51.000Z</published>
-    <updated>2016-02-27T15:33:33.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/4492502130/" target="_blank" rel="external">ラーメン二郎にまなぶ経営学 ―大行列をつくる26（ジロー）の秘訣</a></li>
-<li>読み終わった日<br>2016/1/24</li>
-<li>所要時間<br>12時間くらい？（のべ14日間）</li>
-<li>購入元<br>BookOff</li>
-<li>価格<br>¥200</li>
-</ul>
-<h1 id="感想">感想</h1><p><a href="http://www.amazon.co.jp/dp/4492502130/" target="_blank" rel="external">ラーメン二郎にまなぶ経営学 ―大行列をつくる26（ジロー）の秘訣</a></p>
-<p>昨年の6月に職場の先輩ジロリアンにエスコートしてもらい、ラーメン二郎目黒店を経験してよりラーメン二郎がちょっとしたブームになっていた事もあり手にとってみました。</p>
-<p>内容としては、マーケティングの基本的な考え方が時に自然に、時に若干強引にラーメン二郎と絡めて解説されています。</p>
-<p>ラーメン二郎が好きでマーケティングに初心者の私のような方にはおすすめです。<br>楽しく読めると思います。（私は楽しかったです）</p>
-<p>著者の二郎への愛情と、時に自然に時に強引に二郎と経営学（マーケティング）的な考え方を解説いく方式は、二郎好きな私にとっては飽きずに楽しく読めて良かったです。<br>肝心の内容も、マーケティングに用いる様々な考え方が解説されており、初心者の私でも特に挫折することなく読めました。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/4492502130/" target="_blank" rel="external">ラーメン二郎にまなぶ経営学 ―大行列をつくる]]>
-    </summary>
-    
-      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[2016/1/19 Regional SCRUM GATHERING® Tokyo 2016 に参加しました（二日目）]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2016/01/19/20160119-rsgt2016-day2/"/>
-    <id>http://yenjoji.github.io/pages/pages/2016/01/19/20160119-rsgt2016-day2/</id>
-    <published>2016-01-19T01:03:26.000Z</published>
-    <updated>2016-01-27T05:11:32.000Z</updated>
-    <content type="html"><![CDATA[<p>1/18,19の二日間にわたって開催された <a href="http://2016.scrumgatheringtokyo.org/#top" target="_blank" rel="external">Regional SCRUM GATHERING® Tokyo 2016</a>に参加してきました。<br>一日目に降った雪は残っているものの、2日目はとくに遅延もなく会場に着けました。</p>
-<p><a href="http://togetter.com/li/927646" target="_blank" rel="external">togetter</a> はこちら</p>
-<h1 id="Economically_Sensible_Scrum">Economically Sensible Scrum</h1><p><a href="http://www.amazon.co.jp/dp/4798130508/）の著者である、[Kenneth Rubin](http://www.innolution.com/" target="_blank" rel="external">エッセンシャルスクラム</a>氏によるKeyNote</p>
-<p><strong>経済合理的性</strong> を何度も強調していました。<br>Scrumのベストプラクティスや、こうすべきという話はもちろん根拠があって参考にすべきだが、<br>結局儲かってなんぼなので、そういう観点であえてベストプラクティスに沿わない選択をするケースもある。</p>
-<p>大事なのは <strong>経済合理的性</strong> ということでした。</p>
-<p>例えば、一日目のキーノートではフィーチャーチームがいいよという話だったそうですが、<br>経済的合理性がコンポーネントチームにあれば、コンポーネントチームと言う選択肢も取るべきだろうといったことも言及されていました。</p>
-<p>確かに、儲からないことにはどんなに理想的なプラクティス、プロセス出会っても事業が継続できないですよねぇ。</p>
-<p>「Scrumに従う必要はあるがそれだけでは十分ではない、経済合理性のあるScrumをする必要がある」</p>
-<h1 id="レゴスクラムの覚醒_/_The_Lego_Scrum_Awakens">レゴスクラムの覚醒 / The Lego Scrum Awakens</h1><p><a href="http://www.slideshare.net/kdmsnr/legoscrumawakens20160119" target="_blank" rel="external">スライド</a></p>
-<p>XP祭り2015の基調講演や、XPの第二版を始め様々な良書の翻訳もされている角さんによるセッション。<br>度々有償でセミナーが開催されているレゴスクラムは<br>「全体性」があり「経験学習モデル」で効果的に学習でき「開発者以外も参加」できる。<br>この点からスクラムの学習に最適という解説でした。</p>
-<h2 id="レゴスクラム">レゴスクラム</h2><p><a href="http://www.lego4scrum.com/translations/" target="_blank" rel="external">レゴスクラムのマニュアルは翻訳されている</a>のでぜひやってみてくださいとのことでした。</p>
-<p>印象に残ったのは「みうらじゅん＆タモリ理論」からのワークショップ疲れ→もはや「ゲームしかない！」の流れです。</p>
-<p>セッションを聞いて思ったのは、初期投資は必要な物の、紙飛行機ワークショップの代わりにでもぜひやってみたいと感じ米sた。</p>
-<h1 id="フィリピンのスタートアップにスクラムを導入しようとしてみたお話">フィリピンのスタートアップにスクラムを導入しようとしてみたお話</h1><p>アジア圏に可能性を感じた！と言っていたと思っていたらほんとにそっちの会社に転職して、来月からダナンに行くという藤村さんのセッション。</p>
-<p>内容は<a href="http://www.slideshare.net/aratafuji/ss-57219506" target="_blank" rel="external">スライド</a>を見ていただくとして。</p>
-<p>非常にアツく面白いセッションでした。</p>
-<h1 id="金融系ＩＴ企業におけるスクラムへの挑戦">金融系ＩＴ企業におけるスクラムへの挑戦</h1><p>ニッセイ情報テクノロジー株式会社の社内でのScrum導入のお話。</p>
-<p>publickeyで記事になってました<a href="http://www.publickey1.jp/blog/16/itregional_scrum_gathering.html" target="_blank" rel="external">前編</a><a href="http://www.publickey1.jp/blog/16/itregional_scrum_gathering1.html" target="_blank" rel="external">後編</a></p>
-<h5 id="チームがScrumを導入するときに組織としてのサポートは重要">チームがScrumを導入するときに組織としてのサポートは重要</h5><ul>
-<li>今までのウォータフォールベースの社内標準プロセスから逸脱する許可を得た</li>
-<li>看板などの掲示物はセキュリティ的に問題ないと説得した</li>
-</ul>
-<h5 id="立ち上がりをスムーズにする試み">立ち上がりをスムーズにする試み</h5><ul>
-<li>アジャイルコーチをおねがいした</li>
-</ul>
-<h5 id="周りからみて楽しく見えるような工夫をした">周りからみて楽しく見えるような工夫をした</h5><ul>
-<li>スプリントごとにスローガンを決めた</li>
-<li>プロジェクト公式キャラクターを作った</li>
-<li>お菓子神社をつくった</li>
-</ul>
-<h5 id="報告に工夫をした">報告に工夫をした</h5><ul>
-<li>WBSなどの旧来の報告方式から</li>
-<li>プロダクトバーンアップチャート</li>
-<li>スプリントバーンダウンチャート</li>
-</ul>
-<h5 id="やってみて">やってみて</h5><ul>
-<li>価値のあるものに注力</li>
-<li>フィードバック</li>
-<li>テストツールが充実した</li>
-<li>自主的な行動</li>
-<li>コミュニケーションの活性化</li>
-<li>モチベーションUP</li>
-<li>自分たちでやってる感</li>
-</ul>
-<h1 id="People_As_the_Conveyer_of_Knowledge_(知識は人が運ぶ)">People As the Conveyer of Knowledge (知識は人が運ぶ)</h1><p>平鍋さんによるおはなし。</p>
-<p>当日のスライドの日本語版の<a href="http://www.slideshare.net/hiranabe/nonakas-scrum-phronetic-leadership-and-requirements-development" target="_blank" rel="external">スライド</a></p>
-<ul>
-<li>スクラムは海外発祥と思っているかもしれませんが、その源流は日本人が発表した<a href="https://hbr.org/1986/01/the-new-new-product-development-game" target="_blank" rel="external">論文</a></li>
-<li>SECIモデルを利用してのプロダクト開発には暗黙知の共有が重要である。</li>
-<li>それ故プロダクト開発は（角さんのセッションでもあった）「経験学習モデル」と学びが重要。<ul>
-<li>松下電器がホームベーカリーを開発した時はエンジニアが一番好きなパンを作っている職人に弟子入りした<ul>
-<li>知識は暗黙知が多く、ドキュメントだけでは伝えられない</li>
-<li>ソフトウェアは共感で繋いでいく</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>究極のプロダクトオーナーは何を作るのかを共感</li>
-</ul>
-<h3 id="野中先生はヨーダ"><strong>野中先生はヨーダ</strong></h3><ul>
-<li><p>とあるセミナーでの質問「ステークホルダーが多くて調整が大変です、どうすればいいでしょう」</p>
-<ul>
-<li>合宿をしなさい</li>
-</ul>
-</li>
-<li><p>合宿をすると一日目で形式知ができる</p>
-<ul>
-<li>食事して、メンバーのバックグラウンドがわかり</li>
-<li>なぜここにいるのかというはなしになり</li>
-<li><strong>そこからプロダクト開発の話が始まる</strong></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="以下メモ。">以下メモ。</h1><h1 id="RSGT2016_Day_2_Scrum_alliance_talk">RSGT2016 Day 2 Scrum alliance talk</h1><p>Forbs 100 -&gt; 今は一社しか残っていない→変化に適用できていない→変化に適用することが必要</p>
-<h1 id="Economically_Sensible_Scrum-1">Economically Sensible Scrum</h1><p>大きな組織ではチームレベルではScrumがうまく行っているが、収益ができてない<br>→経済的合理性がないから<br>→阻害要因<br><strong>経済合理性のあるスクラムをやってほしい</strong></p>
-<h3 id="Scrumの概要説明">Scrumの概要説明</h3><p>→ Scrumは成功に必要だが、十分ではない</p>
-<p>Scrumに違反しない＝Scrumで成功 とはいえない</p>
-<h2 id="4つの阻害要因">4つの阻害要因</h2><ul>
-<li>アジャイル原則に沿ってない</li>
-<li>アジャイルの原則を社内に適用できていない</li>
-<li><p>経済合理性が考慮されていない？</p>
-</li>
-<li><p>経済合理性の中でアジャイル原則を適当できていない</p>
-</li>
-</ul>
-<p>→ スクラムとその原則を理解する必要がある</p>
-<h2 id="経済合理性のあるScrum">経済合理性のあるScrum</h2><p>ライフサイクルプロフィット<br>→違った変数で表現されるプロダクトの価値を比べる時の尺度？</p>
-<h3 id="遅延">遅延</h3><h3 id="変更コスト">変更コスト</h3><h3 id="JITの誤解">JITの誤解</h3><p>ScrumなのでJITでやるます→見通しは立てません は間違い→バランスが必要<br>→見通ししすぎ→推測しすぎ沼<br>→すべてをJITで→Sprint1に入ってストーリー作るの？<br>→事前作業は必要なやる、だがやり過ぎない</p>
-<h3 id="WIPの問題">WIPの問題</h3><p>ソフトウェアの在庫<br>→見えないから、ないと言われがち<br>→在庫を見える化すればいい</p>
-<p>ソフトウェア開発の最もかかるコスト<br>→人件費<br>→テスターが60%しか稼働していなかったらそれは無駄ですね<br>→Projectを掛け持ちして稼働率を100%にする→ムダがなくなりました→これはだめだよね。</p>
-<p>リレーのメタファ<br>→リレー選手の稼働率は25%<br>→残りの75%はどうする？<br>→すきま時間に別の競技に出る<br>→そうではない<br>→リレーの目的からすれば稼働率100%ではなくて、25%でバトンを誰よりも早く繋げば最も価値がある。<br>→稼働率100%はプロダクトの価値を高めない、収益性は上がらない。<br>→バトンがつながらない時のロス</p>
-<p>[参考]バリューストリームマップ</p>
-<p>Idle Workに注目しない！</p>
-<p>キューイングすることの無駄<br>→Fast flexible flow</p>
-<h3 id="計画">計画</h3><h3 id="バリューチェーン">バリューチェーン</h3><h3 id="Portfolio_Planning">Portfolio Planning</h3><ul>
-<li><p>遅い車（トラクター）<br>→ボトルネックになる→遅延コストがかかる</p>
-</li>
-<li><p>アジャイルの原則をポートフォリオレベルでは使わない</p>
-</li>
-</ul>
-<h3 id="パートナー">パートナー</h3><p>→アジャイル開発の契約書を作るべき</p>
-<h3 id="変化への抵抗">変化への抵抗</h3><p>→ 変わることに対して抵抗勢力がある</p>
-<h3 id="全体が見えていない">全体が見えていない</h3><p>→ システムレベルでの最適化をすべき</p>
-<h2 id="組織構造を経済合理性のある形にあってない">組織構造を経済合理性のある形にあってない</h2><h3 id="マルチタスク">マルチタスク</h3><ul>
-<li>稼働率を上げるためにマルチプロジェクトとか<br>→ ダメです</li>
-<li><p>マルチタスクは能率を下げる</p>
-<ul>
-<li>1prj = 70% の付加価値を提供できる</li>
-<li>5prj = 30% の付加価値しか提供できない<br>→マルチタスクは経済合理性がない</li>
-</ul>
-<p>2pararellだとちょっと効率が上がる<br>→ 1プロジェクト目がブロックされたら2つ目に逃げられるから？</p>
-</li>
-</ul>
-<h3 id="T字スキル">T字スキル</h3><ul>
-<li>BROAD + DEEP</li>
-</ul>
-<h3 id="長生きチーム">長生きチーム</h3><ul>
-<li><p>プロダクトごとにチームを作るのは経済的に良くない<br>→チームを解散すべきではない</p>
-</li>
-<li><p>消防士<br>→チームを解散させると効率が下がる</p>
-</li>
-</ul>
-<p>→ チームの経済効率性を考える</p>
-<h4 id="チームの分け方">チームの分け方</h4><ul>
-<li><p>コンポーネントチーム<br>→ GUI・Serversideなどで分割されている</p>
-</li>
-<li><p>フィーチャーチーム<br>→クロスファンクショナル<br>→クロスコンポーネント</p>
-</li>
-</ul>
-<p><strong>コンポーネントチームに取ってフィーチャーなものが、フィーチャーチームにはタスクである</strong></p>
-<p>アジャイル界隈ではコンポーネントチームは良くない、フィーチャーチームがおすすめと言われている</p>
-<p>コンポーネントチームで複数のフィーチャーを実装しようとすると、バトンが下に落ちた状態になる。<br>→チーム間のコンセンサスが取れない？？</p>
-<ul>
-<li>この辺よくわからん？？？</li>
-</ul>
-<h3 id="経済性にしたがってスケールしましょう">経済性にしたがってスケールしましょう</h3><h2 id="まとめ">まとめ</h2><ul>
-<li>Scrumに従う必要はあるがそれだけでは十分ではない、経済合理性のあるScrumをする必要がある</li>
-</ul>
-<h2 id="質問">質問</h2><ul>
-<li><p>コンポーネントチームのPO ＝ テックリード<br>→ テックリードはビジネスをあまり考えない<br>→ コンポーネントチームをなくす時も経済的な合理性があるならよい</p>
-<ul>
-<li>消防署は東京で一個とかはありえないですよね<br>→ そういった場合は各区に消防署はあるべき</li>
-</ul>
-</li>
-</ul>
-<h3 id="フィーチャーチーム、コンポーネントチームにするにせよ、マルチタスクと考えるとT型スキルにはならないのでは？">フィーチャーチーム、コンポーネントチームにするにせよ、マルチタスクと考えるとT型スキルにはならないのでは？</h3><p>→チームにはT型にはなってほしい<br>→クロスファンクショナル</p>
-<p>→マルチタスキングは完全には解決できない<br>→フィーチャーチームとコンポーネントチーム同時に所属するのは正しいが、マルチタスキングしちゃいけないという意味では正しくない</p>
-<h1 id="レゴスクラムの覚醒_/_The_Lego_Scrum_Awakens-1">レゴスクラムの覚醒 / The Lego Scrum Awakens</h1><p><a href="http://www.slideshare.net/kdmsnr/legoscrumawakens20160119" target="_blank" rel="external">http://www.slideshare.net/kdmsnr/legoscrumawakens20160119</a></p>
-<h2 id="レゴスクラム-1">レゴスクラム</h2><p>→翻訳してるのでやってみてね。</p>
-<h3 id="OpenStack">OpenStack</h3><p>→OpenSourceのモデルをレゴで表現してみよう<br>→フリーのコントリビューターがいるのがほかと違う</p>
-<p><strong><em>アジャイル開発の体験に最適</em></strong></p>
-<h2 id="レゴスクラムの3つの特徴">レゴスクラムの3つの特徴</h2><h3 id="経験による学習ができる">経験による学習ができる</h3><p>スクラムガイドと実践の間を埋めるためのレゴスクラム</p>
-<p>経験と教育<br>→教育とは日常に溶け込んで行くべきだ</p>
-<p>経験学習モデル<br>→まず経験する</p>
-<p>みうらじゅん＆タモリ理論</p>
-<p>ワークショップ疲れ→もはや「ゲームしかない！」の流れ</p>
-<h3 id="全体性が備わっている">全体性が備わっている</h3><p>ホールネス<br>→ぶぶんぶぶんで違っていても全体として合っていればOK<br>→見積もりとか、部分のトレーニングは意味がないのではないか？</p>
-<p>デイリースクラムが時間の関係でない、後で研修する。<br>時間が短い1スプリント7分<br>→それ以外はスクラムそのもの</p>
-<h3 id="開発者以外でも参加できる">開発者以外でも参加できる</h3><p>スクラムチーム以外、関係者、ユーザーすらも！</p>
-<h1 id="フィリピンのスタートアップにスクラムを導入しようとしてみたお話-1">フィリピンのスタートアップにスクラムを導入しようとしてみたお話</h1><h2 id="経験">経験</h2><p>→食いっぱぐれない！！！！！<br>→金を払ってでも得たい経験！！！</p>
-<h2 id="0週目">0週目</h2><ul>
-<li><p>明確ではないけどなんか良くないよねという状態</p>
-</li>
-<li><p>勉強はしてくれなかった！！</p>
-</li>
-</ul>
-<h2 id="1週目">1週目</h2><ul>
-<li><p>KPT2</p>
-</li>
-<li><p>日本とフィリピント特に変わらないKPT</p>
-</li>
-</ul>
-<h2 id="2週目">2週目</h2><p>だんだん暇になる→隙間タスクをやっていた！</p>
-<h1 id="金融系ＩＴ企業におけるスクラムへの挑戦-1">金融系ＩＴ企業におけるスクラムへの挑戦</h1><p>WFとスクラムを足した感じ<br>→要件定義＋基本設計 WF<br>→予算承認<br>→開発以降はスクラム</p>
-<p>アジャイル→生産性が高いという噂<br> →途中からメンバーを追加した 開発T6人 PO2人中野さんが忙しいのでサポートとして一人入れた</p>
-<p> 導入は1Day研修を受けた</p>
-<p> 社内の標準開発工程を適応しない申請をした！</p>
-<p> 看板も掲示したままでOKとした。</p>
-<p> アジャイルコーチをお願いした→豆蔵山田さん</p>
-<h3 id="デイリースクラム">デイリースクラム</h3><p> →今日やることは最後にみんなで決める<br> →報告チックになっていたので、ファシリテートは持ち回りにした</p>
-<h3 id="KPT">KPT</h3><p> Tryの確認をスプリント中間で行う</p>
-<h3 id="コミュニケーションの活性化">コミュニケーションの活性化</h3><p> →周りから見て楽しそうに見えるように</p>
-<ul>
-<li><p>スローガンをスプリントごとに決める<br>→ POが20分以内に今スプリントでやることを踏まえて決める</p>
-</li>
-<li><p>キャラクターの作成</p>
-</li>
-<li><p>お菓子神社</p>
-</li>
-<li><p>HELPカード  </p>
-</li>
-</ul>
-<h2 id="課題">課題</h2><h3 id="進捗と品質の報告">進捗と品質の報告</h3><ul>
-<li>WF<ul>
-<li>計画通りか</li>
-</ul>
-</li>
-<li>Agile<ul>
-<li>実績を計測して</li>
-<li>収束予測する</li>
-</ul>
-</li>
-</ul>
-<h3 id="進捗の報告方法">進捗の報告方法</h3><ul>
-<li><p>プロジェクト<br>→プロダクトバーンアップ</p>
-</li>
-<li><p>スプリント<br>→バーンダウンチャート</p>
-</li>
-</ul>
-<h3 id="品質の報告">品質の報告</h3><ul>
-<li>ツールを導入して計測した</li>
-</ul>
-<h2 id="成功の要因">成功の要因</h2><h3 id="カイゼンの繰り返し">カイゼンの繰り返し</h3><ul>
-<li>ルールをシンプルにする</li>
-<li>効果的でないならやめる</li>
-</ul>
-<h3 id="チームを取り巻く環境">チームを取り巻く環境</h3><ul>
-<li>外部からの阻害が少なかった<br>→初アジャイルなので、暖かく見守ってもらえた</li>
-<li>メンバー<br>→自己組織化できてた<br>→リードするキャラがいた</li>
-<li>アジャイルコーチを活用した<br>→立ち上げがスムーズに<br>→ちょっとしたことが相談できる</li>
-</ul>
-<h3 id="プロダクトへの効果">プロダクトへの効果</h3><ul>
-<li>価値のあるものに注力</li>
-<li>フィードバック</li>
-<li>テストツールが充実した</li>
-</ul>
-<h3 id="意識">意識</h3><ul>
-<li>自主的な行動</li>
-<li>コミュニケーションの活性化</li>
-<li>モチベーションUP</li>
-<li>たのしいかいはつ<br>→自分たちでやってる感</li>
-</ul>
-<h2 id="今後の展望">今後の展望</h2><h3 id="社内への展開">社内への展開</h3><h3 id="社内開発支援組織を設置">社内開発支援組織を設置</h3><h3 id="複数チーム体制での開発">複数チーム体制での開発</h3><h3 id="顧客も含めた開発への適用">顧客も含めた開発への適用</h3><h1 id="People_As_the_Conveyer_of_Knowledge_(知識は人が運ぶ)-1">People As the Conveyer of Knowledge (知識は人が運ぶ)</h1><p>Slide日本語版あるよ→SlideShare<br><a href="http://www.slideshare.net/hiranabe/nonakas-scrum-phronetic-leadership-and-requirements-development" target="_blank" rel="external">http://www.slideshare.net/hiranabe/nonakas-scrum-phronetic-leadership-and-requirements-development</a></p>
-<p>アジャイル開発のコンセプトは日本が寄与している</p>
-<p>海外プレゼン時にはその地で流行っているアニメを入れるとつかめる</p>
-<h2 id="The_new_new_product_development_game_が_Scrumにあたえた影響">The new new product development game が Scrumにあたえた影響</h2><ul>
-<li>Scrumの黒い本<br>→ 扉の次のページに引用</li>
-<li><p>リレーレースのモデルからラグビーのモデルへ</p>
-</li>
-<li><p>New New</p>
-<ul>
-<li>新しい</li>
-<li>New Product</li>
-<li>新しい新製品開発</li>
-</ul>
-</li>
-<li><p>Scrumを編み出すときに100くらいの論文からこれだと選ばれた</p>
-</li>
-<li><p>TypeC Scrum の語源もこれ</p>
-</li>
-<li><p>プロダクト開発と同じく、関係者を巻き込んで行く進め方</p>
-</li>
-<li><p>野中先生<br>→ Yoda</p>
-</li>
-<li><p>アメリカ海兵隊<br>→ クロスファンクショナル</p>
-</li>
-<li><p>Wise Leadership<br>→Phtonetic Leadership</p>
-</li>
-<li><p>TypeC Scrum<br>→ 最初は刺し身にしようとした→ボツ</p>
-</li>
-</ul>
-<h2 id="SECI-Model">SECI-Model</h2><h3 id="暗黙知">暗黙知</h3><ul>
-<li>more then you can tell</li>
-<li>やってみるほうが早いこと、一緒にやって覚えること<br>→自転車の乗り方とか</li>
-<li>同じ体験をすることによって伝わる<br>→言葉がなくてもつたわる</li>
-<li>ミラーニューロン<br>→暗黙知暗黙知伝達</li>
-</ul>
-<h3 id="形式知">形式知</h3><ul>
-<li>パターン、マニュアルなど</li>
-<li><p>知がポータブルになった</p>
-</li>
-<li><p>Sticky information<br>→暗黙知にちかい</p>
-</li>
-</ul>
-<h3 id="SECI_Model">SECI Model</h3><ul>
-<li><p>T-T</p>
-</li>
-<li><p>T-E</p>
-</li>
-<li><p>E-E</p>
-<ul>
-<li>組み合わせ特許</li>
-</ul>
-</li>
-<li><p>E-T</p>
-</li>
-</ul>
-<h3 id="Story">Story</h3><ul>
-<li>知識創造企業</li>
-</ul>
-<h4 id="松下電器がホームベーカリーを作った時のはなし">松下電器がホームベーカリーを作った時のはなし</h4><p>野中先生</p>
-<ul>
-<li><p>新製品開発の最初は暗黙知にある<br>→想いからはじまる</p>
-</li>
-<li><p>PDCA → イクナイ → Planする前にみんなで何かをしよう→暗黙知の交換</p>
-</li>
-<li><p>パン焼き職人に弟子入り<br>→ 最終的には開発チーム<br>→ 実験＋実装＋暗黙知暗黙知変換<br>→ パン焼き器できた<br>パン焼き職人の暗黙知からリブを作るという形式知になった<br>→ SECIモデル<br>→ 新製品開発においてT-E変換がいかに大事か</p>
-</li>
-</ul>
-<h3 id="Design_Thinking">Design Thinking</h3><p>→最初に「共感」がある！</p>
-<ul>
-<li><p>Role Playing<br>→実際のユーザーの共感をトリガーに</p>
-</li>
-<li><p>Bodystorming<br>→ 体で感じろ</p>
-</li>
-</ul>
-<h4 id="T-T">T-T</h4><ul>
-<li>pair programming</li>
-</ul>
-<h3 id="知識はどこからきてどこへ行くのか">知識はどこからきてどこへ行くのか</h3><ul>
-<li>知識は暗黙知が多い</li>
-<li><p>ソフトウェア開発は共感で繋いでいく<br>→形式知、ドキュメントだけでは伝えられない</p>
-</li>
-<li><p>Honda<br>→ 作ろうと思っているもののユーザー視点になる<br>→ 共感して、もちかえる</p>
-</li>
-</ul>
-<p>究極のPOは何を作るかを共感</p>
-<p>Scrum<br>→ 知識の運びては人であると宣言したもの</p>
-<p>ステークホルダーが多くて調整が大変だ<br>→ 合宿をしなさい</p>
-<p>→一日目で形式知ができる<br>→食事して、メンバーのバックグラウンドがわかり<br>→なぜここにいるのかというはなしになり<br>→そこからプロダクト開発の話が始まる</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>1/18,19の二日間にわたって開催された <a href="http://2016.scrumgatheringtokyo.org/#top" target="_blank" rel="external">Regional SCRUM GATHERING® Tokyo 2]]>
-    </summary>
-    
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
-    
-      <category term="scrum" scheme="http://yenjoji.github.io/pages/pages/tags/scrum/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[2016/1/18 Regional SCRUM GATHERING® Tokyo 2016 に参加しました（一日目）]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2016/01/18/20160118-rsgt2016-day1/"/>
-    <id>http://yenjoji.github.io/pages/pages/2016/01/18/20160118-rsgt2016-day1/</id>
-    <published>2016-01-18T04:13:57.000Z</published>
-    <updated>2016-01-24T03:22:41.000Z</updated>
-    <content type="html"><![CDATA[<p>1/18,19の二日間にわたって開催された <a href="http://2016.scrumgatheringtokyo.org/#top" target="_blank" rel="external">Regional SCRUM GATHERING® Tokyo 2016</a>に参加してきました。</p>
-<p>まずは、天気予報通りといえばその通りなのですが、おかげで新宿にたどり着いた時には午前中のセッションが終わっている（＝基調講演聞き逃した！！！）という波乱の一日目の感想です。</p>
-<p>togetterは<a href="http://togetter.com/li/927511" target="_blank" rel="external">こちら</a></p>
-<h1 id="NexusとLeSSの概要説明、比較">NexusとLeSSの概要説明、比較</h1><p>最近話題の大規模Scrumフレームワークの中から<br>Scrumの父Ken Schwaber氏の「Nexus」と認定スクラムマスター研修の講師でお馴染みのBas Vodde氏の「LeSS」の概要とその差分についての解説のセッションでした。</p>
-<p>資料はそのうち上がると思うので、内容はそっちを見ていただくとして、<a href="http://www.slideshare.net/takubon/nexus-and-less-rsgt2016" target="_blank" rel="external">資料が公開されました</a><br>聞いてみた個人的な感想としてはNexusは依存関係の最小化にこだわったり、イベントに関しても代表者でやるイベントとチームでやるイベントをかっちり分けている印象があり、シンプルさにこだわっている感じを受けました。<br>一方LeSSは、通常のScrumの延長線上でありながら、大規模ゆえのチーム感の調整・協調作業ができるように最大公約数的なゆるいルールを提案している感じを受けました。</p>
-<p>個人的な好みとしては、製薬が少なそうなLeSSの方が適用しやすい印象を受けました。</p>
-<h1 id="生き延びよう！強い組織になろう！_-_迷わず行けよ_行けばわかるさ">生き延びよう！強い組織になろう！ - 迷わず行けよ 行けばわかるさ</h1><p>Scrumを導入して一旦うまく行ったものの、<br>そのままの勢いで周囲を巻き込もうとしたら煙たがられてしまった話とその後それをどうカイゼンしたかというお話。</p>
-<p>おそらくスライドはそのうち公開されるんではないかと思います。</p>
-<p>Scrumとかうまく行きだすと、なんかいい気になって「善意の押し売り」＋「正論で殴る」のコンボみたいな状況になって孤立してしまい、うまく行かなくなるような雰囲気を感じました。<br>その結果、メンバーが萎縮してしまって本当の問題が表面に現れなくなってしまっていたのかなと感じました。</p>
-<p>ただ、体調を崩したタイミングで自分自身でふりかえりを行ったことを天気に、イケイケで勧める感じから、みんなの話を聞くスタンスに変わったことにより状況が良くなったと<br>やはり対話することが大切だなと、あと仲間がいると心強いなぁと感じました。</p>
-<h1 id="僕らのおれおれメトリクス_/_We_metrics_in_our_own_way!">僕らのおれおれメトリクス / We metrics in our own way!</h1><p>スライドはこちら<a href="http://www.slideshare.net/yattom/we-metrics-our-own-way" target="_blank" rel="external">僕らのおれおれメトリクス / We Metrics Our Own Way!</a></p>
-<p>とあるチームに対して、どのようなメトリクスを取得し、<br>それをどのようにつかってチームに考えてカイゼンしてもらったかというお話。</p>
-<p>メトリクスにはお金に関わるKPIに関するメトリクスと、チームの健康状態を測るHealthcheckのメトリクスがあり。<br>何かとおろそかにされがちなHealthcheckのメトリクスも大事だよということを再認識しました。</p>
-<p><strong>よいメトリクス＝NARRATE</strong></p>
-<p>NARRATEの中でも、何かと値で絶対的な評価をしがちですが、絶対値ではなく値の「傾向を見る」というところと、<br>「チームが見たいと思うメトリクス」という点がメトリクスを取る上での心がけとして重要に思えました。</p>
-<h1 id="スクラムとメトリクスとテストを活用するチームの事例">スクラムとメトリクスとテストを活用するチームの事例</h1><p>スライドはこちら<a href="http://www.slideshare.net/KyonMm/scrumtestmetrics-sgt2016" target="_blank" rel="external">Scrum,Test,Metrics #sgt2016</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#31169;&#12399;&#26368;&#39640;&#12398;&#12481;&#12540;&#12512;&#12398;&#19968;&#21729;&#12391;&#12354;&#12427;&#12384;&#12429;&#12358;&#12363;&#65311;&#10;&#26368;&#39640;&#12398;&#12473;&#12463;&#12521;&#12512;&#12434;&#12391;&#12365;&#12390;&#12356;&#12427;&#12398;&#12363;&#65311;&#10;&#26368;&#39640;&#12398;&#38283;&#30330;&#12434;&#12391;&#12365;&#12390;&#12356;&#12427;&#12398;&#12363;&#65311;&#10;&#12388;&#12414;&#12426;&#12289;&#26368;&#39640;&#12398;&#12473;&#12463;&#12521;&#12512;&#12289;&#26368;&#39640;&#12398;&#38283;&#30330;&#12392;&#12399;&#20309;&#12391; &#12354;&#12427;&#12398;&#12363;&#65311;&#12434;&#24120;&#12395;&#21839;&#12356;&#32154;&#12369;&#12427;&#12481;&#12540;&#12512;&#12395;&#12394;&#12427;&#24517;&#35201; &#12364;&#12354;&#12427;&#12290;</span><br></pre></td></tr></table></figure>
-<p>この一節にしびれました。<br>具体的なメトリクスの例は、結構過激なのもあるので、このまま全てチームに適用できないかもしれませんが、<br>常にすべての前提を（もっとカイゼンできないか）疑う姿勢は脱帽でした。</p>
-<h1 id="Technology-Driven_Development">Technology-Driven Development</h1><p>昔のスライドはこちら<a href="http://www.slideshare.net/ssuser968fab/technology-drivendevelopment-forslideshare-38323907" target="_blank" rel="external">Technology-Driven Development: Using Automation and Development Techniques to Grow an Agile Culture</a><br>きっと最新版も公開されるはず。</p>
-<p>テストやデプロイ、要求の確認にツールを導入したら目に見えて効率が上がったというおはなし。<br>Agile2014で海外登壇＆発表されたセッションの日本語番ということで、技術要素などは若干古いらしいですが、<br>改善点を見つけるための計測とそれを改善し続ける取り組み、そして実際成果が出ているところは非常にすごいです。</p>
-<p>社内でアジャイルアジャイル言ってる人が多いが、プロセスばっかりで、テクニカルな要素が全くおろそかだったことに対するアンチテーゼとしてのTechnicalDrivenという表現をしているという反骨精神的なものもアツくさすがアジャイル会のプロレス伝道師というところでした、</p>
-<hr>
-<h1 id="以下、殴り書きメモ">以下、殴り書きメモ</h1><h1 id="NexusとLeSSの概要説明、比較-1">NexusとLeSSの概要説明、比較</h1><h2 id="Nexus">Nexus</h2><h3 id="Nexus_のイベント">Nexus のイベント</h3><ul>
-<li><p>プランニング</p>
-<ul>
-<li>Scrumとほとんど同じ</li>
-<li>最初に代表者 -&gt; 次にチーム</li>
-<li>チームごとにスプリントプランニングするが、場所は一緒のところで、不明点はその都度他チームに確認する</li>
-</ul>
-</li>
-<li><p>デイリースクラム</p>
-<ul>
-<li>全体 -&gt; チームごと</li>
-</ul>
-</li>
-<li><p>スプリントレビュー</p>
-<ul>
-<li>全チーム合同でやる</li>
-<li>全部できないかもしれない -&gt; うまくやってね（としか書いていない）</li>
-</ul>
-</li>
-<li><p>レトロスペクティブ</p>
-<ul>
-<li>依存関係をとくていして最小化するということが繰り返し語られている</li>
-</ul>
-</li>
-<li><p>リファインメント</p>
-<ul>
-<li><p>1チームに割り振れる単位まで分割する</p>
-</li>
-<li><p>依存関係を洗い出す</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="成果物">成果物</h3><ul>
-<li><p>PBL</p>
-<ul>
-<li>全体で一つ</li>
-<li>レディ<br>-&gt; 依存関係が排除されているか最小化されている -&gt; チーム単位でPBIを完成させられないと行けない</li>
-</ul>
-</li>
-<li><p>Nexus PBL</p>
-<ul>
-<li>次のスプリントで行う分のバックログ</li>
-</ul>
-<h1 id="統合">統合</h1></li>
-<li><p>作成物の透明性</p>
-<ul>
-<li>技術的負債</li>
-</ul>
-</li>
-<li><p>完成の定義</p>
-<ul>
-<li>Nexus完成の定義</li>
-</ul>
-<h1 id="QA">QA</h1><ul>
-<li>PBL おすすめツールは<br>→ 数チームならアナログ</li>
-</ul>
-<p>→ 全体はJira チームごとではアナログでやってます</p>
-</li>
-</ul>
-<h2 id="Less">Less</h2><ul>
-<li>Less 2-8 チーム向け それ以上は Less Huge</li>
-<li><p>LeSS Huge</p>
-</li>
-<li><p>LeSS Rules 2016/1 が最新</p>
-</li>
-</ul>
-<h3 id="構造">構造</h3><ul>
-<li><p>大規模なんでマネージャーいるよね</p>
-<ul>
-<li>Undone Work<br>→ わざわざUndoneとかいらなくない？<br>→ 実際こうなってしまうので、（しかたなく？）定義している</li>
-</ul>
-</li>
-</ul>
-<h3 id="特徴">特徴</h3><p>基本的には1チームのScrumと同じ</p>
-<h4 id="協調と統合">協調と統合</h4><ul>
-<li>マルチチームのミーティングなどを定義している</li>
-</ul>
-<h3 id="LeSS_での役割">LeSS での役割</h3><h4 id="PO">PO</h4><ul>
-<li>優先順位付けはかならず一人で演る</li>
-<li>明確化はユーザー・顧客・チームでやる</li>
-</ul>
-<h4 id="SM">SM</h4><ul>
-<li>プロダクト全体を意識するように働きかける→ チームないで凝り固まらないように</li>
-<li>3チームまでは兼務OK</li>
-</ul>
-<h4 id="チーム">チーム</h4><ul>
-<li>フィーチャーチーム</li>
-</ul>
-<h4 id="イベント">イベント</h4><ul>
-<li>全体的なイベントが追加された</li>
-</ul>
-<h4 id="初期のプロダクトバックログリファインメント">初期のプロダクトバックログリファインメント</h4><ul>
-<li>完成の定義</li>
-<li>ビジョン</li>
-</ul>
-<h4 id="スプリント">スプリント</h4><h4 id="スプリントプランニング">スプリントプランニング</h4><ul>
-<li>Nexusと同じ<h5 id="1部">1部</h5>全体</li>
-</ul>
-<h5 id="2部">2部</h5><p>各チーム</p>
-<p>マルチチームスプリントプランニング<br>→ 複数チームが分担を話し合いながらプランニングする</p>
-<h4 id="デイリースクラム">デイリースクラム</h4><ul>
-<li>Scrum of Scrum<br>→ 週に3回程度</li>
-</ul>
-<h4 id="プロダクトバックログリファインメント">プロダクトバックログリファインメント</h4><h5 id="全体的な">全体的な</h5><ul>
-<li>クロスチームで見積もる</li>
-</ul>
-<h5 id="マルチチーム">マルチチーム</h5><ul>
-<li>関連するチームが集まってやる（全員or関係者）</li>
-</ul>
-<h5 id="チーム-1">チーム</h5><ul>
-<li>チームで完結することは</li>
-</ul>
-<h4 id="スプリントレビュー">スプリントレビュー</h4><ul>
-<li>スプリントレビューバザール<ul>
-<li>複数のエリアがある大きな部屋で実施</li>
-</ul>
-</li>
-</ul>
-<h4 id="レトロスペクティブ">レトロスペクティブ</h4><ul>
-<li>すべてのチームを妨げているのは、全体の問題リスト？に上げる</li>
-</ul>
-<h4 id="全体のレトロスペクティブ">全体のレトロスペクティブ</h4><p> *</p>
-<h3 id="作成物">作成物</h3><h4 id="PBL">PBL</h4><p>Scrumと同じ</p>
-<h4 id="インクリメント">インクリメント</h4><p>Scrumと同じ<br>ただし、統合されていること</p>
-<h4 id="DoD">DoD</h4><ul>
-<li>チームごとに拡張することはOK</li>
-</ul>
-<h4 id="未完了作業">未完了作業</h4><ul>
-<li>リスク・遅延を引き起こす可能性のあるものに対してチームで議論する</li>
-</ul>
-<h3 id="まとめ">まとめ</h3><p>ガイドとルールのセットになっている</p>
-<p>代表者の参加するイベント → チームのイベントの2段構え</p>
-<p>協調と統合</p>
-<h2 id="Nexus_と_LeSS_の比較">Nexus と LeSS の比較</h2><h3 id="Nexus-1">Nexus</h3><p>役割、作成物 イベントルールは普遍<br>シンプル10ページ</p>
-<h3 id="LeSS">LeSS</h3><p>オフショアとかのコツが書いてある<br>全部やれとは言ってない</p>
-<h3 id="デイリースクラム-1">デイリースクラム</h3><h4 id="Nexus-2">Nexus</h4><p>依存関係の最小化！にこだわってる<br>ソフトウェア以外にも適用しにくい</p>
-<h4 id="LeSS-1">LeSS</h4><p>フィーチャーチーム<br>マネージャーに言及している</p>
-<h1 id="生き延びよう！強い組織になろう！_-_迷わず行けよ_行けばわかるさ-1">生き延びよう！強い組織になろう！ - 迷わず行けよ 行けばわかるさ</h1><h2 id="前回までのあらすじ">前回までのあらすじ</h2><ul>
-<li>上司と世界観と共有<br>→ 話を聞いてくれる、一緒にセミナーに出てくれる</li>
-</ul>
-<h2 id="鬼っ子">鬼っ子</h2><p>→ アジャイルがうまく行っているアピールが強すぎた<br>→ WF XS Agile の発生!！</p>
-<h3 id="結果">結果</h3><ul>
-<li>チームが見ざる言わざる聞かざる</li>
-<li>形だけのスクラム<br>→ざんねんスクラム化</li>
-</ul>
-<h3 id="病気になった！">病気になった！</h3><p>→ 一人レトロスペクティブす@病室</p>
-<h4 id="対立構造を作っていた要因">対立構造を作っていた要因</h4><h4 id="チームが困っているポイントが変わっていた">チームが困っているポイントが変わっていた</h4><p>どうやるか→どうしたらうまくいくか</p>
-<p>→ コミュニティから力を借りた(2名)</p>
-<h3 id="再始動">再始動</h3><ul>
-<li>そっとチームに関与</li>
-</ul>
-<h2 id="一人でなんとかしようとしていた愚かさ">一人でなんとかしようとしていた愚かさ</h2><p>→ 先人はみんなで、チームでやれって言ってる</p>
-<h2 id="人生は短い">人生は短い</h2><p>ジェフ・サザーランド</p>
-<p>無駄なことでなく、有意義なことに人生を使おう</p>
-<h1 id="僕らのおれおれメトリクス_/_We_metrics_in_our_own_way!-1">僕らのおれおれメトリクス / We metrics in our own way!</h1><p><a href="http://www.slideshare.net/yattom/we-metrics-our-own-way" target="_blank" rel="external">http://www.slideshare.net/yattom/we-metrics-our-own-way</a></p>
-<p>見積もりに自信がないチーム<br>→バーンダウンしない</p>
-<p>Tシャツ見積もりを使っていた<br>→うまくいかない</p>
-<ul>
-<li><p>変えた<br>Spring1-3 Tシャツ 1wスプリント<br>Sprint5- ポイント 2wスプリント</p>
-</li>
-<li><p>うまく行った<br>見積もり通りに行った</p>
-</li>
-<li><p>なんでうまく行ったの？</p>
-<h2 id="分析">分析</h2><h3 id="バックログアイテムを分析">バックログアイテムを分析</h3><p>同じポイントでも5倍くらいの時間見積もりの差があった<br>→見積もりが上手にできるようになったわけではない<br>→3,5 と 8,13 で時間に差がない → うまくなってない<br>→問題か？<br>→別に問題ではない<br>→カイゼンはできているのでOK</p>
-</li>
-</ul>
-<h3 id="オーバーワークしてない？">オーバーワークしてない？</h3><h3 id="スプリントの予実を見る（見積もり時間と実績時間）">スプリントの予実を見る（見積もり時間と実績時間）</h3><h3 id="スプリントの進捗">スプリントの進捗</h3><ul>
-<li>発生したタスクと、終わったタスクをプロットしたグラフ</li>
-<li>バグ、テストの分量も追加でプロット</li>
-</ul>
-<h3 id="Sprint8">Sprint8</h3><ul>
-<li>ビジネス的な要望でやってほしいことがあった！</li>
-<li>オーバーコミットでも完成出来た</li>
-</ul>
-<h3 id="傾向を見た">傾向を見た</h3><p>Sprint7まで 見積もり＞実績<br>Sprint8 見積もり&lt;実績</p>
-<p>Sprint11,13 SprintDondeできなかった<br>→ 見積もり＜実績</p>
-<h4 id="ダメな時の傾向">ダメな時の傾向</h4><ul>
-<li>最後にまとめてテストをして、バグがばっと出た！！！ Sprint8,Sprint11</li>
-<li>追加のタスクが多い！  Sprint13</li>
-</ul>
-<h2 id="メトリクスの使い方">メトリクスの使い方</h2><p>→ ヘルスチェック</p>
-<ul>
-<li>こんなの出てます、このパターンやばくない？ とSMが言う<br>→ チームが考えてアクションをする</li>
-</ul>
-<h2 id="メトリクス">メトリクス</h2><h3 id="KPI">KPI</h3><ul>
-<li>お金に関わるのでみんなが奇にする<h3 id="HealthCheck">HealthCheck</h3></li>
-<li>お金にかかわらないので、みんな疎かにしがち</li>
-<li>傾向を見なければいけない</li>
-</ul>
-<h2 id="Scrum_Master">Scrum Master</h2><p> → OK！ じゃあやってみよう！</p>
-<h2 id="Agile_Metrics_in_action">Agile Metrics in action</h2><h2 id="良いメトリクス">良いメトリクス</h2><ul>
-<li>自然に計測できる<br>→メトリクスのためにプロセスをかえない</li>
-<li>自動化<br>→手間は減らそう</li>
-<li>意味がある</li>
-<li>安定している<br>→傾向を見ないといけないので</li>
-<li>チームに沿っている<br>→チームに合わせたメトリクス、チームが必要としている</li>
-<li>タイミング<br>→ チームが使いたいタイミングで見れるようにする</li>
-<li>見たい！<br>→チームが見たいと思うものを</li>
-</ul>
-<p>NARRATE! 物語！</p>
-<h1 id="スクラムとメトリクスとテストを活用するチームの事例-1">スクラムとメトリクスとテストを活用するチームの事例</h1><h2 id="保守で4年目のプロジェクト">保守で4年目のプロジェクト</h2><p>→ 2014まではうまくやれてなかった<br>→残業多い、再計画が不正確すぎる</p>
-<p>カイゼン<br> 1w Sprint<br> Scrum event is on time as possible<br> multi functional<br> ‥</p>
-<p> → すべての活動を見えるようにする</p>
-<h2 id="大切にしているポリシー">大切にしているポリシー</h2><p>→最高の開発、最高のスクラムとはなんであるかを常に問い続ける<br>→そのためすべての活動を疑う<br>→スクラムイベントも疑う<br>→なぜ必要なのか！</p>
-<p>メトリクス<br>→予実はチームメンバーが自主的に15分単位で入れている<br>→レビューの品質も定量化されている</p>
-<h2 id="テスト">テスト</h2><p>→アジャイルでテストをやるのだから、テストが別チームとか、バックログにテストとかあったらリリースできないよね？</p>
-<ul>
-<li>Specification By Example</li>
-<li>探索的テスト</li>
-<li><p>レビュー<br>→ などの高効率テストを行う</p>
-</li>
-<li><p>誰のようきゅうを表現したテストであるかと徹底する<br>→ なんとなくは許さない</p>
-</li>
-</ul>
-<h2 id="スプリントレビュー-1">スプリントレビュー</h2><ul>
-<li>レビューを行う人は持ち回り<br>→チームのことなんだからわかるよね？</li>
-</ul>
-<p>→ 全くわからない という人をなくす<br>→ わかってないと見積もれない！→コミットできない<br>→ サポートがあればできるの前に説明できるという状態があるだろう → せめてそこまでは持っていく スプリントレビューの場でそこまで持っていく</p>
-<h2 id="メトリクス-1">メトリクス</h2><ul>
-<li><p>メトリクス取っていなかった→自信過剰だった</p>
-</li>
-<li><p>不満からメトリクスを取るようになった<br>→ できるチーム<br>→ 頼まれごと多い<br>→ 自分の仕事できない！！！！<br>→ 割り込み作業をメトリクス化<br>→ 40%<br>→ 割り込み作業のおねがいテンプレ化<br>→ 10%になった<br>→ メトリクス重要！！！となった。</p>
-</li>
-</ul>
-<h2 id="レビュー">レビュー</h2><ul>
-<li><p>レビュアー</p>
-<ul>
-<li>指摘内容を狩野モデルで素敵品質指摘が多い人はダメレビュアーとか</li>
-</ul>
-</li>
-<li><p>レビュイー</p>
-<ul>
-<li>情報共有が多すぎる人は理解が浅いとか</li>
-</ul>
-</li>
-</ul>
-<h2 id="計画内作業と計画外作業">計画内作業と計画外作業</h2><h3 id="アドリブ">アドリブ</h3><p> →いいアドリブと悪いアドリブ</p>
-<h2 id="無関心品質が0であること">無関心品質が0であること</h2><h2 id="新しいTryをした時に注意力を">新しいTryをした時に注意力を</h2><p>→音楽を聞くというTryに対してどうだったか<br>→音楽に載ってると視野が狭くなる<br>→得意な作業は早くなる<br>→不得意な作業、注意が必要な作業はいけてない</p>
-<h2 id="わかったこと">わかったこと</h2><ul>
-<li>自分が納得したものを取り入れる</li>
-<li>活動に対してできるだけ早くフィードバックを上げるとどんどん良くなる、よくなりたいという気持ちになる。</li>
-</ul>
-<h3 id="スプリントレトロスペクティブをレトロスペクティブしていますか？">スプリントレトロスペクティブをレトロスペクティブしていますか？</h3><p>→なかなか解決できない問題がどういうふうに変化しているかを計測する</p>
-<h1 id="Technology-Driven_Development-1">Technology-Driven Development</h1><p>TDDからインスパイアされて作った言葉</p>
-<p>TecDDの3つの目的</p>
-<ul>
-<li>業務効率化</li>
-<li>教育</li>
-<li>コラボレーション</li>
-</ul>
-<h2 id="TecDDの経緯">TecDDの経緯</h2><ul>
-<li>アジャイルをやりたいけど助けてくれない？</li>
-<li>Androidのプロダクトのチーム</li>
-</ul>
-<h3 id="問題点">問題点</h3><ul>
-<li>アジャイルやりたいって言うけど経験者がいない</li>
-<li>業務の殆どが手作業で</li>
-<li>チームメンバーが若くて業務経験が浅かった</li>
-</ul>
-<p>大変だなぁだが、たぎるぜ！<br>→何やっても効果がある！！</p>
-<h2 id="具体的な話">具体的な話</h2><h3 id="CI/CD">CI/CD</h3><ul>
-<li>手作業でパフォーマンスが低い</li>
-<li>要求が曖昧で、チームが混乱している</li>
-</ul>
-<p>→地ならしをしたい！！！</p>
-<h4 id="CI/CD以前">CI/CD以前</h4><ul>
-<li>変更要求に対する回帰テストに週 13.5時間 かかっていた<br>→ 週の1/3以上がこれに！！</li>
-</ul>
-<h4 id="自分のマシンでCI/CD">自分のマシンでCI/CD</h4><ul>
-<li>一時間ごとにビルド</li>
-<li>毎日端末にデプロイ<br>→実機でデモ＆進捗確認<br>→進捗がわかる＆フィードバックが早くなる！<br>→ 13.5h -&gt; 15min へ<br>→ 自動化にかかった時間 = 2w</li>
-</ul>
-<h3 id="TDD">TDD</h3><p>なぜ？<br>→アンドロイドわからないから、勉強したかった<br>→みんなAndoroid知らない<br>→テストを使ってわからないところを明らかにしたかった</p>
-<h4 id="before_TDD">before TDD</h4><ul>
-<li><p>1 アクティビティ追加に時間がかかる</p>
-</li>
-<li><p>Android JUnit<br>→ テストしづらい、テストが遅い<br>→ mockito, roborectricを導入</p>
-</li>
-</ul>
-<h4 id="After_mockito,_roborectric">After  mockito, roborectric</h4><p>→コンポーネント単位でテストできる様になった<br>→ 5日→1日になった</p>
-<h3 id="BDD">BDD</h3><ul>
-<li>Feature creep 要求の爆発！！</li>
-<li>ユースケースレベルのバグとデグレは検知できない</li>
-<li>ドメインの知識が必要になった</li>
-</ul>
-<h4 id="Feature_creep">Feature creep</h4><ul>
-<li>企画側からのやれやれ圧力に対抗する必要が出てきた</li>
-</ul>
-<p>デザイナーが話す<br>→開発チームがBDDのSpec形式で確認<br>→開発＆確認<br>→コラボレーションが可能に</p>
-<h4 id="After_BDD">After BDD</h4><ul>
-<li>Bugs -67%</li>
-<li>変更要求 -70%</li>
-<li>デグレ -60%</li>
-</ul>
-<h2 id="新しく出てきた問題（内密に）">新しく出てきた問題（内密に）</h2><ul>
-<li>スコープの変更ができないという問題<br>→このスコープではどうやってもできない<br>→アナリストに直訴<br>→アナリスト：NO 全部やって</li>
-</ul>
-<h3 id="なんでか？">なんでか？</h3><ul>
-<li><p>社風として、一回企画を通したものは死んでもやりなさい！<br>→ なんとかならないかと一ヶ月調整<br>→ 失敗<br>→ 偉い人に直談判<br>→ OK</p>
-</li>
-<li><p>TecDDとか言ってきましたが、必ずしもそれだけが解決方法ではない。</p>
-<ul>
-<li>なんでもいいから問題が解決できればいい</li>
-</ul>
-</li>
-</ul>
-<h2 id="Feature">Feature</h2><ul>
-<li><p>Adroidエミュレータ遅いよね？Genimotionいいらしいよ<br>→メンバーからの提案は積極的に取り入れるようにした。</p>
-</li>
-<li><p>TecDDは開発者のものではなくて、アナリストやエグゼクティブを巻き込むように活動をした。<br>→プロダクトの全体像を見ながらすすめる必要がある<br>→スクラムであるならばプロダクトオーナーがそれを示す必要がある。</p>
-</li>
-</ul>
-<h2 id="結論">結論</h2><ul>
-<li>passionate member</li>
-<li>現場主義</li>
-</ul>
-<h2 id="Agile2016">Agile2016</h2><ul>
-<li>アトランタでやります</li>
-<li>ぜひ参加してみたらいかがでしょうか？</li>
-</ul>
-<p>#＃ 質問</p>
-<h3 id="Technology_とあえていったのは？">Technology とあえていったのは？</h3><p>→ 当時Scrum偏重で、技術を疎かにしがちだったので、そこへのアンチテーゼ</p>
-<h3 id="ツール入れればOK?">ツール入れればOK?</h3><p>→ No. ツールを使って、失敗して、そこから学んで進んでもらう</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>1/18,19の二日間にわたって開催された <a href="http://2016.scrumgatheringtokyo.org/#top" target="_blank" rel="external">Regional SCRUM GATHERING® Tokyo 2]]>
-    </summary>
-    
-      <category term="Agile" scheme="http://yenjoji.github.io/pages/pages/tags/Agile/"/>
-    
-      <category term="scrum" scheme="http://yenjoji.github.io/pages/pages/tags/scrum/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[「マグロ船で学んだ「ダメ」な自分の活かし方」を読みました]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2016/01/14/20160113-reading-maguro/"/>
-    <id>http://yenjoji.github.io/pages/pages/2016/01/14/20160113-reading-maguro/</id>
-    <published>2016-01-13T16:21:48.000Z</published>
-    <updated>2016-02-27T15:33:24.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/4054054447" target="_blank" rel="external">マグロ船で学んだ「ダメ」な自分の活かし方</a></li>
-<li>読み終わった日<br>2016/1/14</li>
-<li>所要時間<br>2時間</li>
-<li>購入元<br>BookOff</li>
-<li>価格<br>¥200</li>
-</ul>
-<h1 id="感想">感想</h1><p><a href="http://www.amazon.co.jp/dp/4839930201/" target="_blank" rel="external">会社人生で必要な知恵はすべてマグロ船で学んだ</a> の著者であり、<br>また、ホンマでっかTVでマグロ船評論家として出演されている 齊藤 正明 さんの著書です。</p>
-<p>内容としては、「自分が欠点だと思っていることは実は強みでもありますよ」<br>というメッセージが著者の独特のふんわりした文体綴られた、ある意味非常にポジティブな本です。</p>
-<p>今の自分が著者がいうところの「がんばりすぎ」な状態になって、<br>空回って周りに迷惑や不快感を与えていないか確認するためのチェックリストとしても使えるなぁと感じました。</p>
-<ul>
-<li>苦手な仕事には、努力を惜しむべし</li>
-<li>一人で頑張らず、周りの人を巻き込む</li>
-<li>相手にトクをさせてあげれば、人脈は自然とできてくる</li>
-<li>「ナメられる性格」を磨き、人の教えを引き出すべし</li>
-<li>「失敗体験」こそ説得材料。記録を怠るべからず</li>
-<li>周りを「主役」にしてあげれば、自分の存在価値は高まる</li>
-<li>不幸か幸福か。その決定権は完全に自分が握っている</li>
-</ul>
-<p>など、どこか力が抜けているものの、じんわり染みてくるような言葉が散りばめられています。</p>
-<p>7つの習慣のように、この本を読んだ直後に「よし！やるぞ！」的なモチベーションは起きないかもしれませんが、<br>定期的にサラッと読み返して、その時点で自分が変にがんばり過ぎていないかをふりかえるネタにする本としてはいいんじゃなかろうかと思いました。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/4054054447" target="_blank" rel="external">マグロ船で学んだ「ダメ」な自分の活かし方</a]]>
-    </summary>
-    
-      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[「100円のコーラを1000円で売る方法 コミック版」を読みました]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2016/01/11/20160111-how-to-sell-100yen-cola-for-1000yen-comic/"/>
-    <id>http://yenjoji.github.io/pages/pages/2016/01/11/20160111-how-to-sell-100yen-cola-for-1000yen-comic/</id>
-    <published>2016-01-11T14:00:00.000Z</published>
-    <updated>2016-02-27T15:33:14.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/404602836X/" target="_blank" rel="external">100円のコーラを1000円で売る方法 コミック版</a></li>
-<li>読み終わった日<br>2016/1/11</li>
-<li>所要時間<br>1.5時間</li>
-<li>購入元<br>BookOff</li>
-<li>価格<br>¥200</li>
-</ul>
-<h1 id="感想">感想</h1><p><a href="http://www.amazon.co.jp/dp/404602836X/" target="_blank" rel="external">100円のコーラを1000円で売る方法 コミック版</a> を読みました。</p>
-<p><a href="http://www.amazon.co.jp/dp/4800215315" target="_blank" rel="external">まんがでわかる 7つの習慣</a>に続くまんがで読むベストセラーです。</p>
-<p>前回と同じく、活字で読むとそれなりにボリュームがある本のエッセンスを1時間程度でサラッと読めてしまうのが良いです。</p>
-<p>マーケティングと言うと我々ソフトウェアエンジニアには縁遠い用に感じますが、<br>本を読み進めると、プロダクトオーナーなどが考えるべき商品企画の基礎となるような考え方や<br>ブルーオーシャン戦略、キャズム理論など有名な概念がわかりやすく解説されておりマーケティング素人の私でもわかった気になれました。</p>
-<p>中でも印象に残ったのは「顧客満足の式」とよばれる式で 顧客満足は 「 顧客が感じた価値 - 事前期待値 」で表され、<br>顧客の期待に応えるだけでは結果は0点であり、顧客の期待以上の価値が提供できなければ商品としてプラスの評価にはならないという考え方でした。</p>
-<p>実際、詳細にマーケティングを学ぶにはより多くの書籍などに当たる必要があると思いますが、<br>開発者がプロダクトオーナーなど、企画している方々の考えを知るには非常にいい一冊だと思います。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/404602836X/" target="_blank" rel="external">100円のコーラを1000円で売る方法 コミ]]>
-    </summary>
-    
-      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[「まんがでわかる 7つの習慣」を読みました]]></title>
-    <link href="http://yenjoji.github.io/pages/pages/2016/01/10/20160110-7habits-comic-vol01/"/>
-    <id>http://yenjoji.github.io/pages/pages/2016/01/10/20160110-7habits-comic-vol01/</id>
-    <published>2016-01-10T13:00:00.000Z</published>
-    <updated>2016-02-27T15:33:00.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/4800215315" target="_blank" rel="external">まんがでわかる 7つの習慣</a></li>
-<li>読み終わった日<br>2016/1/10</li>
-<li>所要時間<br>1.5時間</li>
-<li>購入元<br>BookOff</li>
-<li>価格<br>¥720</li>
-</ul>
-<h1 id="感想">感想</h1><p><a href="http://www.amazon.co.jp/dp/4800215315" target="_blank" rel="external">まんがでわかる 7つの習慣</a>を読みました。</p>
-<p>私は、本家の7つの習慣を読んだことがないのですが。</p>
-<ul>
-<li>1時間程度でサラッと読める</li>
-<li>（おそらく）重要なエッセンスだけを抽出してある<br>ので、少ない時間で7つの習慣を俯瞰でき、美味しいところだけつまみ食いできて良かったです。</li>
-</ul>
-<p>特に、第2の習慣の「終わりを思い描くことから始める」にあった、ミッションステートメントを持つことについては、<br>40歳、不惑を前にして、自分のこれからを再度考えようと考えていたタイミングにマッチしたのもあり印象に残りました。</p>
-<p>なんとなく目標を考えてはいたものの、父、夫、上司、部下など、<br>自分の役割ごとにミッションステートメントを持つという考え方はより（長期的な）目標を具体的に考える指標になると感じました。</p>
-<p>また、第7の習慣の「刃を研ぐ」も同じく自分の（特に短期的な）これからを考える良い参考になりました。</p>
-<p>まんがでサラッと読めて、絵も綺麗で、内容もためになるという意味でおすすめできます。<br>気になったら読み返すのにも時間がかからないという面でも頑張って活字を読むより良いと感じました。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="読んだ本">読んだ本</h1><ul>
-<li>題名<br><a href="http://www.amazon.co.jp/dp/4800215315" target="_blank" rel="external">まんがでわかる 7つの習慣</a></li>
-]]>
-    </summary>
-    
-      <category term="reading" scheme="http://yenjoji.github.io/pages/pages/tags/reading/"/>
+      <category term="JJUG" scheme="http://yenjoji.github.io/pages/pages/tags/JJUG/"/>
     
   </entry>
   

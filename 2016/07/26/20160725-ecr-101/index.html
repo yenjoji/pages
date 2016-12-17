@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Amazon ECR が思った以上に簡単だったのでDocker Private Registry はコレでいいんじゃないか | Rouleur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは。みなさんはいかがお過ごしでしょうか?　私はすっかりDockerかぶれになっています。
+Dockerは気軽に環境を作ったり壊したりできる手軽さと、Virtualboxと比べてリソースをそこまで食わないのが嬉しいところですね。
+VagrantでVMを3つくらい起動した挙句メモリが足りなくなり、Macがグレーの画面でハングアップなんていうVagrantあるあるからおさらばできるだけでもかなり">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Amazon ECR が思った以上に簡単だったのでDocker Private Registry はコレでいいんじゃないか">
+<meta property="og:url" content="http://yenjoji.github.io/pages/2016/07/26/20160725-ecr-101/index.html">
+<meta property="og:site_name" content="Rouleur">
+<meta property="og:description" content="こんにちは。みなさんはいかがお過ごしでしょうか?　私はすっかりDockerかぶれになっています。
+Dockerは気軽に環境を作ったり壊したりできる手軽さと、Virtualboxと比べてリソースをそこまで食わないのが嬉しいところですね。
+VagrantでVMを3つくらい起動した挙句メモリが足りなくなり、Macがグレーの画面でハングアップなんていうVagrantあるあるからおさらばできるだけでもかなり">
+<meta property="og:updated_time" content="2016-08-06T18:16:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Amazon ECR が思った以上に簡単だったのでDocker Private Registry はコレでいいんじゃないか">
+<meta name="twitter:description" content="こんにちは。みなさんはいかがお過ごしでしょうか?　私はすっかりDockerかぶれになっています。
+Dockerは気軽に環境を作ったり壊したりできる手軽さと、Virtualboxと比べてリソースをそこまで食わないのが嬉しいところですね。
+VagrantでVMを3つくらい起動した挙句メモリが足りなくなり、Macがグレーの画面でハングアップなんていうVagrantあるあるからおさらばできるだけでもかなり">
+  
+    <link rel="alternative" href="/pages/atom.xml" title="Rouleur" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css"> -->
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+  <link href='//fonts.useso.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/pages/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-30922655-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <a href="/pages/pages/" class="logo">Rouleur</a>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/pages/pages/">Home</a>
+        
+          <a class="main-nav-link" href="/pages/pages/archives">Archives</a>
+        
+          <a class="main-nav-link" href="http://about.me/yenjoji">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yenjoji.github.io/pages"></form>
+        </div>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/pages/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/yenjoji" title="Fork me on GitHub"></a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <nav id="mobile-nav" class="off">
+  
+    <a href="/pages/pages/" class="mobile-nav-link">Home</a>
+  
+    <a href="/pages/pages/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="http://about.me/yenjoji" class="mobile-nav-link">About</a>
+  
+  <div id="search-form-wrap-mobile">
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yenjoji.github.io/pages"></form>
+  </div>
+</nav>
+      <div class="outer">
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/pages/2016/12/17/20161217-jirolian-info/">jirolian.info というサービスをつくりました</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2016/11/08/20161108-teyamagu/">ソフトウェア品質勉強会「開発とテストが一体となったソフトウェア開発」</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2016/10/21/20161021-apache-drill/">Apache DrillでJSONを臨機応変に集計する</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2016/07/26/20160725-ecr-101/">Amazon ECR が思った以上に簡単だったのでDocker Private Registry はコレでいいんじゃないか</a>
+          </li>
+        
+          <li>
+            <a href="/pages/2016/07/26/20160726-drone-with-ecr/">DroneでECR上のイメージを使う</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/AWS/">AWS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Agile/">Agile</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Atlassian/">Atlassian</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Bamboo/">Bamboo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/CI/">CI</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Couchbase/">Couchbase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Crowd/">Crowd</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/DevLove/">DevLove</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/ECR/">ECR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/GlusterFS/">GlusterFS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Golang/">Golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Groovy/">Groovy</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/IntellijIDEA/">IntellijIDEA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/IoT/">IoT</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/JJUG/">JJUG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/JSON/">JSON</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Jenkins/">Jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Linux/">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Mackerel/">Mackerel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Pacemaker/">Pacemaker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Play/">Play</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/RasperryPi/">RasperryPi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/S2JDBC/">S2JDBC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/SVN/">SVN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Scala/">Scala</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Scrum/">Scrum</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Stash/">Stash</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Struts/">Struts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/TOCfE/">TOCfE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/agile/">agile</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/apache/">apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/astah/">astah</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/community/">community</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/docker/">docker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/drill/">drill</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/eclipse/">eclipse</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/english/">english</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/jiro/">jiro</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/lifehack/">lifehack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/momongar/">momongar</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/poem/">poem</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/program/">program</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/reading/">reading</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/scrum/">scrum</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/twitter/">twitter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/ネタ/">ネタ</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/pages/tags/横浜道場/">横浜道場</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/12/">12月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/11/">11月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/10/">10月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/07/">7月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/06/">6月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/05/">5月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/04/">4月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/03/">3月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/02/">2月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2016/01/">1月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/10/">10月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/09/">9月 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/08/">8月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/07/">7月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/06/">6月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/04/">4月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2015/02/">2月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2013/01/">1月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/10/">10月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/07/">7月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/04/">4月 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/03/">3月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2012/01/">1月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/12/">12月 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/10/">10月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/07/">7月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/06/">6月 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/pages/archives/2011/05/">5月 2011</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/pages/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/pages/tags/Agile/" style="font-size: 18.89px;">Agile</a> <a href="/pages/tags/Atlassian/" style="font-size: 16.67px;">Atlassian</a> <a href="/pages/tags/Bamboo/" style="font-size: 12.22px;">Bamboo</a> <a href="/pages/tags/CI/" style="font-size: 12.22px;">CI</a> <a href="/pages/tags/Couchbase/" style="font-size: 10px;">Couchbase</a> <a href="/pages/tags/Crowd/" style="font-size: 11.11px;">Crowd</a> <a href="/pages/tags/DevLove/" style="font-size: 10px;">DevLove</a> <a href="/pages/tags/ECR/" style="font-size: 10px;">ECR</a> <a href="/pages/tags/GlusterFS/" style="font-size: 10px;">GlusterFS</a> <a href="/pages/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/pages/tags/Groovy/" style="font-size: 14.44px;">Groovy</a> <a href="/pages/tags/IntellijIDEA/" style="font-size: 10px;">IntellijIDEA</a> <a href="/pages/tags/IoT/" style="font-size: 15.56px;">IoT</a> <a href="/pages/tags/JJUG/" style="font-size: 10px;">JJUG</a> <a href="/pages/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/pages/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/pages/tags/Linux/" style="font-size: 11.11px;">Linux</a> <a href="/pages/tags/Mackerel/" style="font-size: 10px;">Mackerel</a> <a href="/pages/tags/Pacemaker/" style="font-size: 12.22px;">Pacemaker</a> <a href="/pages/tags/Play/" style="font-size: 10px;">Play</a> <a href="/pages/tags/RasperryPi/" style="font-size: 11.11px;">RasperryPi</a> <a href="/pages/tags/S2JDBC/" style="font-size: 10px;">S2JDBC</a> <a href="/pages/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/pages/tags/Scala/" style="font-size: 10px;">Scala</a> <a href="/pages/tags/Scrum/" style="font-size: 12.22px;">Scrum</a> <a href="/pages/tags/Stash/" style="font-size: 14.44px;">Stash</a> <a href="/pages/tags/Struts/" style="font-size: 10px;">Struts</a> <a href="/pages/tags/TOCfE/" style="font-size: 10px;">TOCfE</a> <a href="/pages/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/pages/tags/agile/" style="font-size: 13.33px;">agile</a> <a href="/pages/tags/apache/" style="font-size: 10px;">apache</a> <a href="/pages/tags/astah/" style="font-size: 10px;">astah</a> <a href="/pages/tags/community/" style="font-size: 17.78px;">community</a> <a href="/pages/tags/docker/" style="font-size: 12.22px;">docker</a> <a href="/pages/tags/drill/" style="font-size: 10px;">drill</a> <a href="/pages/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/pages/tags/english/" style="font-size: 10px;">english</a> <a href="/pages/tags/java/" style="font-size: 10px;">java</a> <a href="/pages/tags/jiro/" style="font-size: 11.11px;">jiro</a> <a href="/pages/tags/lifehack/" style="font-size: 10px;">lifehack</a> <a href="/pages/tags/momongar/" style="font-size: 11.11px;">momongar</a> <a href="/pages/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/pages/tags/poem/" style="font-size: 10px;">poem</a> <a href="/pages/tags/program/" style="font-size: 10px;">program</a> <a href="/pages/tags/reading/" style="font-size: 20px;">reading</a> <a href="/pages/tags/scrum/" style="font-size: 11.11px;">scrum</a> <a href="/pages/tags/twitter/" style="font-size: 10px;">twitter</a> <a href="/pages/tags/ネタ/" style="font-size: 11.11px;">ネタ</a> <a href="/pages/tags/横浜道場/" style="font-size: 11.11px;">横浜道場</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://about.me/yenjoji">about.me</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+        <section id="main"><article id="post-20160725-ecr-101" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/pages/2016/07/26/20160725-ecr-101/" class="article-date">
+  <time datetime="2016-07-26T02:14:02.000Z" itemprop="datePublished">2016-07-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Amazon ECR が思った以上に簡単だったのでDocker Private Registry はコレでいいんじゃないか
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは。<br>みなさんはいかがお過ごしでしょうか?　私はすっかりDockerかぶれになっています。</p>
+<p>Dockerは気軽に環境を作ったり壊したりできる手軽さと、Virtualboxと比べてリソースをそこまで食わないのが嬉しいところですね。</p>
+<p>VagrantでVMを3つくらい起動した挙句メモリが足りなくなり、<br>Macがグレーの画面でハングアップなんていうVagrantあるあるからおさらばできるだけでもかなりのメリットがありますね。</p>
+<p>そんなDockerにすっかりかぶれてしまった私なので、当然CIはDroneを使うわけです。<br><a href="https://drone.io/" target="_blank" rel="external">drone</a>は DockerベースのCIサーバーで、特徴としては</p>
+<ul>
+<li>Docker上でビルドを行うので、常にクリーンな環境でビルドできる。</li>
+<li>設定がTravisCI、CircleCIのようにリポジトリのルートにおいた yaml ファイル一個で済むのでスマート＆Git管理下における。</li>
+</ul>
+<p>という感じの田中美奈子と同じくらいナウいCIサーバーです。</p>
+<p>詳しくは<a href="http://knowledge.sakura.ad.jp/tech/2729/" target="_blank" rel="external">この辺</a>を見ていただくとなんとなく特徴がわかると思います。</p>
+<p>そんなある日、プロジェクトで使っているCIサーバーであるDroneでOracleJDKをつかいたくなってしまいました。<br>OpenJDKのコンテナなら、Oracleから提供されているので<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">image: oracle/openjdk:8</div></pre></td></tr></table></figure></p>
+<p>などと、.drone.ymlに設定すれば、たやすく環境が手に入ります。<br>しかしながら、OracleJDKはライセンスの関係か、オフィシャルのコンテナイメージ用意されていないようです。</p>
+<p>ローカル環境で使うだけならば手元で docker build してあげればいいのですが、Droneちゃんは、レジストリからしかイメージを取得できないようでした。</p>
+<p>自前でプライベートレジストリを構築するという選択肢もありましたが、ここは将来的に ECS を使うことも見据えて ECR を使っておこうということになりました（自分の中で）。</p>
+<h1 id="まとめ">まとめ</h1><p>手順等も書きますが、そもそもそんなに難しくないですし、AWSの画面にコマンド一覧出るので、とりあえずここでは言いたいことだけ書きなぐっておきます。</p>
+<ul>
+<li>ECR簡単なので、Docker使っている場合は選択肢に入れていいと思います</li>
+<li>転送量課金なので、そこは気をつけたほうがいいかも</li>
+<li>現在バージニア、オレゴン、アイルランドでしか提供されていないので、それ以外のリージョンで「あれ？ 出てこない？」とかならないように注意</li>
+<li>EC2にIAMロールつけとくと、アクセスキーとか、ユーザーとか気にしなくていいからお気楽です(Amazonも推奨してます。)</li>
+</ul>
+<p>一応雑な手順も書きましたので、興味があったら以下手順も見てみてください。</p>
+<h1 id="手順">手順</h1><h2 id="Amazon_ECR_の準備">Amazon ECR の準備</h2><p>ECRは現在 3つのリージョンでしか使えません<a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_Console_Repositories.html" target="_blank" rel="external">この辺参照</a>。<br>なので、今回は us-east-1 RegionでECRを使いたいと思います。</p>
+<h3 id="ECR_Repository_の作成">ECR Repository の作成</h3><ol>
+<li>はじめてECSを使うとウィザードに誘導されます。今回はひとまずECRだけ用意するので「Store container images securely with Amazon ECR」だけにチェックを入れて進みます。</li>
+<li>次の画面でリポジトリ名（dockerのイメージ名）を設定すれば作成完了です。</li>
+</ol>
+<h3 id="ECR_イメージ作成用インスタンスの作成">ECR イメージ作成用インスタンスの作成</h3><ol>
+<li>EC2用IAMロール作成<br>今回は、アクセスキーの管理の手間を省くため、EC2のIAMロールに ECR関連の権限を付与することにします。そのため、先にEC2用のIAMロールを作っておきます<ol>
+<li>IAM -&gt; 「新しいロールの作成」</li>
+<li>適当なロール名を設定<ul>
+<li>「ECR_CREATER」とかなんでもいいと思います</li>
+</ul>
+</li>
+<li>AWS サービスロールから Amazon EC2 を選択</li>
+<li>「AmazonEC2ContainerRegistryPowerUser」あたりをチェックしてロールの作成</li>
+</ol>
+</li>
+<li>EC2インスタンスの作成<ol>
+<li>適当なイメージからEC2インスタンスを作成します<ul>
+<li>リージョンはどこでも良いので、いつも使っているリージョンで良いと思います</li>
+<li>AMIもdockerが使えればなんでも良いです。今回はAmazonLinuxにしました</li>
+<li>インスタンスタイプもまずは t2.micro とかで大丈夫です。足りなかったら後でスケールアップしましょう</li>
+<li>たくさんイメージを作る・使う場合はディスクを大きめにしておくといいかもしれません</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>イメージの作成</p>
+<ol>
+<li>作成したインスタンスへログイン</li>
+<li><p>dockerのインストール</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install docker</div></pre></td></tr></table></figure>
+</li>
+<li><p>dockerの起動</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service docker start</div></pre></td></tr></table></figure>
+</li>
+<li><p>イメージの作成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker build -t $&#123;dockerのイメージ名&#125; .</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>イメージをRepositoryへ登録</p>
+<ol>
+<li><p>ECRへのログイン</p>
+<ul>
+<li>aws ecr get-login でログイン文字列がもらえるのでバッククォートで直接実行するとログインできます。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`aws ecr get-login  --region us-east-1`</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>イメージへのタグ付け</p>
+<ul>
+<li>ecr のマニュアル通りです<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker tag $&#123;dockerのイメージ名&#125;:latest XXXXXXXXXXXXXX.dkr.ecr.us-east-1.amazonaws.com/$&#123;dockerのイメージ名&#125;:latest</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>イメージのPush</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker push XXXXXXXXXXXXXX.dkr.ecr.us-east-1.amazonaws.com/$&#123;dockerのイメージ名&#125;:latest</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="最後に">最後に</h1><p>こんな感じにDockerレジストリが作れてしまうとは！ と、私はひとりで感動してしまいました。<br>AWSなんでそれなりにお金はかかりますが、懐に余裕があれば選択肢の一つにしてもいいかも知れません。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yenjoji.github.io/pages/pages/2016/07/26/20160725-ecr-101/" data-id="ciwtccgo2002yydvxvugfrptu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/AWS/">AWS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/ECR/">ECR</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/pages/tags/docker/">docker</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/pages/2016/10/21/20161021-apache-drill/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Apache DrillでJSONを臨機応変に集計する
+        
+      </div>
+    </a>
+  
+  
+    <a href="/pages/2016/07/26/20160726-drone-with-ecr/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DroneでECR上のイメージを使う</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <a href="/pages/" class="logo">Rouleur</a>
+      &copy; 2016 yenjoji<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="/pages/js/jquery.min.js"></script>
+<script src="/pages/js/jquery.scrollLoading.js"></script>
+
+
+  <link rel="stylesheet" href="/pages/fancybox/jquery.fancybox.css">
+  <script src="/pages/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/pages/js/script.js"></script>
+
+  </div>
+</body>
+</html>
