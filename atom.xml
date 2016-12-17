@@ -586,12 +586,12 @@
     <link href="http://yenjoji.github.io/pages/pages/2016/06/20/20160620-docker-compose/"/>
     <id>http://yenjoji.github.io/pages/pages/2016/06/20/20160620-docker-compose/</id>
     <published>2016-06-20T10:39:50.000Z</published>
-    <updated>2016-06-20T10:44:53.000Z</updated>
+    <updated>2016-12-17T15:42:12.000Z</updated>
     <content type="html"><![CDATA[<p>みなさん、Docker使ってますか？</p>
 <p>私は使ってません。</p>
 <p>しかし日常的には使っていないものの、ちょっと新しいプロダクト試そうかなと公式サイトのQuickstartとかを眺めると、Dockerのコンテナが用意されているケースが増えてきた気がします。世間の流れですね。いわゆるBigWaveです。乗らないとイカンやつです。</p>
 <p>そんな中、現在のプロジェクトで<a href="https://getkong.org/" target="_blank" rel="external">KONG</a>というミドルウェアを使うことになりました。</p>
-<p>KONGがどういうものかは <a href="http://www.ryuzee.com/contents/blog/7048" target="_blank" rel="external">この辺（Ryuzee）</a> や <a href="http://dev.classmethod.jp/etc/kong-api-aggregator/" target="_blank" rel="external">この辺（クラメソ）</a> を読むとなんとなくわかるかもしれません。</p>
+<p>KONGがどういうものかは <a href="http://www.ryuzee.com/contents/blog/7048" target="_blank" rel="external">この辺（Ryuzeeさん）</a> や <a href="http://dev.classmethod.jp/etc/kong-api-aggregator/" target="_blank" rel="external">この辺（クラメソ）</a> を読むとなんとなくわかるかもしれません。</p>
 <p>同じカテゴリのプロダクトとしては <a href="https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf" target="_blank" rel="external">WEB API Degign</a>を配布している、<a href="http://apigee.com/about/" target="_blank" rel="external">Apigee</a>　が有名です。</p>
 <p>〜閑話休題〜</p>
 <p>このKONGなる謎のミドルウェア。使ったことがないので、どんなものかもわかりません。<br>最終的にはAWSに環境を構築するので、それを待つのもいいのですが、さしあたってどういうものかを試してみたいのが人情ってやつです。</p>
